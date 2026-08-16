@@ -1,0 +1,33 @@
+{
+  "schema_version": "2.0",
+  "run_id": "2026-08-16T16:30:00+02:00",
+  "run_date": "2026-08-16",
+  "inventory_counts": {
+    "Jesolo": {
+      "portal_inventory": 388,
+      "live_capture": 384,
+      "captured_concrete_rows": 28
+    },
+    "Caorle": {
+      "portal_inventory": 44,
+      "live_capture": 48,
+      "captured_concrete_rows": 16
+    },
+    "Cavallino-Treporti": {
+      "portal_inventory": 46,
+      "live_capture": 46,
+      "captured_concrete_rows": 8
+    },
+    "San Donà di Piave": {
+      "portal_inventory": 76,
+      "live_capture": 85,
+      "captured_concrete_rows": 13
+    },
+    "Treviso": {
+      "portal_inventory": 604,
+      "live_capture": 595,
+      "captured_concrete_rows": 3
+    }
+  },
+  "note": "Initial snapshot migrated from the existing Master Radar HTML. Future runs append a new snapshot here."
+}
