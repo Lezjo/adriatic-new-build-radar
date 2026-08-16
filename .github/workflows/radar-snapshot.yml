@@ -34,10 +34,12 @@ jobs:
             pip install -r radar/requirements.txt
           fi
           python -m playwright install --with-deps chromium
-
-      - name: Run radar snapshot pipeline
-        run: python radar/snapshot.py
-
+          
+          - name: Run radar snapshot pipeline
+            env:
+              PYTHONPATH: ${{ github.workspace }}
+            run: python radar/snapshot.py
+            
       - name: Commit snapshot
         run: |
           git config user.name "adriatic-radar-bot"
