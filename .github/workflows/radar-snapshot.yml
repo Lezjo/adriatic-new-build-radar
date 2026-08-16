@@ -1,0 +1,51 @@
+name: Adriatic Radar Snapshot
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 6 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: radar-snapshot
+  cancel-in-progress: false
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f radar/requirements.txt ]; then
+            pip install -r radar/requirements.txt
+          fi
+          python -m playwright install --with-deps chromium
+
+      - name: Run radar snapshot pipeline
+        run: python radar/snapshot.py
+
+      - name: Commit snapshot
+        run: |
+          git config user.name "adriatic-radar-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/ radar/
+          if git diff --cached --quiet; then
+            echo "No snapshot changes to commit."
+            exit 0
+          fi
+          git commit -m "radar: snapshot $(date -u +%Y-%m-%d)"
+          git push
