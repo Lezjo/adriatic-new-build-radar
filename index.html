@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Adriatic New Build Radar</title>
+<style>
+
+*{box-sizing:border-box}body{margin:0;background:#f2f5f8;color:#182332;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}header{background:#17243b;color:#fff;padding:28px}h1{margin:0}.sub{opacity:.8}.tabs{display:flex;gap:7px;flex-wrap:wrap;background:#fff;padding:12px;position:sticky;top:0;z-index:10;border-bottom:1px solid #ddd}.tab{padding:10px 12px;border-radius:9px;background:#e9edf3;color:#17202a;text-decoration:none;font-weight:650}.tab-section{display:none;max-width:1600px;margin:auto;padding:22px}.tab-section:target{display:block}#tab-overview{display:block}body:has(.tab-section:target) #tab-overview:not(:target){display:none}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}.card,.stats>div,.delta>div{background:#fff;border-radius:14px;padding:15px;box-shadow:0 2px 10px #0001}.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}.stats small,.delta small{display:block;color:#697584}.stats b,.delta b{font-size:24px}.price{font-size:22px;font-weight:750;margin:7px 0}.tag{display:inline-block;background:#edf2fa;border-radius:999px;padding:4px 8px;font-size:11px;font-weight:700}.good{background:#e9f7ed;border-left:4px solid #2d8a4b;padding:14px;border-radius:8px;margin:15px 0}.note{background:#fff7dd;border-left:4px solid #d69b00;padding:14px;border-radius:8px;margin:15px 0}.muted{color:#68737f}.tablewrap{overflow:auto;background:#fff;border-radius:14px}table{border-collapse:collapse;width:100%;min-width:1350px;table-layout:auto}
+th,td{padding:10px 9px;border-bottom:1px solid #e7ebef;text-align:left;font-size:12px;vertical-align:top;line-height:1.35;white-space:normal}
+th{background:#edf1f5;position:static;font-weight:800;white-space:normal;overflow-wrap:anywhere;word-break:normal;vertical-align:middle;line-height:1.25}
+td{overflow-wrap:anywhere}
+.tablewrap{overflow-x:auto;overflow-y:visible;background:#fff;border-radius:14px}
+.tablewrap table{margin:0}
+.tablewrap th{min-width:90px}
+.tablewrap th:first-child{min-width:120px}.chart{background:#fff;border-radius:14px;padding:16px;box-shadow:0 2px 10px #0001}.bar{display:grid;grid-template-columns:260px 1fr 120px;gap:10px;align-items:center;margin:9px 0;font-size:12px}.bar i{height:12px;background:#e5e9ee;border-radius:9px;overflow:hidden}.bar i b{display:block;height:100%;background:#17243b;border-radius:9px}.delta{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}a{color:#1457b7;text-decoration:underline;cursor:pointer}@media(max-width:700px){.bar{grid-template-columns:1fr}.tab-section{padding:14px}}
+.source-link{display:inline-block;margin-top:8px;font-weight:700}.source-link:after{content:' ↗'}
+
+
+.tab-section{scroll-margin-top:170px !important;}
+.tab-section:target{scroll-margin-top:170px !important;}
+@media (max-width:900px){.tab-section,.tab-section:target{scroll-margin-top:155px !important;}}
+
+
+.tab-section > h2:first-child{margin-top:0 !important;padding-top:4px !important;position:relative !important;z-index:1 !important;}
+
+
+.inventory-audit{margin:18px 0 24px;padding:18px 20px;background:linear-gradient(135deg,#f8fbff,#ffffff);border:1px solid #dbe5f0;border-radius:18px;box-shadow:0 8px 24px rgba(15,23,42,.06)}
+.inventory-audit h3{margin-top:0}.inventory-audit .stats{margin:12px 0}.inventory-audit .stats>div{min-height:74px}.inventory-audit .tablewrap{max-height:620px;overflow:auto;border-radius:12px}.inventory-audit table{min-width:1050px}.inventory-audit thead th{position:sticky;top:0;z-index:3;background:#eaf0f7}.inventory-audit tbody tr:hover{background:#f7fbff}.inventory-audit .source-link{white-space:nowrap}
+
+
+.run-banner{margin:14px 22px;padding:14px 16px;background:#e9f7ed;border-left:4px solid #2d8a4b;border-radius:8px;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.run-banner span{color:#43505d}
+
+
+.new-badge{display:inline-block;background:#ffe16b;color:#5a4700;border-radius:999px;padding:5px 9px;font-size:11px;font-weight:800}
+.new-row{background:#fffbea}
+.new-card{border:2px solid #f1c40f}
+
+
+#tab-live-full .new-row{background:#fffbea}
+#tab-live-full .source-link{font-weight:700}
+
+
+/* Global table readability fix — applies to every tab */
+table th, table td { box-sizing:border-box; }
+table th { height:auto; }
+table td a { overflow-wrap:anywhere; }
+table th:last-child, table td:last-child { min-width:115px; }
+@media (max-width:1100px){
+  table{min-width:1000px}
+  th,td{font-size:11.5px;padding:8px}
+}
+
+
+.tab-nav{
+  display:inline-block !important;
+  position:relative;
+  z-index:1000;
+  pointer-events:auto !important;
+  cursor:pointer !important;
+  text-decoration:none !important;
+}
+.tab-nav.active{
+  font-weight:800;
+}
+.tab-section{
+  display:none;
+  position:relative;
+  z-index:1;
+}
+.tab-section.active{
+  display:block !important;
+}
+
+
+.tab-section:not(.active){display:none !important}
+.tab-section.active{display:block !important}
+
+
+/* Modern, compact tab bar */
+.tabs,
+nav.tabs,
+.tab-bar,
+.nav-tabs {
+  display:flex !important;
+  flex-wrap:wrap !important;
+  align-items:center !important;
+  gap:8px !important;
+  padding:10px 12px !important;
+  margin:0 0 22px 0 !important;
+  background:rgba(248,250,252,.96) !important;
+  border:1px solid #e2e8f0 !important;
+  border-radius:16px !important;
+  box-shadow:0 6px 20px rgba(15,23,42,.06) !important;
+  position:sticky !important;
+  top:10px !important;
+  z-index:900 !important;
+  backdrop-filter:blur(10px) !important;
+}
+
+.tab-nav {
+  appearance:none !important;
+  -webkit-appearance:none !important;
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  min-height:40px !important;
+  padding:9px 15px !important;
+  border:1px solid transparent !important;
+  border-radius:11px !important;
+  background:transparent !important;
+  color:#475569 !important;
+  font-size:13px !important;
+  font-weight:700 !important;
+  line-height:1.2 !important;
+  white-space:nowrap !important;
+  text-decoration:none !important;
+  transition:all .18s ease !important;
+  box-shadow:none !important;
+}
+
+.tab-nav:hover {
+  color:#0f172a !important;
+  background:#ffffff !important;
+  border-color:#dbe3ec !important;
+  transform:translateY(-1px) !important;
+  box-shadow:0 3px 10px rgba(15,23,42,.06) !important;
+}
+
+.tab-nav.active {
+  color:#ffffff !important;
+  background:linear-gradient(135deg,#172554,#2563eb) !important;
+  border-color:#1d4ed8 !important;
+  box-shadow:0 5px 14px rgba(37,99,235,.24) !important;
+}
+
+.tab-nav:focus-visible {
+  outline:3px solid rgba(59,130,246,.25) !important;
+  outline-offset:2px !important;
+}
+
+/* Mobile / narrow screens */
+@media (max-width: 900px) {
+  .tabs,
+  nav.tabs {
+    position:relative !important;
+    top:auto !important;
+    overflow-x:auto !important;
+    flex-wrap:nowrap !important;
+    scrollbar-width:thin !important;
+  }
+  .tab-nav {
+    flex:0 0 auto !important;
+  }
+}
+
+/* Better section separation after switching tabs */
+.tab-section.active {
+  animation:tabFadeIn .16s ease-out;
+}
+@keyframes tabFadeIn {
+  from { opacity:.65; transform:translateY(3px); }
+  to { opacity:1; transform:translateY(0); }
+}
+
+
+.radar-tab-caption{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin:0 0 10px 2px;
+  color:#64748b;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.03em;
+  text-transform:uppercase;
+}
+.radar-tab-caption .dot{
+  width:7px;height:7px;border-radius:50%;
+  background:#2563eb;display:inline-block;
+  box-shadow:0 0 0 4px rgba(37,99,235,.10);
+}
+
+
+/* No-JavaScript tab system: works from local file, GitHub Pages and webviews. */
+.tab-section{
+  display:none !important;
+  max-width:1600px;
+  margin:auto;
+  padding:22px;
+}
+#tab-overview{
+  display:block !important;
+}
+body:has(.tab-section:target) #tab-overview{
+  display:none !important;
+}
+.tab-section:target{
+  display:block !important;
+}
+
+/* Active tab follows the URL hash. */
+.tab-nav{
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  position:relative !important;
+  z-index:1001 !important;
+  pointer-events:auto !important;
+  cursor:pointer !important;
+  text-decoration:none !important;
+}
+.tab-nav.active{ /* retained for compatibility */
+  color:#fff !important;
+}
+body:not(:has(.tab-section:target)) .tab-nav[href="#tab-overview"],
+body:has(#tab-overview:target) .tab-nav[href="#tab-overview"],
+body:has(#tab-live-full:target) .tab-nav[href="#tab-live-full"],
+body:has(#tab-full-inventory:target) .tab-nav[href="#tab-full-inventory"],
+body:has(#tab-jesolo:target) .tab-nav[href="#tab-jesolo"],
+body:has(#tab-caorle:target) .tab-nav[href="#tab-caorle"],
+body:has(#tab-cavallino:target) .tab-nav[href="#tab-cavallino"],
+body:has(#tab-san-dona:target) .tab-nav[href="#tab-san-dona"],
+body:has(#tab-treviso:target) .tab-nav[href="#tab-treviso"],
+body:has(#tab-global-matrix:target) .tab-nav[href="#tab-global-matrix"],
+body:has(#tab-price-history:target) .tab-nav[href="#tab-price-history"],
+body:has(#tab-planned:target) .tab-nav[href="#tab-planned"],
+body:has(#tab-sources:target) .tab-nav[href="#tab-sources"],
+body:has(#tab-jbc-source:target) .tab-nav[href="#tab-jbc-source"]{
+  color:#fff !important;
+  background:linear-gradient(135deg,#172554,#2563eb) !important;
+  border-color:#1d4ed8 !important;
+  box-shadow:0 5px 14px rgba(37,99,235,.24) !important;
+}
+.tab-nav:hover{
+  color:#0f172a !important;
+  background:#fff !important;
+  border-color:#dbe3ec !important;
+  transform:translateY(-1px) !important;
+}
+.tabs{
+  display:flex !important;
+  flex-wrap:wrap !important;
+  align-items:center !important;
+  gap:8px !important;
+  padding:10px 12px !important;
+  margin:0 0 22px 0 !important;
+  background:rgba(248,250,252,.96) !important;
+  border:1px solid #e2e8f0 !important;
+  border-radius:16px !important;
+  box-shadow:0 6px 20px rgba(15,23,42,.06) !important;
+  position:sticky !important;
+  top:10px !important;
+  z-index:1000 !important;
+  backdrop-filter:blur(10px) !important;
+}
+
+
+/* Definitive GitHub Pages tab controller.  No :target dependency. */
+.tab-section,
+.tab-section:not(.active),
+.tab-section:target { display:none !important; }
+.tab-section.active { display:block !important; }
+.tab-nav.active {
+  color:#fff !important;
+  background:linear-gradient(135deg,#172554,#2563eb) !important;
+  border-color:#1d4ed8 !important;
+  box-shadow:0 5px 14px rgba(37,99,235,.24) !important;
+}
+
+
+.citation-badge{display:inline-flex;align-items:center;gap:3px;margin-left:5px;padding:2px 7px;border-radius:999px;font-size:10px;line-height:1.3;font-weight:800;text-decoration:none !important;vertical-align:middle;white-space:nowrap}
+.web-citation{color:#1457b7 !important;background:#eaf2ff;border:1px solid #c9dcff}
+.file-citation{color:#166534 !important;background:#eaf8ee;border:1px solid #c8e8d2}
+.citation-badge:hover{transform:translateY(-1px);box-shadow:0 2px 7px rgba(15,23,42,.12)}
+.citation-note{font-size:12px}
+
+</style>
+<style>
+/* RADAR V2 SHELL */
+html { scroll-behavior:smooth; }
+body { background:#f2f5f8 !important; }
+.radar-shell-header { background:#17243b;color:#fff;padding:28px; }
+.radar-shell-header h1 { margin:0 0 8px;font-size:34px; }
+.radar-shell-header .sub { opacity:.86; }
+.radar-nav {
+  position:sticky; top:0; z-index:9999;
+  display:flex; flex-wrap:wrap; gap:8px;
+  padding:12px 16px; margin:0;
+  background:rgba(255,255,255,.97);
+  border-bottom:1px solid #d9e0e8;
+  box-shadow:0 5px 18px rgba(15,23,42,.08);
+  backdrop-filter:blur(10px);
+}
+.radar-tab {
+  border:1px solid #dce3eb; background:#f3f6fa; color:#40516a;
+  border-radius:12px; padding:10px 14px; font-weight:750;
+  cursor:pointer; text-decoration:none; display:inline-flex; align-items:center;
+  min-height:40px; transition:.16s ease;
+}
+.radar-tab:hover { background:#fff; transform:translateY(-1px); }
+.radar-tab.active { color:#fff; background:linear-gradient(135deg,#18316b,#2864e6); border-color:#2258d3; box-shadow:0 5px 15px rgba(37,99,235,.22); }
+.radar-section { display:none; max-width:1600px; margin:auto; padding:24px 22px 50px; scroll-margin-top:88px; }
+.radar-section.active { display:block; }
+.radar-error {
+  max-width:900px;margin:70px auto;padding:24px;border-radius:16px;
+  background:#fff1f2;border:1px solid #fecdd3;color:#881337;
+}
+.radar-loading { max-width:900px;margin:70px auto;padding:24px;border-radius:16px;background:#fff; }
+.radar-meta {
+  display:flex; flex-wrap:wrap; gap:10px; margin:12px 0 18px;
+}
+.radar-meta span {
+  background:#fff;border:1px solid #e1e7ee;border-radius:10px;padding:8px 12px;font-size:12px;font-weight:700;color:#526276;
+}
+.radar-delta-up { color:#15803d !important; }
+.radar-delta-down { color:#b91c1c !important; }
+@media(max-width:800px) {
+  .radar-nav { overflow-x:auto; flex-wrap:nowrap; }
+  .radar-tab { flex:0 0 auto; }
+  .radar-section { padding:18px 12px 40px; scroll-margin-top:72px; }
+}
+</style>
+</head>
+<body>
+<header class="radar-shell-header">
+  <h1>Adriatic New Build Radar</h1>
+  <div class="sub">FULL INVENTORY • Project → Unit → Listing • NEW ≤30D • Price History • Data-driven V2</div>
+</header>
+
+<nav id="radar-nav" class="radar-nav" aria-label="Radar sections"></nav>
+<div id="radar-meta" class="radar-meta" style="padding:10px 18px;margin:0;"></div>
+<main id="radar-content">
+  <div class="radar-loading"><b>Завантаження Radar data…</b><br>Читаю <code>data/current.json</code>.</div>
+</main>
+
+<script>
+const DATA_URL = 'data/current.json';
+const NAV = {"tab-overview": "Overview", "tab-live-full": "🔴 LIVE FULL INVENTORY", "tab-full-inventory": "FULL INVENTORY", "tab-jesolo": "Jesolo", "tab-caorle": "Caorle", "tab-cavallino": "Cavallino", "tab-san-dona": "San Donà", "tab-treviso": "Treviso", "tab-global-matrix": "Global Matrix", "tab-price-history": "Price History", "tab-planned": "Planned / Pipeline", "tab-jbc-source": "JBC Source", "tab-sources": "Sources"};
+
+function esc(v) {
+  return String(v ?? '').replace(/[&<>"']/g, s => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[s]));
+}
+
+function renderNav(sections) {
+  const nav=document.getElementById('radar-nav');
+  nav.innerHTML='';
+  sections.forEach(s=>{
+    const a=document.createElement('a');
+    a.className='radar-tab';
+    a.href='#'+s.id;
+    a.dataset.tab=s.id;
+    a.textContent=s.label;
+    a.addEventListener('click',e=>{
+      e.preventDefault();
+      activate(s.id,true);
+    });
+    nav.appendChild(a);
+  });
+}
+
+function activate(id, updateHash) {
+  document.querySelectorAll('.radar-section').forEach(s=>s.classList.toggle('active',s.id===id));
+  document.querySelectorAll('.radar-tab').forEach(t=>t.classList.toggle('active',t.dataset.tab===id));
+  if(updateHash) history.replaceState(null,'','#'+id);
+  const target=document.getElementById(id);
+  if(target) setTimeout(()=>target.scrollIntoView({block:'start',behavior:'smooth'}),0);
+}
+
+function renderMeta(data) {
+  const m=document.getElementById('radar-meta');
+  const vals=Object.entries(data.inventory_counts||{});
+  const total=vals.reduce((a,[,v])=>a+(Number(v.portal_inventory)||0),0);
+  m.innerHTML =
+    `<span>Radar run: <b>${esc(data.run_date)}</b></span>`+
+    `<span>Portal inventory total: <b>${total.toLocaleString('en-US')}</b></span>`+
+    `<span>Locations: <b>${vals.length}</b></span>`+
+    `<span>Data source: <b>data/current.json</b></span>`;
+}
+
+
+function addObjectLayerAudit(data) {
+  const sec=document.getElementById('tab-full-inventory');
+  if(!sec) return;
+  const old=sec.querySelector('.radar-object-audit');
+  if(old) old.remove();
+  const box=document.createElement('div');
+  box.className='radar-object-audit';
+  box.style.cssText='margin:0 0 18px;padding:16px;border-radius:14px;background:#f6f7ff;border:1px solid #dfe3ff;';
+  box.innerHTML=`<h3 style="margin-top:0">🧩 Project → Unit → Listing layer</h3>
+  <p style="margin-top:0">Нижче відображається нормалізований object layer. Він окремий від portal inventory count: 388 результатів порталу не означають 388 унікальних проєктів.</p>
+  <div id="radar-object-audit-table">Завантаження objects.json…</div>`;
+  sec.insertBefore(box, sec.firstChild);
+  fetch('data/objects.json?v='+Date.now(), {cache:'no-store'})
+    .then(r=>{if(!r.ok) throw new Error('HTTP '+r.status); return r.json();})
+    .then(o=>{
+      let rows='';
+      for(const [loc,n] of Object.entries(o.counts?.by_location||{})){
+        rows += `<tr><td><b>${esc(loc)}</b></td><td>${Number(n).toLocaleString('en-US')}</td></tr>`;
+      }
+      document.getElementById('radar-object-audit-table').innerHTML=
+        `<div class="tablewrap"><table><thead><tr><th>Location</th><th>Captured normalized listings</th></tr></thead><tbody>${rows}</tbody></table></div>
+        <p style="font-size:12px;color:#64748b;margin-bottom:0">Current migrated layer: ${Number(o.counts?.total_captured_listings||0).toLocaleString('en-US')} concrete listings. Future runs will expand this layer from live sources.</p>`;
+    })
+    .catch(err=>{
+      document.getElementById('radar-object-audit-table').textContent='objects.json: '+err.message;
+    });
+}
+
+function addInventoryAudit(data) {
+  // Adds live deltas to the FULL INVENTORY section without rewriting its stored HTML.
+  const sec=document.getElementById('tab-full-inventory');
+  if(!sec) return;
+  const existing=sec.querySelector('.radar-v2-audit');
+  if(existing) existing.remove();
+  const box=document.createElement('div');
+  box.className='radar-v2-audit';
+  box.style.cssText='margin:0 0 18px;padding:16px;border-radius:14px;background:#eef6ff;border:1px solid #cfe0ff;';
+  let rows='';
+  for(const [loc,v] of Object.entries(data.inventory_counts||{})) {
+    const prev=data.previous_snapshot?.inventory_counts?.[loc]?.portal_inventory;
+    const cur=Number(v.portal_inventory)||0;
+    const delta=(prev==null)?null:cur-Number(prev);
+    let d=delta==null?'—':(delta>0?`+${delta}`:`${delta}`);
+    rows+=`<tr><td><b>${esc(loc)}</b></td><td>${cur.toLocaleString('en-US')}</td><td>${Number(v.captured_concrete_rows||0)}</td><td class="${delta>0?'radar-delta-up':delta<0?'radar-delta-down':''}">${d}</td></tr>`;
+  }
+  box.innerHTML=`<h3 style="margin-top:0">🔄 Data-driven inventory audit</h3>
+  <p style="margin-top:0">Ці цифри беруться з <code>data/current.json</code>. Наступний radar run змінить JSON — сайт покаже нові значення без редагування <code>index.html</code>.</p>
+  <div class="tablewrap"><table><thead><tr><th>Location</th><th>Portal inventory</th><th>Captured rows</th><th>Δ vs previous</th></tr></thead><tbody>${rows}</tbody></table></div>`;
+  sec.insertBefore(box, sec.firstChild);
+}
+
+async function boot() {
+  try {
+    const res=await fetch(DATA_URL+'?v='+Date.now(), {cache:'no-store'});
+    if(!res.ok) throw new Error('HTTP '+res.status+' while loading '+DATA_URL);
+    const data=await res.json();
+
+    renderNav(data.sections);
+    const main=document.getElementById('radar-content');
+    main.innerHTML='';
+    data.sections.forEach(s=>{
+      const sec=document.createElement('section');
+      sec.id=s.id;
+      sec.className='radar-section';
+      sec.innerHTML=s.html;
+      main.appendChild(sec);
+    });
+    renderMeta(data);
+    addInventoryAudit(data);
+    addObjectLayerAudit(data);
+
+    const wanted=location.hash.replace('#','');
+    const first=data.sections[0]?.id;
+    activate(data.sections.some(s=>s.id===wanted)?wanted:first,false);
+  } catch(err) {
+    document.getElementById('radar-content').innerHTML=
+      `<div class="radar-error"><h2>Radar data не завантажилися</h2>
+      <p><b>${esc(err.message)}</b></p>
+      <p>Перевір, що <code>data/current.json</code> знаходиться в репозиторії поруч із <code>index.html</code>.</p></div>`;
+  }
+}
+window.addEventListener('hashchange',()=>{
+  const id=location.hash.replace('#','');
+  if(document.getElementById(id)) activate(id,false);
+});
+boot();
+</script>
+</body>
+</html>
