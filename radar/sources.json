@@ -1,0 +1,72 @@
+{
+  "jesolo": [
+    {
+      "name": "idealista_new_build",
+      "url": "https://www.idealista.it/vendita-case/jesolo-venezia/con-nuova-costruzione/",
+      "max_pages": 100
+    },
+    {
+      "name": "idealista_projects",
+      "url": "https://www.idealista.it/vendita-nuove_costruzioni/jesolo-venezia/",
+      "max_pages": 100
+    },
+    {
+      "name": "casa_new_build",
+      "url": "https://www.casa.it/vendita/residenziale/in-nuove-costruzioni/jesolo/",
+      "max_pages": 100
+    },
+    {
+      "name": "jbc_direct",
+      "url": "https://www.jbcimmobiliare.it/",
+      "max_pages": 20
+    }
+  ],
+  "caorle": [
+    {
+      "name": "idealista_new_build",
+      "url": "https://www.idealista.it/vendita-case/caorle-venezia/con-nuova-costruzione/",
+      "max_pages": 100
+    },
+    {
+      "name": "jbc_direct",
+      "url": "https://www.jbcimmobiliare.it/",
+      "max_pages": 20
+    }
+  ],
+  "cavallino-treporti": [
+    {
+      "name": "idealista_new_build",
+      "url": "https://www.idealista.it/vendita-case/cavallino-treporti-venezia/con-nuova-costruzione/",
+      "max_pages": 100
+    },
+    {
+      "name": "idealista_apartments",
+      "url": "https://www.idealista.it/vendita-case/cavallino-treporti-venezia/con-appartamenti%2Cnuova-costruzione/",
+      "max_pages": 100
+    }
+  ],
+  "san-dona-di-piave": [
+    {
+      "name": "idealista_new_build",
+      "url": "https://www.idealista.it/vendita-case/san-dona-di-piave-venezia/con-nuova-costruzione/",
+      "max_pages": 100
+    },
+    {
+      "name": "casa_new_build",
+      "url": "https://www.casa.it/vendita/residenziale/in-nuove-costruzioni/san-dona-di-piave/",
+      "max_pages": 100
+    }
+  ],
+  "treviso": [
+    {
+      "name": "idealista_projects",
+      "url": "https://www.idealista.it/vendita-nuove_costruzioni/treviso-treviso/",
+      "max_pages": 100
+    },
+    {
+      "name": "idealista_new_build",
+      "url": "https://www.idealista.it/vendita-case/treviso-treviso/con-nuova-costruzione/",
+      "max_pages": 100
+    }
+  ]
+}
