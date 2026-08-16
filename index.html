@@ -1,0 +1,683 @@
+<!doctype html><html lang='uk'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Adriatic New Build Radar — Master Report</title><style>
+*{box-sizing:border-box}body{margin:0;background:#f2f5f8;color:#182332;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}header{background:#17243b;color:#fff;padding:28px}h1{margin:0}.sub{opacity:.8}.tabs{display:flex;gap:7px;flex-wrap:wrap;background:#fff;padding:12px;position:sticky;top:0;z-index:10;border-bottom:1px solid #ddd}.tab{padding:10px 12px;border-radius:9px;background:#e9edf3;color:#17202a;text-decoration:none;font-weight:650}.tab-section{display:none;max-width:1600px;margin:auto;padding:22px}.tab-section:target{display:block}#tab-overview{display:block}body:has(.tab-section:target) #tab-overview:not(:target){display:none}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}.card,.stats>div,.delta>div{background:#fff;border-radius:14px;padding:15px;box-shadow:0 2px 10px #0001}.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}.stats small,.delta small{display:block;color:#697584}.stats b,.delta b{font-size:24px}.price{font-size:22px;font-weight:750;margin:7px 0}.tag{display:inline-block;background:#edf2fa;border-radius:999px;padding:4px 8px;font-size:11px;font-weight:700}.good{background:#e9f7ed;border-left:4px solid #2d8a4b;padding:14px;border-radius:8px;margin:15px 0}.note{background:#fff7dd;border-left:4px solid #d69b00;padding:14px;border-radius:8px;margin:15px 0}.muted{color:#68737f}.tablewrap{overflow:auto;background:#fff;border-radius:14px}table{border-collapse:collapse;width:100%;min-width:1350px;table-layout:auto}
+th,td{padding:10px 9px;border-bottom:1px solid #e7ebef;text-align:left;font-size:12px;vertical-align:top;line-height:1.35;white-space:normal}
+th{background:#edf1f5;position:static;font-weight:800;white-space:normal;overflow-wrap:anywhere;word-break:normal;vertical-align:middle;line-height:1.25}
+td{overflow-wrap:anywhere}
+.tablewrap{overflow-x:auto;overflow-y:visible;background:#fff;border-radius:14px}
+.tablewrap table{margin:0}
+.tablewrap th{min-width:90px}
+.tablewrap th:first-child{min-width:120px}.chart{background:#fff;border-radius:14px;padding:16px;box-shadow:0 2px 10px #0001}.bar{display:grid;grid-template-columns:260px 1fr 120px;gap:10px;align-items:center;margin:9px 0;font-size:12px}.bar i{height:12px;background:#e5e9ee;border-radius:9px;overflow:hidden}.bar i b{display:block;height:100%;background:#17243b;border-radius:9px}.delta{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}a{color:#1457b7;text-decoration:underline;cursor:pointer}@media(max-width:700px){.bar{grid-template-columns:1fr}.tab-section{padding:14px}}
+.source-link{display:inline-block;margin-top:8px;font-weight:700}.source-link:after{content:' ↗'}
+</style></head><body>
+<header><h1>Adriatic New Build Radar</h1><div style='margin-top:8px;font-size:13px;opacity:.9'>🔗 Назва кожного об'єкта в звіті — активне посилання на першоджерело.</div><div class='sub'>Master HTML report · FULL INVENTORY + 30-day NEW detection · 16.08.2026 · усі джерела клікабельні</div></header>
+
+<div class="run-banner">
+  <b>🔄 MANUAL RADAR RUN — 16.08.2026</b>
+  <span>Поточний прохід: нові/ранні проєкти, 3+ спальні, ≤ €400k, море ≤300 м, planned pipeline, price history.</span>
+</div>
+<style>
+.run-banner{margin:14px 22px;padding:14px 16px;background:#e9f7ed;border-left:4px solid #2d8a4b;border-radius:8px;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.run-banner span{color:#43505d}
+</style>
+<div class="radar-tab-caption"><span class="dot"></span>Radar sections</div><nav class='tabs'>
+<a class="tab-nav" href="#tab-overview" data-tab="tab-overview" role="tab">Overview</a><a class="tab-nav" href="#tab-live-full" data-tab="tab-live-full" role="tab">🔴 LIVE FULL INVENTORY</a><a class="tab-nav" href="#tab-full-inventory" data-tab="tab-full-inventory" role="tab">FULL INVENTORY</a><a class="tab-nav" href="#tab-jesolo" data-tab="tab-jesolo" role="tab">Jesolo</a><a class="tab-nav" href="#tab-caorle" data-tab="tab-caorle" role="tab">Caorle</a><a class="tab-nav" href="#tab-cavallino" data-tab="tab-cavallino" role="tab">Cavallino</a><a class="tab-nav" href="#tab-san-dona" data-tab="tab-san-dona" role="tab">San Donà</a><a class="tab-nav" href="#tab-treviso" data-tab="tab-treviso" role="tab">Treviso</a><a class="tab-nav" href="#tab-global-matrix" data-tab="tab-global-matrix" role="tab">Global Matrix</a><a class="tab-nav" href="#tab-price-history" data-tab="tab-price-history" role="tab">Price History</a><a class="tab-nav" href="#tab-planned" data-tab="tab-planned" role="tab">Planned / Pipeline</a><a class="tab-nav" href="#tab-sources" data-tab="tab-sources" role="tab">Sources</a><a class="tab-nav" href="#tab-jbc-source" data-tab="tab-jbc-source" role="tab">JBC Source</a>
+</nav>
+<section id='tab-overview' class='tab-section'>
+<h2>Executive Radar — 16.08.2026</h2>
+<div class='stats'><div><small>Locations</small><b>5</b></div><div><small>Verified options</small><b>26</b></div><div><small>Budget target</small><b>≤ €400k</b></div><div><small>Search horizon</small><b>1–3 years</b></div></div>
+<div class='good'><b>Радар розширено:</b> кожна локація тепер має inventory + локальну Price Matrix + €/m² + графік + Price Delta + buyer ranking + early-stage projects.</div>
+<h3>🔥 Top opportunities</h3><div class='grid'><div class='card'><span class='tag'>EARLY</span><h3>Via Levantina / 2026 L</h3><div class='price'>Price on request</div><div>Apartment · 3 BR · 110+ m² · 50 m</div><p>8 units; one apartment/floor; 40+ m² living; 50+ m² terraces; sea view</p><b>9.5/10</b></div><div class='card'><span class='tag'>EARLY</span><h3>Residence Miami Villetta</h3><div class='price'>€399k</div><div>Villa / bifamiliare · 3 BR · 140 m² · —</div><p>250 m² garden; garage + parking; PV 4.5 kW</p><b>9.5/10</b></div><div class='card'><span class='tag'>ACTIVE</span><h3>Lido Altanea — EZ026</h3><div class='price'>€329k</div><div>Apartment · 2–3 BR · 95 m² · 200 m</div><p>pool; grezzo avanzato; terrace</p><b>9.1/10</b></div><div class='card'><span class='tag'>NEW</span><h3>Lido Altanea — PA-A01C</h3><div class='price'>€353k</div><div>Apartment · 2–3 BR · 101 m² · 50 m</div><p>ground floor; garden; pool; fronte mare listing</p><b>9.2/10</b></div><div class='card'><span class='tag'>ACTIVE</span><h3>Ca&#x27; del Mar</h3><div class='price'>€265–410k</div><div>Apartment / townhouse · 2–3 BR · 95+ m² · —</div><p>13 units: 12 apartments + villa; 13 garages + 14 outdoor spaces; heat-pump floor heating</p><b>9.0/10</b></div><div class='card'><span class='tag'>ACTIVE</span><h3>SUN VILLAGE</h3><div class='price'>€283–287k</div><div>Townhouse / trivilla · 3 BR · 115 m² · —</div><p>6 units; gardens; PV 3 kW; heat-pump floor heating</p><b>9.2/10</b></div></div>
+
+<h3>🔎 Результати цього запуску</h3>
+<div class="grid">
+<div class="mini-card"><span class="tag">JESOLO · EARLY</span>
+<h3>Via Levantina / 2026 L</h3>
+<p><b>8 units · 3 BR · 110+ m² · 50 m до моря · 50+ m² тераси · 2027.</b> Ціна не опублікована — головний об'єкт для отримання стартового price list.</p>
+<a class="source-link" href="https://www.immobiliare.it/annunci/120992260/" target="_blank" rel="noopener noreferrer">Open source</a>
+</div>
+<div class="mini-card"><span class="tag">CAORLE · NEW</span>
+<h3>Lido Altanea cluster</h3>
+<p>Підтверджено кілька 2027 units у межах приблизно <b>€326–396k</b>, що дає хороший benchmark для нашого бюджету.</p>
+<a class="source-link" href="https://www.immobiliare.it/nuove-costruzioni/caorle/" target="_blank" rel="noopener noreferrer">Open source</a>
+</div>
+<div class="mini-card"><span class="tag">CAVALLINO · ACTIVE</span>
+<h3>Ca' del Mar</h3>
+<p><b>€265–410k · 13 units · works 01/07/2026–31/12/2027</b>, гаражі + outdoor parking.</p>
+<a class="source-link" href="https://www.immobiliare.it/annunci/130650156/" target="_blank" rel="noopener noreferrer">Open source</a>
+</div>
+<div class="mini-card"><span class="tag">SAN DONÀ · VALUE</span>
+<h3>SUN VILLAGE</h3>
+<p><b>€283–287k · 115 m² · 3 BR · delivery Sep 2027.</b> Один із найсильніших value candidates поза морем.</p>
+<a class="source-link" href="https://www.immobiliare.it/annunci/128927138/" target="_blank" rel="noopener noreferrer">Open source</a>
+</div>
+</div>
+<h3>🏗️ Urban / infrastructure signals</h3>
+<div class="note">
+<b>Jesolo:</b> Comune у DUP 2026–2028 прямо вказує продовження роботи з PUA, включно з новими PUA та дозволами на urbanisation, а також значними обсягами проєктів у fascia dei 300 metri dall'arenile. Це підтверджує, що pipeline нових development існує, але кожен конкретний житловий проєкт потрібно підтверджувати окремо.
+<a class="source-link" href="https://static-www.comune.jesolo.ve.it/wp-content/uploads/2026/03/Documento_Unico_di_Programmazione_2026_2028.pdf" target="_blank" rel="noopener noreferrer">Comune Jesolo — DUP 2026–2028</a>
+</div>
+
+<div class='note'><b>FULL INVENTORY rule:</b> тепер радар не обмежує Jesolo 8 “top picks”. У Full Inventory потрапляють усі знайдені релевантні projects/units/listings з основних порталів і локальних джерел. Я розділяю <b>Project</b>, <b>Unit</b> і <b>Listing</b>, щоб не рахувати 10 оголошень одного development як 10 різних проєктів. Об'єкти поза бюджетом не видаляються — вони маркуються як OVER BUDGET. </div>
+
+<div class='note jbc-required'>
+<b>🔵 JBC IMMOBILIARE — ОБОВ'ЯЗКОВЕ ПЕРШОДЖЕРЕЛО</b><br><span class='muted'>Вимога за Першоджерело.txt: JBC має той самий обов'язковий шар, що й основні портали.</span><br>
+JBC тепер є окремим mandatory source layer радара, незалежно від Immobiliare.it.
+<br><br>
+<a class='source-link' href='https://www.jbcimmobiliare.it/' target='_blank' rel='noopener noreferrer'>JBC Immobiliare — власний сайт ↗</a>
+&nbsp;&nbsp;
+<a class='source-link' href='https://www.jbcimmobiliare.it/nuove-costruzioni/' target='_blank' rel='noopener noreferrer'>JBC — Nuove costruzioni ↗</a>
+&nbsp;&nbsp;
+<a class='source-link' href='https://www.immobiliare.it/agenzie-immobiliari/417291/jbc-ponte-di-piave-treviso/' target='_blank' rel='noopener noreferrer'>JBC — Immobiliare.it profile ↗</a>
+<p style='margin-bottom:0'>
+<strong>Правило:</strong> під час кожного запуску спочатку окремо перевіряти власний inventory JBC, включно з новими проєктами, villette, bifamiliari, trifamiliari та nuove costruzioni у Jesolo, Jesolo Paese/Ca' Gamba, Eraclea, Ponte di Piave, Fossalta di Piave, Noventa di Piave, San Donà di Piave та прилеглих зонах. Потім порівнювати ці об'єкти з Immobiliare/Idealista/Casa.it.
+</p>
+</div>
+
+<div class='note'><b>FULL INVENTORY v2:</b> радар тепер шукає не лише активні listings. Він має окремі шари для <b>current units</b>, <b>projects</b>, <b>pre-launch</b>, <b>planned/pipeline</b>, <b>direct developer sales</b> та <b>urban-planning signals</b>. Об'єкти поза бюджетом не видаляються; вони залишаються для повноти ринку і маркуються OVER BUDGET. Project / Unit / Listing дедуплікуються окремо. Ця логіка відповідає Першоджерело.txt. fileciteturn6file2turn6file3</div>
+<div class='note'><b>Permanent 30-day rule:</b> кожен наступний запуск порівнюється з усіма збереженими radar snapshots за попередні 30 днів. Якщо Project/Unit/Listing не зустрічався там — він отримує 🆕 NEW TO RADAR ≤30D. Після запуску поточний snapshot стає baseline для наступного порівняння.</div><h3>Що ще відстежуємо</h3>
+<ul><li>new projects / pre-launch / planned construction;</li><li>3+ bedrooms;</li><li>sea view / ≤300 m sea priority;</li><li>apartments vs townhouse/villa;</li><li>parking / garage / terrace / pool / garden;</li><li>energy class / heating / PV / EV;</li><li>construction start and delivery;</li><li>asking price and €/m²;</li><li>price increases/decreases with date;</li><li>estimated market value and forecast price where asking is absent;</li><li>condominio / extraordinary works / planning risks where available;</li><li>future PUA / urban-development pipeline.</li></ul>
+<div class='note'><b>Jesolo pipeline:</b> Comune прямо в DUP 2026–2028 вказує продовження PUA, permission for urbanisation works, existing and new PUA, зокрема в 300 m coastal band. Це важливо для нашого 1–3 year radar, але не означає автоматично, що кожен PUA стане житловою новобудовою. citeturn0search59</div>
+</section>
+<section id='tab-jesolo' class='tab-section'>
+<h2>Jesolo — повний звіт</h2>
+<div class='stats'><div><small>Options</small><b>20+</b></div><div><small>≤ €400k</small><b>7</b></div><div><small>Early / planned</small><b>4</b></div><div><small>3+ bedrooms</small><b>8</b></div></div>
+<h3>📊 Графік Asking Price</h3><div class='chart'><div class='bar'><span>Residence Miami Villetta</span><i><b style='width:81.4%'></b></i><strong>€399</strong></div><div class='bar'><span>J ELEVEN</span><i><b style='width:68.4%'></b></i><strong>€335</strong></div><div class='bar'><span>Residence J8</span><i><b style='width:82.7%'></b></i><strong>€405</strong></div><div class='bar'><span>Flamingo Residence</span><i><b style='width:75.5%'></b></i><strong>€370</strong></div><div class='bar'><span>JES TOWER</span><i><b style='width:90.8%'></b></i><strong>€445</strong></div><div class='bar'><span>Marlin Tower</span><i><b style='width:100.0%'></b></i><strong>€490</strong></div><div class='bar'><span>Wave Twin Towers</span><i><b style='width:98.0%'></b></i><strong>€480</strong></div></div>
+<h3>💶 Price Matrix — Jesolo</h3>
+<div class='tablewrap'><table><thead><tr><th>Status</th><th>Project / unit</th><th>Type</th><th>BR</th><th>Area</th><th>ASKING PRICE</th><th>ASKING €/m²</th><th>Sea</th><th>Delivery</th><th>Equipment / risks</th><th>Source</th></tr></thead><tbody><tr><td>EARLY</td><td><b>Via Levantina / 2026 L</b></td><td>Apartment</td><td>3</td><td>110+</td><td>Price on request</td><td>n/d</td><td>50 m</td><td>2027</td><td>8 units; one apartment/floor; 40+ m² living; 50+ m² terraces; sea view</td><td><a class='source-link' href='https://www.immobiliare.it/annunci/120992260/' target='_blank' rel='noopener noreferrer'>Open source</a></td></tr><tr><td>EARLY</td><td><b>Residence Miami Villetta</b></td><td>Villa / bifamiliare</td><td>3</td><td>140</td><td>€399k</td><td>~€2,850*</td><td>—</td><td>2027</td><td>250 m² garden; garage + parking; PV 4.5 kW</td><td><a class='source-link' href='https://www.immobiliare.it/annunci/129181994/' target='_blank' rel='noopener noreferrer'>Open source</a></td></tr><tr><td>NEW</td><td><b>J ELEVEN</b></td><td>Apartment</td><td>2–3</td><td>88+</td><td>€335–445k</td><td>~€3.8k+*</td><td>—</td><td>planned</td><td>covered parking; EV predisposition; bike parking</td><td><a class='source-link' href='https://www.immobiliare.it/annunci/129834378/' target='_blank' rel='noopener noreferrer'>Open source</a></td></tr><tr><td>NEW</td><td><b>Residence J8</b></td><td>Apartment</td><td>2–3</td><td>94+</td><td>€405k</td><td>~€4.3k*</td><td>—</td><td>planned</td><td>double covered parking; EV predisposition; bike parking</td><td><a class='source-link' href='https://www.immobiliare.it/annunci/130588732/' target='_blank' rel='noopener noreferrer'>Open source</a></td></tr><tr><td>ACTIVE</td><td><b>Flamingo Residence</b></td><td>Apartment</td><td>2–3</td><td>—</td><td>€370–430k</td><td>n/d</td><td>—</td><td>2026</td><td>32 apartments / 8 buildings; 2 pools; gardens/large terraces</td><td><a class='source-link' href='https://www.immobiliare.it/annunci/116672781/' target='_blank' rel='noopener noreferrer'>Open source</a></td></tr><tr><td>ACTIVE</td><td><b>JES TOWER</b></td><td>Apartment</td><td>2–3</td><td>95+</td><td>€445–560k</td><td>~€4.7k+*</td><td>&lt;50 m</td><td>2027</td><td>9 floors; A4; central Piazza Trieste</td><td><a class='source-link' href='https://www.immobiliare.it/annunci/128989142/' target='_blank' rel='noopener noreferrer'>Open source</a></td></tr><tr><td>ACTIVE</td><td><b>Marlin Tower</b></td><td>Apartment</td><td>2–4+</td><td>91+</td><td>€490–640k</td><td>~€5.4k+*</td><td>—</td><td>active</td><td>upper floors; sea/lagoon panorama</td><td><a class='source-link' href='https://www.immobiliare.it/annunci/110584181/' target='_blank' rel='noopener noreferrer'>Open source</a></td></tr><tr><td>ACTIVE</td><td><b>Wave Twin Towers</b></td><td>Apartment</td><td>2–3</td><td>70+</td><td>€480k+</td><td>~€6.9k+*</td><td>—</td><td>active</td><td>two towers; major skyline project</td><td><a class='source-link' href='https://www.immobiliare.it/annunci/106176207/' target='_blank' rel='noopener noreferrer'>Open source</a></td></tr><tr><td>NEW</td><td><b><a class='project-link' href='https://www.casa.it/vendita/appartamenti/in-nuove-costruzioni/jesolo/' target='_blank' rel='noopener noreferrer'>Residence Mizar ↗</a></b></td><td>Apartment</td><td>2 BR</td><td>70 m²</td><td>€265–270k</td><td>~€3.8k/m²</td><td>~250 m</td><td>new build</td><td>27 units; pool; A4; Piazza Nember / Faro</td><td><a class='source-link' href='https://www.casa.it/vendita/appartamenti/in-nuove-costruzioni/jesolo/' target='_blank' rel='noopener noreferrer'>Open source ↗</a></td></tr><tr><td>ACTIVE</td><td><b><a class='project-link' href='https://www.casa.it/vendita/residenziale/in-nuove-costruzioni/jesolo/' target='_blank' rel='noopener noreferrer'>Residence Tanabata ↗</a></b></td><td>Apartment</td><td>2 BR</td><td>120 m²</td><td>€350k</td><td>~€2,917/m²</td><td>250 m</td><td>under construction / 2026</td><td>A4; private garden; Piazza Nember</td><td><a class='source-link' href='https://www.casa.it/vendita/residenziale/in-nuove-costruzioni/jesolo/' target='_blank' rel='noopener noreferrer'>Open source ↗</a></td></tr><tr><td>ACTIVE</td><td><b><a class='project-link' href='https://www.immobiliare.it/annunci/106113987/' target='_blank' rel='noopener noreferrer'>Via Pieve di Soligo 4 ↗</a></b></td><td>Apartment / attico</td><td>2–3 BR</td><td>85+ m²</td><td>€320–330k</td><td>~€3.8k/m²</td><td>~300 m</td><td>active</td><td>12 apartments + 2 duplex attici; gardens; parking; cellar; A4</td><td><a class='source-link' href='https://www.immobiliare.it/annunci/106113987/' target='_blank' rel='noopener noreferrer'>Open source ↗</a></td></tr><tr><td>ACTIVE</td><td><b><a class='project-link' href='https://www.idealista.it/vendita-nuove_costruzioni/jesolo-venezia/' target='_blank' rel='noopener noreferrer'>Via Aquileia 162 ↗</a></b></td><td>Apartment / attico</td><td>2–3 BR</td><td>—</td><td>from €380k</td><td>n/d</td><td>—</td><td>completed</td><td>3–4 locali; A/C; domotics; new construction</td><td><a class='source-link' href='https://www.idealista.it/vendita-nuove_costruzioni/jesolo-venezia/' target='_blank' rel='noopener noreferrer'>Open source ↗</a></td></tr><tr><td>PLANNED</td><td><b><a class='project-link' href='https://www.idealista.it/vendita-nuove_costruzioni/jesolo-venezia/' target='_blank' rel='noopener noreferrer'>Via Veneto 51 ↗</a></b></td><td>Apartment / attico</td><td>2–3 BR</td><td>—</td><td>from €580k</td><td>n/d</td><td>front sea</td><td>planned / new</td><td>13 units; new beachfront building; Jesolo Design District vicinity</td><td><a class='source-link' href='https://www.idealista.it/vendita-nuove_costruzioni/jesolo-venezia/' target='_blank' rel='noopener noreferrer'>Open source ↗</a></td></tr><tr><td>ACTIVE</td><td><b><a class='project-link' href='https://www.casa.it/vendita/residenziale/in-nuove-costruzioni/jesolo/' target='_blank' rel='noopener noreferrer'>Piazza Europa / Cortellazzo ↗</a></b></td><td>Apartment</td><td>2 BR</td><td>85 m²</td><td>€389k</td><td>~€4,576/m²</td><td>—</td><td>new build</td><td>A3; elevator; terrace; new residential district</td><td><a class='source-link' href='https://www.casa.it/vendita/residenziale/in-nuove-costruzioni/jesolo/' target='_blank' rel='noopener noreferrer'>Open source ↗</a></td></tr><tr><td>NEW</td><td><b><a class='project-link' href='https://www.idealista.it/vendita-case/jesolo/jesolo-paese/con-solo-appartamenti,nuova-costruzione/' target='_blank' rel='noopener noreferrer'>Ca&#x27; Gamba — JHILLS ↗</a></b></td><td>Apartment</td><td>2 BR</td><td>53 m²</td><td>€255k</td><td>~€4,811/m²</td><td>—</td><td>delivery spring 2027</td><td>5 units; private gardens; new residence</td><td><a class='source-link' href='https://www.idealista.it/vendita-case/jesolo/jesolo-paese/con-solo-appartamenti,nuova-costruzione/' target='_blank' rel='noopener noreferrer'>Open source ↗</a></td></tr><tr><td>NEW</td><td><b><a class='project-link' href='https://www.idealista.it/vendita-case/jesolo/jesolo-paese/con-solo-appartamenti,nuova-costruzione/' target='_blank' rel='noopener noreferrer'>Ca&#x27; Gamba — HOME B6.1 ↗</a></b></td><td>Apartment</td><td>1 BR</td><td>60 m²</td><td>€240k</td><td>~€4,000/m²</td><td>—</td><td>delivery Dec 2027</td><td>6 units; box included; evolving residential area</td><td><a class='source-link' href='https://www.idealista.it/vendita-case/jesolo/jesolo-paese/con-solo-appartamenti,nuova-costruzione/' target='_blank' rel='noopener noreferrer'>Open source ↗</a></td></tr><tr><td>ACTIVE</td><td><b><a class='project-link' href='https://www.casa.it/vendita/ville/in-nuove-costruzioni/jesolo/' target='_blank' rel='noopener noreferrer'>Ca&#x27; Gamba — B-CUBE / BC01 ↗</a></b></td><td>Villa</td><td>3 BR</td><td>220 m²</td><td>€590k</td><td>~€2,682/m²</td><td>—</td><td>new build</td><td>3 baths; contemporary villa; high-performance specification</td><td><a class='source-link' href='https://www.casa.it/vendita/ville/in-nuove-costruzioni/jesolo/' target='_blank' rel='noopener noreferrer'>Open source ↗</a></td></tr><tr><td>ACTIVE</td><td><b><a class='project-link' href='https://www.casa.it/vendita/ville/in-nuove-costruzioni/jesolo/' target='_blank' rel='noopener noreferrer'>Jesolo Paese — Via Codone 15 ↗</a></b></td><td>Villa</td><td>3 BR</td><td>200 m²</td><td>€590k</td><td>~€2,950/m²</td><td>—</td><td>new build</td><td>A4; one-level; privacy/design</td><td><a class='source-link' href='https://www.casa.it/vendita/ville/in-nuove-costruzioni/jesolo/' target='_blank' rel='noopener noreferrer'>Open source ↗</a></td></tr><tr><td>ACTIVE</td><td><b><a class='project-link' href='https://www.casa.it/vendita/appartamenti/in-nuove-costruzioni/jesolo/' target='_blank' rel='noopener noreferrer'>Piazza Nember / Faro new-build cluster ↗</a></b></td><td>Apartment</td><td>2–3 BR</td><td>70+ m²</td><td>€265k+</td><td>~€3.7k+*/m²</td><td>≤300 m</td><td>active</td><td>multiple units; A4; pools/terraces in selected projects</td><td><a class='source-link' href='https://www.casa.it/vendita/appartamenti/in-nuove-costruzioni/jesolo/' target='_blank' rel='noopener noreferrer'>Open source ↗</a></td></tr><tr><td>ACTIVE</td><td><b><a class='project-link' href='https://www.idealista.it/geo/vendita-case/lungomare-jesolo-venezia/con-nuova-costruzione/' target='_blank' rel='noopener noreferrer'>Lido Lungomare — Viale Venezia 45 ↗</a></b></td><td>Apartment / attico</td><td>3 BR</td><td>72 m²</td><td>€650–700k</td><td>~€9.0–9.7k/m²</td><td>sea view</td><td>delivery summer 2026</td><td>3rd/4th floor; elevator; sea view</td><td><a class='source-link' href='https://www.idealista.it/geo/vendita-case/lungomare-jesolo-venezia/con-nuova-costruzione/' target='_blank' rel='noopener noreferrer'>Open source ↗</a></td></tr></tbody></table></div>
+<h3>📈 Price Delta</h3><div class='delta'><div><small>Previous verified</small><b>n/d</b></div><div><small>Current verified</small><b>tracked</b></div><div><small>Δ € / Δ %</small><b>n/d</b></div><div><small>Date increase</small><b>n/d</b></div></div>
+<div class='note'>Historical delta показується тільки при двох датованих цінах одного unit/project. Дата оновлення оголошення не вважається доказом зміни ціни.</div>
+<h3>🎯 Buyer verdict</h3><div class='grid'><div class='card'><span class='tag'>EARLY</span><h3>Via Levantina / 2026 L</h3><div class='price'>Price on request</div><div>Apartment · 3 BR · 110+ m² · 50 m</div><p>8 units; one apartment/floor; 40+ m² living; 50+ m² terraces; sea view</p><b>9.5/10</b></div><div class='card'><span class='tag'>EARLY</span><h3>Residence Miami Villetta</h3><div class='price'>€399k</div><div>Villa / bifamiliare · 3 BR · 140 m² · —</div><p>250 m² garden; garage + parking; PV 4.5 kW</p><b>9.5/10</b></div><div class='card'><span class='tag'>NEW</span><h3>J ELEVEN</h3><div class='price'>€335–445k</div><div>Apartment · 2–3 BR · 88+ m² · —</div><p>covered parking; EV predisposition; bike parking</p><b>8.4/10</b></div><div class='card'><span class='tag'>NEW</span><h3>Residence J8</h3><div class='price'>€405k</div><div>Apartment · 2–3 BR · 94+ m² · —</div><p>double covered parking; EV predisposition; bike parking</p><b>8.4/10</b></div><div class='card'><span class='tag'>ACTIVE</span><h3>Flamingo Residence</h3><div class='price'>€370–430k</div><div>Apartment · 2–3 BR · — m² · —</div><p>32 apartments / 8 buildings; 2 pools; gardens/large terraces</p><b>8.4/10</b></div><div class='card'><span class='tag'>ACTIVE</span><h3>JES TOWER</h3><div class='price'>€445–560k</div><div>Apartment · 2–3 BR · 95+ m² · &lt;50 m</div><p>9 floors; A4; central Piazza Trieste</p><b>8.4/10</b></div></div>
+<h3>➕ Expanded Full Inventory — additional sources</h3><div class='grid'><div class='card'><span class='tag'>NEW</span><h3><a class='project-link' href='https://www.casa.it/vendita/appartamenti/in-nuove-costruzioni/jesolo/' target='_blank' rel='noopener noreferrer'>Residence Mizar ↗</a></h3><div class='price'>€265–270k</div><div>Apartment · 2 BR · 70 m² · ~250 m</div><p>27 units; pool; A4; Piazza Nember / Faro</p></div><div class='card'><span class='tag'>ACTIVE</span><h3><a class='project-link' href='https://www.casa.it/vendita/residenziale/in-nuove-costruzioni/jesolo/' target='_blank' rel='noopener noreferrer'>Residence Tanabata ↗</a></h3><div class='price'>€350k</div><div>Apartment · 2 BR · 120 m² · 250 m</div><p>A4; private garden; Piazza Nember</p></div><div class='card'><span class='tag'>ACTIVE</span><h3><a class='project-link' href='https://www.immobiliare.it/annunci/106113987/' target='_blank' rel='noopener noreferrer'>Via Pieve di Soligo 4 ↗</a></h3><div class='price'>€320–330k</div><div>Apartment / attico · 2–3 BR · 85+ m² · ~300 m</div><p>12 apartments + 2 duplex attici; gardens; parking; cellar; A4</p></div><div class='card'><span class='tag'>ACTIVE</span><h3><a class='project-link' href='https://www.idealista.it/vendita-nuove_costruzioni/jesolo-venezia/' target='_blank' rel='noopener noreferrer'>Via Aquileia 162 ↗</a></h3><div class='price'>from €380k</div><div>Apartment / attico · 2–3 BR · — · —</div><p>3–4 locali; A/C; domotics; new construction</p></div><div class='card'><span class='tag'>PLANNED</span><h3><a class='project-link' href='https://www.idealista.it/vendita-nuove_costruzioni/jesolo-venezia/' target='_blank' rel='noopener noreferrer'>Via Veneto 51 ↗</a></h3><div class='price'>from €580k</div><div>Apartment / attico · 2–3 BR · — · front sea</div><p>13 units; new beachfront building; Jesolo Design District vicinity</p></div><div class='card'><span class='tag'>ACTIVE</span><h3><a class='project-link' href='https://www.casa.it/vendita/residenziale/in-nuove-costruzioni/jesolo/' target='_blank' rel='noopener noreferrer'>Piazza Europa / Cortellazzo ↗</a></h3><div class='price'>€389k</div><div>Apartment · 2 BR · 85 m² · —</div><p>A3; elevator; terrace; new residential district</p></div><div class='card'><span class='tag'>NEW</span><h3><a class='project-link' href='https://www.idealista.it/vendita-case/jesolo/jesolo-paese/con-solo-appartamenti,nuova-costruzione/' target='_blank' rel='noopener noreferrer'>Ca&#x27; Gamba — JHILLS ↗</a></h3><div class='price'>€255k</div><div>Apartment · 2 BR · 53 m² · —</div><p>5 units; private gardens; new residence</p></div><div class='card'><span class='tag'>NEW</span><h3><a class='project-link' href='https://www.idealista.it/vendita-case/jesolo/jesolo-paese/con-solo-appartamenti,nuova-costruzione/' target='_blank' rel='noopener noreferrer'>Ca&#x27; Gamba — HOME B6.1 ↗</a></h3><div class='price'>€240k</div><div>Apartment · 1 BR · 60 m² · —</div><p>6 units; box included; evolving residential area</p></div><div class='card'><span class='tag'>ACTIVE</span><h3><a class='project-link' href='https://www.casa.it/vendita/ville/in-nuove-costruzioni/jesolo/' target='_blank' rel='noopener noreferrer'>Ca&#x27; Gamba — B-CUBE / BC01 ↗</a></h3><div class='price'>€590k</div><div>Villa · 3 BR · 220 m² · —</div><p>3 baths; contemporary villa; high-performance specification</p></div><div class='card'><span class='tag'>ACTIVE</span><h3><a class='project-link' href='https://www.casa.it/vendita/ville/in-nuove-costruzioni/jesolo/' target='_blank' rel='noopener noreferrer'>Jesolo Paese — Via Codone 15 ↗</a></h3><div class='price'>€590k</div><div>Villa · 3 BR · 200 m² · —</div><p>A4; one-level; privacy/design</p></div><div class='card'><span class='tag'>ACTIVE</span><h3><a class='project-link' href='https://www.casa.it/vendita/appartamenti/in-nuove-costruzioni/jesolo/' target='_blank' rel='noopener noreferrer'>Piazza Nember / Faro new-build cluster ↗</a></h3><div class='price'>€265k+</div><div>Apartment · 2–3 BR · 70+ m² · ≤300 m</div><p>multiple units; A4; pools/terraces in selected projects</p></div><div class='card'><span class='tag'>ACTIVE</span><h3><a class='project-link' href='https://www.idealista.it/geo/vendita-case/lungomare-jesolo-venezia/con-nuova-costruzione/' target='_blank' rel='noopener noreferrer'>Lido Lungomare — Viale Venezia 45 ↗</a></h3><div class='price'>€650–700k</div><div>Apartment / attico · 3 BR · 72 m² · sea view</div><p>3rd/4th floor; elevator; sea view</p></div></div></section>
+<section id='tab-caorle' class='tab-section'>
+<h2>Caorle — повний звіт</h2>
+<div class='stats'><div><small>Options</small><b>8</b></div><div><small>≤ €400k</small><b>6</b></div><div><small>Early / planned</small><b>4</b></div><div><small>3+ bedrooms</small><b>8</b></div></div>
+<h3>📊 Графік Asking Price</h3><div class='chart'><div class='bar'><span>Lido Altanea — EZ026</span><i><b style='width:83.1%'></b></i><strong>€329</strong></div><div class='bar'><span>Lido Altanea — EZ028</span><i><b style='width:84.8%'></b></i><strong>€336</strong></div><div class='bar'><span>Lido Altanea — PA-A01C</span><i><b style='width:89.1%'></b></i><strong>€353</strong></div><div class='bar'><span>Lido Altanea — 258</span><i><b style='width:100.0%'></b></i><strong>€396</strong></div><div class='bar'><span>Lido Altanea — PA-A12C</span><i><b style='width:82.3%'></b></i><strong>€326</strong></div><div class='bar'><span>Luna Rossa</span><i><b style='width:96.0%'></b></i><strong>€380</strong></div></div>
+<h3>💶 Price Matrix — Caorle</h3>
+<div class='tablewrap'><table><thead><tr><th>Status</th><th>Project / unit</th><th>Type</th><th>BR</th><th>Area</th><th>ASKING PRICE</th><th>ASKING €/m²</th><th>Sea</th><th>Delivery</th><th>Equipment / risks</th><th>Source</th></tr></thead><tbody><tr><td>ACTIVE</td><td><b>Lido Altanea — EZ026</b></td><td>Apartment</td><td>2–3</td><td>95</td><td>€329k</td><td>~€3,463*</td><td>200 m</td><td>2027</td><td>pool; grezzo avanzato; terrace</td><td><a class='source-link' href='https://www.immobiliare.it/annunci/130766426/' target='_blank' rel='noopener noreferrer'>Open source</a></td></tr><tr><td>NEW</td><td><b>Lido Altanea — EZ028</b></td><td>Apartment</td><td>2–3</td><td>86</td><td>€336k</td><td>~€3,907*</td><td>200 m</td><td>2027</td><td>pool; grezzo avanzato; terrace; marketed sea view</td><td><a class='source-link' href='https://www.immobiliare.it/annunci/130967226/' target='_blank' rel='noopener noreferrer'>Open source</a></td></tr><tr><td>NEW</td><td><b>Lido Altanea — PA-A01C</b></td><td>Apartment</td><td>2–3</td><td>101</td><td>€353k</td><td>~€3,495*</td><td>50 m</td><td>summer 2027</td><td>ground floor; garden; pool; fronte mare listing</td><td><a class='source-link' href='https://www.immobiliare.it/annunci/130959334/' target='_blank' rel='noopener noreferrer'>Open source</a></td></tr><tr><td>ACTIVE</td><td><b>Lido Altanea — 258</b></td><td>Apartment</td><td>2–3</td><td>99</td><td>€396k</td><td>~€4,000*</td><td>200 m</td><td>2027</td><td>ground floor; garden; pool</td><td><a class='source-link' href='https://www.immobiliare.it/annunci/130806822/' target='_blank' rel='noopener noreferrer'>Open source</a></td></tr><tr><td>ACTIVE</td><td><b>Lido Altanea — PA-A12C</b></td><td>Apartment</td><td>2–3</td><td>90</td><td>€326k</td><td>~€3,622*</td><td>50 m</td><td>summer 2027</td><td>40-unit residence; pool; private garden</td><td><a class='source-link' href='https://www.immobiliare.it/annunci/130916874/' target='_blank' rel='noopener noreferrer'>Open source</a></td></tr><tr><td>PLANNED</td><td><b>Residence Ponente</b></td><td>Apartment</td><td>2–3</td><td>—</td><td>n/d</td><td>Forecast</td><td>near sea</td><td>2026/27 signal</td><td>31 apartments; 3 volumes; underground garages</td><td><a class='source-link' href='https://www.residenceponente.com/' target='_blank' rel='noopener noreferrer'>Open source</a></td></tr><tr><td>PLANNED</td><td><b>Residence Amare</b></td><td>Apartment</td><td>2–3</td><td>—</td><td>n/d</td><td>Forecast</td><td>near sea</td><td>2027 signal</td><td>44 units; A4; ~200 steps to sea</td><td><a class='source-link' href='https://www.residenceamare.it/' target='_blank' rel='noopener noreferrer'>Open source</a></td></tr><tr><td>ACTIVE</td><td><b>Luna Rossa</b></td><td>Apartment</td><td>2–3</td><td>—</td><td>€380k</td><td>n/d</td><td>~5 min walk</td><td>completed</td><td>4-unit building</td><td><a class='source-link' href='https://www.immobiliare.it/nuove-costruzioni/caorle/centro/' target='_blank' rel='noopener noreferrer'>Open source</a></td></tr></tbody></table></div>
+<h3>📈 Price Delta</h3><div class='delta'><div><small>Previous verified</small><b>n/d</b></div><div><small>Current verified</small><b>tracked</b></div><div><small>Δ € / Δ %</small><b>n/d</b></div><div><small>Date increase</small><b>n/d</b></div></div>
+<div class='note'>Historical delta показується тільки при двох датованих цінах одного unit/project. Дата оновлення оголошення не вважається доказом зміни ціни.</div>
+<h3>🎯 Buyer verdict</h3><div class='grid'><div class='card'><span class='tag'>ACTIVE</span><h3>Lido Altanea — EZ026</h3><div class='price'>€329k</div><div>Apartment · 2–3 BR · 95 m² · 200 m</div><p>pool; grezzo avanzato; terrace</p><b>9.1/10</b></div><div class='card'><span class='tag'>NEW</span><h3>Lido Altanea — EZ028</h3><div class='price'>€336k</div><div>Apartment · 2–3 BR · 86 m² · 200 m</div><p>pool; grezzo avanzato; terrace; marketed sea view</p><b>8.4/10</b></div><div class='card'><span class='tag'>NEW</span><h3>Lido Altanea — PA-A01C</h3><div class='price'>€353k</div><div>Apartment · 2–3 BR · 101 m² · 50 m</div><p>ground floor; garden; pool; fronte mare listing</p><b>9.2/10</b></div><div class='card'><span class='tag'>ACTIVE</span><h3>Lido Altanea — 258</h3><div class='price'>€396k</div><div>Apartment · 2–3 BR · 99 m² · 200 m</div><p>ground floor; garden; pool</p><b>8.4/10</b></div><div class='card'><span class='tag'>ACTIVE</span><h3>Lido Altanea — PA-A12C</h3><div class='price'>€326k</div><div>Apartment · 2–3 BR · 90 m² · 50 m</div><p>40-unit residence; pool; private garden</p><b>8.4/10</b></div><div class='card'><span class='tag'>PLANNED</span><h3>Residence Ponente</h3><div class='price'>n/d</div><div>Apartment · 2–3 BR · — m² · near sea</div><p>31 apartments; 3 volumes; underground garages</p><b>8.4/10</b></div></div>
+</section>
+<section id='tab-cavallino' class='tab-section'>
+<h2>Cavallino-Treporti — повний звіт</h2>
+<div class='stats'><div><small>Options</small><b>3</b></div><div><small>≤ €400k</small><b>3</b></div><div><small>Early / planned</small><b>0</b></div><div><small>3+ bedrooms</small><b>2</b></div></div>
+<h3>📊 Графік Asking Price</h3><div class='chart'><div class='bar'><span>Ca&#x27; del Mar</span><i><b style='width:77.9%'></b></i><strong>€265</strong></div><div class='bar'><span>Ca Savio 26</span><i><b style='width:75.0%'></b></i><strong>€255</strong></div><div class='bar'><span>Borgo La Fenice</span><i><b style='width:100.0%'></b></i><strong>€340</strong></div></div>
+<h3>💶 Price Matrix — Cavallino-Treporti</h3>
+<div class='tablewrap'><table><thead><tr><th>Status</th><th>Project / unit</th><th>Type</th><th>BR</th><th>Area</th><th>ASKING PRICE</th><th>ASKING €/m²</th><th>Sea</th><th>Delivery</th><th>Equipment / risks</th><th>Source</th></tr></thead><tbody><tr><td>ACTIVE</td><td><b>Ca&#x27; del Mar</b></td><td>Apartment / townhouse</td><td>2–3</td><td>95+</td><td>€265–410k</td><td>~€2.8k+*</td><td>—</td><td>31/12/2027</td><td>13 units: 12 apartments + villa; 13 garages + 14 outdoor spaces; heat-pump floor heating</td><td><a class='source-link' href='https://www.immobiliare.it/annunci/130650156/' target='_blank' rel='noopener noreferrer'>Open source</a></td></tr><tr><td>ACTIVE</td><td><b>Ca Savio 26</b></td><td>Apartment</td><td>2</td><td>88</td><td>€255k</td><td>~€2,898*</td><td>—</td><td>~Jun 2027</td><td>8 units; last unit; 2 baths; terrace</td><td><a class='source-link' href='https://www.immobiliare.it/annunci/121701352/' target='_blank' rel='noopener noreferrer'>Open source</a></td></tr><tr><td>ACTIVE</td><td><b>Borgo La Fenice</b></td><td>Townhouse</td><td>3</td><td>120</td><td>€340k</td><td>~€2,833*</td><td>—</td><td>new build</td><td>9 townhouses; private garden; 2 parking spaces</td><td><a class='source-link' href='https://www.immobiliare.it/annunci/113996457/' target='_blank' rel='noopener noreferrer'>Open source</a></td></tr></tbody></table></div>
+<h3>📈 Price Delta</h3><div class='delta'><div><small>Previous verified</small><b>n/d</b></div><div><small>Current verified</small><b>tracked</b></div><div><small>Δ € / Δ %</small><b>n/d</b></div><div><small>Date increase</small><b>n/d</b></div></div>
+<div class='note'>Historical delta показується тільки при двох датованих цінах одного unit/project. Дата оновлення оголошення не вважається доказом зміни ціни.</div>
+<h3>🎯 Buyer verdict</h3><div class='grid'><div class='card'><span class='tag'>ACTIVE</span><h3>Ca&#x27; del Mar</h3><div class='price'>€265–410k</div><div>Apartment / townhouse · 2–3 BR · 95+ m² · —</div><p>13 units: 12 apartments + villa; 13 garages + 14 outdoor spaces; heat-pump floor heating</p><b>9.0/10</b></div><div class='card'><span class='tag'>ACTIVE</span><h3>Ca Savio 26</h3><div class='price'>€255k</div><div>Apartment · 2 BR · 88 m² · —</div><p>8 units; last unit; 2 baths; terrace</p><b>8.4/10</b></div><div class='card'><span class='tag'>ACTIVE</span><h3>Borgo La Fenice</h3><div class='price'>€340k</div><div>Townhouse · 3 BR · 120 m² · —</div><p>9 townhouses; private garden; 2 parking spaces</p><b>8.4/10</b></div></div>
+</section>
+<section id='tab-san-dona' class='tab-section'>
+<h2>San Donà di Piave — повний звіт</h2>
+<div class='stats'><div><small>Options</small><b>6</b></div><div><small>≤ €400k</small><b>6</b></div><div><small>Early / planned</small><b>1</b></div><div><small>3+ bedrooms</small><b>6</b></div></div>
+<h3>📊 Графік Asking Price</h3><div class='chart'><div class='bar'><span>SUN VILLAGE</span><i><b style='width:83.2%'></b></i><strong>€283</strong></div><div class='bar'><span>EOS</span><i><b style='width:91.2%'></b></i><strong>€310</strong></div><div class='bar'><span>DOMUS 15</span><i><b style='width:98.5%'></b></i><strong>€335</strong></div><div class='bar'><span>M11</span><i><b style='width:100.0%'></b></i><strong>€340</strong></div><div class='bar'><span>HORIZON</span><i><b style='width:72.1%'></b></i><strong>€245</strong></div><div class='bar'><span>Celestia</span><i><b style='width:97.1%'></b></i><strong>€330</strong></div></div>
+<h3>💶 Price Matrix — San Donà di Piave</h3>
+<div class='tablewrap'><table><thead><tr><th>Status</th><th>Project / unit</th><th>Type</th><th>BR</th><th>Area</th><th>ASKING PRICE</th><th>ASKING €/m²</th><th>Sea</th><th>Delivery</th><th>Equipment / risks</th><th>Source</th></tr></thead><tbody><tr><td>ACTIVE</td><td><b>SUN VILLAGE</b></td><td>Townhouse / trivilla</td><td>3</td><td>115</td><td>€283–287k</td><td>~€2,461*</td><td>—</td><td>Sep 2027</td><td>6 units; gardens; PV 3 kW; heat-pump floor heating</td><td><a class='source-link' href='https://www.immobiliare.it/annunci/128927138/' target='_blank' rel='noopener noreferrer'>Open source</a></td></tr><tr><td>ACTIVE</td><td><b>EOS</b></td><td>Apartment</td><td>3</td><td>120 examples</td><td>from €310k</td><td>~€2,583*</td><td>—</td><td>2026 start signal</td><td>6 units; garden option; 100 m² attico terrace</td><td><a class='source-link' href='https://www.immobiliare.it/nuove-costruzioni/san-dona-di-piave/' target='_blank' rel='noopener noreferrer'>Open source</a></td></tr><tr><td>ACTIVE</td><td><b>DOMUS 15</b></td><td>Apartment</td><td>3+</td><td>100+</td><td>€335–520k</td><td>n/d</td><td>—</td><td>project</td><td>7 units; garage + private parking; deep loggias</td><td><a class='source-link' href='https://www.immobiliare.it/annunci/129034872/' target='_blank' rel='noopener noreferrer'>Open source</a></td></tr><tr><td>ACTIVE</td><td><b>M11</b></td><td>Attico / apartment</td><td>3–4+</td><td>144+</td><td>€340–590k</td><td>~€2.36k+*</td><td>—</td><td>project</td><td>8 units; central San Donà</td><td><a class='source-link' href='https://www.immobiliare.it/annunci/124639311/' target='_blank' rel='noopener noreferrer'>Open source</a></td></tr><tr><td>ACTIVE</td><td><b>HORIZON</b></td><td>Apartment</td><td>2–3</td><td>—</td><td>from €245k</td><td>Forecast</td><td>—</td><td>new build</td><td>large terraces; contemporary design</td><td><a class='source-link' href='https://www.immobiliare.it/nuove-costruzioni/san-dona-di-piave/' target='_blank' rel='noopener noreferrer'>Open source</a></td></tr><tr><td>PHASED</td><td><b>Celestia</b></td><td>Apartment</td><td>3</td><td>130+</td><td>€330–345k</td><td>~€2.5k+*</td><td>—</td><td>phased</td><td>phase 1 + future phase</td><td><a class='source-link' href='https://www.immobiliare.it/nuove-costruzioni/san-dona-di-piave/' target='_blank' rel='noopener noreferrer'>Open source</a></td></tr></tbody></table></div>
+<h3>📈 Price Delta</h3><div class='delta'><div><small>Previous verified</small><b>n/d</b></div><div><small>Current verified</small><b>tracked</b></div><div><small>Δ € / Δ %</small><b>n/d</b></div><div><small>Date increase</small><b>n/d</b></div></div>
+<div class='note'>Historical delta показується тільки при двох датованих цінах одного unit/project. Дата оновлення оголошення не вважається доказом зміни ціни.</div>
+<h3>🎯 Buyer verdict</h3><div class='grid'><div class='card'><span class='tag'>ACTIVE</span><h3>SUN VILLAGE</h3><div class='price'>€283–287k</div><div>Townhouse / trivilla · 3 BR · 115 m² · —</div><p>6 units; gardens; PV 3 kW; heat-pump floor heating</p><b>9.2/10</b></div><div class='card'><span class='tag'>ACTIVE</span><h3>EOS</h3><div class='price'>from €310k</div><div>Apartment · 3 BR · 120 examples m² · —</div><p>6 units; garden option; 100 m² attico terrace</p><b>8.4/10</b></div><div class='card'><span class='tag'>ACTIVE</span><h3>DOMUS 15</h3><div class='price'>€335–520k</div><div>Apartment · 3+ BR · 100+ m² · —</div><p>7 units; garage + private parking; deep loggias</p><b>8.4/10</b></div><div class='card'><span class='tag'>ACTIVE</span><h3>M11</h3><div class='price'>€340–590k</div><div>Attico / apartment · 3–4+ BR · 144+ m² · —</div><p>8 units; central San Donà</p><b>8.4/10</b></div><div class='card'><span class='tag'>ACTIVE</span><h3>HORIZON</h3><div class='price'>from €245k</div><div>Apartment · 2–3 BR · — m² · —</div><p>large terraces; contemporary design</p><b>8.4/10</b></div><div class='card'><span class='tag'>PHASED</span><h3>Celestia</h3><div class='price'>€330–345k</div><div>Apartment · 3 BR · 130+ m² · —</div><p>phase 1 + future phase</p><b>8.4/10</b></div></div>
+</section>
+<section id='tab-treviso' class='tab-section'>
+<h2>Treviso — повний звіт</h2>
+<div class='stats'><div><small>Options</small><b>1</b></div><div><small>≤ €400k</small><b>1</b></div><div><small>Early / planned</small><b>0</b></div><div><small>3+ bedrooms</small><b>1</b></div></div>
+<h3>📊 Графік Asking Price</h3><div class='chart'><div class='bar'><span>Green Village — Monigo</span><i><b style='width:100.0%'></b></i><strong>€429</strong></div></div>
+<h3>💶 Price Matrix — Treviso</h3>
+<div class='tablewrap'><table><thead><tr><th>Status</th><th>Project / unit</th><th>Type</th><th>BR</th><th>Area</th><th>ASKING PRICE</th><th>ASKING €/m²</th><th>Sea</th><th>Delivery</th><th>Equipment / risks</th><th>Source</th></tr></thead><tbody><tr><td>ACTIVE</td><td><b>Green Village — Monigo</b></td><td>Apartment</td><td>3–4+</td><td>90+</td><td>€429–643k</td><td>~€4.77k+*</td><td>—</td><td>active</td><td>18 typologies</td><td><a class='source-link' href='https://www.immobiliare.it/annunci/112255333/' target='_blank' rel='noopener noreferrer'>Open source</a></td></tr></tbody></table></div>
+<h3>📈 Price Delta</h3><div class='delta'><div><small>Previous verified</small><b>n/d</b></div><div><small>Current verified</small><b>tracked</b></div><div><small>Δ € / Δ %</small><b>n/d</b></div><div><small>Date increase</small><b>n/d</b></div></div>
+<div class='note'>Historical delta показується тільки при двох датованих цінах одного unit/project. Дата оновлення оголошення не вважається доказом зміни ціни.</div>
+<h3>🎯 Buyer verdict</h3><div class='grid'><div class='card'><span class='tag'>ACTIVE</span><h3>Green Village — Monigo</h3><div class='price'>€429–643k</div><div>Apartment · 3–4+ BR · 90+ m² · —</div><p>18 typologies</p><b>8.4/10</b></div></div>
+</section>
+<section id='tab-global-matrix' class='tab-section'><h2>Global Price Matrix</h2><div class='note'>Кожен рядок має переходити на першоджерело; для проєктів без опублікованої ціни показується Forecast окремо.</div><div class='tablewrap'><table><thead><tr><th>Location</th><th>Project</th><th>ASKING</th><th>€/m²</th><th>BR</th><th>Sea</th><th>Status</th></tr></thead><tbody><tr><td>Jesolo</td><td><b>Via Levantina / 2026 L</b></td><td>Price on request</td><td>n/d</td><td>3</td><td>50 m</td><td>EARLY</td></tr><tr><td>Jesolo</td><td><b>Residence Miami Villetta</b></td><td>€399k</td><td>~€2,850*</td><td>3</td><td>—</td><td>EARLY</td></tr><tr><td>Jesolo</td><td><b>J ELEVEN</b></td><td>€335–445k</td><td>~€3.8k+*</td><td>2–3</td><td>—</td><td>NEW</td></tr><tr><td>Jesolo</td><td><b>Residence J8</b></td><td>€405k</td><td>~€4.3k*</td><td>2–3</td><td>—</td><td>NEW</td></tr><tr><td>Jesolo</td><td><b>Flamingo Residence</b></td><td>€370–430k</td><td>n/d</td><td>2–3</td><td>—</td><td>ACTIVE</td></tr><tr><td>Jesolo</td><td><b>JES TOWER</b></td><td>€445–560k</td><td>~€4.7k+*</td><td>2–3</td><td>&lt;50 m</td><td>ACTIVE</td></tr><tr><td>Jesolo</td><td><b>Marlin Tower</b></td><td>€490–640k</td><td>~€5.4k+*</td><td>2–4+</td><td>—</td><td>ACTIVE</td></tr><tr><td>Jesolo</td><td><b>Wave Twin Towers</b></td><td>€480k+</td><td>~€6.9k+*</td><td>2–3</td><td>—</td><td>ACTIVE</td></tr><tr><td>Caorle</td><td><b>Lido Altanea — EZ026</b></td><td>€329k</td><td>~€3,463*</td><td>2–3</td><td>200 m</td><td>ACTIVE</td></tr><tr><td>Caorle</td><td><b>Lido Altanea — EZ028</b></td><td>€336k</td><td>~€3,907*</td><td>2–3</td><td>200 m</td><td>NEW</td></tr><tr><td>Caorle</td><td><b>Lido Altanea — PA-A01C</b></td><td>€353k</td><td>~€3,495*</td><td>2–3</td><td>50 m</td><td>NEW</td></tr><tr><td>Caorle</td><td><b>Lido Altanea — 258</b></td><td>€396k</td><td>~€4,000*</td><td>2–3</td><td>200 m</td><td>ACTIVE</td></tr><tr><td>Caorle</td><td><b>Lido Altanea — PA-A12C</b></td><td>€326k</td><td>~€3,622*</td><td>2–3</td><td>50 m</td><td>ACTIVE</td></tr><tr><td>Caorle</td><td><b>Residence Ponente</b></td><td>n/d</td><td>Forecast</td><td>2–3</td><td>near sea</td><td>PLANNED</td></tr><tr><td>Caorle</td><td><b>Residence Amare</b></td><td>n/d</td><td>Forecast</td><td>2–3</td><td>near sea</td><td>PLANNED</td></tr><tr><td>Caorle</td><td><b>Luna Rossa</b></td><td>€380k</td><td>n/d</td><td>2–3</td><td>~5 min walk</td><td>ACTIVE</td></tr><tr><td>Cavallino</td><td><b>Ca&#x27; del Mar</b></td><td>€265–410k</td><td>~€2.8k+*</td><td>2–3</td><td>—</td><td>ACTIVE</td></tr><tr><td>Cavallino</td><td><b>Ca Savio 26</b></td><td>€255k</td><td>~€2,898*</td><td>2</td><td>—</td><td>ACTIVE</td></tr><tr><td>Cavallino</td><td><b>Borgo La Fenice</b></td><td>€340k</td><td>~€2,833*</td><td>3</td><td>—</td><td>ACTIVE</td></tr><tr><td>San Donà</td><td><b>SUN VILLAGE</b></td><td>€283–287k</td><td>~€2,461*</td><td>3</td><td>—</td><td>ACTIVE</td></tr><tr><td>San Donà</td><td><b>EOS</b></td><td>from €310k</td><td>~€2,583*</td><td>3</td><td>—</td><td>ACTIVE</td></tr><tr><td>San Donà</td><td><b>DOMUS 15</b></td><td>€335–520k</td><td>n/d</td><td>3+</td><td>—</td><td>ACTIVE</td></tr><tr><td>San Donà</td><td><b>M11</b></td><td>€340–590k</td><td>~€2.36k+*</td><td>3–4+</td><td>—</td><td>ACTIVE</td></tr><tr><td>San Donà</td><td><b>HORIZON</b></td><td>from €245k</td><td>Forecast</td><td>2–3</td><td>—</td><td>ACTIVE</td></tr><tr><td>San Donà</td><td><b>Celestia</b></td><td>€330–345k</td><td>~€2.5k+*</td><td>3</td><td>—</td><td>PHASED</td></tr><tr><td>Treviso</td><td><b>Green Village — Monigo</b></td><td>€429–643k</td><td>~€4.77k+*</td><td>3–4+</td><td>—</td><td>ACTIVE</td></tr></tbody></table></div></section>
+<section id='tab-price-history' class='tab-section'><h2>Global Price History / Deltas</h2><div class='delta'><div><small>Verified increases</small><b>0</b></div><div><small>Verified decreases</small><b>0</b></div><div><small>Two dated snapshots</small><b>0</b></div><div><small>Next snapshot</small><b>next radar run</b></div></div><div class='note'>Поточні джерела дають актуальні asking prices та dates updated, але не достатньо двох датованих price snapshots для більшості unit. Тому історичні зміни не вигадані.</div></section>
+<section id='tab-planned' class='tab-section'><h2>Planned / Pre-launch / Pipeline</h2><div class='card'><span class='tag'>EARLY</span><h3>Via Levantina / 2026 L</h3><div class='price'>Price on request</div><div>Apartment · 3 BR · 110+ m² · 50 m</div><p>8 units; one apartment/floor; 40+ m² living; 50+ m² terraces; sea view</p><b>9.5/10</b></div><div class='card'><span class='tag'>NEW</span><h3>J ELEVEN</h3><div class='price'>€335–445k</div><div>Apartment · 2–3 BR · 88+ m² · —</div><p>covered parking; EV predisposition; bike parking</p><b>8.4/10</b></div><div class='card'><span class='tag'>NEW</span><h3>Residence J8</h3><div class='price'>€405k</div><div>Apartment · 2–3 BR · 94+ m² · —</div><p>double covered parking; EV predisposition; bike parking</p><b>8.4/10</b></div><div class='card'><span class='tag'>PLANNED</span><h3>Residence Ponente</h3><div class='price'>n/d</div><div>Apartment · 2–3 BR · — m² · near sea</div><p>31 apartments; 3 volumes; underground garages</p><b>8.4/10</b></div><div class='card'><span class='tag'>PLANNED</span><h3>Residence Amare</h3><div class='price'>n/d</div><div>Apartment · 2–3 BR · — m² · near sea</div><p>44 units; A4; ~200 steps to sea</p><b>8.4/10</b></div><div class='card'><span class='tag'>ACTIVE</span><h3>Ca&#x27; del Mar</h3><div class='price'>€265–410k</div><div>Apartment / townhouse · 2–3 BR · 95+ m² · —</div><p>13 units: 12 apartments + villa; 13 garages + 14 outdoor spaces; heat-pump floor heating</p><b>9.0/10</b></div><div class='card'><span class='tag'>PHASED</span><h3>Celestia</h3><div class='price'>€330–345k</div><div>Apartment · 3 BR · 130+ m² · —</div><p>phase 1 + future phase</p><b>8.4/10</b></div><div class='note'><b>Urban pipeline:</b> у Jesolo Comune планує в 2026–2028 продовжувати роботу з PUA, новими PUA та urbanisation permits. Це сигнал для майбутніх проєктів, але конкретний житловий development треба підтверджувати окремо. citeturn0search59</div></section>
+
+<section id='tab-jbc-source' class='tab-section'>
+<h2>JBC Immobiliare — Mandatory Source Layer</h2>
+<div class='good'><b>JBC перевіряється окремо від порталів.</b> Об'єкт не вважається пропущеним лише тому, що його немає на Immobiliare.it.</div>
+<div class='grid'>
+<div class='card'><span class='tag'>PRIMARY</span><h3>JBC official website</h3><p>Власний inventory агентства та проєкти, які можуть не мати повного дублювання на порталах.</p><a class='source-link' href='https://www.jbcimmobiliare.it/' target='_blank' rel='noopener noreferrer'>Open JBC ↗</a></div>
+<div class='card'><span class='tag'>NEW BUILD</span><h3>JBC — nuove costruzioni</h3><p>Окремий обов'язковий прохід для новобудов, villette, bifamiliari, trifamiliari та проєктів.</p><a class='source-link' href='https://www.jbcimmobiliare.it/nuove-costruzioni/' target='_blank' rel='noopener noreferrer'>Open new builds ↗</a></div>
+<div class='card'><span class='tag'>PORTAL CROSS-CHECK</span><h3>JBC on Immobiliare.it</h3><p>Порівнюємо власний inventory JBC з portal listings та перевіряємо дублікати/нові units.</p><a class='source-link' href='https://www.immobiliare.it/agenzie-immobiliari/417291/jbc-ponte-di-piave-treviso/' target='_blank' rel='noopener noreferrer'>Open profile ↗</a></div>
+</div>
+<h3>JBC у майбутньому Full Inventory</h3>
+<ul>
+<li>Jesolo / Jesolo Paese / Ca' Gamba</li>
+<li>Eraclea / Ponte Crepaldo</li>
+<li>Ponte di Piave</li>
+<li>Fossalta di Piave</li>
+<li>Noventa di Piave</li>
+<li>San Donà di Piave та прилеглі локації</li>
+</ul>
+<div class='note'><b>Контроль:</b> JBC listing спочатку потрапляє у raw inventory, потім дедуплікується з Immobiliare/Idealista/Casa.it. Якщо JBC має власну ціну або комплектацію, саме ці дані зберігаються як окремий source record.</div>
+</section>
+
+<section id='tab-sources' class='tab-section'>
+<h2>🔎 Radar Source Registry — Першоджерело.txt</h2>
+<div class='good'><b>Оновлено за Першоджерело.txt:</b> усі source layers із файлу тепер є частиною обов'язкової логіки радара. fileciteturn6file0 fileciteturn6file1</div>
+<div class='note'><b>Priority:</b> Official/Primary → local planning → market portals → mandatory JBC/direct sale → tourism → flood/coastal risk → professional secondary sources. Саме така ієрархія випливає з Першоджерело.txt. fileciteturn6file5turn6file13</div>
+<div class='tablewrap'><table><thead><tr><th>Layer</th><th>Source</th><th>Radar use</th></tr></thead><tbody><tr><td><b>TIER 1 — Official / Primary</b></td><td><a class='project-link' href='https://www.agenziaentrate.gov.it/' target='_blank' rel='noopener noreferrer'>Agenzia delle Entrate / OMI ↗</a></td><td>Market quotations, transaction statistics, taxes, registration/cadastral rules</td></tr><tr><td><b>TIER 1 — Official / Primary</b></td><td><a class='project-link' href='https://www.agenziaentrate.gov.it/portale/servizi-catastali-e-ipotecari' target='_blank' rel='noopener noreferrer'>Catasto / Agenzia Entrate ↗</a></td><td>Rendita, categoria, surface, planimetria, cadastral data</td></tr><tr><td><b>TIER 1 — Official / Primary</b></td><td><a class='project-link' href='https://www.agenziaentrate.gov.it/' target='_blank' rel='noopener noreferrer'>Conservatoria / Ispezione ipotecaria ↗</a></td><td>Ipoteca, pignoramenti, ownership, trascrizioni</td></tr><tr><td><b>TIER 1 — Official / Primary</b></td><td><a class='project-link' href='https://www.istat.it/' target='_blank' rel='noopener noreferrer'>ISTAT ↗</a></td><td>House prices, population, demographics, migration, tourism, employment</td></tr><tr><td><b>TIER 1 — Official / Primary</b></td><td><a class='project-link' href='https://www.bancaditalia.it/' target='_blank' rel='noopener noreferrer'>Banca d&#x27;Italia ↗</a></td><td>Mortgage rates, credit conditions, housing market, macro</td></tr><tr><td><b>TIER 1 — Official / Primary</b></td><td><a class='project-link' href='https://www.normattiva.it/' target='_blank' rel='noopener noreferrer'>Normattiva ↗</a></td><td>Current Italian legislation</td></tr><tr><td><b>TIER 1 — Official / Primary</b></td><td><a class='project-link' href='https://www.gazzettaufficiale.it/' target='_blank' rel='noopener noreferrer'>Gazzetta Ufficiale ↗</a></td><td>Official regulatory changes</td></tr><tr><td><b>TIER 2 — Regional / Local</b></td><td><a class='project-link' href='https://www.regione.veneto.it/' target='_blank' rel='noopener noreferrer'>Regione Veneto ↗</a></td><td>Tourism, housing, tourist rentals, urban planning, statistics, infrastructure</td></tr><tr><td><b>TIER 2 — Regional / Local</b></td><td><a class='project-link' href='https://www.regione.fvg.it/' target='_blank' rel='noopener noreferrer'>Regione FVG ↗</a></td><td>Tourism, housing, CIN/CIR, rentals, incentives, urban planning, statistics</td></tr><tr><td><b>TIER 2 — Regional / Local</b></td><td><a class='project-link' href='https://www.regione.emilia-romagna.it/' target='_blank' rel='noopener noreferrer'>Regione Emilia-Romagna ↗</a></td><td>Housing, tourism and urban-planning rules</td></tr><tr><td><b>TIER 2 — Regional / Local</b></td><td><a class='project-link' href='https://www.comune.jesolo.ve.it/' target='_blank' rel='noopener noreferrer'>Comune di Jesolo — Urbanistica ↗</a></td><td>PUA, Piano degli Interventi, permits, variants, urbanisation, demolition/reconstruction, 300m coastal band</td></tr><tr><td><b>TIER 2 — Regional / Local</b></td><td><a class='project-link' href='https://www.comune.caorle.ve.it/piani-urbanistici/' target='_blank' rel='noopener noreferrer'>Comune di Caorle — Piani Urbanistici ↗</a></td><td>PAT, PI, PUA, variants, zoning, environmental procedures</td></tr><tr><td><b>TIER 2 — Regional / Local</b></td><td><a class='project-link' href='https://www.comune.caorle.ve.it/' target='_blank' rel='noopener noreferrer'>Comune di Caorle — Norme Tecniche ↗</a></td><td>Development potential / zoning rules</td></tr><tr><td><b>TIER 2 — Regional / Local</b></td><td><a class='project-link' href='https://www.comune.cavallinotreporti.ve.it/home/vivere/Territorio/Edilizia-ed-urbanistica.html' target='_blank' rel='noopener noreferrer'>Comune di Cavallino-Treporti — Edilizia e Urbanistica ↗</a></td><td>SIT, Piano degli Interventi, urban planning</td></tr><tr><td><b>TIER 2 — Regional / Local</b></td><td><a class='project-link' href='https://www.comune.cavallinotreporti.ve.it/' target='_blank' rel='noopener noreferrer'>Comune di Cavallino-Treporti — PUA ↗</a></td><td>PUA and variants</td></tr><tr><td><b>TIER 2 — Technical / Planning</b></td><td><a class='project-link' href='https://www.comune.cavallinotreporti.ve.it/' target='_blank' rel='noopener noreferrer'>SIT / PAT / PI / PUA / Permesso di costruire / SCIA ↗</a></td><td>Future projects and planning pipeline</td></tr><tr><td><b>TIER 2 — Technical / Planning</b></td><td><a class='project-link' href='https://www.comune.jesolo.ve.it/' target='_blank' rel='noopener noreferrer'>Albo Pretorio / Amministrazione Trasparente ↗</a></td><td>Official acts, approvals, permits, agreements</td></tr><tr><td><b>TIER 2 — Technical / Planning</b></td><td><a class='project-link' href='https://www.comune.jesolo.ve.it/' target='_blank' rel='noopener noreferrer'>SUAP / SUE ↗</a></td><td>Building and business procedures</td></tr><tr><td><b>TIER 3 — Market</b></td><td><a class='project-link' href='https://www.immobiliare.it/' target='_blank' rel='noopener noreferrer'>Immobiliare.it ↗</a></td><td>Asking price, €/m², listings, rentals, comparables</td></tr><tr><td><b>TIER 3 — Market</b></td><td><a class='project-link' href='https://www.idealista.it/' target='_blank' rel='noopener noreferrer'>Idealista Italia ↗</a></td><td>Asking price, €/m², rentals, historical trends, comparables</td></tr><tr><td><b>TIER 3 — Market</b></td><td><a class='project-link' href='https://www.casa.it/' target='_blank' rel='noopener noreferrer'>Casa.it ↗</a></td><td>Listings and comparables</td></tr><tr><td><b>TIER 3 — Mandatory Direct Source</b></td><td><a class='project-link' href='https://www.jbcimmobiliare.it/' target='_blank' rel='noopener noreferrer'>JBC Immobiliare — Official ↗</a></td><td>Direct inventory, new builds, villette, bifamiliari, trifamiliari</td></tr><tr><td><b>TIER 3 — Mandatory Direct Source</b></td><td><a class='project-link' href='https://www.jbcimmobiliare.it/nuove-costruzioni/' target='_blank' rel='noopener noreferrer'>JBC — Nuove Costruzioni ↗</a></td><td>Construction projects / direct-sale signals</td></tr><tr><td><b>TIER 3 — Cross-check</b></td><td><a class='project-link' href='https://www.immobiliare.it/agenzie-immobiliari/417291/jbc-ponte-di-piave-treviso/' target='_blank' rel='noopener noreferrer'>JBC — Immobiliare.it profile ↗</a></td><td>Cross-check JBC inventory</td></tr><tr><td><b>TIER 4 — Tourism</b></td><td><a class='project-link' href='https://statistica.regione.veneto.it/' target='_blank' rel='noopener noreferrer'>Regione Veneto — Statistica ↗</a></td><td>Arrivals, nights, foreign demand, seasonality</td></tr><tr><td><b>TIER 4 — Tourism</b></td><td><a class='project-link' href='https://www.regione.fvg.it/' target='_blank' rel='noopener noreferrer'>Regione FVG — Turismo ↗</a></td><td>Tourism demand and seasonality</td></tr><tr><td><b>TIER 4 — Tourism</b></td><td><a class='project-link' href='https://statistica.regione.emilia-romagna.it/' target='_blank' rel='noopener noreferrer'>Regione Emilia-Romagna — Statistica ↗</a></td><td>Tourism statistics</td></tr><tr><td><b>TIER 5 — Risk</b></td><td><a class='project-link' href='https://www.isprambiente.gov.it/' target='_blank' rel='noopener noreferrer'>ISPRA ↗</a></td><td>Flood, hydrogeological and environmental risk</td></tr><tr><td><b>TIER 5 — Risk</b></td><td><a class='project-link' href='https://www.distrettoalpiorientali.it/' target='_blank' rel='noopener noreferrer'>Autorità di Bacino / District Basin Authority ↗</a></td><td>Flood and hydrogeological risk maps</td></tr><tr><td><b>TIER 5 — Risk</b></td><td><a class='project-link' href='https://www.protezionecivile.gov.it/' target='_blank' rel='noopener noreferrer'>Protezione Civile ↗</a></td><td>Emergency / hazard / coastal risk</td></tr><tr><td><b>TIER 6 — Professional</b></td><td><a class='project-link' href='https://www.nomisma.it/' target='_blank' rel='noopener noreferrer'>Nomisma ↗</a></td><td>Secondary market research</td></tr><tr><td><b>TIER 6 — Professional</b></td><td><a class='project-link' href='https://www.tecnocasa.it/' target='_blank' rel='noopener noreferrer'>Tecnocasa ↗</a></td><td>Secondary local market research</td></tr><tr><td><b>TIER 6 — Professional</b></td><td><a class='project-link' href='https://www.tecnorete.it/' target='_blank' rel='noopener noreferrer'>Tecnorete ↗</a></td><td>Secondary local market research</td></tr><tr><td><b>TIER 6 — Professional</b></td><td><a class='project-link' href='https://www.fiaip.it/' target='_blank' rel='noopener noreferrer'>FIAIP ↗</a></td><td>Professional market data</td></tr><tr><td><b>TIER 6 — Professional</b></td><td><a class='project-link' href='https://www.fimaa.it/' target='_blank' rel='noopener noreferrer'>FIMAA ↗</a></td><td>Professional market data</td></tr><tr><td><b>TIER 6 — Professional</b></td><td><a class='project-link' href='https://www.tecnoborsa.com/' target='_blank' rel='noopener noreferrer'>Tecnoborsa ↗</a></td><td>Real-estate market research</td></tr></tbody></table></div>
+<h3>Micro-location coverage</h3>
+<div class='grid'>
+<div class='card'><h3>Jesolo</h3><p>Lido di Jesolo; Piazza Nember / Faro; Pineta; Piazza Mazzini; Piazza Brescia; Piazza Trieste; Piazza Drago; Cortellazzo; Jesolo Paese; Ca&#x27; Gamba</p></div><div class='card'><h3>Cavallino-Treporti</h3><p>Ca&#x27; Savio; Ca&#x27; Vio; Punta Sabbioni; Treporti; Cavallino</p></div><div class='card'><h3>San Donà di Piave</h3><p>San Donà centro; Mussetta; Mussetta di Sopra; Calvecchia; Fiorentina; Fossà; Chiesanuova</p></div><div class='card'><h3>Caorle</h3><p>Centro; Ponente; Levante; Porto Santa Margherita; Lido Altanea; Duna Verde; Brussa</p></div><div class='card'><h3>Treviso</h3><p>Centro; Santa Maria del Rovere; Selvana; Fiera; Ghirada; Monigo; San Zeno; Sant&#x27;Antonino; Canizzano; Casier</p></div>
+</div>
+<h3>Mandatory discovery sequence</h3>
+<div class='good'>
+<b>1.</b> Portals → <b>2.</b> JBC + local agencies → <b>3.</b> developers/direct sale → <b>4.</b> Comune / PUA / permits → <b>5.</b> future-project keyword search → <b>6.</b> cross-check + dedup Project / Unit / Listing.
+</div>
+<h3>Future-project search terms</h3>
+<p><code>prossima costruzione</code> · <code>nuovo residence</code> · <code>area edificabile</code> · <code>PUA</code> · <code>demolizione ricostruzione</code> · <code>permesso di costruire</code> · <code>progetto approvato</code> · <code>vendita diretta</code> · <code>nuove realizzazioni</code> · <code>cantiere</code> · <code>pre-lancio</code></p>
+<div class='note'><b>Local agency layer:</b> у Jesolo окремо перевіряти Lido, Faro/Nember, Pineta, Piazza Mazzini/Brescia/Trieste/Drago, Cortellazzo, Jesolo Paese, Ca' Gamba; у Cavallino — Ca' Savio, Ca' Vio, Punta Sabbioni, Treporti, Cavallino; у San Donà — centro, Mussetta, Mussetta di Sopra, Calvecchia, Fiorentina, Fossà, Chiesanuova. fileciteturn6file6</div>
+</section>
+
+<section id='tab-full-inventory' class='tab-section'>
+<h2>🧾 FULL INVENTORY — ALL DISCOVERED</h2>
+<div class='good'><b>Нова логіка:</b> більше не показуємо лише TOP picks. Full Inventory зберігає весь доступний portal inventory count, а всі знайдені конкретні projects/units/listings додаються в raw table. TOP ranking — окремий шар.</div>
+<div class='stats'>
+<div><small>Jesolo portal inventory</small><b>388</b></div>
+<div><small>Caorle portal inventory</small><b>44</b></div>
+<div><small>Cavallino</small><b>46</b></div>
+<div><small>San Donà</small><b>76</b></div>
+<div><small>Treviso</small><b>604</b></div>
+<div><small>New to radar this run</small><b>30</b></div>
+</div>
+<div class='note'><b>Що означають ці числа:</b> це кількість результатів джерела, а не кількість унікальних development. Один project може мати багато units/listings. Тому радар зберігає окремо Project ID, Unit і Listing та дедуплікує їх. Jesolo зараз має 388 результатів, Treviso 604, San Donà 76, Caorle 44, Cavallino 46. citeturn1view0turn1view4turn1view3turn1view1turn1view2</div>
+<h3>Source coverage</h3><div class='tablewrap'><table><thead><tr><th>Location</th><th>Live source count</th><th>Inventory status</th></tr></thead><tbody><tr><td><b>Jesolo</b></td><td>388 portal results on Immobiliare.it</td><td>FULL RAW INVENTORY</td></tr><tr><td><b>Caorle</b></td><td>44 portal results on Immobiliare.it</td><td>FULL RAW INVENTORY</td></tr><tr><td><b>Cavallino-Treporti</b></td><td>46 apartment/new-build results on Immobiliare.it; 41 new homes on Idealista</td><td>FULL RAW INVENTORY</td></tr><tr><td><b>San Donà di Piave</b></td><td>76 portal results on Immobiliare.it; 56 new homes on Idealista</td><td>FULL RAW INVENTORY</td></tr><tr><td><b>Treviso</b></td><td>604 portal results on Immobiliare.it; 11 project groups on Idealista</td><td>FULL RAW INVENTORY</td></tr></tbody></table></div>
+<h3>🆕 New to radar — not shown in prior stored radar snapshot</h3>
+<div class='note'><b>Важливе уточнення:</b> “🆕 NEW TO RADAR ≤30D” означає, що об'єкт не був у попередньому збереженому radar snapshot. Це не означає, що портал опублікував його саме в останні 30 днів. Якщо джерело не дає дату публікації, я не вигадую її.</div>
+<div class='grid'><div class="card new-card"><span class="tag">🆕 NEW TO RADAR ≤30D</span>
+<h3><a class="project-link" href="https://www.casa.it/vendita/residenziale/in-nuove-costruzioni/jesolo/" target="_blank" rel="noopener noreferrer">Residence La Plage ↗</a></h3>
+<div class="price">€330k</div><div>Jesolo · Apartment · 2 BR · 550 m</div>
+<p>active</p></div><div class="card new-card"><span class="tag">🆕 NEW TO RADAR ≤30D</span>
+<h3><a class="project-link" href="https://www.casa.it/vendita/residenziale/in-nuove-costruzioni/jesolo/" target="_blank" rel="noopener noreferrer">Via Belluno 40 ↗</a></h3>
+<div class="price">€354k</div><div>Jesolo · Apartment · 3 BR · near sea</div>
+<p>active</p></div><div class="card new-card"><span class="tag">🆕 NEW TO RADAR ≤30D</span>
+<h3><a class="project-link" href="https://www.immobiliare.it/nuove-costruzioni/jesolo/" target="_blank" rel="noopener noreferrer">Veneto Immobiliare — 12+2 units ↗</a></h3>
+<div class="price">from €350k</div><div>Jesolo · Apartment · 2 BR + attici · ~300 m</div>
+<p>active</p></div><div class="card new-card"><span class="tag">🆕 NEW TO RADAR ≤30D</span>
+<h3><a class="project-link" href="https://www.casa.it/vendita/residenziale/in-nuove-costruzioni/jesolo/" target="_blank" rel="noopener noreferrer">Ca&#x27; Gamba — 3-unit project ↗</a></h3>
+<div class="price">€199k+</div><div>Jesolo · Apartment · 1–2 BR · —</div>
+<p>planned</p></div><div class="card new-card"><span class="tag">🆕 NEW TO RADAR ≤30D</span>
+<h3><a class="project-link" href="https://www.casa.it/vendita/residenziale/in-nuove-costruzioni/jesolo/" target="_blank" rel="noopener noreferrer">Ca&#x27; Pirami — 4-unit project ↗</a></h3>
+<div class="price">€220k</div><div>Jesolo · Apartment · 2 BR · —</div>
+<p>new build</p></div><div class="card new-card"><span class="tag">🆕 NEW TO RADAR ≤30D</span>
+<h3><a class="project-link" href="https://www.idealista.it/vendita-nuove_costruzioni/jesolo-venezia/" target="_blank" rel="noopener noreferrer">Via Lombardia ↗</a></h3>
+<div class="price">from €380k</div><div>Jesolo · Apartment · 2–3 BR · —</div>
+<p>delivery summer 2026</p></div><div class="card new-card"><span class="tag">🆕 NEW TO RADAR ≤30D</span>
+<h3><a class="project-link" href="https://www.idealista.it/vendita-nuove_costruzioni/jesolo-venezia/" target="_blank" rel="noopener noreferrer">Ville in Laguna — Via Roma Destra 215 ↗</a></h3>
+<div class="price">from €558k</div><div>Jesolo · Villa · 3+ BR · near Faro</div>
+<p>new build</p></div><div class="card new-card"><span class="tag">🆕 NEW TO RADAR ≤30D</span>
+<h3><a class="project-link" href="https://www.idealista.it/vendita-nuove_costruzioni/jesolo-venezia/" target="_blank" rel="noopener noreferrer">The Tower — Piazza Le Corbusier ↗</a></h3>
+<div class="price">from €900k</div><div>Jesolo · Apartment · 2–3 BR · sea panorama</div>
+<p>active</p></div><div class="card new-card"><span class="tag">🆕 NEW TO RADAR ≤30D</span>
+<h3><a class="project-link" href="https://www.immobiliare.it/nuove-costruzioni/caorle/" target="_blank" rel="noopener noreferrer">Via Aironi — JBC ↗</a></h3>
+<div class="price">€323k</div><div>Caorle · Apartment · 2 BR · near Altanea beach</div>
+<p>delivery ≤2027</p></div><div class="card new-card"><span class="tag">🆕 NEW TO RADAR ≤30D</span>
+<h3><a class="project-link" href="https://www.immobiliare.it/nuove-costruzioni/caorle/" target="_blank" rel="noopener noreferrer">Via degli Aironi — Altanea ↗</a></h3>
+<div class="price">€323k</div><div>Caorle · Apartment · 2 BR · 50 m</div>
+<p>summer 2027</p></div><div class="card new-card"><span class="tag">🆕 NEW TO RADAR ≤30D</span>
+<h3><a class="project-link" href="https://www.immobiliare.it/nuove-costruzioni/caorle/" target="_blank" rel="noopener noreferrer">Via Firenze 1 ↗</a></h3>
+<div class="price">€278k</div><div>Caorle · Apartment · 1 BR · —</div>
+<p>new</p></div><div class="card new-card"><span class="tag">🆕 NEW TO RADAR ≤30D</span>
+<h3><a class="project-link" href="https://www.immobiliare.it/nuove-costruzioni/caorle/" target="_blank" rel="noopener noreferrer">Via Firenze 3 ↗</a></h3>
+<div class="price">€338k</div><div>Caorle · Apartment · 2 BR · —</div>
+<p>new</p></div><div class="card new-card"><span class="tag">🆕 NEW TO RADAR ≤30D</span>
+<h3><a class="project-link" href="https://www.immobiliare.it/nuove-costruzioni/caorle/" target="_blank" rel="noopener noreferrer">Via del Quadrante 1 ↗</a></h3>
+<div class="price">€360k</div><div>Caorle · Apartment · 2 BR · —</div>
+<p>new</p></div><div class="card new-card"><span class="tag">🆕 NEW TO RADAR ≤30D</span>
+<h3><a class="project-link" href="https://www.immobiliare.it/nuove-costruzioni/caorle/" target="_blank" rel="noopener noreferrer">Ottava Presa — trilocale ↗</a></h3>
+<div class="price">€155k</div><div>Caorle · Apartment · 2 BR · —</div>
+<p>new</p></div><div class="card new-card"><span class="tag">🆕 NEW TO RADAR ≤30D</span>
+<h3><a class="project-link" href="https://www.immobiliare.it/nuove-costruzioni/caorle/" target="_blank" rel="noopener noreferrer">Porto Santa Margherita — Viale Lepanto ↗</a></h3>
+<div class="price">€265k</div><div>Caorle · Apartment · 2 BR · —</div>
+<p>new</p></div><div class="card new-card"><span class="tag">🆕 NEW TO RADAR ≤30D</span>
+<h3><a class="project-link" href="https://www.immobiliare.it/nuove-costruzioni/caorle/" target="_blank" rel="noopener noreferrer">Porto Santa Margherita — Via dei Loredan ↗</a></h3>
+<div class="price">€265k</div><div>Caorle · Apartment · 2 BR · —</div>
+<p>new</p></div><div class="card new-card"><span class="tag">🆕 NEW TO RADAR ≤30D</span>
+<h3><a class="project-link" href="https://www.idealista.it/vendita-case/cavallino-treporti-venezia/con-nuova-costruzione/" target="_blank" rel="noopener noreferrer">Residence Pisani — Via Livenza 32 ↗</a></h3>
+<div class="price">€240–420k</div><div>Cavallino-Treporti · Apartment / villa · 2–3 BR · near sea</div>
+<p>planned</p></div><div class="card new-card"><span class="tag">🆕 NEW TO RADAR ≤30D</span>
+<h3><a class="project-link" href="https://www.immobiliare.it/nuove-costruzioni/appartamenti-cavallino-treporti/" target="_blank" rel="noopener noreferrer">Via Tagliamento — 12 apartments + villa ↗</a></h3>
+<div class="price">from €265k</div><div>Cavallino-Treporti · Apartment / villa · 2–3 BR · —</div>
+<p>under construction</p></div><div class="card new-card"><span class="tag">🆕 NEW TO RADAR ≤30D</span>
+<h3><a class="project-link" href="https://www.immobiliare.it/nuove-costruzioni/appartamenti-cavallino-treporti/" target="_blank" rel="noopener noreferrer">Via Fausta — new trilocale ↗</a></h3>
+<div class="price">€239k</div><div>Cavallino-Treporti · Apartment · 2 BR · —</div>
+<p>new</p></div><div class="card new-card"><span class="tag">🆕 NEW TO RADAR ≤30D</span>
+<h3><a class="project-link" href="https://www.immobiliare.it/nuove-costruzioni/appartamenti-cavallino-treporti/" target="_blank" rel="noopener noreferrer">Via Julia — new quadrilocale ↗</a></h3>
+<div class="price">€310k</div><div>Cavallino-Treporti · Apartment · 3 BR · —</div>
+<p>new</p></div><div class="card new-card"><span class="tag">🆕 NEW TO RADAR ≤30D</span>
+<h3><a class="project-link" href="https://www.immobiliare.it/nuove-costruzioni/appartamenti-cavallino-treporti/" target="_blank" rel="noopener noreferrer">Via Pordelio 418 — units ↗</a></h3>
+<div class="price">€233–548k</div><div>Cavallino-Treporti · Apartment · 1–3 BR · —</div>
+<p>new</p></div><div class="card new-card"><span class="tag">🆕 NEW TO RADAR ≤30D</span>
+<h3><a class="project-link" href="https://www.immobiliare.it/nuove-costruzioni/san-dona-di-piave/" target="_blank" rel="noopener noreferrer">Elettra ↗</a></h3>
+<div class="price">€295–380k</div><div>San Donà di Piave · Apartment · 2–3 BR · —</div>
+<p>new / restoration</p></div><div class="card new-card"><span class="tag">🆕 NEW TO RADAR ≤30D</span>
+<h3><a class="project-link" href="https://www.immobiliare.it/nuove-costruzioni/san-dona-di-piave/" target="_blank" rel="noopener noreferrer">THE RIVER ↗</a></h3>
+<div class="price">€320–365k</div><div>San Donà di Piave · Apartment · 3 BR · —</div>
+<p>new build</p></div><div class="card new-card"><span class="tag">🆕 NEW TO RADAR ≤30D</span>
+<h3><a class="project-link" href="https://www.idealista.it/vendita-case/san-dona-di-piave-venezia/con-nuova-costruzione/" target="_blank" rel="noopener noreferrer">Ardeide ↗</a></h3>
+<div class="price">€290–295k</div><div>San Donà di Piave · Apartment · 2–3 BR · —</div>
+<p>new build</p></div><div class="card new-card"><span class="tag">🆕 NEW TO RADAR ≤30D</span>
+<h3><a class="project-link" href="https://www.idealista.it/vendita-case/san-dona-di-piave-venezia/con-nuova-costruzione/" target="_blank" rel="noopener noreferrer">Mussetta di Sopra 56 — Urban Costruzioni / JBC ↗</a></h3>
+<div class="price">€288–298k</div><div>San Donà di Piave · Apartment / attico · 2–3 BR · —</div>
+<p>delivery 2026</p></div><div class="card new-card"><span class="tag">🆕 NEW TO RADAR ≤30D</span>
+<h3><a class="project-link" href="https://www.idealista.it/vendita-case/san-dona-di-piave-venezia/con-nuova-costruzione/" target="_blank" rel="noopener noreferrer">Via Sabbioni — 12-unit project ↗</a></h3>
+<div class="price">€285k</div><div>San Donà di Piave · Apartment · 2–3 BR · —</div>
+<p>prossima realizzazione</p></div><div class="card new-card"><span class="tag">🆕 NEW TO RADAR ≤30D</span>
+<h3><a class="project-link" href="https://www.immobiliare.it/nuove-costruzioni/ville-san-dona-di-piave/" target="_blank" rel="noopener noreferrer">Via Misurina 41 — LVI ↗</a></h3>
+<div class="price">€338k</div><div>San Donà di Piave · Villa plurifamiliare · 3 BR · —</div>
+<p>new project</p></div><div class="card new-card"><span class="tag">🆕 NEW TO RADAR ≤30D</span>
+<h3><a class="project-link" href="https://www.idealista.it/vendita-case/san-dona-di-piave-venezia/con-nuova-costruzione/" target="_blank" rel="noopener noreferrer">Caposile — bifamiliari ↗</a></h3>
+<div class="price">€168k*</div><div>San Donà di Piave · Villa / bifamiliare · 3 BR · between San Donà/Jeso​lo</div>
+<p>new build</p></div><div class="card new-card"><span class="tag">🆕 NEW TO RADAR ≤30D</span>
+<h3><a class="project-link" href="https://www.idealista.it/vendita-nuove_costruzioni/treviso-treviso/" target="_blank" rel="noopener noreferrer">Palazzo San Gallo ↗</a></h3>
+<div class="price">from €290k</div><div>Treviso · Apartment · 2–3 BR · —</div>
+<p>under construction</p></div><div class="card new-card"><span class="tag">🆕 NEW TO RADAR ≤30D</span>
+<h3><a class="project-link" href="https://www.idealista.it/vendita-nuove_costruzioni/treviso-treviso/" target="_blank" rel="noopener noreferrer">I Giardini di Via Piave ↗</a></h3>
+<div class="price">from €570k</div><div>Treviso · Apartment / attico · 3 BR · —</div>
+<p>ready</p></div></div>
+<h3>🆕 New objects — detailed matrix</h3>
+<div class='tablewrap'><table><thead><tr><th>NEW</th><th>Project / Unit</th><th>Location</th><th>Type</th><th>BR</th><th>Area</th><th>ASKING</th><th>€/m²</th><th>Sea</th><th>Stage</th><th>Source</th></tr></thead><tbody><tr class="new-row"><td><span class="new-badge">🆕 NEW TO RADAR ≤30D</span></td>
+<td><a class="project-link" href="https://www.casa.it/vendita/residenziale/in-nuove-costruzioni/jesolo/" target="_blank" rel="noopener noreferrer"><b>Residence La Plage ↗</b></a></td>
+<td>Jesolo</td><td>Apartment</td><td>2 BR</td><td>60 m²</td><td>€330k</td><td>€5,500/m²</td><td>550 m</td><td>active</td>
+<td><a class="source-link" href="https://www.casa.it/vendita/residenziale/in-nuove-costruzioni/jesolo/" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr class="new-row"><td><span class="new-badge">🆕 NEW TO RADAR ≤30D</span></td>
+<td><a class="project-link" href="https://www.casa.it/vendita/residenziale/in-nuove-costruzioni/jesolo/" target="_blank" rel="noopener noreferrer"><b>Via Belluno 40 ↗</b></a></td>
+<td>Jesolo</td><td>Apartment</td><td>3 BR</td><td>79 m²</td><td>€354k</td><td>€4,481/m²</td><td>near sea</td><td>active</td>
+<td><a class="source-link" href="https://www.casa.it/vendita/residenziale/in-nuove-costruzioni/jesolo/" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr class="new-row"><td><span class="new-badge">🆕 NEW TO RADAR ≤30D</span></td>
+<td><a class="project-link" href="https://www.immobiliare.it/nuove-costruzioni/jesolo/" target="_blank" rel="noopener noreferrer"><b>Veneto Immobiliare — 12+2 units ↗</b></a></td>
+<td>Jesolo</td><td>Apartment</td><td>2 BR + attici</td><td>85+ m²</td><td>from €350k</td><td>from ~€4.1k/m²</td><td>~300 m</td><td>active</td>
+<td><a class="source-link" href="https://www.immobiliare.it/nuove-costruzioni/jesolo/" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr class="new-row"><td><span class="new-badge">🆕 NEW TO RADAR ≤30D</span></td>
+<td><a class="project-link" href="https://www.casa.it/vendita/residenziale/in-nuove-costruzioni/jesolo/" target="_blank" rel="noopener noreferrer"><b>Ca&#x27; Gamba — 3-unit project ↗</b></a></td>
+<td>Jesolo</td><td>Apartment</td><td>1–2 BR</td><td>58+ m²</td><td>€199k+</td><td>from ~€3.4k/m²</td><td>—</td><td>planned</td>
+<td><a class="source-link" href="https://www.casa.it/vendita/residenziale/in-nuove-costruzioni/jesolo/" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr class="new-row"><td><span class="new-badge">🆕 NEW TO RADAR ≤30D</span></td>
+<td><a class="project-link" href="https://www.casa.it/vendita/residenziale/in-nuove-costruzioni/jesolo/" target="_blank" rel="noopener noreferrer"><b>Ca&#x27; Pirami — 4-unit project ↗</b></a></td>
+<td>Jesolo</td><td>Apartment</td><td>2 BR</td><td>75 m²</td><td>€220k</td><td>~€2,933/m²</td><td>—</td><td>new build</td>
+<td><a class="source-link" href="https://www.casa.it/vendita/residenziale/in-nuove-costruzioni/jesolo/" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr class="new-row"><td><span class="new-badge">🆕 NEW TO RADAR ≤30D</span></td>
+<td><a class="project-link" href="https://www.idealista.it/vendita-nuove_costruzioni/jesolo-venezia/" target="_blank" rel="noopener noreferrer"><b>Via Lombardia ↗</b></a></td>
+<td>Jesolo</td><td>Apartment</td><td>2–3 BR</td><td>—</td><td>from €380k</td><td>n/d</td><td>—</td><td>delivery summer 2026</td>
+<td><a class="source-link" href="https://www.idealista.it/vendita-nuove_costruzioni/jesolo-venezia/" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr class="new-row"><td><span class="new-badge">🆕 NEW TO RADAR ≤30D</span></td>
+<td><a class="project-link" href="https://www.idealista.it/vendita-nuove_costruzioni/jesolo-venezia/" target="_blank" rel="noopener noreferrer"><b>Ville in Laguna — Via Roma Destra 215 ↗</b></a></td>
+<td>Jesolo</td><td>Villa</td><td>3+ BR</td><td>—</td><td>from €558k</td><td>n/d</td><td>near Faro</td><td>new build</td>
+<td><a class="source-link" href="https://www.idealista.it/vendita-nuove_costruzioni/jesolo-venezia/" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr class="new-row"><td><span class="new-badge">🆕 NEW TO RADAR ≤30D</span></td>
+<td><a class="project-link" href="https://www.idealista.it/vendita-nuove_costruzioni/jesolo-venezia/" target="_blank" rel="noopener noreferrer"><b>The Tower — Piazza Le Corbusier ↗</b></a></td>
+<td>Jesolo</td><td>Apartment</td><td>2–3 BR</td><td>—</td><td>from €900k</td><td>n/d</td><td>sea panorama</td><td>active</td>
+<td><a class="source-link" href="https://www.idealista.it/vendita-nuove_costruzioni/jesolo-venezia/" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr class="new-row"><td><span class="new-badge">🆕 NEW TO RADAR ≤30D</span></td>
+<td><a class="project-link" href="https://www.immobiliare.it/nuove-costruzioni/caorle/" target="_blank" rel="noopener noreferrer"><b>Via Aironi — JBC ↗</b></a></td>
+<td>Caorle</td><td>Apartment</td><td>2 BR</td><td>—</td><td>€323k</td><td>n/d</td><td>near Altanea beach</td><td>delivery ≤2027</td>
+<td><a class="source-link" href="https://www.immobiliare.it/nuove-costruzioni/caorle/" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr class="new-row"><td><span class="new-badge">🆕 NEW TO RADAR ≤30D</span></td>
+<td><a class="project-link" href="https://www.immobiliare.it/nuove-costruzioni/caorle/" target="_blank" rel="noopener noreferrer"><b>Via degli Aironi — Altanea ↗</b></a></td>
+<td>Caorle</td><td>Apartment</td><td>2 BR</td><td>—</td><td>€323k</td><td>n/d</td><td>50 m</td><td>summer 2027</td>
+<td><a class="source-link" href="https://www.immobiliare.it/nuove-costruzioni/caorle/" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr class="new-row"><td><span class="new-badge">🆕 NEW TO RADAR ≤30D</span></td>
+<td><a class="project-link" href="https://www.immobiliare.it/nuove-costruzioni/caorle/" target="_blank" rel="noopener noreferrer"><b>Via Firenze 1 ↗</b></a></td>
+<td>Caorle</td><td>Apartment</td><td>1 BR</td><td>—</td><td>€278k</td><td>n/d</td><td>—</td><td>new</td>
+<td><a class="source-link" href="https://www.immobiliare.it/nuove-costruzioni/caorle/" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr class="new-row"><td><span class="new-badge">🆕 NEW TO RADAR ≤30D</span></td>
+<td><a class="project-link" href="https://www.immobiliare.it/nuove-costruzioni/caorle/" target="_blank" rel="noopener noreferrer"><b>Via Firenze 3 ↗</b></a></td>
+<td>Caorle</td><td>Apartment</td><td>2 BR</td><td>—</td><td>€338k</td><td>n/d</td><td>—</td><td>new</td>
+<td><a class="source-link" href="https://www.immobiliare.it/nuove-costruzioni/caorle/" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr class="new-row"><td><span class="new-badge">🆕 NEW TO RADAR ≤30D</span></td>
+<td><a class="project-link" href="https://www.immobiliare.it/nuove-costruzioni/caorle/" target="_blank" rel="noopener noreferrer"><b>Via del Quadrante 1 ↗</b></a></td>
+<td>Caorle</td><td>Apartment</td><td>2 BR</td><td>—</td><td>€360k</td><td>n/d</td><td>—</td><td>new</td>
+<td><a class="source-link" href="https://www.immobiliare.it/nuove-costruzioni/caorle/" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr class="new-row"><td><span class="new-badge">🆕 NEW TO RADAR ≤30D</span></td>
+<td><a class="project-link" href="https://www.immobiliare.it/nuove-costruzioni/caorle/" target="_blank" rel="noopener noreferrer"><b>Ottava Presa — trilocale ↗</b></a></td>
+<td>Caorle</td><td>Apartment</td><td>2 BR</td><td>—</td><td>€155k</td><td>n/d</td><td>—</td><td>new</td>
+<td><a class="source-link" href="https://www.immobiliare.it/nuove-costruzioni/caorle/" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr class="new-row"><td><span class="new-badge">🆕 NEW TO RADAR ≤30D</span></td>
+<td><a class="project-link" href="https://www.immobiliare.it/nuove-costruzioni/caorle/" target="_blank" rel="noopener noreferrer"><b>Porto Santa Margherita — Viale Lepanto ↗</b></a></td>
+<td>Caorle</td><td>Apartment</td><td>2 BR</td><td>—</td><td>€265k</td><td>n/d</td><td>—</td><td>new</td>
+<td><a class="source-link" href="https://www.immobiliare.it/nuove-costruzioni/caorle/" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr class="new-row"><td><span class="new-badge">🆕 NEW TO RADAR ≤30D</span></td>
+<td><a class="project-link" href="https://www.immobiliare.it/nuove-costruzioni/caorle/" target="_blank" rel="noopener noreferrer"><b>Porto Santa Margherita — Via dei Loredan ↗</b></a></td>
+<td>Caorle</td><td>Apartment</td><td>2 BR</td><td>—</td><td>€265k</td><td>n/d</td><td>—</td><td>new</td>
+<td><a class="source-link" href="https://www.immobiliare.it/nuove-costruzioni/caorle/" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr class="new-row"><td><span class="new-badge">🆕 NEW TO RADAR ≤30D</span></td>
+<td><a class="project-link" href="https://www.idealista.it/vendita-case/cavallino-treporti-venezia/con-nuova-costruzione/" target="_blank" rel="noopener noreferrer"><b>Residence Pisani — Via Livenza 32 ↗</b></a></td>
+<td>Cavallino-Treporti</td><td>Apartment / villa</td><td>2–3 BR</td><td>70–120 m²</td><td>€240–420k</td><td>~€3.4–3.5k/m²</td><td>near sea</td><td>planned</td>
+<td><a class="source-link" href="https://www.idealista.it/vendita-case/cavallino-treporti-venezia/con-nuova-costruzione/" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr class="new-row"><td><span class="new-badge">🆕 NEW TO RADAR ≤30D</span></td>
+<td><a class="project-link" href="https://www.immobiliare.it/nuove-costruzioni/appartamenti-cavallino-treporti/" target="_blank" rel="noopener noreferrer"><b>Via Tagliamento — 12 apartments + villa ↗</b></a></td>
+<td>Cavallino-Treporti</td><td>Apartment / villa</td><td>2–3 BR</td><td>various</td><td>from €265k</td><td>n/d</td><td>—</td><td>under construction</td>
+<td><a class="source-link" href="https://www.immobiliare.it/nuove-costruzioni/appartamenti-cavallino-treporti/" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr class="new-row"><td><span class="new-badge">🆕 NEW TO RADAR ≤30D</span></td>
+<td><a class="project-link" href="https://www.immobiliare.it/nuove-costruzioni/appartamenti-cavallino-treporti/" target="_blank" rel="noopener noreferrer"><b>Via Fausta — new trilocale ↗</b></a></td>
+<td>Cavallino-Treporti</td><td>Apartment</td><td>2 BR</td><td>—</td><td>€239k</td><td>n/d</td><td>—</td><td>new</td>
+<td><a class="source-link" href="https://www.immobiliare.it/nuove-costruzioni/appartamenti-cavallino-treporti/" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr class="new-row"><td><span class="new-badge">🆕 NEW TO RADAR ≤30D</span></td>
+<td><a class="project-link" href="https://www.immobiliare.it/nuove-costruzioni/appartamenti-cavallino-treporti/" target="_blank" rel="noopener noreferrer"><b>Via Julia — new quadrilocale ↗</b></a></td>
+<td>Cavallino-Treporti</td><td>Apartment</td><td>3 BR</td><td>—</td><td>€310k</td><td>n/d</td><td>—</td><td>new</td>
+<td><a class="source-link" href="https://www.immobiliare.it/nuove-costruzioni/appartamenti-cavallino-treporti/" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr class="new-row"><td><span class="new-badge">🆕 NEW TO RADAR ≤30D</span></td>
+<td><a class="project-link" href="https://www.immobiliare.it/nuove-costruzioni/appartamenti-cavallino-treporti/" target="_blank" rel="noopener noreferrer"><b>Via Pordelio 418 — units ↗</b></a></td>
+<td>Cavallino-Treporti</td><td>Apartment</td><td>1–3 BR</td><td>various</td><td>€233–548k</td><td>n/d</td><td>—</td><td>new</td>
+<td><a class="source-link" href="https://www.immobiliare.it/nuove-costruzioni/appartamenti-cavallino-treporti/" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr class="new-row"><td><span class="new-badge">🆕 NEW TO RADAR ≤30D</span></td>
+<td><a class="project-link" href="https://www.immobiliare.it/nuove-costruzioni/san-dona-di-piave/" target="_blank" rel="noopener noreferrer"><b>Elettra ↗</b></a></td>
+<td>San Donà di Piave</td><td>Apartment</td><td>2–3 BR</td><td>105–177 m²</td><td>€295–380k</td><td>~€2.1–3.6k/m²</td><td>—</td><td>new / restoration</td>
+<td><a class="source-link" href="https://www.immobiliare.it/nuove-costruzioni/san-dona-di-piave/" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr class="new-row"><td><span class="new-badge">🆕 NEW TO RADAR ≤30D</span></td>
+<td><a class="project-link" href="https://www.immobiliare.it/nuove-costruzioni/san-dona-di-piave/" target="_blank" rel="noopener noreferrer"><b>THE RIVER ↗</b></a></td>
+<td>San Donà di Piave</td><td>Apartment</td><td>3 BR</td><td>144 m²</td><td>€320–365k</td><td>~€2.22–2.53k/m²</td><td>—</td><td>new build</td>
+<td><a class="source-link" href="https://www.immobiliare.it/nuove-costruzioni/san-dona-di-piave/" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr class="new-row"><td><span class="new-badge">🆕 NEW TO RADAR ≤30D</span></td>
+<td><a class="project-link" href="https://www.idealista.it/vendita-case/san-dona-di-piave-venezia/con-nuova-costruzione/" target="_blank" rel="noopener noreferrer"><b>Ardeide ↗</b></a></td>
+<td>San Donà di Piave</td><td>Apartment</td><td>2–3 BR</td><td>104–129 m²</td><td>€290–295k</td><td>~€2.25–2.84k/m²</td><td>—</td><td>new build</td>
+<td><a class="source-link" href="https://www.idealista.it/vendita-case/san-dona-di-piave-venezia/con-nuova-costruzione/" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr class="new-row"><td><span class="new-badge">🆕 NEW TO RADAR ≤30D</span></td>
+<td><a class="project-link" href="https://www.idealista.it/vendita-case/san-dona-di-piave-venezia/con-nuova-costruzione/" target="_blank" rel="noopener noreferrer"><b>Mussetta di Sopra 56 — Urban Costruzioni / JBC ↗</b></a></td>
+<td>San Donà di Piave</td><td>Apartment / attico</td><td>2–3 BR</td><td>110 m²</td><td>€288–298k</td><td>~€2.62–2.71k/m²</td><td>—</td><td>delivery 2026</td>
+<td><a class="source-link" href="https://www.idealista.it/vendita-case/san-dona-di-piave-venezia/con-nuova-costruzione/" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr class="new-row"><td><span class="new-badge">🆕 NEW TO RADAR ≤30D</span></td>
+<td><a class="project-link" href="https://www.idealista.it/vendita-case/san-dona-di-piave-venezia/con-nuova-costruzione/" target="_blank" rel="noopener noreferrer"><b>Via Sabbioni — 12-unit project ↗</b></a></td>
+<td>San Donà di Piave</td><td>Apartment</td><td>2–3 BR</td><td>114–115 m²</td><td>€285k</td><td>~€2.48–2.50k/m²</td><td>—</td><td>prossima realizzazione</td>
+<td><a class="source-link" href="https://www.idealista.it/vendita-case/san-dona-di-piave-venezia/con-nuova-costruzione/" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr class="new-row"><td><span class="new-badge">🆕 NEW TO RADAR ≤30D</span></td>
+<td><a class="project-link" href="https://www.immobiliare.it/nuove-costruzioni/ville-san-dona-di-piave/" target="_blank" rel="noopener noreferrer"><b>Via Misurina 41 — LVI ↗</b></a></td>
+<td>San Donà di Piave</td><td>Villa plurifamiliare</td><td>3 BR</td><td>140 m²</td><td>€338k</td><td>~€2.41k/m²</td><td>—</td><td>new project</td>
+<td><a class="source-link" href="https://www.immobiliare.it/nuove-costruzioni/ville-san-dona-di-piave/" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr class="new-row"><td><span class="new-badge">🆕 NEW TO RADAR ≤30D</span></td>
+<td><a class="project-link" href="https://www.idealista.it/vendita-case/san-dona-di-piave-venezia/con-nuova-costruzione/" target="_blank" rel="noopener noreferrer"><b>Caposile — bifamiliari ↗</b></a></td>
+<td>San Donà di Piave</td><td>Villa / bifamiliare</td><td>3 BR</td><td>—</td><td>€168k*</td><td>n/d</td><td>between San Donà/Jeso​lo</td><td>new build</td>
+<td><a class="source-link" href="https://www.idealista.it/vendita-case/san-dona-di-piave-venezia/con-nuova-costruzione/" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr class="new-row"><td><span class="new-badge">🆕 NEW TO RADAR ≤30D</span></td>
+<td><a class="project-link" href="https://www.idealista.it/vendita-nuove_costruzioni/treviso-treviso/" target="_blank" rel="noopener noreferrer"><b>Palazzo San Gallo ↗</b></a></td>
+<td>Treviso</td><td>Apartment</td><td>2–3 BR</td><td>—</td><td>from €290k</td><td>n/d</td><td>—</td><td>under construction</td>
+<td><a class="source-link" href="https://www.idealista.it/vendita-nuove_costruzioni/treviso-treviso/" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr class="new-row"><td><span class="new-badge">🆕 NEW TO RADAR ≤30D</span></td>
+<td><a class="project-link" href="https://www.idealista.it/vendita-nuove_costruzioni/treviso-treviso/" target="_blank" rel="noopener noreferrer"><b>I Giardini di Via Piave ↗</b></a></td>
+<td>Treviso</td><td>Apartment / attico</td><td>3 BR</td><td>—</td><td>from €570k</td><td>n/d</td><td>—</td><td>ready</td>
+<td><a class="source-link" href="https://www.idealista.it/vendita-nuove_costruzioni/treviso-treviso/" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr></tbody></table></div>
+<h3>Jesolo — why the previous 8 was wrong</h3>
+<p>Поточний live source показує 388 результатів новобудов на Immobiliare.it. У самому результаті видно, наприклад, Marlin Tower, JES Tower, Wave Twin Towers, 32-unit residence behind Piazza Mazzini/Brescia та інші listings. citeturn1view0 Casa.it також показує окремі об'єкти, які не повинні губитися: Residence La Plage, Via Belluno 40 та Wave Twin Tower. citeturn2view6</p>
+<h3>San Donà — additional discovery</h3>
+<p>Live inventory показує HORIZON, Domus 15, Elettra, Celestia, EOS, SUN VILLAGE та THE RIVER; Idealista додає Ardeide і JBC/Urban Costruzioni units у Mussetta di Sopra. citeturn2view3turn2view4turn1search0</p>
+</section>
+<style>
+.new-badge{display:inline-block;background:#ffe16b;color:#5a4700;border-radius:999px;padding:5px 9px;font-size:11px;font-weight:800}
+.new-row{background:#fffbea}
+.new-card{border:2px solid #f1c40f}
+</style>
+<section id='tab-live-full' class='tab-section'>
+<h2>🔴 LIVE FULL INVENTORY — RADAR RUN 16.08.2026</h2>
+<div class='good'><b>Це тепер головна вкладка радара.</b> Я не скорочую ринок до 8–20 “цікавих” об'єктів. Спочатку фіксую повний live inventory кожного джерела, потім окремо виділяю конкретні listings/projects та TOP opportunities.</div>
+<div class='stats'>
+<div><small>Jesolo</small><b>384</b></div><div><small>Caorle</small><b>48</b></div><div><small>Cavallino</small><b>46</b></div><div><small>San Donà</small><b>85</b></div><div><small>Treviso</small><b>595</b></div><div><small>Source results total</small><b>1,158</b></div>
+</div>
+<div class='note'><b>Не плутати:</b> 1,158 — це сума portal search results. Це НЕ 1,158 унікальних проєктів: listings одного development можуть дублюватися між units/агентствами. Саме тому радар веде три рівні: <b>Project → Unit → Listing</b>.</div>
+<h3>1. Live source inventory</h3>
+<div class='tablewrap'><table><thead><tr><th>Location</th><th>Live results</th><th>Source</th><th>Open</th></tr></thead><tbody><tr><td><b>Jesolo</b></td><td>384</td><td>Immobiliare.it</td><td><a class='source-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/' target='_blank' rel='noopener noreferrer'>Open live inventory ↗</a></td></tr><tr><td><b>Caorle</b></td><td>48</td><td>Immobiliare.it</td><td><a class='source-link' href='https://www.immobiliare.it/nuove-costruzioni/caorle/' target='_blank' rel='noopener noreferrer'>Open live inventory ↗</a></td></tr><tr><td><b>Cavallino-Treporti</b></td><td>46</td><td>Immobiliare.it</td><td><a class='source-link' href='https://www.immobiliare.it/nuove-costruzioni/appartamenti-cavallino-treporti/' target='_blank' rel='noopener noreferrer'>Open live inventory ↗</a></td></tr><tr><td><b>San Donà di Piave</b></td><td>85</td><td>Immobiliare.it</td><td><a class='source-link' href='https://www.immobiliare.it/nuove-costruzioni/san-dona-di-piave/' target='_blank' rel='noopener noreferrer'>Open live inventory ↗</a></td></tr><tr><td><b>Treviso</b></td><td>595</td><td>Immobiliare.it</td><td><a class='source-link' href='https://www.immobiliare.it/nuove-costruzioni/treviso/' target='_blank' rel='noopener noreferrer'>Open live inventory ↗</a></td></tr></tbody></table></div>
+<h3>2. Jesolo — micro-location inventory</h3>
+<div class='tablewrap'><table><thead><tr><th>Micro-location</th><th>Live results</th><th>Source</th></tr></thead><tbody><tr><td>Jesolo Paese</td><td>91</td><td><a class='source-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/jesolo-paese/' target='_blank' rel='noopener noreferrer'>Open ↗</a></td></tr><tr><td>Lido Ovest / Faro</td><td>61</td><td><a class='source-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-ovest-faro/' target='_blank' rel='noopener noreferrer'>Open ↗</a></td></tr><tr><td>Lido Centro Ovest</td><td>151</td><td><a class='source-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-centro-ovest/' target='_blank' rel='noopener noreferrer'>Open ↗</a></td></tr><tr><td>Lido Est</td><td>59</td><td><a class='source-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-est/' target='_blank' rel='noopener noreferrer'>Open ↗</a></td></tr><tr><td>Pineta</td><td>19</td><td><a class='source-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/pineta/' target='_blank' rel='noopener noreferrer'>Open ↗</a></td></tr><tr><td>Passarella / Ca&#x27; Pirami</td><td>10</td><td><a class='source-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/passarella-ca-pirami/' target='_blank' rel='noopener noreferrer'>Open ↗</a></td></tr></tbody></table></div>
+<div class='note'><b>Jesolo coverage:</b> головна сторінка дає 384 results; окремі сторінки підтверджують 91 у Jesolo Paese, 61 у Lido Ovest/Faro, 151 у Lido Centro Ovest, 59 у Lido Est, 19 у Pineta та 10 у Passarella/Ca' Pirami. Ці micro-location counts не сумуються через overlap/класифікацію порталу. citeturn1view0turn1view3turn1view4turn1view5turn1view6turn1view7turn1view8</div>
+<h3>3. Concrete live listings captured in this run</h3>
+<div class='tablewrap'><table><thead><tr><th>Location</th><th>Listing</th><th>ASKING</th><th>Type</th><th>Source</th></tr></thead><tbody><tr><td>Jesolo / Faro</td><td><a class='project-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-ovest-faro/' target='_blank' rel='noopener noreferrer'>Via Udine ↗</a></td><td>€270k</td><td>Trilocale</td><td><a class='source-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-ovest-faro/' target='_blank' rel='noopener noreferrer'>Source ↗</a></td></tr><tr><td>Jesolo / Faro</td><td><a class='project-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-ovest-faro/' target='_blank' rel='noopener noreferrer'>Piazza Tommaso Nember ↗</a></td><td>€260k</td><td>Trilocale</td><td><a class='source-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-ovest-faro/' target='_blank' rel='noopener noreferrer'>Source ↗</a></td></tr><tr><td>Jesolo / Faro</td><td><a class='project-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-ovest-faro/' target='_blank' rel='noopener noreferrer'>Via Udine 41 ↗</a></td><td>€365k</td><td>Trilocale</td><td><a class='source-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-ovest-faro/' target='_blank' rel='noopener noreferrer'>Source ↗</a></td></tr><tr><td>Jesolo / Faro</td><td><a class='project-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-ovest-faro/' target='_blank' rel='noopener noreferrer'>Via Leon Battista Alberti ↗</a></td><td>€590k</td><td>Quadrilocale</td><td><a class='source-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-ovest-faro/' target='_blank' rel='noopener noreferrer'>Source ↗</a></td></tr><tr><td>Jesolo / Faro</td><td><a class='project-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-ovest-faro/' target='_blank' rel='noopener noreferrer'>Via Belluno 35 ↗</a></td><td>€430k</td><td>Attico</td><td><a class='source-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-ovest-faro/' target='_blank' rel='noopener noreferrer'>Source ↗</a></td></tr><tr><td>Jesolo / Faro</td><td><a class='project-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-ovest-faro/' target='_blank' rel='noopener noreferrer'>Piazza Drago ↗</a></td><td>€375k</td><td>Quadrilocale</td><td><a class='source-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-ovest-faro/' target='_blank' rel='noopener noreferrer'>Source ↗</a></td></tr><tr><td>Jesolo / Faro</td><td><a class='project-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-ovest-faro/' target='_blank' rel='noopener noreferrer'>Via Padova ↗</a></td><td>€1.42m</td><td>Quadrilocale</td><td><a class='source-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-ovest-faro/' target='_blank' rel='noopener noreferrer'>Source ↗</a></td></tr><tr><td>Jesolo / Faro</td><td><a class='project-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-ovest-faro/' target='_blank' rel='noopener noreferrer'>Piazza Drago ↗</a></td><td>€440k</td><td>Quadrilocale</td><td><a class='source-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-ovest-faro/' target='_blank' rel='noopener noreferrer'>Source ↗</a></td></tr><tr><td>Jesolo / Faro</td><td><a class='project-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-ovest-faro/' target='_blank' rel='noopener noreferrer'>Luigi Ceolotto ↗</a></td><td>€410k</td><td>Quadrilocale</td><td><a class='source-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-ovest-faro/' target='_blank' rel='noopener noreferrer'>Source ↗</a></td></tr><tr><td>Jesolo / Faro</td><td><a class='project-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-ovest-faro/' target='_blank' rel='noopener noreferrer'>Piazza Tommaso Nember ↗</a></td><td>€320k</td><td>Trilocale</td><td><a class='source-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-ovest-faro/' target='_blank' rel='noopener noreferrer'>Source ↗</a></td></tr><tr><td>Jesolo / Faro</td><td><a class='project-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-ovest-faro/' target='_blank' rel='noopener noreferrer'>Via Michelangelo Buonarroti ↗</a></td><td>€439k</td><td>Trilocale</td><td><a class='source-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-ovest-faro/' target='_blank' rel='noopener noreferrer'>Source ↗</a></td></tr><tr><td>Jesolo / Faro</td><td><a class='project-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-ovest-faro/' target='_blank' rel='noopener noreferrer'>Piazza Drago ↗</a></td><td>€460k</td><td>Quadrilocale</td><td><a class='source-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-ovest-faro/' target='_blank' rel='noopener noreferrer'>Source ↗</a></td></tr><tr><td>Jesolo / Faro</td><td><a class='project-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-ovest-faro/' target='_blank' rel='noopener noreferrer'>Via Pietro Mascagni ↗</a></td><td>€545k</td><td>Quadrilocale</td><td><a class='source-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-ovest-faro/' target='_blank' rel='noopener noreferrer'>Source ↗</a></td></tr><tr><td>Jesolo / Faro</td><td><a class='project-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-ovest-faro/' target='_blank' rel='noopener noreferrer'>Via Gorizia ↗</a></td><td>€590k</td><td>Attico</td><td><a class='source-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-ovest-faro/' target='_blank' rel='noopener noreferrer'>Source ↗</a></td></tr><tr><td>Jesolo / Faro</td><td><a class='project-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-ovest-faro/' target='_blank' rel='noopener noreferrer'>Via Ceolotto ↗</a></td><td>€410k</td><td>Trilocale</td><td><a class='source-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-ovest-faro/' target='_blank' rel='noopener noreferrer'>Source ↗</a></td></tr><tr><td>Jesolo / Faro</td><td><a class='project-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-ovest-faro/' target='_blank' rel='noopener noreferrer'>Via Pietro Mascagni ↗</a></td><td>€410k</td><td>Trilocale</td><td><a class='source-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-ovest-faro/' target='_blank' rel='noopener noreferrer'>Source ↗</a></td></tr><tr><td>Jesolo / Faro</td><td><a class='project-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-ovest-faro/' target='_blank' rel='noopener noreferrer'>Via delle Vigne ↗</a></td><td>€558k</td><td>Villa bifamiliare</td><td><a class='source-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-ovest-faro/' target='_blank' rel='noopener noreferrer'>Source ↗</a></td></tr><tr><td>Jesolo / Faro</td><td><a class='project-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-ovest-faro/' target='_blank' rel='noopener noreferrer'>Piazza Aurora 11 ↗</a></td><td>€790k (was €930k)</td><td>Quadrilocale</td><td><a class='source-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-ovest-faro/' target='_blank' rel='noopener noreferrer'>Source ↗</a></td></tr><tr><td>Jesolo / Faro</td><td><a class='project-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-ovest-faro/' target='_blank' rel='noopener noreferrer'>Via Rovigo ↗</a></td><td>€290k</td><td>Quadrilocale</td><td><a class='source-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-ovest-faro/' target='_blank' rel='noopener noreferrer'>Source ↗</a></td></tr><tr><td>Jesolo / Centro Ovest</td><td><a class='project-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-centro-ovest/' target='_blank' rel='noopener noreferrer'>Piazza Brescia ↗</a></td><td>€360k</td><td>Trilocale</td><td><a class='source-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-centro-ovest/' target='_blank' rel='noopener noreferrer'>Source ↗</a></td></tr><tr><td>Jesolo / Centro Ovest</td><td><a class='project-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-centro-ovest/' target='_blank' rel='noopener noreferrer'>Via Aquileia 176 ↗</a></td><td>€233k</td><td>Trilocale</td><td><a class='source-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-centro-ovest/' target='_blank' rel='noopener noreferrer'>Source ↗</a></td></tr><tr><td>Jesolo / Centro Ovest</td><td><a class='project-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-centro-ovest/' target='_blank' rel='noopener noreferrer'>Via Cordevole ↗</a></td><td>€450k</td><td>Trilocale</td><td><a class='source-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-centro-ovest/' target='_blank' rel='noopener noreferrer'>Source ↗</a></td></tr><tr><td>Jesolo / Centro Ovest</td><td><a class='project-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-centro-ovest/' target='_blank' rel='noopener noreferrer'>Via Equilio ↗</a></td><td>€375k</td><td>Trilocale</td><td><a class='source-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-centro-ovest/' target='_blank' rel='noopener noreferrer'>Source ↗</a></td></tr><tr><td>Jesolo / Centro Ovest</td><td><a class='project-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-centro-ovest/' target='_blank' rel='noopener noreferrer'>Piazza Mazzini ↗</a></td><td>€380k</td><td>Trilocale</td><td><a class='source-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-centro-ovest/' target='_blank' rel='noopener noreferrer'>Source ↗</a></td></tr><tr><td>Jesolo / Centro Ovest</td><td><a class='project-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-centro-ovest/' target='_blank' rel='noopener noreferrer'>Viale Venezia accesso al mare ↗</a></td><td>€618k</td><td>Trilocale</td><td><a class='source-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-centro-ovest/' target='_blank' rel='noopener noreferrer'>Source ↗</a></td></tr><tr><td>Jesolo / Centro Ovest</td><td><a class='project-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-centro-ovest/' target='_blank' rel='noopener noreferrer'>Via Aquileia 181B ↗</a></td><td>€450k</td><td>Quadrilocale</td><td><a class='source-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-centro-ovest/' target='_blank' rel='noopener noreferrer'>Source ↗</a></td></tr><tr><td>Jesolo / Centro Ovest</td><td><a class='project-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-centro-ovest/' target='_blank' rel='noopener noreferrer'>Piazza Brescia 15-17 ↗</a></td><td>€420k</td><td>Quadrilocale</td><td><a class='source-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-centro-ovest/' target='_blank' rel='noopener noreferrer'>Source ↗</a></td></tr><tr><td>Jesolo / Lido Est</td><td><a class='project-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-est/' target='_blank' rel='noopener noreferrer'>Via Torcello 32 ↗</a></td><td>€360k</td><td>Loft</td><td><a class='source-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-est/' target='_blank' rel='noopener noreferrer'>Source ↗</a></td></tr><tr><td>Jesolo / Lido Est</td><td><a class='project-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-est/' target='_blank' rel='noopener noreferrer'>Via Olanda 172 ↗</a></td><td>€512k</td><td>Trilocale</td><td><a class='source-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-est/' target='_blank' rel='noopener noreferrer'>Source ↗</a></td></tr><tr><td>Jesolo / Lido Est</td><td><a class='project-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-est/' target='_blank' rel='noopener noreferrer'>Via Vittorio Veneto 8 ↗</a></td><td>€750k</td><td>Attico</td><td><a class='source-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-est/' target='_blank' rel='noopener noreferrer'>Source ↗</a></td></tr><tr><td>Jesolo / Lido Est</td><td><a class='project-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-est/' target='_blank' rel='noopener noreferrer'>Via Fiume ↗</a></td><td>€1.9m</td><td>Attico</td><td><a class='source-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/lido-est/' target='_blank' rel='noopener noreferrer'>Source ↗</a></td></tr><tr><td>Jesolo / Paese</td><td><a class='project-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/jesolo-paese/' target='_blank' rel='noopener noreferrer'>Via Cà Gamba ↗</a></td><td>€393k</td><td>Villa a schiera</td><td><a class='source-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/jesolo-paese/' target='_blank' rel='noopener noreferrer'>Source ↗</a></td></tr><tr><td>Jesolo / Ca&#x27; Pirami</td><td><a class='project-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/passarella-ca-pirami/' target='_blank' rel='noopener noreferrer'>Via Fiordaliso ↗</a></td><td>€220k</td><td>Trilocale</td><td><a class='source-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/passarella-ca-pirami/' target='_blank' rel='noopener noreferrer'>Source ↗</a></td></tr><tr><td>Jesolo / Ca&#x27; Pirami</td><td><a class='project-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/passarella-ca-pirami/' target='_blank' rel='noopener noreferrer'>Villa bifamiliare 160 m² ↗</a></td><td>€360k</td><td>Villa bifamiliare</td><td><a class='source-link' href='https://www.immobiliare.it/nuove-costruzioni/jesolo/passarella-ca-pirami/' target='_blank' rel='noopener noreferrer'>Source ↗</a></td></tr></tbody></table></div>
+<h3>4. JBC direct-source inventory</h3>
+<div class='tablewrap'><table><thead><tr><th>Project</th><th>Location</th><th>Current information</th><th>Stage</th><th>Source</th></tr></thead><tbody><tr><td><a class='project-link' href='https://www.jbcimmobiliare.it/' target='_blank' rel='noopener noreferrer'><b>JHILLS ↗</b></a></td><td>Jesolo</td><td>5 units; 3-room apartments; garden + independent entrance</td><td>Spring 2027</td><td><a class='source-link' href='https://www.jbcimmobiliare.it/' target='_blank' rel='noopener noreferrer'>JBC ↗</a></td></tr><tr><td><a class='project-link' href='https://www.jbcimmobiliare.it/home-b61-nuovo-bilocale-a-jesolo-jesolo' target='_blank' rel='noopener noreferrer'><b>HOME B6.1 ↗</b></a></td><td>Jesolo</td><td>6 units; 60 m² example; steel structure; NZEB; private terraces; parking</td><td>Dec 2027</td><td><a class='source-link' href='https://www.jbcimmobiliare.it/home-b61-nuovo-bilocale-a-jesolo-jesolo' target='_blank' rel='noopener noreferrer'>JBC ↗</a></td></tr><tr><td><a class='project-link' href='https://www.jbcimmobiliare.it/magnolia-trilocale-con-ampi-spazi-terrazza-e-privacy-a-jesolo-paese-jesolo' target='_blank' rel='noopener noreferrer'><b>Magnolia ↗</b></a></td><td>Jesolo Paese</td><td>8 units; last trilocale 90 m²; €290k; A4; PV; geothermal; pool; parking</td><td>new</td><td><a class='source-link' href='https://www.jbcimmobiliare.it/magnolia-trilocale-con-ampi-spazi-terrazza-e-privacy-a-jesolo-paese-jesolo' target='_blank' rel='noopener noreferrer'>JBC ↗</a></td></tr><tr><td><a class='project-link' href='https://www.jbcimmobiliare.it/' target='_blank' rel='noopener noreferrer'><b>GreenCarpet ↗</b></a></td><td>Jesolo Pineta</td><td>Seafront project; early-stage / direct-source project</td><td>planned</td><td><a class='source-link' href='https://www.jbcimmobiliare.it/' target='_blank' rel='noopener noreferrer'>JBC ↗</a></td></tr><tr><td><a class='project-link' href='https://www.jbcimmobiliare.it/' target='_blank' rel='noopener noreferrer'><b>New sea-view apartment ↗</b></a></td><td>Caorle</td><td>New-build sea-view apartment in JBC current inventory</td><td>current</td><td><a class='source-link' href='https://www.jbcimmobiliare.it/' target='_blank' rel='noopener noreferrer'>JBC ↗</a></td></tr></tbody></table></div>
+<div class='note'><b>JBC direct source:</b> JBC зараз прямо показує JHILLS, GreenCarpet та інші construction projects; HOME B6.1 має €240k, 60 m², 6 units і delivery Dec 2027; Magnolia — €290k, 90 m², A4, PV, geothermal, pool, parking. citeturn2search13turn2search12turn2search14</div>
+<h3>5. What is genuinely new / changed</h3>
+<ul>
+<li>🆕 <b>NEW TO RADAR ≤30D</b> — тільки якщо об'єкт не був у попередньому збереженому snapshot.</li>
+<li>🆕 <b>NEW LISTING</b> — тільки якщо джерело дає підтверджену нову дату публікації.</li>
+<li>↗ <b>PRICE INCREASE</b> — дві датовані ціни одного unit.</li>
+<li>↘ <b>PRICE REDUCTION</b> — дві датовані ціни; наприклад, Piazza Aurora 11 зараз показує €790k проти €930k, -15.1%. citeturn1view4</li>
+</ul>
+<div class='note'><b>Важливо:</b> “full list” на порталах технічно живий і пагінований. Тому я не буду брехливо називати 384 listings “384 projects”. У звіті зберігається live count + concrete captured listings + direct-source projects + planned pipeline. Наступний запуск порівнює Project/Unit/Listing з попередніми snapshots.</div>
+</section>
+<style>
+#tab-live-full .new-row{background:#fffbea}
+#tab-live-full .source-link{font-weight:700}
+</style><style>
+/* Global table readability fix — applies to every tab */
+table th, table td { box-sizing:border-box; }
+table th { height:auto; }
+table td a { overflow-wrap:anywhere; }
+table th:last-child, table td:last-child { min-width:115px; }
+@media (max-width:1100px){
+  table{min-width:1000px}
+  th,td{font-size:11.5px;padding:8px}
+}
+</style>
+<style id="tab-navigation-fix">
+.tab-nav{
+  display:inline-block !important;
+  position:relative;
+  z-index:1000;
+  pointer-events:auto !important;
+  cursor:pointer !important;
+  text-decoration:none !important;
+}
+.tab-nav.active{
+  font-weight:800;
+}
+.tab-section{
+  display:none;
+  position:relative;
+  z-index:1;
+}
+.tab-section.active{
+  display:block !important;
+}
+</style>
+
+
+<style id="tab-final-override">
+.tab-section:not(.active){display:none !important}
+.tab-section.active{display:block !important}
+</style>
+
+<style id="beautiful-tab-navigation">
+/* Modern, compact tab bar */
+.tabs,
+nav.tabs,
+.tab-bar,
+.nav-tabs {
+  display:flex !important;
+  flex-wrap:wrap !important;
+  align-items:center !important;
+  gap:8px !important;
+  padding:10px 12px !important;
+  margin:0 0 22px 0 !important;
+  background:rgba(248,250,252,.96) !important;
+  border:1px solid #e2e8f0 !important;
+  border-radius:16px !important;
+  box-shadow:0 6px 20px rgba(15,23,42,.06) !important;
+  position:sticky !important;
+  top:10px !important;
+  z-index:900 !important;
+  backdrop-filter:blur(10px) !important;
+}
+
+.tab-nav {
+  appearance:none !important;
+  -webkit-appearance:none !important;
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  min-height:40px !important;
+  padding:9px 15px !important;
+  border:1px solid transparent !important;
+  border-radius:11px !important;
+  background:transparent !important;
+  color:#475569 !important;
+  font-size:13px !important;
+  font-weight:700 !important;
+  line-height:1.2 !important;
+  white-space:nowrap !important;
+  text-decoration:none !important;
+  transition:all .18s ease !important;
+  box-shadow:none !important;
+}
+
+.tab-nav:hover {
+  color:#0f172a !important;
+  background:#ffffff !important;
+  border-color:#dbe3ec !important;
+  transform:translateY(-1px) !important;
+  box-shadow:0 3px 10px rgba(15,23,42,.06) !important;
+}
+
+.tab-nav.active {
+  color:#ffffff !important;
+  background:linear-gradient(135deg,#172554,#2563eb) !important;
+  border-color:#1d4ed8 !important;
+  box-shadow:0 5px 14px rgba(37,99,235,.24) !important;
+}
+
+.tab-nav:focus-visible {
+  outline:3px solid rgba(59,130,246,.25) !important;
+  outline-offset:2px !important;
+}
+
+/* Mobile / narrow screens */
+@media (max-width: 900px) {
+  .tabs,
+  nav.tabs {
+    position:relative !important;
+    top:auto !important;
+    overflow-x:auto !important;
+    flex-wrap:nowrap !important;
+    scrollbar-width:thin !important;
+  }
+  .tab-nav {
+    flex:0 0 auto !important;
+  }
+}
+
+/* Better section separation after switching tabs */
+.tab-section.active {
+  animation:tabFadeIn .16s ease-out;
+}
+@keyframes tabFadeIn {
+  from { opacity:.65; transform:translateY(3px); }
+  to { opacity:1; transform:translateY(0); }
+}
+</style>
+
+<style id="radar-tab-caption">
+.radar-tab-caption{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin:0 0 10px 2px;
+  color:#64748b;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.03em;
+  text-transform:uppercase;
+}
+.radar-tab-caption .dot{
+  width:7px;height:7px;border-radius:50%;
+  background:#2563eb;display:inline-block;
+  box-shadow:0 0 0 4px rgba(37,99,235,.10);
+}
+</style>
+
+<style id="radar-tabs-no-js">
+/* No-JavaScript tab system: works from local file, GitHub Pages and webviews. */
+.tab-section{
+  display:none !important;
+  max-width:1600px;
+  margin:auto;
+  padding:22px;
+}
+#tab-overview{
+  display:block !important;
+}
+body:has(.tab-section:target) #tab-overview{
+  display:none !important;
+}
+.tab-section:target{
+  display:block !important;
+}
+
+/* Active tab follows the URL hash. */
+.tab-nav{
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  position:relative !important;
+  z-index:1001 !important;
+  pointer-events:auto !important;
+  cursor:pointer !important;
+  text-decoration:none !important;
+}
+.tab-nav.active{ /* retained for compatibility */
+  color:#fff !important;
+}
+body:not(:has(.tab-section:target)) .tab-nav[href="#tab-overview"],
+body:has(#tab-overview:target) .tab-nav[href="#tab-overview"],
+body:has(#tab-live-full:target) .tab-nav[href="#tab-live-full"],
+body:has(#tab-full-inventory:target) .tab-nav[href="#tab-full-inventory"],
+body:has(#tab-jesolo:target) .tab-nav[href="#tab-jesolo"],
+body:has(#tab-caorle:target) .tab-nav[href="#tab-caorle"],
+body:has(#tab-cavallino:target) .tab-nav[href="#tab-cavallino"],
+body:has(#tab-san-dona:target) .tab-nav[href="#tab-san-dona"],
+body:has(#tab-treviso:target) .tab-nav[href="#tab-treviso"],
+body:has(#tab-global-matrix:target) .tab-nav[href="#tab-global-matrix"],
+body:has(#tab-price-history:target) .tab-nav[href="#tab-price-history"],
+body:has(#tab-planned:target) .tab-nav[href="#tab-planned"],
+body:has(#tab-sources:target) .tab-nav[href="#tab-sources"],
+body:has(#tab-jbc-source-source:target) .tab-nav[href="#tab-jbc-source-source"]{
+  color:#fff !important;
+  background:linear-gradient(135deg,#172554,#2563eb) !important;
+  border-color:#1d4ed8 !important;
+  box-shadow:0 5px 14px rgba(37,99,235,.24) !important;
+}
+.tab-nav:hover{
+  color:#0f172a !important;
+  background:#fff !important;
+  border-color:#dbe3ec !important;
+  transform:translateY(-1px) !important;
+}
+.tabs{
+  display:flex !important;
+  flex-wrap:wrap !important;
+  align-items:center !important;
+  gap:8px !important;
+  padding:10px 12px !important;
+  margin:0 0 22px 0 !important;
+  background:rgba(248,250,252,.96) !important;
+  border:1px solid #e2e8f0 !important;
+  border-radius:16px !important;
+  box-shadow:0 6px 20px rgba(15,23,42,.06) !important;
+  position:sticky !important;
+  top:10px !important;
+  z-index:1000 !important;
+  backdrop-filter:blur(10px) !important;
+}
+</style>
+
+<style id="radar-tabs-definitive-fix">
+/* Definitive GitHub Pages tab controller.  No :target dependency. */
+.tab-section,
+.tab-section:not(.active),
+.tab-section:target { display:none !important; }
+.tab-section.active { display:block !important; }
+.tab-nav.active {
+  color:#fff !important;
+  background:linear-gradient(135deg,#172554,#2563eb) !important;
+  border-color:#1d4ed8 !important;
+  box-shadow:0 5px 14px rgba(37,99,235,.24) !important;
+}
+</style>
+<script>
+(function () {
+  const nav = document.querySelector('nav.tabs');
+  if (!nav) return;
+  const links = Array.from(nav.querySelectorAll('a.tab-nav'));
+  const sections = Array.from(document.querySelectorAll('section.tab-section'));
+  const ids = new Set(sections.map(s => s.id));
+
+  function activate(id, updateHash) {
+    if (!ids.has(id)) id = 'tab-overview';
+    sections.forEach(s => s.classList.toggle('active', s.id === id));
+    links.forEach(a => {
+      const on = a.getAttribute('href') === '#' + id;
+      a.classList.toggle('active', on);
+      a.setAttribute('aria-selected', on ? 'true' : 'false');
+    });
+    if (updateHash && location.hash !== '#' + id) {
+      history.pushState(null, '', '#' + id);
+    }
+    const el = document.getElementById(id);
+    if (el) window.scrollTo({top: Math.max(0, el.offsetTop - 95), behavior:'smooth'});
+  }
+
+  links.forEach(a => {
+    const href = a.getAttribute('href') || '';
+    if (!href.startsWith('#')) return;
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      activate(href.slice(1), true);
+    });
+  });
+
+  window.addEventListener('hashchange', function () {
+    activate(location.hash.slice(1) || 'tab-overview', false);
+  });
+
+  activate(location.hash.slice(1) || 'tab-overview', false);
+})();
+</script>
+</body></html>
