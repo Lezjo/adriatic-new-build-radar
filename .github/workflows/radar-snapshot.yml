@@ -27,27 +27,34 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Install dependencies
+      - name: Install Python dependencies
         run: |
           python -m pip install --upgrade pip
-          if [ -f radar/requirements.txt ]; then
-            pip install -r radar/requirements.txt
-          fi
-          python -m playwright install --with-deps chromium
-          
-          - name: Run radar snapshot pipeline
-            env:
-              PYTHONPATH: ${{ github.workspace }}
-            run: python radar/snapshot.py
-            
+          pip install -r radar/requirements.txt
+
+      - name: Install Playwright Chromium
+        run: |
+          python -m playwright install chromium
+
+      - name: Run radar snapshot pipeline
+        run: |
+          python -m radar.snapshot
+
       - name: Commit snapshot
         run: |
           git config user.name "adriatic-radar-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # Never commit Python cache files.
+          find radar -type d -name "__pycache__" -prune -exec rm -rf {} +
+          find . -type f \( -name "*.pyc" -o -name "*.pyo" \) -delete
+
           git add data/ radar/
+
           if git diff --cached --quiet; then
             echo "No snapshot changes to commit."
             exit 0
           fi
+
           git commit -m "radar: snapshot $(date -u +%Y-%m-%d)"
           git push
