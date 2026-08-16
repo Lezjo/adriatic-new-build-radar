@@ -1,0 +1,2 @@
+# Stage 4A has no runtime dependencies.
+# Stage 4B will add the exact packages needed by the live source collectors.
