@@ -3,7 +3,7 @@ name: Adriatic Radar Snapshot
 on:
   workflow_dispatch:
   schedule:
-    # Daily at 06:00 UTC (08:00 Italy in summer)
+    # Every day at 06:00 UTC = 08:00 Italy during summer time.
     - cron: "0 6 * * *"
 
 permissions:
@@ -19,31 +19,42 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7
         with:
           python-version: "3.12"
+          cache: "pip"
+          cache-dependency-path: radar/requirements.txt
 
-      - name: Install dependencies
+      - name: Prepare diagnostics
+        run: |
+          mkdir -p data/debug
+          printf 'Radar run started: %s\n' "$(date -u '+%Y-%m-%dT%H:%M:%SZ')" > data/debug/run-info.txt
+
+      - name: Install Python dependencies
         run: |
           python -m pip install --upgrade pip
           if [ -f radar/requirements.txt ]; then
-            pip install -r radar/requirements.txt
+            python -m pip install -r radar/requirements.txt
           fi
-          python -m playwright install --with-deps chromium
+
+      - name: Install Playwright Chromium
+        run: |
+          python -m playwright install chromium
 
       - name: Run radar snapshot pipeline
-        run: python radar/snapshot.py
+        run: |
+          python -m radar.snapshot
 
       - name: Upload capture diagnostics
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: radar-capture-diagnostics
+          name: radar-capture-diagnostics-${{ github.run_number }}
           path: |
             data/debug/
             data/history/*FAILED*.json
@@ -51,14 +62,24 @@ jobs:
           if-no-files-found: warn
           retention-days: 14
 
+      - name: Clean Python cache
+        if: always()
+        run: |
+          find radar -type d -name "__pycache__" -prune -exec rm -rf {} +
+          find . -type f \( -name "*.pyc" -o -name "*.pyo" \) -delete
+
       - name: Commit snapshot
+        if: success()
         run: |
           git config user.name "adriatic-radar-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
           git add data/ radar/
+
           if git diff --cached --quiet; then
             echo "No snapshot changes to commit."
             exit 0
           fi
+
           git commit -m "radar: snapshot $(date -u +%Y-%m-%d)"
           git push
