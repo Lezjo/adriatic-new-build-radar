@@ -309,6 +309,9 @@ def next_page_url(page, current, seen):
 
 
 def capture_source(browser, location, spec):
+    debug_dir = ROOT / "data" / "debug"
+    debug_dir.mkdir(parents=True, exist_ok=True)
+
     context = browser.new_context(
         locale="it-IT",
         user_agent=(
@@ -322,6 +325,9 @@ def capture_source(browser, location, spec):
     results = []
     seen_pages = set()
     url = spec["url"]
+    source_error = None
+    last_status = None
+    last_title = None
 
     for _ in range(spec.get("max_pages", 100)):
         url = canonical(url)
@@ -337,6 +343,12 @@ def capture_source(browser, location, spec):
                 wait_until="domcontentloaded",
                 timeout=60000,
             )
+            last_status = response.status if response else None
+            last_title = await_title = None
+            try:
+                last_title = page.title()
+            except Exception:
+                pass
 
             # Give client-side portals time to hydrate.
             page.wait_for_timeout(2500)
@@ -362,14 +374,49 @@ def capture_source(browser, location, spec):
 
             url = nxt
 
-        except PlaywrightTimeoutError:
-            # Keep anything captured before the timeout.
+        except PlaywrightTimeoutError as exc:
+            source_error = f"TIMEOUT: {exc!r}"
             break
 
-        except Exception:
+        except Exception as exc:
+            source_error = f"{type(exc).__name__}: {exc!r}"
             break
+
+    # If nothing was found, keep an inspectable artifact from the last page.
+    if not results:
+        safe = re.sub(r"[^a-zA-Z0-9_-]+", "_", f"{location}__{spec['name']}")[:120]
+        try:
+            html_path = debug_dir / f"{safe}.html"
+            png_path = debug_dir / f"{safe}.png"
+            html_path.write_text(page.content(), encoding="utf-8")
+            page.screenshot(path=str(png_path), full_page=False)
+        except Exception as debug_exc:
+            source_error = (source_error or "") + f" | debug_save: {debug_exc!r}"
 
     context.close()
+
+    # Persist one compact diagnostic record per source.
+    try:
+        debug_json = debug_dir / "capture_debug.json"
+        existing = []
+        if debug_json.exists():
+            existing = json.loads(debug_json.read_text(encoding="utf-8"))
+        existing.append({
+            "location": location,
+            "source": spec["name"],
+            "url": spec["url"],
+            "pages_captured": len(seen_pages),
+            "records_captured": len(results),
+            "last_http_status": last_status,
+            "last_title": last_title,
+            "error": source_error,
+        })
+        debug_json.write_text(
+            json.dumps(existing, ensure_ascii=False, indent=2),
+            encoding="utf-8",
+        )
+    except Exception:
+        pass
 
     # Deduplicate within a source.
     dedup = {}
