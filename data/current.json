@@ -10,33 +10,7 @@
     "San Donà di Piave",
     "Treviso"
   ],
-  "inventory_counts": {
-    "Jesolo": {
-      "portal_inventory": 388,
-      "live_capture": 384,
-      "captured_concrete_rows": 28
-    },
-    "Caorle": {
-      "portal_inventory": 44,
-      "live_capture": 48,
-      "captured_concrete_rows": 16
-    },
-    "Cavallino-Treporti": {
-      "portal_inventory": 46,
-      "live_capture": 46,
-      "captured_concrete_rows": 8
-    },
-    "San Donà di Piave": {
-      "portal_inventory": 76,
-      "live_capture": 85,
-      "captured_concrete_rows": 13
-    },
-    "Treviso": {
-      "portal_inventory": 604,
-      "live_capture": 595,
-      "captured_concrete_rows": 3
-    }
-  },
+  "inventory_counts": {},
   "previous_snapshot": null,
   "sections": [
     {
@@ -116,6 +90,94 @@
       "label": "Sources",
       "title": "🔎 Radar Source Registry — Першоджерело.txt",
       "html": "\n<h2>🔎 Radar Source Registry — Першоджерело.txt</h2><div class=\"note citation-note\"><b>ℹ️ Про позначки джерел:</b> У standalone HTML спеціальні citation-теги ChatGPT не рендеряться. У цьому звіті вони замінені на звичайні клікабельні <b>↗ Джерело</b> / <b>↗ Першоджерело</b>. Натискання відкриває вкладку Sources; при наведенні показується технічний ID первинного джерела.</div>\n<div class=\"good\"><b>Оновлено за Першоджерело.txt:</b> усі source layers із файлу тепер є частиною обов'язкової логіки радара. <a class=\"citation-badge file-citation\" href=\"#tab-sources\" title=\"Першоджерело\">↗ Першоджерело</a> <a class=\"citation-badge file-citation\" href=\"#tab-sources\" title=\"Першоджерело\">↗ Першоджерело</a></div>\n<div class=\"note\"><b>Priority:</b> Official/Primary → local planning → market portals → mandatory JBC/direct sale → tourism → flood/coastal risk → professional secondary sources. Саме така ієрархія випливає з Першоджерело.txt. <a class=\"citation-badge file-citation\" href=\"#tab-sources\" title=\"Першоджерело\">↗ Першоджерело</a></div>\n<div class=\"tablewrap\"><table><thead><tr><th>Layer</th><th>Source</th><th>Radar use</th></tr></thead><tbody><tr><td><b>TIER 1 — Official / Primary</b></td><td><a class=\"project-link\" href=\"https://www.agenziaentrate.gov.it/\" rel=\"noopener noreferrer\" target=\"_blank\">Agenzia delle Entrate / OMI ↗</a></td><td>Market quotations, transaction statistics, taxes, registration/cadastral rules</td></tr><tr><td><b>TIER 1 — Official / Primary</b></td><td><a class=\"project-link\" href=\"https://www.agenziaentrate.gov.it/portale/servizi-catastali-e-ipotecari\" rel=\"noopener noreferrer\" target=\"_blank\">Catasto / Agenzia Entrate ↗</a></td><td>Rendita, categoria, surface, planimetria, cadastral data</td></tr><tr><td><b>TIER 1 — Official / Primary</b></td><td><a class=\"project-link\" href=\"https://www.agenziaentrate.gov.it/\" rel=\"noopener noreferrer\" target=\"_blank\">Conservatoria / Ispezione ipotecaria ↗</a></td><td>Ipoteca, pignoramenti, ownership, trascrizioni</td></tr><tr><td><b>TIER 1 — Official / Primary</b></td><td><a class=\"project-link\" href=\"https://www.istat.it/\" rel=\"noopener noreferrer\" target=\"_blank\">ISTAT ↗</a></td><td>House prices, population, demographics, migration, tourism, employment</td></tr><tr><td><b>TIER 1 — Official / Primary</b></td><td><a class=\"project-link\" href=\"https://www.bancaditalia.it/\" rel=\"noopener noreferrer\" target=\"_blank\">Banca d'Italia ↗</a></td><td>Mortgage rates, credit conditions, housing market, macro</td></tr><tr><td><b>TIER 1 — Official / Primary</b></td><td><a class=\"project-link\" href=\"https://www.normattiva.it/\" rel=\"noopener noreferrer\" target=\"_blank\">Normattiva ↗</a></td><td>Current Italian legislation</td></tr><tr><td><b>TIER 1 — Official / Primary</b></td><td><a class=\"project-link\" href=\"https://www.gazzettaufficiale.it/\" rel=\"noopener noreferrer\" target=\"_blank\">Gazzetta Ufficiale ↗</a></td><td>Official regulatory changes</td></tr><tr><td><b>TIER 2 — Regional / Local</b></td><td><a class=\"project-link\" href=\"https://www.regione.veneto.it/\" rel=\"noopener noreferrer\" target=\"_blank\">Regione Veneto ↗</a></td><td>Tourism, housing, tourist rentals, urban planning, statistics, infrastructure</td></tr><tr><td><b>TIER 2 — Regional / Local</b></td><td><a class=\"project-link\" href=\"https://www.regione.fvg.it/\" rel=\"noopener noreferrer\" target=\"_blank\">Regione FVG ↗</a></td><td>Tourism, housing, CIN/CIR, rentals, incentives, urban planning, statistics</td></tr><tr><td><b>TIER 2 — Regional / Local</b></td><td><a class=\"project-link\" href=\"https://www.regione.emilia-romagna.it/\" rel=\"noopener noreferrer\" target=\"_blank\">Regione Emilia-Romagna ↗</a></td><td>Housing, tourism and urban-planning rules</td></tr><tr><td><b>TIER 2 — Regional / Local</b></td><td><a class=\"project-link\" href=\"https://www.comune.jesolo.ve.it/\" rel=\"noopener noreferrer\" target=\"_blank\">Comune di Jesolo — Urbanistica ↗</a></td><td>PUA, Piano degli Interventi, permits, variants, urbanisation, demolition/reconstruction, 300m coastal band</td></tr><tr><td><b>TIER 2 — Regional / Local</b></td><td><a class=\"project-link\" href=\"https://www.comune.caorle.ve.it/piani-urbanistici/\" rel=\"noopener noreferrer\" target=\"_blank\">Comune di Caorle — Piani Urbanistici ↗</a></td><td>PAT, PI, PUA, variants, zoning, environmental procedures</td></tr><tr><td><b>TIER 2 — Regional / Local</b></td><td><a class=\"project-link\" href=\"https://www.comune.caorle.ve.it/\" rel=\"noopener noreferrer\" target=\"_blank\">Comune di Caorle — Norme Tecniche ↗</a></td><td>Development potential / zoning rules</td></tr><tr><td><b>TIER 2 — Regional / Local</b></td><td><a class=\"project-link\" href=\"https://www.comune.cavallinotreporti.ve.it/home/vivere/Territorio/Edilizia-ed-urbanistica.html\" rel=\"noopener noreferrer\" target=\"_blank\">Comune di Cavallino-Treporti — Edilizia e Urbanistica ↗</a></td><td>SIT, Piano degli Interventi, urban planning</td></tr><tr><td><b>TIER 2 — Regional / Local</b></td><td><a class=\"project-link\" href=\"https://www.comune.cavallinotreporti.ve.it/\" rel=\"noopener noreferrer\" target=\"_blank\">Comune di Cavallino-Treporti — PUA ↗</a></td><td>PUA and variants</td></tr><tr><td><b>TIER 2 — Technical / Planning</b></td><td><a class=\"project-link\" href=\"https://www.comune.cavallinotreporti.ve.it/\" rel=\"noopener noreferrer\" target=\"_blank\">SIT / PAT / PI / PUA / Permesso di costruire / SCIA ↗</a></td><td>Future projects and planning pipeline</td></tr><tr><td><b>TIER 2 — Technical / Planning</b></td><td><a class=\"project-link\" href=\"https://www.comune.jesolo.ve.it/\" rel=\"noopener noreferrer\" target=\"_blank\">Albo Pretorio / Amministrazione Trasparente ↗</a></td><td>Official acts, approvals, permits, agreements</td></tr><tr><td><b>TIER 2 — Technical / Planning</b></td><td><a class=\"project-link\" href=\"https://www.comune.jesolo.ve.it/\" rel=\"noopener noreferrer\" target=\"_blank\">SUAP / SUE ↗</a></td><td>Building and business procedures</td></tr><tr><td><b>TIER 3 — Market</b></td><td><a class=\"project-link\" href=\"https://www.immobiliare.it/\" rel=\"noopener noreferrer\" target=\"_blank\">Immobiliare.it ↗</a></td><td>Asking price, €/m², listings, rentals, comparables</td></tr><tr><td><b>TIER 3 — Market</b></td><td><a class=\"project-link\" href=\"https://www.idealista.it/\" rel=\"noopener noreferrer\" target=\"_blank\">Idealista Italia ↗</a></td><td>Asking price, €/m², rentals, historical trends, comparables</td></tr><tr><td><b>TIER 3 — Market</b></td><td><a class=\"project-link\" href=\"https://www.casa.it/\" rel=\"noopener noreferrer\" target=\"_blank\">Casa.it ↗</a></td><td>Listings and comparables</td></tr><tr><td><b>TIER 3 — Mandatory Direct Source</b></td><td><a class=\"project-link\" href=\"https://www.jbcimmobiliare.it/\" rel=\"noopener noreferrer\" target=\"_blank\">JBC Immobiliare — Official ↗</a></td><td>Direct inventory, new builds, villette, bifamiliari, trifamiliari</td></tr><tr><td><b>TIER 3 — Mandatory Direct Source</b></td><td><a class=\"project-link\" href=\"https://www.jbcimmobiliare.it/nuove-costruzioni/\" rel=\"noopener noreferrer\" target=\"_blank\">JBC — Nuove Costruzioni ↗</a></td><td>Construction projects / direct-sale signals</td></tr><tr><td><b>TIER 3 — Cross-check</b></td><td><a class=\"project-link\" href=\"https://www.immobiliare.it/agenzie-immobiliari/417291/jbc-ponte-di-piave-treviso/\" rel=\"noopener noreferrer\" target=\"_blank\">JBC — Immobiliare.it profile ↗</a></td><td>Cross-check JBC inventory</td></tr><tr><td><b>TIER 4 — Tourism</b></td><td><a class=\"project-link\" href=\"https://statistica.regione.veneto.it/\" rel=\"noopener noreferrer\" target=\"_blank\">Regione Veneto — Statistica ↗</a></td><td>Arrivals, nights, foreign demand, seasonality</td></tr><tr><td><b>TIER 4 — Tourism</b></td><td><a class=\"project-link\" href=\"https://www.regione.fvg.it/\" rel=\"noopener noreferrer\" target=\"_blank\">Regione FVG — Turismo ↗</a></td><td>Tourism demand and seasonality</td></tr><tr><td><b>TIER 4 — Tourism</b></td><td><a class=\"project-link\" href=\"https://statistica.regione.emilia-romagna.it/\" rel=\"noopener noreferrer\" target=\"_blank\">Regione Emilia-Romagna — Statistica ↗</a></td><td>Tourism statistics</td></tr><tr><td><b>TIER 5 — Risk</b></td><td><a class=\"project-link\" href=\"https://www.isprambiente.gov.it/\" rel=\"noopener noreferrer\" target=\"_blank\">ISPRA ↗</a></td><td>Flood, hydrogeological and environmental risk</td></tr><tr><td><b>TIER 5 — Risk</b></td><td><a class=\"project-link\" href=\"https://www.distrettoalpiorientali.it/\" rel=\"noopener noreferrer\" target=\"_blank\">Autorità di Bacino / District Basin Authority ↗</a></td><td>Flood and hydrogeological risk maps</td></tr><tr><td><b>TIER 5 — Risk</b></td><td><a class=\"project-link\" href=\"https://www.protezionecivile.gov.it/\" rel=\"noopener noreferrer\" target=\"_blank\">Protezione Civile ↗</a></td><td>Emergency / hazard / coastal risk</td></tr><tr><td><b>TIER 6 — Professional</b></td><td><a class=\"project-link\" href=\"https://www.nomisma.it/\" rel=\"noopener noreferrer\" target=\"_blank\">Nomisma ↗</a></td><td>Secondary market research</td></tr><tr><td><b>TIER 6 — Professional</b></td><td><a class=\"project-link\" href=\"https://www.tecnocasa.it/\" rel=\"noopener noreferrer\" target=\"_blank\">Tecnocasa ↗</a></td><td>Secondary local market research</td></tr><tr><td><b>TIER 6 — Professional</b></td><td><a class=\"project-link\" href=\"https://www.tecnorete.it/\" rel=\"noopener noreferrer\" target=\"_blank\">Tecnorete ↗</a></td><td>Secondary local market research</td></tr><tr><td><b>TIER 6 — Professional</b></td><td><a class=\"project-link\" href=\"https://www.fiaip.it/\" rel=\"noopener noreferrer\" target=\"_blank\">FIAIP ↗</a></td><td>Professional market data</td></tr><tr><td><b>TIER 6 — Professional</b></td><td><a class=\"project-link\" href=\"https://www.fimaa.it/\" rel=\"noopener noreferrer\" target=\"_blank\">FIMAA ↗</a></td><td>Professional market data</td></tr><tr><td><b>TIER 6 — Professional</b></td><td><a class=\"project-link\" href=\"https://www.tecnoborsa.com/\" rel=\"noopener noreferrer\" target=\"_blank\">Tecnoborsa ↗</a></td><td>Real-estate market research</td></tr></tbody></table></div>\n<h3>Micro-location coverage</h3>\n<div class=\"grid\">\n<div class=\"card\"><h3>Jesolo</h3><p>Lido di Jesolo; Piazza Nember / Faro; Pineta; Piazza Mazzini; Piazza Brescia; Piazza Trieste; Piazza Drago; Cortellazzo; Jesolo Paese; Ca' Gamba</p></div><div class=\"card\"><h3>Cavallino-Treporti</h3><p>Ca' Savio; Ca' Vio; Punta Sabbioni; Treporti; Cavallino</p></div><div class=\"card\"><h3>San Donà di Piave</h3><p>San Donà centro; Mussetta; Mussetta di Sopra; Calvecchia; Fiorentina; Fossà; Chiesanuova</p></div><div class=\"card\"><h3>Caorle</h3><p>Centro; Ponente; Levante; Porto Santa Margherita; Lido Altanea; Duna Verde; Brussa</p></div><div class=\"card\"><h3>Treviso</h3><p>Centro; Santa Maria del Rovere; Selvana; Fiera; Ghirada; Monigo; San Zeno; Sant'Antonino; Canizzano; Casier</p></div>\n</div>\n<h3>Mandatory discovery sequence</h3>\n<div class=\"good\">\n<b>1.</b> Portals → <b>2.</b> JBC + local agencies → <b>3.</b> developers/direct sale → <b>4.</b> Comune / PUA / permits → <b>5.</b> future-project keyword search → <b>6.</b> cross-check + dedup Project / Unit / Listing.\n</div>\n<h3>Future-project search terms</h3>\n<p><code>prossima costruzione</code> · <code>nuovo residence</code> · <code>area edificabile</code> · <code>PUA</code> · <code>demolizione ricostruzione</code> · <code>permesso di costruire</code> · <code>progetto approvato</code> · <code>vendita diretta</code> · <code>nuove realizzazioni</code> · <code>cantiere</code> · <code>pre-lancio</code></p>\n<div class=\"note\"><b>Local agency layer:</b> у Jesolo окремо перевіряти Lido, Faro/Nember, Pineta, Piazza Mazzini/Brescia/Trieste/Drago, Cortellazzo, Jesolo Paese, Ca' Gamba; у Cavallino — Ca' Savio, Ca' Vio, Punta Sabbioni, Treporti, Cavallino; у San Donà — centro, Mussetta, Mussetta di Sopra, Calvecchia, Fiorentina, Fossà, Chiesanuova. <a class=\"citation-badge file-citation\" href=\"#tab-sources\" title=\"Першоджерело\">↗ Першоджерело</a></div>\n"
+    }
+  ],
+  "last_live_capture": "2026-08-16T15:25:26.220402+00:00",
+  "objects_file": "data/objects.json",
+  "capture_coverage": [
+    {
+      "location": "jesolo",
+      "source": "idealista_new_build",
+      "start_url": "https://www.idealista.it/vendita-case/jesolo-venezia/con-nuova-costruzione/",
+      "pages_captured": 1,
+      "records_captured": 0
+    },
+    {
+      "location": "jesolo",
+      "source": "idealista_projects",
+      "start_url": "https://www.idealista.it/vendita-nuove_costruzioni/jesolo-venezia/",
+      "pages_captured": 1,
+      "records_captured": 0
+    },
+    {
+      "location": "jesolo",
+      "source": "casa_new_build",
+      "start_url": "https://www.casa.it/vendita/residenziale/in-nuove-costruzioni/jesolo/",
+      "pages_captured": 1,
+      "records_captured": 0
+    },
+    {
+      "location": "jesolo",
+      "source": "jbc_direct",
+      "start_url": "https://www.jbcimmobiliare.it/",
+      "pages_captured": 1,
+      "records_captured": 0
+    },
+    {
+      "location": "caorle",
+      "source": "idealista_new_build",
+      "start_url": "https://www.idealista.it/vendita-case/caorle-venezia/con-nuova-costruzione/",
+      "pages_captured": 1,
+      "records_captured": 0
+    },
+    {
+      "location": "caorle",
+      "source": "jbc_direct",
+      "start_url": "https://www.jbcimmobiliare.it/",
+      "pages_captured": 1,
+      "records_captured": 0
+    },
+    {
+      "location": "cavallino-treporti",
+      "source": "idealista_new_build",
+      "start_url": "https://www.idealista.it/vendita-case/cavallino-treporti-venezia/con-nuova-costruzione/",
+      "pages_captured": 1,
+      "records_captured": 0
+    },
+    {
+      "location": "cavallino-treporti",
+      "source": "idealista_apartments",
+      "start_url": "https://www.idealista.it/vendita-case/cavallino-treporti-venezia/con-appartamenti%2Cnuova-costruzione/",
+      "pages_captured": 1,
+      "records_captured": 0
+    },
+    {
+      "location": "san-dona-di-piave",
+      "source": "idealista_new_build",
+      "start_url": "https://www.idealista.it/vendita-case/san-dona-di-piave-venezia/con-nuova-costruzione/",
+      "pages_captured": 1,
+      "records_captured": 0
+    },
+    {
+      "location": "san-dona-di-piave",
+      "source": "casa_new_build",
+      "start_url": "https://www.casa.it/vendita/residenziale/in-nuove-costruzioni/san-dona-di-piave/",
+      "pages_captured": 1,
+      "records_captured": 0
+    },
+    {
+      "location": "treviso",
+      "source": "idealista_projects",
+      "start_url": "https://www.idealista.it/vendita-nuove_costruzioni/treviso-treviso/",
+      "pages_captured": 1,
+      "records_captured": 0
+    },
+    {
+      "location": "treviso",
+      "source": "idealista_new_build",
+      "start_url": "https://www.idealista.it/vendita-case/treviso-treviso/con-nuova-costruzione/",
+      "pages_captured": 1,
+      "records_captured": 0
     }
   ]
 }
