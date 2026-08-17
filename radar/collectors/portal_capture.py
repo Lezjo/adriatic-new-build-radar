@@ -189,7 +189,9 @@ def capture_jbc(browser, location, spec, debug):
         if not internal(u) or bad(u):
             return
         path = urlparse(u).path.lower()
-        if path in ("", "/") or path.rstrip("/") in ("/404.php",):
+        # The JBC homepage "/" is a mandatory discovery hub.
+        # Only reject explicit error pages, not the homepage.
+        if path.rstrip("/") in ("/404.php",):
             return
         hay = f"{path} {label}".lower()
         # Strong category/navigation signals. Keep the queue bounded.
@@ -348,7 +350,12 @@ def capture_jbc(browser, location, spec, debug):
 
     # 1) Start with the configured source and homepage.
     for s in starts:
-        add_hub(s, "homepage")
+        if canonical(s) == canonical(JBC_HOME):
+            if s not in queued_hubs:
+                queued_hubs.add(s)
+                hub_queue.append(s)
+        else:
+            add_hub(s, "homepage")
 
     # 2) Sitemap first: if present, it can expose inventory not linked from
     # the current homepage.
