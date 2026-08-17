@@ -56,7 +56,7 @@
       "source": "idealista_apartments",
       "start_url": "https://www.idealista.it/vendita-case/cavallino-treporti-venezia/con-appartamenti%2Cnuova-costruzione/",
       "pages_captured": 1,
-      "records_captured": 0
+      "records_captured": 113
     },
     {
       "location": "san-dona-di-piave",
@@ -88,8 +88,9 @@
     }
   ],
   "counts": {
-    "total_captured_listings": 7,
+    "total_captured_listings": 120,
     "by_location": {
+      "cavallino-treporti": 113,
       "jesolo": 7
     }
   },
