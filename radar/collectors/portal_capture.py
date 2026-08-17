@@ -129,45 +129,206 @@ def generic_extract(page,source,location,url):
         seen.add(u)
     return out
 
-def capture_jbc(browser,location,spec,debug):
-    source=spec["name"]; starts=[spec["url"]]
-    ctx=browser.new_context(locale="it-IT",user_agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36")
-    hub=ctx.new_page(); det=ctx.new_page(); discovered={}; hubs=set(); errors=[]; pages=0; status=None; title=None
-    def inspect(url):
-        nonlocal pages,status,title
-        url=canonical(url)
-        if url in hubs:return
-        hubs.add(url)
+def capture_jbc(browser, location, spec, debug):
+    """Dedicated JBC full-inventory crawler."""
+    source = spec["name"]
+    max_hubs = int(spec.get("max_hub_pages", 20))
+    max_details = int(spec.get("max_detail_pages", 300))
+
+    ctx = browser.new_context(
+        locale="it-IT",
+        user_agent=(
+            "Mozilla/5.0 (X11; Linux x86_64) "
+            "AppleWebKit/537.36 (KHTML, like Gecko) "
+            "Chrome/124.0 Safari/537.36"
+        ),
+    )
+    hub_page = ctx.new_page()
+    detail_page = ctx.new_page()
+
+    hub_queue = [canonical(spec["url"])]
+    queued_hubs = set(hub_queue)
+    visited_hubs = set()
+    discovered_details = {}
+    errors = []
+    pages = 0
+    last_status = None
+    last_title = None
+
+    def add_hub(u):
+        u = canonical(u)
+        p = urlparse(u)
+        if p.netloc.lower() != JBC_HOST:
+            return
+        if u in visited_hubs or u in queued_hubs:
+            return
+        if any(x in p.path.lower() for x in BAD_PATH_HINTS):
+            return
+        queued_hubs.add(u)
+        hub_queue.append(u)
+
+    def inspect_hub(u):
+        nonlocal pages, last_status, last_title
         try:
-            r=hub.goto(url,wait_until="domcontentloaded",timeout=60000);status=r.status if r else None;title=hub.title();hub.wait_for_timeout(1800)
-            for _ in range(4):hub.mouse.wheel(0,1800);hub.wait_for_timeout(450)
-            pages+=1
-            for a in hub.locator("a[href]").all():
-                try:h=a.get_attribute("href")
-                except:continue
-                if not h:continue
-                u=canonical(urljoin(url,h));t=get_text(a)
-                label=t.lower()
-                if jbc_url(u,t,url) or "vedi immobile" in label:
-                    discovered[u]=t
-                elif "vedi tutti i cantieri" in label or "nostri cantieri" in label:
-                    inspect(u)
-        except Exception as e:errors.append(f"hub {url}: {type(e).__name__}: {e!r}")
-    for s in starts:inspect(s)
-    rows=[]
-    for u,t in list(discovered.items()):
+            response = hub_page.goto(
+                u, wait_until="domcontentloaded", timeout=60000
+            )
+            last_status = response.status if response else None
+            last_title = hub_page.title()
+            hub_page.wait_for_timeout(1800)
+
+            for _ in range(6):
+                hub_page.mouse.wheel(0, 1800)
+                hub_page.wait_for_timeout(450)
+
+            pages += 1
+            anchors = hub_page.locator("a[href]").all()
+
+            for anchor in anchors:
+                try:
+                    href = anchor.get_attribute("href")
+                    if not href:
+                        continue
+                    u2 = canonical(urljoin(u, href))
+                    label = get_text(anchor)
+                    low = label.lower()
+                    p2 = urlparse(u2)
+
+                    if p2.netloc.lower() != JBC_HOST:
+                        continue
+                    if any(x in p2.path.lower() for x in BAD_PATH_HINTS):
+                        continue
+
+                    # Explicit links to the construction/project catalog.
+                    if (
+                        "vedi tutti i cantieri" in low
+                        or "vedi tutti cantieri" in low
+                        or "i nostri cantieri" in low
+                        or "nostri cantieri" in low
+                        or "nuove costruzioni" in low
+                        or "nuova costruzione" in low
+                    ):
+                        add_hub(u2)
+                        continue
+
+                    # Individual listing/detail links.
+                    if "vedi immobile" in low or jbc_url(u2, label, u):
+                        discovered_details[u2] = label
+                        continue
+
+                    # Hub/category URLs even when anchor text is weak.
+                    path = p2.path.lower()
+                    if any(x in path for x in (
+                        "/cantieri", "/cantiere", "/progetti",
+                        "/nuove-costruzioni", "/nuova-costruzione",
+                        "/immobili", "/appartamenti", "/case",
+                    )):
+                        add_hub(u2)
+
+                except Exception as exc:
+                    errors.append(
+                        f"anchor {u}: {type(exc).__name__}: {exc!r}"
+                    )
+
+        except PlaywrightTimeoutError as exc:
+            errors.append(f"hub {u}: TIMEOUT {exc!r}")
+        except Exception as exc:
+            errors.append(f"hub {u}: {type(exc).__name__}: {exc!r}")
+
+    while hub_queue and len(visited_hubs) < max_hubs:
+        u = hub_queue.pop(0)
+        if u in visited_hubs:
+            continue
+        visited_hubs.add(u)
+        inspect_hub(u)
+
+    records = []
+    visited_details = set()
+
+    for u, card_text in list(discovered_details.items()):
+        if u in visited_details or len(visited_details) >= max_details:
+            continue
+        visited_details.add(u)
+
         try:
-            r=det.goto(u,wait_until="domcontentloaded",timeout=60000);det.wait_for_timeout(900)
-            body=" ".join((det.locator("body").inner_text(timeout=3000) or "").split())
-            if r and r.status>=400 or len(body)<80:continue
-            low=(det.title()+" "+body).lower()
-            if not any(x in low for x in JBC_TERMS):continue
-            rows.append(detail(det,source,location,u,t))
-        except Exception as e:errors.append(f"detail {u}: {type(e).__name__}: {e!r}")
-    ded={x["source_url"]:x for x in rows}
-    try:(debug/f"{location}__jbc_manifest.json").write_text(json.dumps({"source":source,"location":location,"start_urls":starts,"hub_pages_captured":pages,"candidate_detail_urls":len(discovered),"records_captured":len(ded),"last_http_status":status,"last_title":title,"errors":errors[:50],"candidate_urls":sorted(discovered)},ensure_ascii=False,indent=2),encoding="utf-8")
-    except:pass
-    ctx.close();return list(ded.values()),pages,status,title,(None if ded else "JBC adapter found 0 detail records")
+            response = detail_page.goto(
+                u, wait_until="domcontentloaded", timeout=60000
+            )
+            detail_page.wait_for_timeout(1000)
+
+            if response and response.status >= 400:
+                continue
+
+            body = " ".join(
+                (detail_page.locator("body").inner_text(timeout=4000) or "").split()
+            )
+            title = detail_page.title() or ""
+
+            if len(body) < 80:
+                continue
+
+            low = f"{title} {body}".lower()
+            if not any(term in low for term in JBC_TERMS):
+                continue
+
+            records.append(
+                detail(
+                    detail_page,
+                    source,
+                    location,
+                    u,
+                    card_text,
+                )
+            )
+
+        except PlaywrightTimeoutError as exc:
+            errors.append(f"detail {u}: TIMEOUT {exc!r}")
+        except Exception as exc:
+            errors.append(f"detail {u}: {type(exc).__name__}: {exc!r}")
+
+    ded = {x["source_url"]: x for x in records}
+
+    try:
+        manifest = {
+            "source": source,
+            "location": location,
+            "start_url": spec["url"],
+            "hub_pages_visited": len(visited_hubs),
+            "hub_pages": sorted(visited_hubs),
+            "candidate_detail_urls": len(discovered_details),
+            "detail_pages_visited": len(visited_details),
+            "records_captured": len(ded),
+            "unit_records": sum(
+                1 for r in ded.values() if r.get("record_type") == "UNIT"
+            ),
+            "project_records": sum(
+                1 for r in ded.values() if r.get("record_type") == "PROJECT"
+            ),
+            "projects_detected": len({
+                r.get("project_id")
+                for r in ded.values()
+                if r.get("project_id")
+            }),
+            "last_http_status": last_status,
+            "last_title": last_title,
+            "errors": errors[:100],
+            "candidate_urls": sorted(discovered_details),
+        }
+        (debug / f"{location}__jbc_manifest.json").write_text(
+            json.dumps(manifest, ensure_ascii=False, indent=2),
+            encoding="utf-8",
+        )
+    except Exception:
+        pass
+
+    ctx.close()
+    return (
+        list(ded.values()),
+        pages,
+        last_status,
+        last_title,
+        None if ded else "JBC adapter found 0 detail records",
+    )
 
 def next_page(page,current,seen):
     for sel in ('a[rel="next"]','a[aria-label*="Successiva"]','a[aria-label*="successiva"]','a[aria-label*="Next"]','a[title*="Successiva"]','a[title*="successiva"]','a[title*="Next"]'):
