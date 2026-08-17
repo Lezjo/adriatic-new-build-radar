@@ -361,7 +361,10 @@ def capture_jbc(browser, location, spec, debug):
     def inspect_hub(u):
         nonlocal pages, last_status, last_title
         try:
-            response = page.goto(u, wait_until="domcontentloaded", timeout=35000)
+            try:
+                response = page.goto(u, wait_until="networkidle", timeout=35000)
+            except PlaywrightTimeoutError:
+                response = page.goto(u, wait_until="domcontentloaded", timeout=35000)
             last_status = response.status if response else None
             last_title = page.title() or ""
             pages += 1
@@ -426,7 +429,7 @@ def capture_jbc(browser, location, spec, debug):
                 errors.append(f"detail {u}: HTTP {status}")
                 continue
 
-            page.wait_for_timeout(700)
+            page.wait_for_timeout(1800)
 
             try:
                 body = " ".join(
@@ -440,17 +443,24 @@ def capture_jbc(browser, location, spec, debug):
             except Exception:
                 title = ""
 
-            # Some pages expose content only after a short render delay.
+            # Some pages expose the listing after client-side rendering.
             if len(body) < 80:
                 try:
-                    page.wait_for_timeout(1500)
+                    page.wait_for_timeout(2500)
                     body = " ".join(
-                        (page.locator("body").inner_text(timeout=8000) or "").split()
+                        (page.locator("body").inner_text(timeout=10000) or "").split()
                     )
                 except Exception:
                     pass
 
             low = f"{title} {body}".lower()
+
+            detail_diagnostics.append({
+                "url": u,
+                "title": title[:300],
+                "body_chars": len(body),
+                "has_property_signal": any(term in low for term in JBC_TERMS),
+            })
 
             if any(x in low for x in (
                 "pagina non trovata", "errore 404", "page not found",
@@ -500,6 +510,7 @@ def capture_jbc(browser, location, spec, debug):
         "last_title": last_title,
         "errors": errors[:150],
         "candidate_urls": list(detail_urls.keys())[:max_details],
+        "detail_diagnostics": detail_diagnostics[:max_details],
     }
 
     try:
