@@ -130,7 +130,7 @@ def generic_extract(page,source,location,url):
     return out
 
 def capture_jbc(browser,location,spec,debug):
-    source=spec["name"]; starts=[spec["url"],"https://www.jbcimmobiliare.it/nuove-costruzioni/"]
+    source=spec["name"]; starts=[spec["url"]]
     ctx=browser.new_context(locale="it-IT",user_agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36")
     hub=ctx.new_page(); det=ctx.new_page(); discovered={}; hubs=set(); errors=[]; pages=0; status=None; title=None
     def inspect(url):
@@ -147,7 +147,11 @@ def capture_jbc(browser,location,spec,debug):
                 except:continue
                 if not h:continue
                 u=canonical(urljoin(url,h));t=get_text(a)
-                if jbc_url(u,t,url) or "vedi immobile" in t.lower() or "vedi tutti i cantieri" in t.lower():discovered[u]=t
+                label=t.lower()
+                if jbc_url(u,t,url) or "vedi immobile" in label:
+                    discovered[u]=t
+                elif "vedi tutti i cantieri" in label or "nostri cantieri" in label:
+                    inspect(u)
         except Exception as e:errors.append(f"hub {url}: {type(e).__name__}: {e!r}")
     for s in starts:inspect(s)
     rows=[]
