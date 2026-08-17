@@ -141,7 +141,7 @@
   "live_capture_total": 12,
   "captured_concrete_total": 12,
   "snapshot_status": "SUCCESS",
-  "last_live_capture": "2026-08-17T10:16:15.923204+00:00",
+  "last_live_capture": "2026-08-17T10:31:07.680744+00:00",
   "capture_coverage": [
     {
       "location": "jesolo",
