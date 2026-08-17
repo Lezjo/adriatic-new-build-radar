@@ -53,7 +53,7 @@ def parse_floor(text):
 
 def get_text(anchor):
     try:
-        return " ".join((anchor.evaluate("""el=>{let n=el,b='';for(let i=0;i<6&&n;i++,n=n.parentElement){let t=(n.innerText||'').replace(/\s+/g,' ').trim();if(t.length>b.length&&t.length<=3500)b=t}return b}""") or "").split())
+        return " ".join((anchor.evaluate("""el=>{let n=el,b='';for(let i=0;i<6&&n;i++,n=n.parentElement){let t=(n.innerText||'').replace(/\\s+/g,' ').trim();if(t.length>b.length&&t.length<=3500)b=t}return b}""") or "").split())
     except:
         try:return " ".join((anchor.inner_text(timeout=1500) or "").split())
         except:return ""
@@ -130,10 +130,10 @@ def generic_extract(page,source,location,url):
     return out
 
 def capture_jbc(browser, location, spec, debug):
-    """Dedicated JBC full-inventory crawler."""
+    """JBC crawler: homepage -> hubs -> every internal property/project detail."""
     source = spec["name"]
-    max_hubs = int(spec.get("max_hub_pages", 20))
-    max_details = int(spec.get("max_detail_pages", 300))
+    max_hubs = int(spec.get("max_hub_pages", 25))
+    max_details = int(spec.get("max_detail_pages", 400))
 
     ctx = browser.new_context(
         locale="it-IT",
@@ -155,33 +155,54 @@ def capture_jbc(browser, location, spec, debug):
     last_status = None
     last_title = None
 
+    def internal(u):
+        p = urlparse(canonical(u))
+        return p.netloc.lower().removeprefix("www.") == JBC_HOST
+
+    def is_bad(u):
+        path = urlparse(canonical(u)).path.lower()
+        return any(x in path for x in BAD_PATH_HINTS)
+
     def add_hub(u):
         u = canonical(u)
-        p = urlparse(u)
-        if p.netloc.lower() != JBC_HOST:
+        if not internal(u) or is_bad(u):
             return
         if u in visited_hubs or u in queued_hubs:
             return
-        if any(x in p.path.lower() for x in BAD_PATH_HINTS):
-            return
         queued_hubs.add(u)
         hub_queue.append(u)
+
+    def add_detail(u, label=""):
+        u = canonical(u)
+        if not internal(u) or is_bad(u):
+            return
+        if u.rstrip("/") == canonical(spec["url"]).rstrip("/"):
+            return
+        discovered_details.setdefault(u, label)
 
     def inspect_hub(u):
         nonlocal pages, last_status, last_title
         try:
             response = hub_page.goto(
-                u, wait_until="domcontentloaded", timeout=60000
+                u,
+                wait_until="domcontentloaded",
+                timeout=60000,
             )
             last_status = response.status if response else None
-            last_title = hub_page.title()
+            try:
+                last_title = hub_page.title()
+            except Exception:
+                last_title = None
+
             hub_page.wait_for_timeout(1800)
 
-            for _ in range(6):
+            # Lazy-load cards and menus.
+            for _ in range(7):
                 hub_page.mouse.wheel(0, 1800)
-                hub_page.wait_for_timeout(450)
+                hub_page.wait_for_timeout(400)
 
             pages += 1
+
             anchors = hub_page.locator("a[href]").all()
 
             for anchor in anchors:
@@ -189,17 +210,17 @@ def capture_jbc(browser, location, spec, debug):
                     href = anchor.get_attribute("href")
                     if not href:
                         continue
+
                     u2 = canonical(urljoin(u, href))
+                    if not internal(u2) or is_bad(u2):
+                        continue
+
                     label = get_text(anchor)
                     low = label.lower()
-                    p2 = urlparse(u2)
+                    path = urlparse(u2).path.lower()
 
-                    if p2.netloc.lower() != JBC_HOST:
-                        continue
-                    if any(x in p2.path.lower() for x in BAD_PATH_HINTS):
-                        continue
-
-                    # Explicit links to the construction/project catalog.
+                    # The real JBC homepage explicitly exposes this link.
+                    # Follow it as a hub regardless of its slug.
                     if (
                         "vedi tutti i cantieri" in low
                         or "vedi tutti cantieri" in low
@@ -211,19 +232,39 @@ def capture_jbc(browser, location, spec, debug):
                         add_hub(u2)
                         continue
 
-                    # Individual listing/detail links.
-                    if "vedi immobile" in low or jbc_url(u2, label, u):
-                        discovered_details[u2] = label
+                    # Explicit property/detail CTA.
+                    if (
+                        "vedi immobile" in low
+                        or "scopri immobile" in low
+                        or "dettagli" in low
+                        or "scopri" == low.strip()
+                    ):
+                        add_detail(u2, label)
                         continue
 
-                    # Hub/category URLs even when anchor text is weak.
-                    path = p2.path.lower()
+                    # Known catalog/category routes are hubs.
                     if any(x in path for x in (
                         "/cantieri", "/cantiere", "/progetti",
                         "/nuove-costruzioni", "/nuova-costruzione",
                         "/immobili", "/appartamenti", "/case",
+                        "/vendita", "/property", "/properties",
                     )):
                         add_hub(u2)
+                        continue
+
+                    # If a link sits inside a property card, get_text()
+                    # contains the card title/price/features. Treat it as a
+                    # detail even when the URL slug is unconventional.
+                    card_hay = (label + " " + low)
+                    if any(term in card_hay for term in JBC_TERMS):
+                        add_detail(u2, label)
+                        continue
+
+                    # Last-resort internal page candidate: JBC's site is a
+                    # small catalogue. Non-root internal links not filtered
+                    # above are safe to inspect as detail pages.
+                    if path not in ("", "/"):
+                        add_detail(u2, label)
 
                 except Exception as exc:
                     errors.append(
@@ -252,7 +293,9 @@ def capture_jbc(browser, location, spec, debug):
 
         try:
             response = detail_page.goto(
-                u, wait_until="domcontentloaded", timeout=60000
+                u,
+                wait_until="domcontentloaded",
+                timeout=60000,
             )
             detail_page.wait_for_timeout(1000)
 
@@ -260,14 +303,22 @@ def capture_jbc(browser, location, spec, debug):
                 continue
 
             body = " ".join(
-                (detail_page.locator("body").inner_text(timeout=4000) or "").split()
+                (detail_page.locator("body").inner_text(timeout=5000) or "").split()
             )
             title = detail_page.title() or ""
+            low = f"{title} {body}".lower()
 
+            # Ignore navigation/legal pages accidentally discovered.
             if len(body) < 80:
                 continue
+            if any(x in low for x in (
+                "privacy policy", "cookie policy",
+                "lavora con noi", "franchising",
+            )):
+                continue
 
-            low = f"{title} {body}".lower()
+            # A JBC property/project detail should have at least one
+            # property signal. Do not require a specific URL slug.
             if not any(term in low for term in JBC_TERMS):
                 continue
 
