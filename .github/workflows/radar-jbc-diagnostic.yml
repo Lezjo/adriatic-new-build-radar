@@ -1,0 +1,45 @@
+name: JBC diagnostic
+
+on:
+  workflow_dispatch:
+
+jobs:
+  diagnostic:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Playwright
+        run: |
+          python -m pip install --upgrade pip
+          pip install playwright
+          python -m playwright install --with-deps chromium
+
+      - name: Run JBC diagnostic
+        run: |
+          python jbc_diagnostic.py
+
+      - name: Print diagnostic summary
+        if: always()
+        run: |
+          echo "===== JBC DIAGNOSTIC DIRECTORY ====="
+          find data/debug/jbc_diagnostic -maxdepth 1 -type f -printf '%f %s bytes\n' 2>/dev/null || true
+
+          echo "===== REPORT ====="
+          cat data/debug/jbc_diagnostic/report.json 2>/dev/null || true
+
+      - name: Upload JBC diagnostic
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: jbc-diagnostic
+          path: data/debug/jbc_diagnostic/
+          if-no-files-found: warn
+          retention-days: 7
