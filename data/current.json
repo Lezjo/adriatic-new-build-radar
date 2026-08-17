@@ -9,6 +9,7 @@
     "Jesolo",
     "San Donà",
     "Treviso",
+    "caorle",
     "jesolo"
   ],
   "inventory_counts": {
@@ -37,10 +38,15 @@
       "live_capture": 0,
       "captured_concrete_rows": 0
     },
+    "caorle": {
+      "portal_inventory": null,
+      "live_capture": 5,
+      "captured_concrete_rows": 5
+    },
     "jesolo": {
       "portal_inventory": null,
-      "live_capture": 12,
-      "captured_concrete_rows": 12
+      "live_capture": 0,
+      "captured_concrete_rows": 0
     }
   },
   "previous_snapshot": null,
@@ -138,10 +144,10 @@
     "next_run_rule": "match by listing_id/source_url first; then project_id/unit_id where available"
   },
   "portal_inventory_total": 1158,
-  "live_capture_total": 12,
-  "captured_concrete_total": 12,
+  "live_capture_total": 5,
+  "captured_concrete_total": 5,
   "snapshot_status": "SUCCESS",
-  "last_live_capture": "2026-08-17T10:31:07.680744+00:00",
+  "last_live_capture": "2026-08-17T12:46:50.535671+00:00",
   "capture_coverage": [
     {
       "location": "jesolo",
@@ -168,8 +174,8 @@
       "location": "jesolo",
       "source": "jbc_direct",
       "start_url": "https://www.jbcimmobiliare.it/",
-      "pages_captured": 1,
-      "records_captured": 12
+      "pages_captured": 2,
+      "records_captured": 5
     },
     {
       "location": "caorle",
@@ -182,8 +188,8 @@
       "location": "caorle",
       "source": "jbc_direct",
       "start_url": "https://www.jbcimmobiliare.it/",
-      "pages_captured": 1,
-      "records_captured": 12
+      "pages_captured": 2,
+      "records_captured": 5
     },
     {
       "location": "cavallino-treporti",
