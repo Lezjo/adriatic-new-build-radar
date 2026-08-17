@@ -130,17 +130,18 @@ def generic_extract(page,source,location,url):
     return out
 
 def capture_jbc(browser, location, spec, debug):
-    """JBC V9: homepage + category + sitemap discovery, then detail capture.
+    """JBC V10: robust homepage/category discovery + direct detail capture.
 
-    The JBC site exposes inventory through several navigation layers. V9 does not
-    depend on a single legacy listing endpoint; it discovers category/listing
-    pages from anchors and, when available, sitemap XML, then follows pagination.
+    V10 fixes the V9 failure mode where property URLs were classified as
+    navigation hubs and detail pages could be discarded before normalization.
+    It also handles sitemap indexes, direct property slugs and JS/lazy links.
     """
     source = spec["name"]
     max_hubs = max(5, int(spec.get("max_hub_pages", 20)))
     max_details = max(20, int(spec.get("max_detail_pages", 250)))
     max_sitemap_urls = max(100, int(spec.get("max_sitemap_urls", 1000)))
     JBC_HOME = "https://www.jbcimmobiliare.it/"
+
     starts = list(dict.fromkeys([
         canonical(spec.get("url") or JBC_HOME),
         canonical(JBC_HOME),
@@ -152,9 +153,9 @@ def capture_jbc(browser, location, spec, debug):
                     "(KHTML, like Gecko) Chrome/124.0 Safari/537.36"),
         extra_http_headers={"Accept-Language": "it-IT,it;q=0.9,en;q=0.7"},
     )
-    ctx.set_default_timeout(10000)
+    ctx.set_default_timeout(12000)
     page = ctx.new_page()
-    page.set_default_navigation_timeout(30000)
+    page.set_default_navigation_timeout(35000)
 
     hub_queue, queued_hubs, visited_hubs = [], set(), set()
     detail_urls, errors = {}, []
@@ -162,80 +163,94 @@ def capture_jbc(browser, location, spec, debug):
     last_status = None
     last_title = None
 
+    HUB_PATHS = (
+        "/immobili", "/vendita", "/cerca", "/ricerca",
+        "/cantieri", "/cantiere", "/progetti", "/progetto",
+        "/nuove-costruzioni", "/nuove_costruzioni",
+        "/nuova-costruzione",
+    )
+    HUB_TEXT = (
+        "scopri gli immobili", "scopri gli immobili",
+        "immobili in città", "immobili al mare",
+        "tutti i cantieri", "i nostri cantieri",
+        "immobili in vendita", "cerca", "ricerca",
+        "cantieri", "progetti", "residenze", "residence",
+    )
+    EXPLICIT_HUB_SLUGS = {
+        "", "index", "index.php", "home", "home.php",
+        "investimento-immobiliare.php", "chi-siamo.php",
+        "about-us.php", "contatti.php", "contact.php",
+        "404.php",
+    }
+
     def internal(u):
         try:
-            return urlparse(canonical(u)).netloc.lower().removeprefix("www.") == JBC_HOST
+            return (
+                urlparse(canonical(u)).netloc.lower().removeprefix("www.")
+                == JBC_HOST
+            )
         except Exception:
             return False
 
     def bad(u):
         path = urlparse(canonical(u)).path.lower()
-        return any(x in path for x in BAD_PATH_HINTS) or path.endswith((
-            ".jpg", ".jpeg", ".png", ".gif", ".webp", ".svg", ".pdf",
-            ".css", ".js", ".xml"
-        ))
+        return (
+            any(x in path for x in BAD_PATH_HINTS)
+            or path.endswith((
+                ".jpg", ".jpeg", ".png", ".gif", ".webp", ".svg",
+                ".pdf", ".css", ".js", ".xml", ".ico"
+            ))
+        )
 
-    # These are navigation/category signals, not property-detail signals.
-    HUB_TERMS = (
-        "vendita immobili", "scopri gli immobili", "immobili in città",
-        "immobili al mare", "al mare", "in città", "tutti i cantieri",
-        "i nostri cantieri", "nuove costruzioni", "nuova costruzione",
-        "immobili in vendita", "cerca", "ricerca", "case", "appartamenti",
-        "cantieri", "progetti", "residenze", "residence"
-    )
+    def is_property_url(u, label=""):
+        if not internal(u) or bad(u):
+            return False
+        path = urlparse(u).path.strip("/").lower()
+        if path in EXPLICIT_HUB_SLUGS:
+            return False
+        if path.endswith(".php"):
+            return False
+
+        # Real JBC property pages use descriptive slugs such as:
+        # /home-b61-nuovo-bilocale-a-jesolo-jesolo
+        # /magnolia-trilocale-con-ampi-spazi-terrazza-e-privacy-a-jesolo-paese-jesolo
+        slug = path.split("/")[-1]
+        descriptive = len(slug) >= 18 and slug.count("-") >= 2
+        property_signal = any(t in f"{slug} {label}".lower()
+                              for t in JBC_TERMS)
+        return descriptive or property_signal
+
+    def is_hub_url(u, label=""):
+        if not internal(u) or bad(u):
+            return False
+        path = urlparse(u).path.lower()
+        if path.rstrip("/") in ("", "/404.php"):
+            return True
+        hay = f"{path} {label}".lower()
+        return (
+            any(x in path for x in HUB_PATHS)
+            or any(x in hay for x in HUB_TEXT)
+        )
 
     def add_hub(u, label=""):
         u = canonical(u)
         if not internal(u) or bad(u):
             return
-        path = urlparse(u).path.lower()
-        # The JBC homepage "/" is a mandatory discovery hub.
-        # Only reject explicit error pages, not the homepage.
-        if path.rstrip("/") in ("/404.php",):
+        if u in visited_hubs or u in queued_hubs:
             return
-        hay = f"{path} {label}".lower()
-        # Strong category/navigation signals. Keep the queue bounded.
-        strong = (
-            any(term in hay for term in HUB_TERMS)
-            or any(x in path for x in (
-                "/vendita", "/immobili", "/cerca", "/ricerca",
-                "/cantier", "/progett", "/nuove", "/nuova"
-            ))
-        )
-        if strong and u not in queued_hubs and u not in visited_hubs:
-            if len(queued_hubs) < max_hubs:
-                queued_hubs.add(u)
-                hub_queue.append(u)
+        if is_hub_url(u, label) and len(queued_hubs) < max_hubs:
+            queued_hubs.add(u)
+            hub_queue.append(u)
 
     def add_detail(u, label=""):
         u = canonical(u)
-        if not internal(u) or bad(u):
+        if not is_property_url(u, label):
             return
-        path = urlparse(u).path.lower()
-        slug = path.strip("/")
-        if not slug or slug.endswith((".php", ".html")) and slug in (
-            "index.php", "home.php", "chi-siamo.php", "404.php"
-        ):
-            return
-        if any(x in path for x in (
-            "/privacy", "/cookie", "/contatti", "/contact",
-            "/franchising", "/newsletter", "/login", "/registr",
-            "/agenzia", "/agenzie", "/lavora-con-noi", "/404"
-        )):
-            return
-
-        hay = f"{slug} {label}".lower()
-        descriptive = (
-            len(slug) >= 18 and slug.count("-") >= 2
-        )
-        text_signal = any(term in hay for term in JBC_TERMS)
-        # JBC detail URLs are normally descriptive slugs and often have no
-        # /immobile/ prefix, so do not require a specific path.
-        if descriptive or text_signal:
-            detail_urls.setdefault(u, label)
+        detail_urls.setdefault(u, " ".join(str(label).split())[:500])
 
     def inspect_links(base):
-        """Extract all same-host anchors and classify them as hub/detail."""
+        """Extract normal, lazy and data-* links without confusing properties with hubs."""
+        rows = []
         try:
             rows = page.locator("a[href]").evaluate_all(
                 """els => els.map(el => ({
@@ -246,122 +261,137 @@ def capture_jbc(browser, location, spec, debug):
             )
         except Exception as exc:
             errors.append(f"anchor-extract: {type(exc).__name__}: {exc!r}")
-            rows = []
 
+        raw = []
         for row in rows:
-            raw = str(row.get("href") or "").strip()
-            if not raw or raw.startswith(("javascript:", "mailto:", "tel:", "#")):
-                continue
-            u = canonical(urljoin(base, raw))
-            if not internal(u) or bad(u):
-                continue
-            label = " ".join(str(row.get("text") or "").split())
-            hay = f"{u} {label}".lower()
+            raw.append((row.get("href", ""), row.get("text", "")))
 
-            if any(term in hay for term in HUB_TERMS):
-                add_hub(u, label)
-            else:
-                add_detail(u, label)
-
-        # Also inspect raw HTML for lazy-loaded links such as data-href/data-url.
         try:
             html = page.content()
-            raw_links = re.findall(
-                r'(?:href|data-href|data-url)\s*=\s*["\']([^"\']+)["\']',
-                html, flags=re.I
-            )
-            for raw in raw_links:
-                raw = str(raw).strip()
-                if not raw or raw.startswith(("javascript:", "mailto:", "tel:", "#")):
-                    continue
-                u = canonical(urljoin(base, raw))
-                if not internal(u) or bad(u):
-                    continue
-                add_detail(u)
-        except Exception:
-            pass
+            raw += [
+                (h, "")
+                for h in re.findall(
+                    r'(?:href|data-href|data-url|data-link)\s*=\s*["\']([^"\']+)["\']',
+                    html, flags=re.I
+                )
+            ]
+        except Exception as exc:
+            errors.append(f"html-link-extract: {type(exc).__name__}: {exc!r}")
 
-    def inspect_sitemap():
-        """Try common sitemap locations. XML is cheap and often contains full inventory."""
+        seen = set()
+        for href, label in raw:
+            href = str(href or "").strip()
+            if not href or href.startswith(("javascript:", "mailto:", "tel:", "#")):
+                continue
+            u = canonical(urljoin(base, href))
+            if u in seen or not internal(u) or bad(u):
+                continue
+            seen.add(u)
+
+            # Critical V10 ordering: classify as PROPERTY first.
+            # A property title often contains "nuova", "residence", etc.;
+            # V9 incorrectly promoted those links to hubs.
+            if is_property_url(u, label):
+                add_detail(u, label)
+            elif is_hub_url(u, label):
+                add_hub(u, label)
+
+    def parse_sitemap_xml(text):
+        urls = re.findall(
+            r"<loc>\s*(https?://[^<\s]+)\s*</loc>",
+            text or "", flags=re.I
+        )
+        if not urls:
+            urls = re.findall(
+                r"https?://(?:www\.)?jbcimmobiliare\.it/[^\s\"'<>]+",
+                text or "", flags=re.I
+            )
+        return [canonical(x.replace("&amp;", "&")) for x in urls]
+
+    def inspect_sitemaps():
         nonlocal pages, last_status, last_title
-        sitemap_candidates = [
+        found = 0
+        queue = [
             "https://www.jbcimmobiliare.it/sitemap.xml",
             "https://www.jbcimmobiliare.it/sitemap_index.xml",
         ]
-        found = 0
-        for sm in sitemap_candidates:
+        visited_sm = set()
+
+        while queue and found < max_sitemap_urls:
+            sm = canonical(queue.pop(0))
+            if sm in visited_sm:
+                continue
+            visited_sm.add(sm)
             try:
-                response = page.goto(sm, wait_until="domcontentloaded", timeout=15000)
+                response = page.goto(sm, wait_until="domcontentloaded", timeout=20000)
+                last_status = response.status if response else last_status
                 if response and response.status >= 400:
                     continue
-                last_status = response.status if response else last_status
-                text = page.locator("body").inner_text(timeout=5000) or ""
-                # If browser renders XML as text, URLs are still visible.
-                urls = re.findall(r'https?://www\.jbcimmobiliare\.it[^<\s"]+', text)
-                if not urls:
+
+                text = ""
+                try:
+                    text = page.locator("body").inner_text(timeout=5000) or ""
+                except Exception:
+                    pass
+                if not text:
                     try:
-                        html = page.content()
-                        urls = re.findall(
-                            r'https?://www\.jbcimmobiliare\.it[^<\s"]+',
-                            html, flags=re.I
-                        )
+                        text = page.content()
                     except Exception:
-                        pass
+                        text = ""
 
-                for raw in urls[:max_sitemap_urls]:
-                    u = canonical(raw.replace("&amp;", "&"))
-                    if internal(u) and not bad(u):
-                        add_detail(u)
-                        found += 1
-
-                if found:
-                    return found
+                urls = parse_sitemap_xml(text)
+                for u in urls[:max_sitemap_urls]:
+                    if not internal(u) or bad(u):
+                        continue
+                    path = urlparse(u).path.lower()
+                    # Sitemap indexes can point to other sitemap XML files.
+                    if path.endswith(".xml") or "sitemap" in path:
+                        if u not in visited_sm and len(queue) < 30:
+                            queue.append(u)
+                        continue
+                    if is_property_url(u):
+                        before = len(detail_urls)
+                        add_detail(u, "sitemap")
+                        found += int(len(detail_urls) > before)
             except Exception as exc:
                 errors.append(f"sitemap {sm}: {type(exc).__name__}: {exc!r}")
+
         return found
 
     def inspect_hub(u):
         nonlocal pages, last_status, last_title
         try:
-            response = page.goto(u, wait_until="domcontentloaded", timeout=30000)
+            response = page.goto(u, wait_until="domcontentloaded", timeout=35000)
             last_status = response.status if response else None
             last_title = page.title() or ""
             pages += 1
-            page.wait_for_timeout(700)
+            page.wait_for_timeout(800)
 
-            # Lazy-loaded cards can appear after a small scroll.
+            # Trigger lazy cards.
             for _ in range(3):
                 try:
                     page.mouse.wheel(0, 1800)
-                    page.wait_for_timeout(350)
+                    page.wait_for_timeout(400)
                 except Exception:
                     break
 
             inspect_links(u)
 
-            # Explicit pagination detection.
             nxt = next_page(page, u, visited_hubs)
             if nxt:
-                add_hub(nxt, "pagination successiva")
+                add_hub(nxt, "pagination")
         except PlaywrightTimeoutError:
             errors.append(f"hub {u}: TIMEOUT")
         except Exception as exc:
             errors.append(f"hub {u}: {type(exc).__name__}: {exc!r}")
 
-    # 1) Start with the configured source and homepage.
+    # Homepage must be crawled even if sitemap navigation moves the browser.
     for s in starts:
-        if canonical(s) == canonical(JBC_HOME):
-            if s not in queued_hubs:
-                queued_hubs.add(s)
-                hub_queue.append(s)
-        else:
-            add_hub(s, "homepage")
+        add_hub(s, "start")
 
-    # 2) Sitemap first: if present, it can expose inventory not linked from
-    # the current homepage.
-    sitemap_found = inspect_sitemap()
+    # Sitemap is supplementary, never the only discovery mechanism.
+    sitemap_found = inspect_sitemaps()
 
-    # 3) Crawl category/navigation pages discovered from the homepage.
     while hub_queue and len(visited_hubs) < max_hubs:
         u = hub_queue.pop(0)
         if u in visited_hubs:
@@ -369,10 +399,17 @@ def capture_jbc(browser, location, spec, debug):
         visited_hubs.add(u)
         inspect_hub(u)
 
-    records, visited_details = [], []
+    # Always re-open homepage after sitemap processing. This avoids V9's
+    # browser being left on sitemap XML before normal navigation discovery.
+    if canonical(JBC_HOME) not in visited_hubs and len(visited_hubs) < max_hubs:
+        visited_hubs.add(canonical(JBC_HOME))
+        inspect_hub(canonical(JBC_HOME))
 
-    # 4) Capture details. A detail page can itself contain related units, so
-    # inspect its anchors for additional detail URLs, but keep bounded.
+    records = []
+    visited_details = []
+
+    # Detail capture is deliberately tolerant. A valid property page is kept
+    # even if some fields cannot be parsed.
     idx = 0
     while idx < len(detail_urls) and len(visited_details) < max_details:
         u = list(detail_urls.keys())[idx]
@@ -383,42 +420,56 @@ def capture_jbc(browser, location, spec, debug):
         visited_details.append(u)
 
         try:
-            response = page.goto(u, wait_until="domcontentloaded", timeout=30000)
-            if response and response.status >= 400:
-                errors.append(f"detail {u}: HTTP {response.status}")
+            response = page.goto(u, wait_until="domcontentloaded", timeout=35000)
+            status = response.status if response else None
+            if status is not None and status >= 400:
+                errors.append(f"detail {u}: HTTP {status}")
                 continue
 
-            page.wait_for_timeout(250)
-            title = page.title() or ""
+            page.wait_for_timeout(700)
+
             try:
                 body = " ".join(
-                    (page.locator("body").inner_text(timeout=5000) or "").split()
+                    (page.locator("body").inner_text(timeout=8000) or "").split()
                 )
             except Exception:
-                body = fallback or ""
+                body = ""
 
+            try:
+                title = page.title() or ""
+            except Exception:
+                title = ""
+
+            # Some pages expose content only after a short render delay.
             if len(body) < 80:
-                continue
+                try:
+                    page.wait_for_timeout(1500)
+                    body = " ".join(
+                        (page.locator("body").inner_text(timeout=8000) or "").split()
+                    )
+                except Exception:
+                    pass
 
             low = f"{title} {body}".lower()
+
             if any(x in low for x in (
-                "privacy policy", "cookie policy", "lavora con noi",
-                "franchising", "pagina non trovata", "errore 404"
+                "pagina non trovata", "errore 404", "page not found",
+                "privacy policy", "cookie policy"
             )):
                 continue
 
-            path = urlparse(u).path.lower()
-            descriptive_slug = (
-                len(path.strip("/")) >= 18 and path.strip("/").count("-") >= 2
-            )
-            has_property_signal = any(term in low for term in JBC_TERMS)
-            if not (descriptive_slug or has_property_signal):
+            # V10 does NOT require a price/area/rooms field to accept a
+            # property. The normalization layer can retain partial records.
+            if len(body) < 30 and not title:
+                errors.append(f"detail {u}: empty body")
                 continue
 
-            records.append(detail(page, source, location, u, fallback))
+            records.append(detail(
+                page, source, location, u,
+                fallback=fallback or title
+            ))
 
-            # Related/newly surfaced cards can reveal inventory not present in
-            # the category page.
+            # Discover related property pages from detail cards.
             inspect_links(u)
 
         except PlaywrightTimeoutError:
@@ -429,7 +480,7 @@ def capture_jbc(browser, location, spec, debug):
     ded = {r["source_url"]: r for r in records if r.get("source_url")}
 
     manifest = {
-        "version": "JBC-V9-HOMEPAGE-CATEGORIES-SITEMAP",
+        "version": "JBC-V10-ROBUST-DISCOVERY",
         "source": source,
         "location": location,
         "start_urls": starts,
@@ -439,8 +490,12 @@ def capture_jbc(browser, location, spec, debug):
         "candidate_detail_urls": len(detail_urls),
         "detail_pages_visited": len(visited_details),
         "records_captured": len(ded),
-        "unit_records": sum(1 for r in ded.values() if r.get("record_type") == "UNIT"),
-        "project_records": sum(1 for r in ded.values() if r.get("record_type") == "PROJECT"),
+        "unit_records": sum(
+            1 for r in ded.values() if r.get("record_type") == "UNIT"
+        ),
+        "project_records": sum(
+            1 for r in ded.values() if r.get("record_type") == "PROJECT"
+        ),
         "last_http_status": last_status,
         "last_title": last_title,
         "errors": errors[:150],
@@ -450,15 +505,20 @@ def capture_jbc(browser, location, spec, debug):
     try:
         debug.mkdir(parents=True, exist_ok=True)
         (debug / f"{location}__jbc_manifest.json").write_text(
-            json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8"
+            json.dumps(manifest, ensure_ascii=False, indent=2),
+            encoding="utf-8",
         )
     except Exception as exc:
         errors.append(f"manifest-write: {type(exc).__name__}: {exc!r}")
 
     ctx.close()
+
     return (
-        list(ded.values()), pages, last_status, last_title,
-        None if ded else "JBC V9 adapter found 0 detail records",
+        list(ded.values()),
+        pages,
+        last_status,
+        last_title,
+        None if ded else "JBC V10 adapter found 0 detail records",
     )
 
 def next_page(page,current,seen):
