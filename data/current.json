@@ -46,8 +46,8 @@
     },
     "cavallino-treporti": {
       "portal_inventory": null,
-      "live_capture": 113,
-      "captured_concrete_rows": 113
+      "live_capture": 0,
+      "captured_concrete_rows": 0
     },
     "jesolo": {
       "portal_inventory": null,
@@ -150,10 +150,10 @@
     "next_run_rule": "match by listing_id/source_url first; then project_id/unit_id where available"
   },
   "portal_inventory_total": 1158,
-  "live_capture_total": 120,
-  "captured_concrete_total": 120,
+  "live_capture_total": 7,
+  "captured_concrete_total": 7,
   "snapshot_status": "SUCCESS",
-  "last_live_capture": "2026-08-17T16:57:04.231826+00:00",
+  "last_live_capture": "2026-08-17T17:10:00.128348+00:00",
   "capture_coverage": [
     {
       "location": "jesolo",
@@ -209,7 +209,7 @@
       "source": "idealista_apartments",
       "start_url": "https://www.idealista.it/vendita-case/cavallino-treporti-venezia/con-appartamenti%2Cnuova-costruzione/",
       "pages_captured": 1,
-      "records_captured": 113
+      "records_captured": 0
     },
     {
       "location": "san-dona-di-piave",
@@ -239,5 +239,16 @@
       "pages_captured": 1,
       "records_captured": 0
     }
-  ]
+  ],
+  "price_history_file": "data/price_history.json",
+  "price_history_retention_days": 365,
+  "price_history_stats": {
+    "priced_objects": 6,
+    "previous_run_changes": 0,
+    "decreases_vs_previous": 0,
+    "increases_vs_previous": 0,
+    "with_30d": 0,
+    "with_180d": 0,
+    "discount_signals": 4
+  }
 }
