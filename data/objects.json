@@ -184,8 +184,8 @@
       "source_url": "https://www.jbcimmobiliare.it/prestigiosa-villa-singola-con-parco-e-piscina-nuova-modalita-di-acquisto-jesolo",
       "first_seen": "2026-08-17",
       "last_seen": "2026-08-17",
-      "previous_price": null,
-      "price_delta": null,
+      "previous_price": 600000,
+      "price_delta": 0,
       "new_to_radar_30d": true
     },
     {
@@ -215,8 +215,8 @@
       "source_url": "https://www.jbcimmobiliare.it/trilocale-di-nuova-costruzione-vista-mare-a-caorle-caorle",
       "first_seen": "2026-08-17",
       "last_seen": "2026-08-17",
-      "previous_price": null,
-      "price_delta": null,
+      "previous_price": 336000,
+      "price_delta": 0,
       "new_to_radar_30d": true
     },
     {
@@ -246,8 +246,8 @@
       "source_url": "https://www.jbcimmobiliare.it/quadrilocale-nuovo-con-vista-mare-a-jesolo-lido-jesolo",
       "first_seen": "2026-08-17",
       "last_seen": "2026-08-17",
-      "previous_price": null,
-      "price_delta": null,
+      "previous_price": 482000,
+      "price_delta": 0,
       "new_to_radar_30d": true
     },
     {
@@ -277,8 +277,8 @@
       "source_url": "https://www.jbcimmobiliare.it/nuovo-bilocale-piano-terra-con-giardino-residence-al-lido-altanea-caorle",
       "first_seen": "2026-08-17",
       "last_seen": "2026-08-17",
-      "previous_price": null,
-      "price_delta": null,
+      "previous_price": 255000,
+      "price_delta": 0,
       "new_to_radar_30d": true
     },
     {
@@ -308,8 +308,8 @@
       "source_url": "https://www.jbcimmobiliare.it/nuovo-trilocale-con-giardino-esclusivo-residence-altanea-a-caorle-caorle",
       "first_seen": "2026-08-17",
       "last_seen": "2026-08-17",
-      "previous_price": null,
-      "price_delta": null,
+      "previous_price": 418000,
+      "price_delta": 0,
       "new_to_radar_30d": true
     },
     {
@@ -339,8 +339,8 @@
       "source_url": "https://www.jbcimmobiliare.it/nuovo-bilocale-in-residence-al-lido-altanea-a-caorle-caorle",
       "first_seen": "2026-08-17",
       "last_seen": "2026-08-17",
-      "previous_price": null,
-      "price_delta": null,
+      "previous_price": 246000,
+      "price_delta": 0,
       "new_to_radar_30d": true
     },
     {
@@ -373,43 +373,12 @@
       "previous_price": null,
       "price_delta": null,
       "new_to_radar_30d": true
-    },
-    {
-      "object_id": "obj:586629518735edef0861b7f44c1f8109aa7033d3",
-      "location": "jesolo",
-      "project_id": "project:d3aa09e22b86a89d1e9554e413382b7b7a9f7692",
-      "unit_id": null,
-      "listing_id": "url:9f2b56d5099f23947abbcedbf3a987634f53986a",
-      "project": null,
-      "unit": null,
-      "listing_title": "Pagina non trovata - JBC Immobiliare",
-      "price": null,
-      "area_m2": null,
-      "eur_m2": null,
-      "bedrooms": null,
-      "rooms": null,
-      "floor": null,
-      "parking": null,
-      "garage": null,
-      "terrace": null,
-      "pool": null,
-      "sea_distance_m": null,
-      "delivery": null,
-      "stage": null,
-      "status": "active_snapshot",
-      "source": "jbc_direct",
-      "source_url": "https://www.jbcimmobiliare.it/nuove-costruzioni",
-      "first_seen": "2026-08-17",
-      "last_seen": "2026-08-17",
-      "previous_price": null,
-      "price_delta": null,
-      "new_to_radar_30d": true
     }
   ],
   "counts": {
-    "total_captured_listings": 13,
+    "total_captured_listings": 12,
     "by_location": {
-      "jesolo": 13
+      "jesolo": 12
     }
   },
   "coverage": [
@@ -438,8 +407,8 @@
       "location": "jesolo",
       "source": "jbc_direct",
       "start_url": "https://www.jbcimmobiliare.it/",
-      "pages_captured": 2,
-      "records_captured": 13
+      "pages_captured": 1,
+      "records_captured": 12
     },
     {
       "location": "caorle",
@@ -452,8 +421,8 @@
       "location": "caorle",
       "source": "jbc_direct",
       "start_url": "https://www.jbcimmobiliare.it/",
-      "pages_captured": 2,
-      "records_captured": 13
+      "pages_captured": 1,
+      "records_captured": 12
     },
     {
       "location": "cavallino-treporti",

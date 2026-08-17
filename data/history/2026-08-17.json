@@ -27,8 +27,8 @@
       "location": "jesolo",
       "source": "jbc_direct",
       "start_url": "https://www.jbcimmobiliare.it/",
-      "pages_captured": 2,
-      "records_captured": 13
+      "pages_captured": 1,
+      "records_captured": 12
     },
     {
       "location": "caorle",
@@ -41,8 +41,8 @@
       "location": "caorle",
       "source": "jbc_direct",
       "start_url": "https://www.jbcimmobiliare.it/",
-      "pages_captured": 2,
-      "records_captured": 13
+      "pages_captured": 1,
+      "records_captured": 12
     },
     {
       "location": "cavallino-treporti",
@@ -88,9 +88,9 @@
     }
   ],
   "counts": {
-    "total_captured_listings": 13,
+    "total_captured_listings": 12,
     "by_location": {
-      "jesolo": 13
+      "jesolo": 12
     }
   },
   "portal_inventory_total": 1158
