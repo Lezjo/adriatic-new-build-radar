@@ -130,10 +130,18 @@ def generic_extract(page,source,location,url):
     return out
 
 def capture_jbc(browser, location, spec, debug):
-    """JBC crawler: homepage -> hubs -> every internal property/project detail."""
+    """Fast, bounded JBC crawler.
+
+    Strategy:
+      1) Load the JBC homepage/catalog once.
+      2) Collect only explicit property/project links and known catalog hubs.
+      3) Visit a bounded number of detail pages with short timeouts.
+      4) Never crawl arbitrary internal links, so a bad navigation tree cannot
+         stall the daily radar for many minutes.
+    """
     source = spec["name"]
-    max_hubs = int(spec.get("max_hub_pages", 25))
-    max_details = int(spec.get("max_detail_pages", 400))
+    max_hubs = min(int(spec.get("max_hub_pages", 5)), 5)
+    max_details = min(int(spec.get("max_detail_pages", 60)), 60)
 
     ctx = browser.new_context(
         locale="it-IT",
@@ -143,13 +151,16 @@ def capture_jbc(browser, location, spec, debug):
             "Chrome/124.0 Safari/537.36"
         ),
     )
-    hub_page = ctx.new_page()
-    detail_page = ctx.new_page()
+    ctx.set_default_timeout(12000)
 
-    hub_queue = [canonical(spec["url"])]
-    queued_hubs = set(hub_queue)
+    page = ctx.new_page()
+    page.set_default_navigation_timeout(18000)
+
+    start_url = canonical(spec["url"])
+    hub_queue = [start_url]
+    queued_hubs = {start_url}
     visited_hubs = set()
-    discovered_details = {}
+    detail_urls = {}
     errors = []
     pages = 0
     last_status = None
@@ -159,123 +170,110 @@ def capture_jbc(browser, location, spec, debug):
         p = urlparse(canonical(u))
         return p.netloc.lower().removeprefix("www.") == JBC_HOST
 
-    def is_bad(u):
+    def bad(u):
         path = urlparse(canonical(u)).path.lower()
         return any(x in path for x in BAD_PATH_HINTS)
 
     def add_hub(u):
         u = canonical(u)
-        if not internal(u) or is_bad(u):
-            return
-        if u in visited_hubs or u in queued_hubs:
-            return
-        queued_hubs.add(u)
-        hub_queue.append(u)
+        if internal(u) and not bad(u) and u not in queued_hubs and len(hub_queue) < max_hubs:
+            queued_hubs.add(u)
+            hub_queue.append(u)
 
     def add_detail(u, label=""):
         u = canonical(u)
-        if not internal(u) or is_bad(u):
+        if (
+            internal(u)
+            and not bad(u)
+            and u.rstrip("/") != start_url.rstrip("/")
+            and len(detail_urls) < max_details
+        ):
+            detail_urls.setdefault(u, label)
+
+    def collect_links(base):
+        """Collect explicit JBC property/project links only."""
+        try:
+            anchors = page.locator("a[href]").all()
+        except Exception:
             return
-        if u.rstrip("/") == canonical(spec["url"]).rstrip("/"):
-            return
-        discovered_details.setdefault(u, label)
+
+        for a in anchors:
+            try:
+                href = a.get_attribute("href")
+                if not href:
+                    continue
+                u = canonical(urljoin(base, href))
+                if not internal(u) or bad(u):
+                    continue
+
+                label = get_text(a)
+                low = label.lower()
+                path = urlparse(u).path.lower()
+                hay = f"{low} {path}"
+
+                # Explicit catalog links.
+                if (
+                    "vedi tutti i cantieri" in low
+                    or "vedi tutti cantieri" in low
+                    or "i nostri cantieri" in low
+                    or "nuove costruzioni" in low
+                    or "nuova costruzione" in low
+                    or "/cantieri" in path
+                    or "/cantiere" in path
+                ):
+                    add_hub(u)
+                    continue
+
+                # Explicit listing/project CTAs are the preferred source.
+                if (
+                    "vedi immobile" in low
+                    or "scopri immobile" in low
+                    or "dettagli" in low
+                    or low.strip() == "scopri"
+                ):
+                    add_detail(u, label)
+                    continue
+
+                # JBC homepage currently exposes project cards directly.
+                # Their URL slugs are descriptive and contain property terms.
+                if any(term in hay for term in JBC_TERMS):
+                    add_detail(u, label)
+                    continue
+
+                # Do NOT add every arbitrary internal link here.
+                # That was the source of the multi-minute crawl.
+            except Exception as exc:
+                errors.append(f"link {base}: {type(exc).__name__}: {exc!r}")
 
     def inspect_hub(u):
         nonlocal pages, last_status, last_title
         try:
-            response = hub_page.goto(
-                u,
-                wait_until="domcontentloaded",
-                timeout=60000,
-            )
+            response = page.goto(u, wait_until="domcontentloaded", timeout=18000)
             last_status = response.status if response else None
             try:
-                last_title = hub_page.title()
+                last_title = page.title()
             except Exception:
                 last_title = None
 
-            hub_page.wait_for_timeout(1800)
+            # Short wait only; no 7x scrolling loop.
+            page.wait_for_timeout(700)
 
-            # Lazy-load cards and menus.
-            for _ in range(7):
-                hub_page.mouse.wheel(0, 1800)
-                hub_page.wait_for_timeout(400)
+            # One small scroll is enough for the current JBC homepage.
+            try:
+                page.mouse.wheel(0, 1200)
+                page.wait_for_timeout(300)
+            except Exception:
+                pass
 
             pages += 1
-
-            anchors = hub_page.locator("a[href]").all()
-
-            for anchor in anchors:
-                try:
-                    href = anchor.get_attribute("href")
-                    if not href:
-                        continue
-
-                    u2 = canonical(urljoin(u, href))
-                    if not internal(u2) or is_bad(u2):
-                        continue
-
-                    label = get_text(anchor)
-                    low = label.lower()
-                    path = urlparse(u2).path.lower()
-
-                    # The real JBC homepage explicitly exposes this link.
-                    # Follow it as a hub regardless of its slug.
-                    if (
-                        "vedi tutti i cantieri" in low
-                        or "vedi tutti cantieri" in low
-                        or "i nostri cantieri" in low
-                        or "nostri cantieri" in low
-                        or "nuove costruzioni" in low
-                        or "nuova costruzione" in low
-                    ):
-                        add_hub(u2)
-                        continue
-
-                    # Explicit property/detail CTA.
-                    if (
-                        "vedi immobile" in low
-                        or "scopri immobile" in low
-                        or "dettagli" in low
-                        or "scopri" == low.strip()
-                    ):
-                        add_detail(u2, label)
-                        continue
-
-                    # Known catalog/category routes are hubs.
-                    if any(x in path for x in (
-                        "/cantieri", "/cantiere", "/progetti",
-                        "/nuove-costruzioni", "/nuova-costruzione",
-                        "/immobili", "/appartamenti", "/case",
-                        "/vendita", "/property", "/properties",
-                    )):
-                        add_hub(u2)
-                        continue
-
-                    # If a link sits inside a property card, get_text()
-                    # contains the card title/price/features. Treat it as a
-                    # detail even when the URL slug is unconventional.
-                    card_hay = (label + " " + low)
-                    if any(term in card_hay for term in JBC_TERMS):
-                        add_detail(u2, label)
-                        continue
-
-                    # Last-resort internal page candidate: JBC's site is a
-                    # small catalogue. Non-root internal links not filtered
-                    # above are safe to inspect as detail pages.
-                    if path not in ("", "/"):
-                        add_detail(u2, label)
-
-                except Exception as exc:
-                    errors.append(
-                        f"anchor {u}: {type(exc).__name__}: {exc!r}"
-                    )
+            collect_links(u)
 
         except PlaywrightTimeoutError as exc:
-            errors.append(f"hub {u}: TIMEOUT {exc!r}")
+            errors.append(f"hub {u}: TIMEOUT")
         except Exception as exc:
             errors.append(f"hub {u}: {type(exc).__name__}: {exc!r}")
 
+    # Visit only a handful of hubs.
     while hub_queue and len(visited_hubs) < max_hubs:
         u = hub_queue.pop(0)
         if u in visited_hubs:
@@ -283,96 +281,103 @@ def capture_jbc(browser, location, spec, debug):
         visited_hubs.add(u)
         inspect_hub(u)
 
+    # Visit bounded detail pages.
     records = []
-    visited_details = set()
+    visited_details = []
 
-    for u, card_text in list(discovered_details.items()):
-        if u in visited_details or len(visited_details) >= max_details:
-            continue
-        visited_details.add(u)
-
+    for u, fallback in list(detail_urls.items())[:max_details]:
+        visited_details.append(u)
         try:
-            response = detail_page.goto(
-                u,
-                wait_until="domcontentloaded",
-                timeout=60000,
-            )
-            detail_page.wait_for_timeout(1000)
-
+            response = page.goto(u, wait_until="domcontentloaded", timeout=18000)
             if response and response.status >= 400:
+                errors.append(f"detail {u}: HTTP {response.status}")
                 continue
 
-            body = " ".join(
-                (detail_page.locator("body").inner_text(timeout=5000) or "").split()
-            )
-            title = detail_page.title() or ""
+            page.wait_for_timeout(500)
+
+            try:
+                title = page.title() or ""
+            except Exception:
+                title = ""
+
+            try:
+                body = " ".join(
+                    (page.locator("body").inner_text(timeout=5000) or "").split()
+                )
+            except Exception:
+                body = fallback
+
             low = f"{title} {body}".lower()
 
-            # Ignore navigation/legal pages accidentally discovered.
             if len(body) < 80:
                 continue
+
             if any(x in low for x in (
-                "privacy policy", "cookie policy",
-                "lavora con noi", "franchising",
+                "privacy policy",
+                "cookie policy",
+                "lavora con noi",
+                "franchising",
             )):
                 continue
 
-            # A JBC property/project detail should have at least one
-            # property signal. Do not require a specific URL slug.
-            if not any(term in low for term in JBC_TERMS):
+            # A detail page should contain at least one property/project
+            # signal OR a descriptive title/slug.
+            path_low = urlparse(u).path.lower()
+            has_property_signal = any(term in low for term in JBC_TERMS)
+            has_descriptive_slug = (
+                path_low.count("-") >= 2
+                and len(path_low.strip("/")) >= 18
+            )
+            if not (has_property_signal or has_descriptive_slug):
                 continue
 
-            records.append(
-                detail(
-                    detail_page,
-                    source,
-                    location,
-                    u,
-                    card_text,
-                )
-            )
+            records.append(detail(page, source, location, u, fallback))
 
-        except PlaywrightTimeoutError as exc:
-            errors.append(f"detail {u}: TIMEOUT {exc!r}")
+        except PlaywrightTimeoutError:
+            errors.append(f"detail {u}: TIMEOUT")
         except Exception as exc:
             errors.append(f"detail {u}: {type(exc).__name__}: {exc!r}")
 
     ded = {x["source_url"]: x for x in records}
 
+    # Always write a manifest, even when zero records are found.
+    manifest = {
+        "version": "JBC-V5-FAST",
+        "source": source,
+        "location": location,
+        "start_url": start_url,
+        "hub_pages_visited": len(visited_hubs),
+        "hub_pages": sorted(visited_hubs),
+        "candidate_detail_urls": len(detail_urls),
+        "detail_pages_visited": len(visited_details),
+        "records_captured": len(ded),
+        "unit_records": sum(
+            1 for r in ded.values() if r.get("record_type") == "UNIT"
+        ),
+        "project_records": sum(
+            1 for r in ded.values() if r.get("record_type") == "PROJECT"
+        ),
+        "projects_detected": len({
+            r.get("project_id")
+            for r in ded.values()
+            if r.get("project_id")
+        }),
+        "last_http_status": last_status,
+        "last_title": last_title,
+        "errors": errors[:100],
+        "candidate_urls": list(detail_urls.keys()),
+    }
+
     try:
-        manifest = {
-            "source": source,
-            "location": location,
-            "start_url": spec["url"],
-            "hub_pages_visited": len(visited_hubs),
-            "hub_pages": sorted(visited_hubs),
-            "candidate_detail_urls": len(discovered_details),
-            "detail_pages_visited": len(visited_details),
-            "records_captured": len(ded),
-            "unit_records": sum(
-                1 for r in ded.values() if r.get("record_type") == "UNIT"
-            ),
-            "project_records": sum(
-                1 for r in ded.values() if r.get("record_type") == "PROJECT"
-            ),
-            "projects_detected": len({
-                r.get("project_id")
-                for r in ded.values()
-                if r.get("project_id")
-            }),
-            "last_http_status": last_status,
-            "last_title": last_title,
-            "errors": errors[:100],
-            "candidate_urls": sorted(discovered_details),
-        }
         (debug / f"{location}__jbc_manifest.json").write_text(
             json.dumps(manifest, ensure_ascii=False, indent=2),
             encoding="utf-8",
         )
-    except Exception:
-        pass
+    except Exception as exc:
+        errors.append(f"manifest: {type(exc).__name__}: {exc!r}")
 
     ctx.close()
+
     return (
         list(ded.values()),
         pages,
