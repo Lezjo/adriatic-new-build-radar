@@ -463,9 +463,12 @@ def capture_jbc(browser, location, spec, debug):
                 "has_property_signal": any(term in low for term in JBC_TERMS),
             })
 
+            # Do NOT reject property pages just because their footer contains
+            # "privacy policy" or "cookie policy". JBC property pages include
+            # those footer links, so the previous V10.1 check discarded every
+            # valid detail page. Reject only actual 404/not-found pages.
             if any(x in low for x in (
-                "pagina non trovata", "errore 404", "page not found",
-                "privacy policy", "cookie policy"
+                "pagina non trovata", "errore 404", "page not found"
             )):
                 continue
 
