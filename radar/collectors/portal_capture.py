@@ -130,7 +130,7 @@ def generic_extract(page,source,location,url):
     return out
 
 def capture_jbc(browser, location, spec, debug):
-    """JBC V10: robust homepage/category discovery + direct detail capture.
+    """JBC V10.1: robust homepage/category discovery + direct detail capture.
 
     V10 fixes the V9 failure mode where property URLs were classified as
     navigation hubs and detail pages could be discarded before normalization.
@@ -159,6 +159,7 @@ def capture_jbc(browser, location, spec, debug):
 
     hub_queue, queued_hubs, visited_hubs = [], set(), set()
     detail_urls, errors = {}, []
+    detail_diagnostics = []
     pages = 0
     last_status = None
     last_title = None
@@ -490,7 +491,7 @@ def capture_jbc(browser, location, spec, debug):
     ded = {r["source_url"]: r for r in records if r.get("source_url")}
 
     manifest = {
-        "version": "JBC-V10-ROBUST-DISCOVERY",
+        "version": "JBC-V10.1-ROBUST-DISCOVERY",
         "source": source,
         "location": location,
         "start_urls": starts,
@@ -499,6 +500,7 @@ def capture_jbc(browser, location, spec, debug):
         "hub_pages": sorted(visited_hubs),
         "candidate_detail_urls": len(detail_urls),
         "detail_pages_visited": len(visited_details),
+        "detail_diagnostics_count": len(detail_diagnostics),
         "records_captured": len(ded),
         "unit_records": sum(
             1 for r in ded.values() if r.get("record_type") == "UNIT"
@@ -529,7 +531,7 @@ def capture_jbc(browser, location, spec, debug):
         pages,
         last_status,
         last_title,
-        None if ded else "JBC V10 adapter found 0 detail records",
+        None if ded else "JBC V10.1 adapter found 0 detail records",
     )
 
 def next_page(page,current,seen):
