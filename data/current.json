@@ -40,13 +40,13 @@
     },
     "caorle": {
       "portal_inventory": null,
-      "live_capture": 5,
-      "captured_concrete_rows": 5
+      "live_capture": 0,
+      "captured_concrete_rows": 0
     },
     "jesolo": {
       "portal_inventory": null,
-      "live_capture": 0,
-      "captured_concrete_rows": 0
+      "live_capture": 7,
+      "captured_concrete_rows": 7
     }
   },
   "previous_snapshot": null,
@@ -144,10 +144,10 @@
     "next_run_rule": "match by listing_id/source_url first; then project_id/unit_id where available"
   },
   "portal_inventory_total": 1158,
-  "live_capture_total": 5,
-  "captured_concrete_total": 5,
+  "live_capture_total": 7,
+  "captured_concrete_total": 7,
   "snapshot_status": "SUCCESS",
-  "last_live_capture": "2026-08-17T12:46:50.535671+00:00",
+  "last_live_capture": "2026-08-17T16:34:01.489455+00:00",
   "capture_coverage": [
     {
       "location": "jesolo",
@@ -174,8 +174,8 @@
       "location": "jesolo",
       "source": "jbc_direct",
       "start_url": "https://www.jbcimmobiliare.it/",
-      "pages_captured": 2,
-      "records_captured": 5
+      "pages_captured": 1,
+      "records_captured": 7
     },
     {
       "location": "caorle",
@@ -188,8 +188,8 @@
       "location": "caorle",
       "source": "jbc_direct",
       "start_url": "https://www.jbcimmobiliare.it/",
-      "pages_captured": 2,
-      "records_captured": 5
+      "pages_captured": 1,
+      "records_captured": 7
     },
     {
       "location": "cavallino-treporti",
