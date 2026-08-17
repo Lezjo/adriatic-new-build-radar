@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Adriatic New Build Radar</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f2f5f8;color:#182332;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}
+header{background:#17243b;color:#fff;padding:28px}h1{margin:0 0 8px}.sub{opacity:.86}
+.radar-nav{position:sticky;top:0;z-index:9999;display:flex;flex-wrap:wrap;gap:8px;padding:12px 16px;background:rgba(255,255,255,.97);border-bottom:1px solid #d9e0e8;box-shadow:0 5px 18px rgba(15,23,42,.08);backdrop-filter:blur(10px)}
+.radar-tab{border:1px solid #dce3eb;background:#f3f6fa;color:#40516a;border-radius:12px;padding:10px 14px;font-weight:750;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;min-height:40px}
+.radar-tab.active{color:#fff;background:linear-gradient(135deg,#18316b,#2864e6);border-color:#2258d3;box-shadow:0 5px 15px rgba(37,99,235,.22)}
+.radar-section{display:none;max-width:1600px;margin:auto;padding:24px 22px 50px;scroll-margin-top:88px}.radar-section.active{display:block}
+.radar-meta{display:flex;flex-wrap:wrap;gap:10px;padding:10px 18px;margin:0}.radar-meta span{background:#fff;border:1px solid #e1e7ee;border-radius:10px;padding:8px 12px;font-size:12px;font-weight:700;color:#526276}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}.stats,.delta{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}
+.card,.stats>div,.delta>div{background:#fff;border-radius:14px;padding:15px;box-shadow:0 2px 10px #0001}
+.stats small,.delta small{display:block;color:#697584}.stats b,.delta b{font-size:24px}.good{background:#e9f7ed;border-left:4px solid #2d8a4b;padding:14px;border-radius:8px;margin:15px 0}
+.note{background:#fff7dd;border-left:4px solid #d69b00;padding:14px;border-radius:8px;margin:15px 0}.tablewrap{overflow:auto;background:#fff;border-radius:14px}
+table{border-collapse:collapse;width:100%;min-width:1250px}th,td{padding:9px;border-bottom:1px solid #e7ebef;text-align:left;font-size:12px;vertical-align:top;line-height:1.35}
+th{background:#edf1f5;font-weight:800;position:sticky;top:0;z-index:2}td{overflow-wrap:anywhere}a{color:#1457b7;text-decoration:underline}
+.price-up{color:#15803d;font-weight:800}.price-down{color:#b91c1c;font-weight:800}.price-flat{color:#64748b}
+.discount{background:#fff1f2;border-left:4px solid #dc2626;padding:14px;border-radius:8px;margin:15px 0}
+.filterbar{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}.filterbar button,.filterbar select,.filterbar input{border:1px solid #d8e0ea;background:#fff;border-radius:9px;padding:8px 10px}
+.radar-error,.radar-loading{max-width:900px;margin:70px auto;padding:24px;border-radius:16px;background:#fff}.radar-error{background:#fff1f2;border:1px solid #fecdd3;color:#881337}
+.small{font-size:11px;color:#68737f}.badge{display:inline-block;border-radius:999px;padding:3px 7px;font-size:10px;font-weight:800;background:#edf2fa}.badge.discount{background:#fee2e2;border:0;margin:0}
+@media(max-width:800px){.radar-nav{overflow-x:auto;flex-wrap:nowrap}.radar-tab{flex:0 0 auto}.radar-section{padding:18px 12px 40px}}
+</style>
+</head>
+<body>
+<header><h1>Adriatic New Build Radar</h1><div class="sub">FULL INVENTORY • Project → Unit → Listing • NEW ≤30D • Price History • Data-driven V2</div></header>
+<nav id="radar-nav" class="radar-nav" aria-label="Radar sections"></nav>
+<div id="radar-meta" class="radar-meta"></div>
+<main id="radar-content"><div class="radar-loading"><b>Завантаження Radar data…</b><br>Читаю <code>data/current.json</code> та <code>data/objects.json</code>.</div></main>
+
+<script>
+const DATA_URL='data/current.json', OBJECTS_URL='data/objects.json', PRICE_HISTORY_URL='data/price_history.json';
+function esc(v){return String(v??'').replace(/[&<>"']/g,s=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[s]));}
+function euro(v){return v==null||v===''?'—':'€'+Number(v).toLocaleString('it-IT');}
+function pct(v){return v==null||!isFinite(v)?'—':(v>0?'+':'')+Number(v).toFixed(1)+'%';}
+function deltaClass(v){return v>0?'price-up':v<0?'price-down':'price-flat';}
+function deltaText(v){return v==null?'—':(v>0?'+':'')+euro(v);}
+function formatRunDate(v){if(!v)return '—';const d=new Date(v+'T00:00:00');return isNaN(d)?v:d.toLocaleDateString('uk-UA',{day:'2-digit',month:'2-digit',year:'numeric'});}
+function renderNav(sections){const nav=document.getElementById('radar-nav');nav.innerHTML='';sections.forEach(s=>{const a=document.createElement('a');a.className='radar-tab';a.href='#'+s.id;a.dataset.tab=s.id;a.textContent=s.label;a.onclick=e=>{e.preventDefault();activate(s.id,true)};nav.appendChild(a);});}
+function activate(id,updateHash){document.querySelectorAll('.radar-section').forEach(s=>s.classList.toggle('active',s.id===id));document.querySelectorAll('.radar-tab').forEach(t=>t.classList.toggle('active',t.dataset.tab===id));if(updateHash)history.replaceState(null,'','#'+id);const t=document.getElementById(id);if(t)setTimeout(()=>t.scrollIntoView({block:'start',behavior:'smooth'}),0);}
+function renderMeta(data){const vals=Object.entries(data.inventory_counts||{}),total=vals.reduce((a,[,v])=>a+(Number(v.portal_inventory)||0),0);document.getElementById('radar-meta').innerHTML=`<span>Radar run: <b>${esc(data.run_date)}</b></span><span>Live capture: <b>${Number(data.live_capture_total||0).toLocaleString('en-US')}</b></span><span>Portal inventory total: <b>${total.toLocaleString('en-US')}</b></span><span>Locations: <b>${vals.length}</b></span><span>Last live capture: <b>${esc(data.last_live_capture||'—')}</b></span>`;}
+function normalizeObject(o){const p=o.price==null?null:Number(o.price),prev=o.previous_price==null?null:Number(o.previous_price);return {...o,price:p,previous_price:prev};}
+
+function buildHistorySection(data,objects){
+  const sec=document.createElement('section');sec.id='tab-price-history';sec.className='radar-section';
+  const priced=objects.map(normalizeObject).filter(o=>o.price!=null);
+  const drops=priced.filter(o=>(Number(o.price_delta)<0)||(Number(o.price_change_30d)<0)||(Number(o.price_change_180d)<0)||o.discount_signal);
+  const immediateDrops=priced.filter(o=>Number(o.price_delta)<0);
+  const with30=priced.filter(o=>o.price_change_30d!=null),with180=priced.filter(o=>o.price_change_180d!=null);
+  let html=`<h2>Global Price History / Deltas</h2>
+  <div class="good"><b>Як це працює:</b> кожен успішний radar run фіксує ціну кожного знайденого listing з ціною. Для кожного об'єкта зберігається поточна ціна, попередня ціна, зміна за ~30 днів і ~180 днів. Явні сигнали <b>ribassato</b> також фіксуються окремо.</div>
+  <div class="delta"><div><small>Price decreases vs previous run</small><b>${immediateDrops.length}</b></div><div><small>Objects with 30D delta</small><b>${with30.length}</b></div><div><small>Objects with 180D delta</small><b>${with180.length}</b></div><div><small>Discount / ribassato signals</small><b>${priced.filter(o=>o.discount_signal).length}</b></div></div>
+  <div class="note"><b>Важливо:</b> перші 30/180 днів не можуть показувати історію, якої ще фізично немає. Після накопичення snapshots дельта з'явиться автоматично.</div>
+  <h3>🔻 Зниження ціни / знижки</h3>`;
+  if(!drops.length)html+=`<div class="note">Поки немає підтверджених price decreases або discount signals.</div>`;
+  else{
+    const rows=drops.sort((a,b)=>Math.min(a.price_delta??0,a.price_change_30d??0,a.price_change_180d??0)-Math.min(b.price_delta??0,b.price_change_30d??0,b.price_change_180d??0)).slice(0,500).map(o=>`
+      <tr><td>${esc(o.location)}</td><td><b>${esc(o.listing_title)}</b><div class="small">${esc(o.source||'')}</div></td><td>${euro(o.price)}</td>
+      <td class="${deltaClass(o.price_delta)}">${deltaText(o.price_delta)}</td><td class="${deltaClass(o.price_change_30d)}">${deltaText(o.price_change_30d)}<br><span class="small">${pct(o.price_change_30d_pct)}</span></td>
+      <td class="${deltaClass(o.price_change_180d)}">${deltaText(o.price_change_180d)}<br><span class="small">${pct(o.price_change_180d_pct)}</span></td>
+      <td>${o.discount_signal?'<span class="badge discount">DISCOUNT / RIBASSATO</span>':'—'}<div class="small">${esc((o.discount_keywords||[]).join(', '))}</div></td>
+      <td><a href="${esc(o.source_url)}" target="_blank" rel="noopener noreferrer">Open</a></td></tr>`).join('');
+    html+=`<div class="tablewrap"><table><thead><tr><th>Location</th><th>Object</th><th>Current</th><th>Δ prev</th><th>Δ ~30D</th><th>Δ ~180D</th><th>Discount signal</th><th>Source</th></tr></thead><tbody>${rows}</tbody></table></div>`;
+  }
+  html+=`<h3>📊 Price changes across all priced objects</h3>
+  <div class="filterbar"><input id="ph-search" placeholder="Пошук object / location / source"><select id="ph-period"><option value="prev">Previous run</option><option value="30">~30 days</option><option value="180">~180 days</option></select><select id="ph-direction"><option value="all">All</option><option value="down">Decreases</option><option value="up">Increases</option><option value="flat">No change</option></select></div>
+  <div id="ph-table" class="tablewrap"></div>
+  <h3>🧾 Методологія</h3><div class="note"><ul>
+  <li><b>Previous run:</b> порівняння з попереднім успішним snapshot.</li>
+  <li><b>~30D:</b> найближчий збережений snapshot не пізніше цільової дати 30 днів тому.</li>
+  <li><b>~180D:</b> аналогічно для 180 днів.</li>
+  <li><b>Discount:</b> окремо фіксуються явні сигнали <code>ribassato</code>, <code>ribasso</code>, <code>sconto</code>, <code>offerta</code>, <code>promozione</code> тощо; окремо — фактичне падіння ціни між snapshots.</li>
+  <li><b>Price delta:</b> asking-price delta, не actual transaction price.</li>
+  <li><b>Identity:</b> порівняння на рівні стабільного <code>source_url</code>, щоб не змішувати різні listings.</li>
+  </ul></div>`;
+  sec.innerHTML=html;
+  function renderTable(){
+    const q=(document.getElementById('ph-search').value||'').toLowerCase().trim(),period=document.getElementById('ph-period').value,dir=document.getElementById('ph-direction').value;
+    const field=period==='prev'?'price_delta':period==='30'?'price_change_30d':'price_change_180d';
+    let rows=priced.filter(o=>{const hay=`${o.location||''} ${o.listing_title||''} ${o.source||''}`.toLowerCase(),v=o[field];if(q&&!hay.includes(q))return false;if(dir==='down'&&!(v<0))return false;if(dir==='up'&&!(v>0))return false;if(dir==='flat'&&!(v===0))return false;return true;});
+    rows.sort((a,b)=>(a[field]??Infinity)-(b[field]??Infinity));
+    const body=rows.slice(0,1000).map(o=>`<tr><td>${esc(o.location)}</td><td><b>${esc(o.listing_title)}</b><div class="small">${esc(o.source||'')}</div></td><td>${euro(o.price)}</td><td class="${deltaClass(o[field])}">${deltaText(o[field])}</td><td>${period==='30'?pct(o.price_change_30d_pct):period==='180'?pct(o.price_change_180d_pct):pct(o.price_delta_pct)}</td><td>${o.discount_signal?'<span class="badge discount">RIBASSATO / DISCOUNT</span>':'—'}</td><td><a href="${esc(o.source_url)}" target="_blank" rel="noopener noreferrer">Open</a></td></tr>`).join('');
+    document.getElementById('ph-table').innerHTML=`<table><thead><tr><th>Location</th><th>Object</th><th>Current</th><th>Δ</th><th>%</th><th>Discount</th><th>Source</th></tr></thead><tbody>${body||'<tr><td colspan="7">Немає даних для цього фільтра.</td></tr>'}</tbody></table>`;
+  }
+  ['ph-search','ph-period','ph-direction'].forEach(id=>document.getElementById(id).addEventListener(id==='ph-search'?'input':'change',renderTable));renderTable();
+  return sec;
+}
+
+async function boot(){
+  try{
+    const [r1,r2]=await Promise.all([fetch(DATA_URL+'?v='+Date.now(),{cache:'no-store'}),fetch(OBJECTS_URL+'?v='+Date.now(),{cache:'no-store'})]);
+    if(!r1.ok)throw new Error('HTTP '+r1.status+' while loading '+DATA_URL);
+    const data=await r1.json(),objPayload=r2.ok?await r2.json():{objects:[]},objects=(objPayload.objects||[]).map(normalizeObject);
+    renderMeta(data);
+    const sections=(data.sections||[]).map(s=>({...s,html:(s.html||'').replace(/Executive Radar — \d{2}\.\d{2}\.\d{4}/g,`Executive Radar — ${formatRunDate(data.run_date)}`).replace(/RADAR RUN \d{2}\.\d{2}\.\d{4}/g,`RADAR RUN ${formatRunDate(data.run_date)}`)}));
+    renderNav(sections);const main=document.getElementById('radar-content');main.innerHTML='';
+    sections.forEach(s=>{const sec=document.createElement('section');sec.id=s.id;sec.className='radar-section';sec.innerHTML=s.html||'';main.appendChild(sec);});
+    const old=document.getElementById('tab-price-history');if(old)old.replaceWith(buildHistorySection(data,objects));else main.appendChild(buildHistorySection(data,objects));
+    const wanted=location.hash.replace('#',''),first=data.sections[0]?.id||'tab-overview';activate(document.getElementById(wanted)?wanted:first,false);
+  }catch(err){document.getElementById('radar-content').innerHTML=`<div class="radar-error"><h2>Radar data не завантажилися</h2><p><b>${esc(err.message)}</b></p><p>Перевір <code>data/current.json</code> та <code>data/objects.json</code>.</p></div>`;}
+}
+window.addEventListener('hashchange',()=>{const id=location.hash.replace('#','');if(document.getElementById(id))activate(id,false)});boot();
+</script>
+</body>
+</html>
