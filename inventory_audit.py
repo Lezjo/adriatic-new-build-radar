@@ -4,7 +4,7 @@ from collections import Counter,defaultdict
 from datetime import datetime,timezone
 from pathlib import Path
 from urllib.parse import urlparse,parse_qsl,urlencode,urlunparse
-ROOT=Path(__file__).resolve().parents[1]; DATA=ROOT/'data'; DEBUG=DATA/'debug'; CURRENT=DATA/'current.json'; OBJECTS=DATA/'objects.json'; SOURCES=ROOT/'radar'/'sources.json'; OUT=DEBUG/'inventory_audit.json'; MD=DEBUG/'inventory_audit.md'
+ROOT=Path(__file__).resolve().parent; DATA=ROOT/'data'; DEBUG=DATA/'debug'; CURRENT=DATA/'current.json'; OBJECTS=DATA/'objects.json'; SOURCES=ROOT/'radar'/'sources.json'; OUT=DEBUG/'inventory_audit.json'; MD=DEBUG/'inventory_audit.md'
 MANDATORY={'Immobiliare.it':['Jesolo','Caorle','Cavallino-Treporti','San Donà di Piave'],'Idealista':['Jesolo','San Donà di Piave','Cavallino-Treporti'],'Casa.it':['Jesolo','Cavallino-Treporti','San Donà di Piave'],'JBC':['Jesolo','Jesolo Paese',"Ca' Gamba",'Eraclea','Ponte di Piave','Fossalta di Piave','Noventa di Piave','San Donà di Piave']}
 def load(p,d):
  try:return json.loads(p.read_text(encoding='utf-8'))
