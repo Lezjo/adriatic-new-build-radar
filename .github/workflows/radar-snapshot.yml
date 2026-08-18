@@ -8,6 +8,8 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 concurrency:
   group: radar-snapshot
@@ -16,6 +18,10 @@ concurrency:
 jobs:
   snapshot:
     runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - name: Checkout repository
@@ -55,7 +61,7 @@ jobs:
         run: |
           echo "===== RADAR DEBUG DIRECTORY ====="
           if [ -d data/debug ]; then
-            find data/debug -maxdepth 1 -type f -printf '%f %s bytes\\n' | sort
+            find data/debug -maxdepth 1 -type f -printf '%f %s bytes\n' | sort
           else
             echo "data/debug does not exist"
           fi
@@ -68,7 +74,7 @@ jobs:
           fi
 
           echo "===== DATA DIRECTORY ====="
-          find data -maxdepth 2 -type f -printf '%p %s bytes\\n' 2>/dev/null | sort | head -200 || true
+          find data -maxdepth 2 -type f -printf '%p %s bytes\n' 2>/dev/null | sort | head -200 || true
 
       - name: Upload capture diagnostics
         if: always()
@@ -98,8 +104,19 @@ jobs:
 
           if git diff --cached --quiet; then
             echo "No snapshot changes to commit."
-            exit 0
+          else
+            git commit -m "radar: snapshot $(date -u +%Y-%m-%d)"
+            git push
           fi
 
-          git commit -m "radar: snapshot $(date -u +%Y-%m-%d)"
-          git push
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload site
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: '.'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
