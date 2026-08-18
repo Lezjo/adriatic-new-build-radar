@@ -1,89 +1,557 @@
 from __future__ import annotations
-import json,re
-from collections import Counter,defaultdict
-from datetime import datetime,timezone
+
+import json
+import re
+from collections import Counter, defaultdict
+from datetime import datetime, timezone
 from pathlib import Path
-from urllib.parse import urlparse,parse_qsl,urlencode,urlunparse
-ROOT=Path(__file__).resolve().parent; DATA=ROOT/'data'; DEBUG=DATA/'debug'; CURRENT=DATA/'current.json'; OBJECTS=DATA/'objects.json'; SOURCES=ROOT/'radar'/'sources.json'; OUT=DEBUG/'inventory_audit.json'; MD=DEBUG/'inventory_audit.md'
-MANDATORY={'Immobiliare.it':['Jesolo','Caorle','Cavallino-Treporti','San Donà di Piave'],'Idealista':['Jesolo','San Donà di Piave','Cavallino-Treporti'],'Casa.it':['Jesolo','Cavallino-Treporti','San Donà di Piave'],'JBC':['Jesolo','Jesolo Paese',"Ca' Gamba",'Eraclea','Ponte di Piave','Fossalta di Piave','Noventa di Piave','San Donà di Piave']}
-def load(p,d):
- try:return json.loads(p.read_text(encoding='utf-8'))
- except:return d
-def canon(u):
- if not u:return ''
- try:
-  p=urlparse(str(u));q=[(k,v) for k,v in parse_qsl(p.query) if k.lower() not in {'utm_source','utm_medium','utm_campaign','utm_content','utm_term'}]
-  return urlunparse((p.scheme.lower(),p.netloc.lower(),p.path.rstrip('/'),'',urlencode(q),'')))
- except:return str(u)
-def src(n):
- n=(n or '').lower()
- if 'immobiliare' in n:return 'Immobiliare.it'
- if 'idealista' in n:return 'Idealista'
- if 'casa.it' in n or n=='casa':return 'Casa.it'
- if 'jbc' in n:return 'JBC'
- return n or 'UNKNOWN'
-def loc(v):return re.sub(r'\s+',' ',str(v or '').strip()).lower()
-def url(r):return canon(r.get('source_url') or r.get('url') or r.get('listing_url'))
+from urllib.parse import urlparse, parse_qsl, urlencode, urlunparse
+
+# inventory_audit.py is stored in the repository ROOT.
+ROOT = Path(__file__).resolve().parent
+DATA = ROOT / "data"
+DEBUG = DATA / "debug"
+CURRENT = DATA / "current.json"
+OBJECTS = DATA / "objects.json"
+SOURCES = ROOT / "radar" / "sources.json"
+OUT = DEBUG / "inventory_audit.json"
+MD = DEBUG / "inventory_audit.md"
+
+MANDATORY = {
+    "Immobiliare.it": [
+        "Jesolo", "Caorle", "Cavallino-Treporti", "San Donà di Piave"
+    ],
+    "Idealista": [
+        "Jesolo", "San Donà di Piave", "Cavallino-Treporti"
+    ],
+    "Casa.it": [
+        "Jesolo", "Cavallino-Treporti", "San Donà di Piave"
+    ],
+    "JBC": [
+        "Jesolo", "Jesolo Paese", "Ca' Gamba", "Eraclea",
+        "Ponte di Piave", "Fossalta di Piave", "Noventa di Piave",
+        "San Donà di Piave"
+    ],
+}
+
+
+def load(path: Path, default):
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        return default
+
+
+def canon(value):
+    """Canonical URL used for cross-source deduplication."""
+    if not value:
+        return ""
+    try:
+        p = urlparse(str(value))
+        q = [
+            (k, v)
+            for k, v in parse_qsl(p.query)
+            if k.lower() not in {
+                "utm_source", "utm_medium", "utm_campaign",
+                "utm_content", "utm_term"
+            }
+        ]
+        return urlunparse(
+            (
+                p.scheme.lower(),
+                p.netloc.lower(),
+                p.path.rstrip("/"),
+                "",
+                urlencode(q),
+                "",
+            )
+        )
+    except Exception:
+        return str(value)
+
+
+def src(name):
+    n = str(name or "").lower()
+    if "immobiliare" in n:
+        return "Immobiliare.it"
+    if "idealista" in n:
+        return "Idealista"
+    if "casa.it" in n or n == "casa":
+        return "Casa.it"
+    if "jbc" in n:
+        return "JBC"
+    return n or "UNKNOWN"
+
+
+def loc(value):
+    return re.sub(r"\s+", " ", str(value or "").strip()).lower()
+
+
+def row_url(row):
+    return canon(
+        row.get("source_url")
+        or row.get("url")
+        or row.get("listing_url")
+    )
+
+
 def rows():
- for p in (CURRENT,OBJECTS):
-  d=load(p,{})
-  if isinstance(d,dict):
-   for k in ('objects','listings','items','rows','inventory'):
-    if isinstance(d.get(k),list):return d[k]
- return []
+    """
+    Read the current normalized inventory.
+    Prefer objects.json; fall back to current.json.
+    """
+    candidates = [OBJECTS, CURRENT]
+
+    for path in candidates:
+        data = load(path, None)
+        if isinstance(data, list):
+            return data
+
+        if isinstance(data, dict):
+            for key in ("objects", "listings", "items", "rows", "inventory"):
+                value = data.get(key)
+                if isinstance(value, list):
+                    return value
+
+    return []
+
+
 def configured():
- d=load(SOURCES,{})
- out=[]
- if isinstance(d,dict):
-  for l,ss in d.items():
-   if isinstance(ss,list):
-    for s in ss:
-     if isinstance(s,dict):out.append({'location':str(l),'source':src(s.get('name')),'name':s.get('name'),'url':s.get('url'),'expected':s.get('expected_count',s.get('live_results',s.get('expected_results')))})
- return out
-def counts(rs):
- bs=Counter();bp=Counter();us=defaultdict(set);up=defaultdict(set)
- for r in rs:
-  s=src(r.get('source'));l=str(r.get('location') or 'Unknown');u=url(r);bs[s]+=1;bp[(l,s)]+=1
-  if u:us[s].add(u);up[(l,s)].add(u)
- return {'by_source':dict(bs),'by_pair':{f'{l} | {s}':n for (l,s),n in sorted(bp.items())},'unique_urls_by_source':{s:len(v) for s,v in us.items()},'unique_urls_by_pair':{f'{l} | {s}':len(v) for (l,s),v in sorted(up.items())}}
-def overlap(rs):
- o=defaultdict(set)
- for r in rs:
-  u=url(r)
-  if u:o[u].add(src(r.get('source')))
- x=[{'url':u,'sources':sorted(s)} for u,s in o.items() if len(s)>1]
- return {'urls_seen_in_multiple_sources':len(x),'examples':x[:200]}
-def audit_coverage(cfg,rs):
- dbg=load(DEBUG/'capture_debug.json',[]); latest={}
- for x in dbg if isinstance(dbg,list) else []:latest[(str(x.get('location')),src(x.get('source')))]=x
- c=counts(rs)['unique_urls_by_pair'];out=[]
- for s in cfg:
-  k=(s['location'],s['source']);d=latest.get(k,{});cap=int(d.get('records_captured') or c.get(f'{s["location"]} | {s["source"]}',0) or 0);pages=int(d.get('pages_captured') or 0);exp=s['expected'];pct=None
-  if exp is not None:
-   try:pct=round(cap/int(exp)*100,1)
-   except:pass
-  verdict='RED — capture error' if d.get('error') or (d.get('last_http_status') and int(d['last_http_status'])>=400) else ('RED — 0 records' if cap==0 else ('YELLOW — below declared inventory' if exp is not None and cap<int(exp) else 'GREEN — captured; live count not independently proven'))
-  out.append({'location':s['location'],'source':s['source'],'configured_url':s['url'],'pages_captured':pages,'records_captured':cap,'expected_live_results':exp,'completeness_pct':pct,'http_status':d.get('last_http_status'),'error':d.get('error'),'verdict':verdict})
- for p in sorted(DEBUG.glob('*__jbc_manifest.json')):
-  m=load(p,{})
-  if isinstance(m,dict):out.append({'location':m.get('location'),'source':'JBC','configured_url':(m.get('start_urls') or [None])[0],'pages_captured':m.get('hub_pages_visited'),'records_captured':m.get('records_captured'),'expected_live_results':None,'completeness_pct':None,'http_status':m.get('last_http_status'),'error':'; '.join(m.get('errors',[])[:5]) or None,'verdict':'RED — 0 JBC records' if not m.get('records_captured') else 'GREEN — JBC discovery produced records; completeness requires live-source denominator','jbc_candidate_detail_urls':m.get('candidate_detail_urls'),'jbc_detail_pages_visited':m.get('detail_pages_visited'),'jbc_sitemap_urls_found':m.get('sitemap_urls_found'),'jbc_unit_records':m.get('unit_records'),'jbc_project_records':m.get('project_records')})
- return out
-def gaps(cfg):
- p={(x['source'],loc(x['location'])) for x in cfg};g=[]
- for s,ls in MANDATORY.items():
-  for l in ls:
-   if (s,loc(l)) not in p:g.append({'source':s,'location':l,'issue':'Mandatory source/location is not configured in radar/sources.json'})
- return g
+    data = load(SOURCES, {})
+    out = []
+
+    if isinstance(data, dict):
+        for location, specs in data.items():
+            if not isinstance(specs, list):
+                continue
+
+            for spec in specs:
+                if not isinstance(spec, dict):
+                    continue
+
+                expected = spec.get(
+                    "expected_count",
+                    spec.get(
+                        "live_results",
+                        spec.get("expected_results")
+                    ),
+                )
+
+                out.append(
+                    {
+                        "location": str(location),
+                        "source": src(spec.get("name")),
+                        "name": spec.get("name"),
+                        "url": spec.get("url"),
+                        "expected": expected,
+                    }
+                )
+
+    return out
+
+
+def counts(records):
+    by_source = Counter()
+    by_pair = Counter()
+    unique_source = defaultdict(set)
+    unique_pair = defaultdict(set)
+
+    for record in records:
+        source = src(record.get("source"))
+        location = str(record.get("location") or "Unknown")
+        url = row_url(record)
+
+        by_source[source] += 1
+        by_pair[(location, source)] += 1
+
+        if url:
+            unique_source[source].add(url)
+            unique_pair[(location, source)].add(url)
+
+    return {
+        "by_source": dict(by_source),
+        "by_pair": {
+            f"{location} | {source}": count
+            for (location, source), count in sorted(by_pair.items())
+        },
+        "unique_urls_by_source": {
+            source: len(values)
+            for source, values in unique_source.items()
+        },
+        "unique_urls_by_pair": {
+            f"{location} | {source}": len(values)
+            for (location, source), values
+            in sorted(unique_pair.items())
+        },
+    }
+
+
+def overlap(records):
+    sources_by_url = defaultdict(set)
+
+    for record in records:
+        url = row_url(record)
+        if url:
+            sources_by_url[url].add(src(record.get("source")))
+
+    duplicated = [
+        {
+            "url": url,
+            "sources": sorted(sources),
+        }
+        for url, sources in sources_by_url.items()
+        if len(sources) > 1
+    ]
+
+    return {
+        "urls_seen_in_multiple_sources": len(duplicated),
+        "examples": duplicated[:200],
+    }
+
+
+def audit_coverage(config, records):
+    """
+    Compare the latest collector diagnostics with normalized inventory.
+
+    Important:
+    a captured count is NOT treated as proof of 100% completeness unless
+    an independent live-result denominator exists.
+    """
+    debug_log = load(DEBUG / "capture_debug.json", [])
+    latest = {}
+
+    if isinstance(debug_log, list):
+        for item in debug_log:
+            key = (
+                str(item.get("location")),
+                src(item.get("source")),
+            )
+            latest[key] = item
+
+    unique_by_pair = counts(records)["unique_urls_by_pair"]
+    result = []
+
+    for spec in config:
+        key = (spec["location"], spec["source"])
+        diagnostic = latest.get(key, {})
+
+        captured = int(
+            diagnostic.get("records_captured")
+            or unique_by_pair.get(
+                f"{spec['location']} | {spec['source']}",
+                0,
+            )
+            or 0
+        )
+
+        pages = int(diagnostic.get("pages_captured") or 0)
+        expected = spec["expected"]
+        completeness = None
+
+        if expected is not None:
+            try:
+                expected_int = int(expected)
+                if expected_int > 0:
+                    completeness = round(
+                        captured / expected_int * 100,
+                        1,
+                    )
+            except (TypeError, ValueError):
+                pass
+
+        status = diagnostic.get("last_http_status")
+        has_http_error = False
+
+        try:
+            has_http_error = status is not None and int(status) >= 400
+        except (TypeError, ValueError):
+            pass
+
+        if diagnostic.get("error") or has_http_error:
+            verdict = "RED — capture error"
+        elif captured == 0:
+            verdict = "RED — 0 records"
+        elif (
+            expected is not None
+            and completeness is not None
+            and captured < int(expected)
+        ):
+            verdict = "YELLOW — below declared inventory"
+        else:
+            verdict = (
+                "GREEN — captured; live count not independently proven"
+            )
+
+        result.append(
+            {
+                "location": spec["location"],
+                "source": spec["source"],
+                "configured_url": spec["url"],
+                "pages_captured": pages,
+                "records_captured": captured,
+                "expected_live_results": expected,
+                "completeness_pct": completeness,
+                "http_status": status,
+                "error": diagnostic.get("error"),
+                "verdict": verdict,
+            }
+        )
+
+    # JBC has its own manifests and is audited independently.
+    for manifest_path in sorted(
+        DEBUG.glob("*__jbc_manifest.json")
+    ):
+        manifest = load(manifest_path, {})
+
+        if not isinstance(manifest, dict):
+            continue
+
+        records_captured = int(
+            manifest.get("records_captured") or 0
+        )
+
+        result.append(
+            {
+                "location": manifest.get("location"),
+                "source": "JBC",
+                "configured_url": (
+                    manifest.get("start_urls") or [None]
+                )[0],
+                "pages_captured": manifest.get("hub_pages_visited"),
+                "records_captured": records_captured,
+                "expected_live_results": None,
+                "completeness_pct": None,
+                "http_status": manifest.get("last_http_status"),
+                "error": (
+                    "; ".join(
+                        manifest.get("errors", [])[:5]
+                    )
+                    or None
+                ),
+                "verdict": (
+                    "RED — 0 JBC records"
+                    if not records_captured
+                    else
+                    "GREEN — JBC discovery produced records; "
+                    "completeness requires live-source denominator"
+                ),
+                "jbc_candidate_detail_urls": manifest.get(
+                    "candidate_detail_urls"
+                ),
+                "jbc_detail_pages_visited": manifest.get(
+                    "detail_pages_visited"
+                ),
+                "jbc_sitemap_urls_found": manifest.get(
+                    "sitemap_urls_found"
+                ),
+                "jbc_unit_records": manifest.get(
+                    "unit_records"
+                ),
+                "jbc_project_records": manifest.get(
+                    "project_records"
+                ),
+            }
+        )
+
+    return result
+
+
+def gaps(config):
+    configured_pairs = {
+        (item["source"], loc(item["location"]))
+        for item in config
+    }
+
+    missing = []
+
+    for source, locations in MANDATORY.items():
+        for location in locations:
+            if (source, loc(location)) not in configured_pairs:
+                missing.append(
+                    {
+                        "source": source,
+                        "location": location,
+                        "issue": (
+                            "Mandatory source/location is not configured "
+                            "in radar/sources.json"
+                        ),
+                    }
+                )
+
+    return missing
+
+
 def report():
- rs=rows();cfg=configured();return {'schema_version':'inventory-audit-1.0','generated_at':datetime.now(timezone.utc).isoformat(),'status':'OK' if rs else 'NO_DATA','current_rows':len(rs),'unique_source_urls':len({url(r) for r in rs if url(r)}),'configured_source_locations':len(cfg),'coverage':audit_coverage(cfg,rs),'mandatory_configuration_gaps':gaps(cfg),'counts':counts(rs),'cross_source_overlap':overlap(rs),'methodology':{'important':['Captured count is NOT proof of complete live inventory.','Portal search-result totals must be measured independently from the collector.','Project, Unit and Listing are separate levels.','Same canonical URL across sources is overlap, not a new unique listing.','JBC is audited as a mandatory independent source layer.'],'next_upgrade':'Add independent live-result denominator extraction per portal/location.'}}
-def md(r):
- z=['# Adriatic Radar — Inventory Audit','',f"Generated: `{r['generated_at']}`",'',f"Current rows: **{r['current_rows']}**",f"Unique source URLs: **{r['unique_source_urls']}**",'', '## Coverage','','| Location | Source | Pages | Captured | Expected live | Completeness | Verdict |','|---|---|---:|---:|---:|---:|---|']
- for x in r['coverage']:
-  e='-' if x['expected_live_results'] is None else str(x['expected_live_results']);p='-' if x['completeness_pct'] is None else f"{x['completeness_pct']}%";z.append(f"| {x.get('location','')} | {x.get('source','')} | {x.get('pages_captured','-')} | {x.get('records_captured',0)} | {e} | {p} | {x.get('verdict','')} |")
- z+=['','## Mandatory configuration gaps',''];g=r['mandatory_configuration_gaps'];z += ['None detected.'] if not g else [f"- 🔴 **{x['source']} — {x['location']}**: {x['issue']}" for x in g]
- z+=['','## Current inventory by source','','| Source | Captured rows |','|---|---:|']+[f"| {s} | {n} |" for s,n in sorted(r['counts']['by_source'].items())]
- z+=['','## Cross-source overlap','',f"URLs present in multiple source layers: **{r['cross_source_overlap']['urls_seen_in_multiple_sources']}**",'','## Important','','This audit deliberately does not call a capture 100% complete merely because Playwright returned records. The next required step is an independent live-result denominator for each portal/location.']
- return '\n'.join(z)+'\n'
+    records = rows()
+    config = configured()
+
+    return {
+        "schema_version": "inventory-audit-1.1",
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "status": "OK" if records else "NO_DATA",
+        "current_rows": len(records),
+        "unique_source_urls": len(
+            {
+                row_url(record)
+                for record in records
+                if row_url(record)
+            }
+        ),
+        "configured_source_locations": len(config),
+        "coverage": audit_coverage(config, records),
+        "mandatory_configuration_gaps": gaps(config),
+        "counts": counts(records),
+        "cross_source_overlap": overlap(records),
+        "methodology": {
+            "important": [
+                "Captured count is NOT proof of complete live inventory.",
+                "Portal search-result totals must be measured independently from the collector.",
+                "Project, Unit and Listing are separate levels.",
+                "Same canonical URL across sources is overlap, not a new unique listing.",
+                "JBC is audited as a mandatory independent source layer.",
+            ],
+            "next_upgrade": (
+                "Add independent live-result denominator extraction "
+                "per portal/location."
+            ),
+        },
+    }
+
+
+def markdown(report_data):
+    lines = [
+        "# Adriatic Radar — Inventory Audit",
+        "",
+        f"Generated: `{report_data['generated_at']}`",
+        "",
+        f"Current rows: **{report_data['current_rows']}**",
+        (
+            "Unique source URLs: "
+            f"**{report_data['unique_source_urls']}**"
+        ),
+        "",
+        "## Coverage",
+        "",
+        "| Location | Source | Pages | Captured | Expected live | Completeness | Verdict |",
+        "|---|---|---:|---:|---:|---:|---|",
+    ]
+
+    for item in report_data["coverage"]:
+        expected = (
+            "-"
+            if item["expected_live_results"] is None
+            else str(item["expected_live_results"])
+        )
+        completeness = (
+            "-"
+            if item["completeness_pct"] is None
+            else f"{item['completeness_pct']}%"
+        )
+
+        lines.append(
+            f"| {item.get('location', '')} | "
+            f"{item.get('source', '')} | "
+            f"{item.get('pages_captured', '-')} | "
+            f"{item.get('records_captured', 0)} | "
+            f"{expected} | "
+            f"{completeness} | "
+            f"{item.get('verdict', '')} |"
+        )
+
+    lines += [
+        "",
+        "## Mandatory configuration gaps",
+        "",
+    ]
+
+    missing = report_data["mandatory_configuration_gaps"]
+
+    if not missing:
+        lines.append("None detected.")
+    else:
+        for item in missing:
+            lines.append(
+                f"- 🔴 **{item['source']} — {item['location']}**: "
+                f"{item['issue']}"
+            )
+
+    lines += [
+        "",
+        "## Current inventory by source",
+        "",
+        "| Source | Captured rows |",
+        "|---|---:|",
+    ]
+
+    for source, count in sorted(
+        report_data["counts"]["by_source"].items()
+    ):
+        lines.append(f"| {source} | {count} |")
+
+    lines += [
+        "",
+        "## Cross-source overlap",
+        "",
+        "URLs present in multiple source layers: "
+        f"**{report_data['cross_source_overlap']['urls_seen_in_multiple_sources']}**",
+        "",
+        "## Important",
+        "",
+        (
+            "This audit deliberately does not call a capture 100% complete "
+            "merely because Playwright returned records. An independent "
+            "live-result denominator is required for each portal/location."
+        ),
+        "",
+    ]
+
+    return "\n".join(lines)
+
+
 def main():
- r=report();DEBUG.mkdir(parents=True,exist_ok=True);OUT.write_text(json.dumps(r,ensure_ascii=False,indent=2),encoding='utf-8');MD.write_text(md(r),encoding='utf-8');print(json.dumps({'status':r['status'],'current_rows':r['current_rows'],'unique_source_urls':r['unique_source_urls'],'configured_source_locations':r['configured_source_locations'],'mandatory_gaps':len(r['mandatory_configuration_gaps']),'overlap_urls':r['cross_source_overlap']['urls_seen_in_multiple_sources'],'files':[str(OUT),str(MD)]},ensure_ascii=False,indent=2))
-if __name__=='__main__':main()
+    result = report()
+
+    DEBUG.mkdir(parents=True, exist_ok=True)
+
+    OUT.write_text(
+        json.dumps(
+            result,
+            ensure_ascii=False,
+            indent=2,
+        ),
+        encoding="utf-8",
+    )
+
+    MD.write_text(
+        markdown(result),
+        encoding="utf-8",
+    )
+
+    print(
+        json.dumps(
+            {
+                "status": result["status"],
+                "current_rows": result["current_rows"],
+                "unique_source_urls": result["unique_source_urls"],
+                "configured_source_locations": result[
+                    "configured_source_locations"
+                ],
+                "mandatory_gaps": len(
+                    result["mandatory_configuration_gaps"]
+                ),
+                "overlap_urls": result[
+                    "cross_source_overlap"
+                ]["urls_seen_in_multiple_sources"],
+                "files": [
+                    str(OUT),
+                    str(MD),
+                ],
+            },
+            ensure_ascii=False,
+            indent=2,
+        )
+    )
+
+
+if __name__ == "__main__":
+    main()
