@@ -1,0 +1,173 @@
+{
+  "run_date": "2026-08-18",
+  "status": "SUCCESS",
+  "capture_coverage": [
+    {
+      "location": "jesolo",
+      "source": "idealista_new_build",
+      "start_url": "https://www.idealista.it/vendita-case/jesolo-venezia/con-nuova-costruzione/",
+      "pages_captured": 1,
+      "records_captured": 0
+    },
+    {
+      "location": "jesolo",
+      "source": "idealista_projects",
+      "start_url": "https://www.idealista.it/vendita-nuove_costruzioni/jesolo-venezia/",
+      "pages_captured": 1,
+      "records_captured": 0
+    },
+    {
+      "location": "jesolo",
+      "source": "casa_new_build",
+      "start_url": "https://www.casa.it/vendita/residenziale/in-nuove-costruzioni/jesolo/",
+      "pages_captured": 1,
+      "records_captured": 0
+    },
+    {
+      "location": "jesolo",
+      "source": "jbc_direct",
+      "start_url": "https://www.jbcimmobiliare.it/",
+      "pages_captured": 1,
+      "records_captured": 7
+    },
+    {
+      "location": "caorle",
+      "source": "idealista_new_build",
+      "start_url": "https://www.idealista.it/vendita-case/caorle-venezia/con-nuova-costruzione/",
+      "pages_captured": 1,
+      "records_captured": 0
+    },
+    {
+      "location": "caorle",
+      "source": "jbc_direct",
+      "start_url": "https://www.jbcimmobiliare.it/",
+      "pages_captured": 1,
+      "records_captured": 7
+    },
+    {
+      "location": "cavallino-treporti",
+      "source": "idealista_new_build",
+      "start_url": "https://www.idealista.it/vendita-case/cavallino-treporti-venezia/con-nuova-costruzione/",
+      "pages_captured": 1,
+      "records_captured": 0
+    },
+    {
+      "location": "cavallino-treporti",
+      "source": "idealista_apartments",
+      "start_url": "https://www.idealista.it/vendita-case/cavallino-treporti-venezia/con-appartamenti%2Cnuova-costruzione/",
+      "pages_captured": 1,
+      "records_captured": 0
+    },
+    {
+      "location": "san-dona-di-piave",
+      "source": "idealista_new_build",
+      "start_url": "https://www.idealista.it/vendita-case/san-dona-di-piave-venezia/con-nuova-costruzione/",
+      "pages_captured": 1,
+      "records_captured": 0
+    },
+    {
+      "location": "san-dona-di-piave",
+      "source": "casa_new_build",
+      "start_url": "https://www.casa.it/vendita/residenziale/in-nuove-costruzioni/san-dona-di-piave/",
+      "pages_captured": 1,
+      "records_captured": 0
+    },
+    {
+      "location": "treviso",
+      "source": "idealista_projects",
+      "start_url": "https://www.idealista.it/vendita-nuove_costruzioni/treviso-treviso/",
+      "pages_captured": 1,
+      "records_captured": 0
+    },
+    {
+      "location": "treviso",
+      "source": "idealista_new_build",
+      "start_url": "https://www.idealista.it/vendita-case/treviso-treviso/con-nuova-costruzione/",
+      "pages_captured": 1,
+      "records_captured": 0
+    }
+  ],
+  "counts": {
+    "total_captured_listings": 7,
+    "by_location": {
+      "jesolo": 7
+    }
+  },
+  "portal_inventory_total": 1158,
+  "price_objects": [
+    {
+      "source_url": "https://www.jbcimmobiliare.it/prestigiosa-villa-singola-con-parco-e-piscina-nuova-modalita-di-acquisto-jesolo",
+      "listing_id": "url:b515505a89599b432bfeb87f60d4f1aea69c05b5",
+      "listing_title": "Prestigiosa Villa singola con parco e piscina: nuova modalità di acquisto villa in Nuove Costruzioni a Jesolo - JBC Immobiliare",
+      "location": "jesolo",
+      "source": "jbc_direct",
+      "price": 600000,
+      "eur_m2": 2000,
+      "discount_signal": false,
+      "discount_keywords": []
+    },
+    {
+      "source_url": "https://www.jbcimmobiliare.it/trilocale-di-nuova-costruzione-vista-mare-a-caorle-caorle",
+      "listing_id": "url:b84072b9e09e10721eba8b1b20e5f11f587d776c",
+      "listing_title": "Trilocale di Nuova Costruzione Vista Mare a Caorle appartamento in Nuove Costruzioni a Caorle - JBC Immobiliare",
+      "location": "jesolo",
+      "source": "jbc_direct",
+      "price": 336000,
+      "eur_m2": 3907,
+      "discount_signal": true,
+      "discount_keywords": [
+        "occasione"
+      ]
+    },
+    {
+      "source_url": "https://www.jbcimmobiliare.it/quadrilocale-nuovo-con-vista-mare-a-jesolo-lido-jesolo",
+      "listing_id": "url:402804a3562ac66d070cd83bda8e8bab477dccef",
+      "listing_title": "Quadrilocale Nuovo con Vista Mare a Jesolo Lido appartamento in Nuove Costruzioni a Jesolo - JBC Immobiliare",
+      "location": "jesolo",
+      "source": "jbc_direct",
+      "price": 482000,
+      "eur_m2": 4820,
+      "discount_signal": false,
+      "discount_keywords": []
+    },
+    {
+      "source_url": "https://www.jbcimmobiliare.it/nuovo-bilocale-piano-terra-con-giardino-residence-al-lido-altanea-caorle",
+      "listing_id": "url:b3d9347d87f5650509bbee3eb22b3393a2210fdd",
+      "listing_title": "Nuovo Bilocale | Piano Terra con Giardino - Residence al Lido Altanea appartamento in Nuove Costruzioni a Caorle - JBC Immobiliare",
+      "location": "jesolo",
+      "source": "jbc_direct",
+      "price": 255000,
+      "eur_m2": 3984,
+      "discount_signal": true,
+      "discount_keywords": [
+        "occasione"
+      ]
+    },
+    {
+      "source_url": "https://www.jbcimmobiliare.it/nuovo-trilocale-con-giardino-esclusivo-residence-altanea-a-caorle-caorle",
+      "listing_id": "url:a3310e6a81581d09925dbbc054cc1e97cba30862",
+      "listing_title": "Nuovo Trilocale con Giardino Esclusivo | Residence Altanea a Caorle appartamento in Nuove Costruzioni a Caorle - JBC Immobiliare",
+      "location": "jesolo",
+      "source": "jbc_direct",
+      "price": 418000,
+      "eur_m2": 4019,
+      "discount_signal": true,
+      "discount_keywords": [
+        "occasione"
+      ]
+    },
+    {
+      "source_url": "https://www.jbcimmobiliare.it/nuovo-bilocale-in-residence-al-lido-altanea-a-caorle-caorle",
+      "listing_id": "url:1de43e321dd2ef51f9177464d3580567df1427ff",
+      "listing_title": "Nuovo Bilocale in Residence al Lido Altanea a Caorle appartamento in Nuove Costruzioni a Caorle - JBC Immobiliare",
+      "location": "jesolo",
+      "source": "jbc_direct",
+      "price": 246000,
+      "eur_m2": 3905,
+      "discount_signal": true,
+      "discount_keywords": [
+        "occasione"
+      ]
+    }
+  ]
+}

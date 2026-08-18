@@ -9,11 +9,25 @@
         "eur_m2": 2000,
         "source": "jbc_direct",
         "listing_title": "Prestigiosa Villa singola con parco e piscina: nuova modalità di acquisto villa in Nuove Costruzioni a Jesolo - JBC Immobiliare"
+      },
+      {
+        "date": "2026-08-18",
+        "price": 600000,
+        "eur_m2": 2000,
+        "source": "jbc_direct",
+        "listing_title": "Prestigiosa Villa singola con parco e piscina: nuova modalità di acquisto villa in Nuove Costruzioni a Jesolo - JBC Immobiliare"
       }
     ],
     "https://www.jbcimmobiliare.it/trilocale-di-nuova-costruzione-vista-mare-a-caorle-caorle": [
       {
         "date": "2026-08-17",
+        "price": 336000,
+        "eur_m2": 3907,
+        "source": "jbc_direct",
+        "listing_title": "Trilocale di Nuova Costruzione Vista Mare a Caorle appartamento in Nuove Costruzioni a Caorle - JBC Immobiliare"
+      },
+      {
+        "date": "2026-08-18",
         "price": 336000,
         "eur_m2": 3907,
         "source": "jbc_direct",
@@ -27,11 +41,25 @@
         "eur_m2": 4820,
         "source": "jbc_direct",
         "listing_title": "Quadrilocale Nuovo con Vista Mare a Jesolo Lido appartamento in Nuove Costruzioni a Jesolo - JBC Immobiliare"
+      },
+      {
+        "date": "2026-08-18",
+        "price": 482000,
+        "eur_m2": 4820,
+        "source": "jbc_direct",
+        "listing_title": "Quadrilocale Nuovo con Vista Mare a Jesolo Lido appartamento in Nuove Costruzioni a Jesolo - JBC Immobiliare"
       }
     ],
     "https://www.jbcimmobiliare.it/nuovo-bilocale-piano-terra-con-giardino-residence-al-lido-altanea-caorle": [
       {
         "date": "2026-08-17",
+        "price": 255000,
+        "eur_m2": 3984,
+        "source": "jbc_direct",
+        "listing_title": "Nuovo Bilocale | Piano Terra con Giardino - Residence al Lido Altanea appartamento in Nuove Costruzioni a Caorle - JBC Immobiliare"
+      },
+      {
+        "date": "2026-08-18",
         "price": 255000,
         "eur_m2": 3984,
         "source": "jbc_direct",
@@ -45,6 +73,13 @@
         "eur_m2": 4019,
         "source": "jbc_direct",
         "listing_title": "Nuovo Trilocale con Giardino Esclusivo | Residence Altanea a Caorle appartamento in Nuove Costruzioni a Caorle - JBC Immobiliare"
+      },
+      {
+        "date": "2026-08-18",
+        "price": 418000,
+        "eur_m2": 4019,
+        "source": "jbc_direct",
+        "listing_title": "Nuovo Trilocale con Giardino Esclusivo | Residence Altanea a Caorle appartamento in Nuove Costruzioni a Caorle - JBC Immobiliare"
       }
     ],
     "https://www.jbcimmobiliare.it/nuovo-bilocale-in-residence-al-lido-altanea-a-caorle-caorle": [
@@ -54,8 +89,15 @@
         "eur_m2": 3905,
         "source": "jbc_direct",
         "listing_title": "Nuovo Bilocale in Residence al Lido Altanea a Caorle appartamento in Nuove Costruzioni a Caorle - JBC Immobiliare"
+      },
+      {
+        "date": "2026-08-18",
+        "price": 246000,
+        "eur_m2": 3905,
+        "source": "jbc_direct",
+        "listing_title": "Nuovo Bilocale in Residence al Lido Altanea a Caorle appartamento in Nuove Costruzioni a Caorle - JBC Immobiliare"
       }
     ]
   },
-  "updated_at": "2026-08-17T17:11:45.996186+00:00"
+  "updated_at": "2026-08-18T06:46:39.721725+00:00"
 }
