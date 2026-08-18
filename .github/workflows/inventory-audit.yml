@@ -1,0 +1,40 @@
+name: Inventory Audit
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "inventory_audit.py"
+      - "data/**"
+      - "radar/**"
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run inventory audit
+        run: |
+          python inventory_audit.py
+
+      - name: Upload audit report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: inventory-audit-report
+          path: |
+            inventory_audit_report.json
+            inventory_audit_report.html
+            data/debug/inventory_audit/**
+          if-no-files-found: ignore
