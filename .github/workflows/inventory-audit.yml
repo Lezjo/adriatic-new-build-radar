@@ -34,7 +34,7 @@ jobs:
         with:
           name: inventory-audit-report
           path: |
-            inventory_audit_report.json
-            inventory_audit_report.html
-            data/debug/inventory_audit/**
-          if-no-files-found: ignore
+            data/debug/inventory_audit.json
+            data/debug/inventory_audit.md
+          if-no-files-found: error
+          retention-days: 14
