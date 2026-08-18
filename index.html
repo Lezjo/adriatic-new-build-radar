@@ -9,7 +9,70 @@ function cards(a){let x=[...a].sort((x,y)=>(x.price||Infinity)-(y.price||Infinit
 function changeTable(a){if(!a.length)return'<div class="note">Ще немає достатньої історії для дельт.</div>';return `<div class="tablewrap"><table><thead><tr><th>Object</th><th>Price</th><th>Δ prev</th><th>Δ ~30D</th><th>Δ ~180D</th><th>Discount</th></tr></thead><tbody>${a.map(o=>`<tr><td><a href="${esc(o.source_url)}" target="_blank" rel="noopener noreferrer">${esc(o.listing_title||'Object')}</a></td><td>${money(o.price)}</td><td>${delta(o.price_delta)}</td><td>${delta(o.price_change_30d)}</td><td>${delta(o.price_change_180d)}</td><td>${o.discount_signal?'🏷️ '+esc((o.discount_keywords||[]).join(', ')||'DISCOUNT'):'—'}</td></tr>`).join('')}</tbody></table></div>`}
 function objectTable(){return `<div class="controls"><input id="os" placeholder="Пошук об’єкта / локації…"><select id="of"><option value="all">Всі</option><option value="discount">Discount</option><option value="down">Price down</option><option value="new">NEW ≤30D</option></select></div><div class="tablewrap"><table id="ot"><thead><tr><th>Location</th><th>Object / source</th><th>Price</th><th>m²</th><th>€/m²</th><th>Δ prev</th><th>Δ ~30D</th><th>Δ ~180D</th><th>Discount</th><th>NEW</th></tr></thead><tbody>${S.objects.map(o=>`<tr><td>${esc(o.location)}</td><td><a href="${esc(o.source_url)}" target="_blank" rel="noopener noreferrer">${esc(o.listing_title||'Open listing')}</a></td><td>${money(o.price)}</td><td>${o.area_m2??'—'}</td><td>${o.eur_m2?money(o.eur_m2):'—'}</td><td>${delta(o.price_delta)}</td><td>${delta(o.price_change_30d)}</td><td>${delta(o.price_change_180d)}</td><td>${o.discount_signal?'🏷️ '+esc((o.discount_keywords||[]).join(', ')||'DISCOUNT'):'—'}</td><td>${o.new_to_radar_30d?'🆕':''}</td></tr>`).join('')}</tbody></table></div>`}
 function history(){let rows=[];for(let [url,a] of Object.entries(S.history?.listings||{})){if(!Array.isArray(a)||!a.length)continue;let s=[...a].sort((x,y)=>String(x.date).localeCompare(String(y.date))),l=s.at(-1),p=s.at(-2);rows.push({url,title:l.listing_title||url,l,p,dp:p&&l.price!=null&&p.price!=null?l.price-p.price:null})}return `<h2>Global Price History / Deltas</h2><div class="good"><b>Object-level price history.</b> Кожен щоденний snapshot зберігає dated price. Реальна знижка визначається порівнянням snapshot; слова ribassato/occasione/sconto фіксуються окремо як signal.</div><div class="stats"><div><small>Tracked listings</small><b>${rows.length}</b></div><div><small>Decreases vs previous</small><b>${rows.filter(r=>(r.dp??0)<0).length}</b></div><div><small>Increases vs previous</small><b>${rows.filter(r=>(r.dp??0)>0).length}</b></div></div><div class="tablewrap"><table id="ht"><thead><tr><th>Object</th><th>Latest</th><th>Previous snapshot</th><th>Δ prev</th><th>History</th></tr></thead><tbody>${rows.map(r=>`<tr><td><a href="${esc(r.url)}" target="_blank" rel="noopener noreferrer">${esc(r.title)}</a></td><td><b>${money(r.l.price)}</b><br><span class="small">${esc(df(r.l.date))}</span></td><td>${r.p?money(r.p.price)+'<br><span class="small">'+esc(df(r.p.date))+'</span>':'—'}</td><td>${delta(r.dp)}</td><td>${r.p?money(r.p.price)+' → '+money(r.l.price):'1 snapshot'}</td></tr>`).join('')}</tbody></table></div><div class="note">30-day та 180-day baselines з’являтимуться автоматично після накопичення відповідної історії.</div>`}
-function render(){let c=S.current||{},sections=Array.isArray(c.sections)?c.sections:[],tabs=[{id:'overview',label:'Overview',html:overview()},{id:'live',label:'🔴 LIVE FULL INVENTORY',html:'<h2>🔴 LIVE FULL INVENTORY</h2>'+objectTable()},{id:'price',label:'Price History',html:history()},{id:'all',label:'All Objects',html:'<h2>All Objects</h2>'+objectTable()},...sections.map((s,i)=>({id:'src'+i,label:s.label||s.title||'Section',html:s.html||''}))];$('#tabs').innerHTML=tabs.map((t,i)=>`<button type="button" class="tab ${i===0?'active':''}" data-s="${esc(t.id)}">${esc(t.label)}</button>`).join('');$('#app').innerHTML=tabs.map((t,i)=>`<section id="sec-${esc(t.id)}" class="${i===0?'section-active':''}">${t.html}</section>`).join('')}
+function render(){
+  let c=S.current||{}, sections=Array.isArray(c.sections)?c.sections:[];
+  const norm=v=>String(v??'').trim().toLowerCase().replace(/[^a-zа-яіїєґ0-9]+/gi,' ');
+  const wanted=[
+    ['overview','Overview'],
+    ['live','🔴 LIVE FULL INVENTORY'],
+    ['full','FULL INVENTORY'],
+    ['price','Price History'],
+    ['planned','Planned / Pipeline'],
+    ['jbc','JBC Source'],
+    ['sources','Sources'],
+    ['jesolo','Jesolo'],
+    ['caorle','Caorle'],
+    ['cavallino','Cavallino'],
+    ['san dona','San Donà'],
+    ['treviso','Treviso'],
+    ['global matrix','Global Matrix']
+  ];
+  const aliases={
+    'planned / pipeline':['planned pipeline','planned / pipeline','pipeline','planned'],
+    'jbc source':['jbc source','jbc'],
+    'sources':['sources','source'],
+    'san dona':['san dona','san donà','sandonà'],
+    'global matrix':['global matrix','matrix'],
+    'full':['full inventory','all objects','all object'],
+    'price':['price history','price'],
+    'live':['live full inventory','live inventory']
+  };
+  const used=new Set();
+  function matches(sec,key){
+    const label=norm(sec.label||sec.title||'');
+    if(key==='overview') return false;
+    const a=aliases[key]||[key];
+    return a.some(x=>label===norm(x)||label.includes(norm(x)));
+  }
+  function take(key){
+    const idx=sections.findIndex((s,i)=>!used.has(i)&&matches(s,key));
+    if(idx<0)return null;
+    used.add(idx); return sections[idx];
+  }
+  const tabs=[];
+  tabs.push({id:'overview',label:'Overview',html:overview()});
+  tabs.push({id:'live',label:'🔴 LIVE FULL INVENTORY',html:'<h2>🔴 LIVE FULL INVENTORY</h2>'+objectTable()});
+  tabs.push({id:'full',label:'FULL INVENTORY',html:'<h2>FULL INVENTORY</h2>'+objectTable()});
+  tabs.push({id:'price',label:'Price History',html:history()});
+  for(const key of ['planned','jbc','sources']){
+    const s=take(key); if(s) tabs.push({id:key,label:wanted.find(x=>x[0]===key)?.[1]||s.label||s.title,html:s.html||''});
+  }
+  for(const key of ['jesolo','caorle','cavallino','san dona','treviso','global matrix']){
+    const s=take(key); if(s) tabs.push({id:key.replace(/\s+/g,'-'),label:wanted.find(x=>x[0]===key)?.[1]||s.label||s.title,html:s.html||''});
+  }
+  // Any remaining sections are retained, but duplicate labels are removed.
+  const shownLabels=new Set(tabs.map(t=>norm(t.label)));
+  sections.forEach((s,i)=>{
+    if(used.has(i))return;
+    const label=s.label||s.title||'';
+    const n=norm(label);
+    if(!label||shownLabels.has(n))return;
+    shownLabels.add(n);
+    tabs.push({id:'extra-'+i,label,html:s.html||''});
+  });
+  $('#tabs').innerHTML=tabs.map((t,i)=>`<button type="button" class="tab ${i===0?'active':''}" data-s="${esc(t.id)}">${esc(t.label)}</button>`).join('');
+  $('#app').innerHTML=tabs.map((t,i)=>`<section id="sec-${esc(t.id)}" class="${i===0?'section-active':''}">${t.html}</section>`).join('');
+}
 function events(){$('#tabs').addEventListener('click',e=>{let b=e.target.closest('[data-s]');if(!b)return;document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x===b));document.querySelectorAll('main section').forEach(x=>x.classList.remove('section-active'));let t=document.getElementById('sec-'+b.dataset.s);if(t)t.classList.add('section-active')});document.addEventListener('input',e=>{if(e.target.id!=='os')return;let q=e.target.value.toLowerCase();document.querySelectorAll('#ot tbody tr').forEach(r=>r.style.display=r.innerText.toLowerCase().includes(q)?'':'none')});document.addEventListener('change',e=>{if(e.target.id!=='of')return;let f=e.target.value;document.querySelectorAll('#ot tbody tr').forEach(r=>{let x=r.innerText.toLowerCase();let ok=f==='all'||(f==='discount'&&x.includes('discount'))||(f==='down'&&x.includes('-€'))||(f==='new'&&x.includes('🆕'));r.style.display=ok?'':'none'})})}
 async function init(){events();try{[S.current,S.objects,S.history]=await Promise.all([get(U.c),get(U.o),get(U.h)]);S.objects=Array.isArray(S.objects.objects)?S.objects.objects:[];meta();render();document.title='Adriatic New Build Radar — '+(S.current.run_date||'')}catch(e){console.error(e);$('#app').innerHTML='<div class="error"><h2>Radar data не завантажилися</h2><b>'+esc(e.message)+'</b><p>Перевір data/current.json, data/objects.json та data/price_history.json.</p></div>'}}init()})();
 </script></body></html>
