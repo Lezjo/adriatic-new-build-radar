@@ -1,1 +1,146 @@
-{"detail":"Not found."}
+1. Обов'язкові комерційні джерела
+Пріоритет	Джерело	Для чого
+🔴 1	Immobiliare.it — Jesolo	Найбільший базовий inventory; зараз показує 398 результатів по Jesolo.
+🔴 2	Immobiliare.it — Caorle	Новобудови Caorle
+🔴 3	Immobiliare.it — Cavallino-Treporti	46 apartment/new-build results зараз.
+🔴 4	Immobiliare.it — San Donà	76 results зараз.
+🔴 5	Idealista — Jesolo new builds	Особливо корисний для pre-launch/direct sale; зараз показує окремі нові проєкти, зокрема Via Veneto 51.
+🔴 6	Idealista — San Donà	56 нових будинків; серед них є JBC/Urban Costruzioni.
+🔴 7	Idealista — Cavallino-Treporti	41 новий об'єкт зараз.
+🔴 8	Casa.it — Jesolo	Хороший додатковий inventory
+🔴 9	Casa.it — Cavallino-Treporti	Додаткові проєкти + локальні агентства; сторінка показує, зокрема, Vento di Laguna та місцеві агенції.
+🔴 10	Casa.it — San Donà	Додатковий inventory
+2. JBC — окремий обов'язковий шар
+Це я б залишив нарівні з Immobiliare, а не як звичайне агентство.
+JBC Immobiliare — official site
+JBC — Nuove Costruzioni
+JBC — Immobiliare.it profile
+Чому це важливо: ми вже бачили, що JBC має об'єкти, які можуть бути представлені як окремий власний inventory, наприклад у San Donà. Idealista прямо показує JBC + Urban Costruzioni в одному з поточних новобудовних listings.
+3. Локальні агентства
+Це дуже важливий шар, тому що частина невеликих новобудов продається через локального агента і може погано індексуватися загальним запитом.
+Jesolo
+Шукати окремо агентства в:
+Lido di Jesolo
+Piazza Nember / Faro
+Pineta
+Piazza Mazzini
+Piazza Brescia
+Piazza Trieste
+Piazza Drago
+Cortellazzo
+Jesolo Paese
+Ca' Gamba
+Cavallino-Treporti
+Особливо:
+Ca' Savio
+Ca' Vio
+Punta Sabbioni
+Treporti
+Cavallino
+На Casa.it уже видно локальних операторів на Via Fausta, зокрема Leotours, Immobiliare Fausta, Immobiliare Multiservice, Agenzia Immobiliare Verago та LIFE Gruppo Immobiliare.
+San Donà
+Окремо:
+San Donà centro
+Mussetta
+Mussetta di Sopra
+Calvecchia
+Fiorentina
+Fossà
+Chiesanuova
+4. Забудовники та direct-sale
+Це критично для твого завдання "зловити старт".
+Потрібно шукати:
+Costruttore → sito → nuove costruzioni → cantieri → prossime realizzazioni → vendita diretta
+Саме тут часто з'являється інформація до Immobiliare/Idealista.
+Для кожного знайденого development радар повинен намагатися знайти:
+Developer → Project website → Sales office → Price list → Brochure → Floor plans → construction timeline
+5. Офіційні джерела Comune — для майбутніх проєктів
+Це окремий шар, який не можна замінити порталами.
+Jesolo
+Comune di Jesolo — Urbanistica
+Особливо:
+PUA;
+Piano degli Interventi;
+Permessi di costruire;
+varianti;
+urbanizzazione;
+demolizione/ricostruzione;
+progetti в 300 m coastal band.
+У DUP Jesolo 2026–2028 прямо зазначені численні PUA, нові PUA та дозволи на urbanisation, у тому числі в прибережній 300-метровій зоні.
+Caorle
+Comune di Caorle — Piani Urbanistici
+Там є:
+PAT;
+PI;
+PUA;
+varianti;
+zoning;
+environmental procedures.
+Також:
+Comune di Caorle — Norme Tecniche
+Це допомагає визначити, де потенційно може з'явитися нове будівництво, а не тільки де вже є оголошення.
+Cavallino-Treporti
+Comune di Cavallino-Treporti — Edilizia e Urbanistica
+Особливо корисний їхній SIT — Sistema Informativo Territoriale та Piano degli Interventi.
+Також:
+Comune Cavallino — PUA / urbanistica
+Там публікуються PUA та їхні варіанти.
+6. Технічні / містобудівні джерела
+Для нашого 1–3 year radar вони навіть важливіші за Immobiliare.
+Шукати:
+SIT
+PAT
+PI
+PUA
+Permesso di costruire
+SCIA
+Convenzione urbanistica
+Delibere Comune
+Albo Pretorio
+Amministrazione Trasparente
+SUAP/SUE
+varianti urbanistiche
+Наприклад, Cavallino має офіційний PAT з картами vincoli, fragilità, trasformabilità, що дуже корисно для оцінки майбутніх development.
+7. Як я б побудував остаточний Radar
+Не просто список сайтів.
+Я б зробив 6 незалежних discovery layers:
+Layer 1 — Portals
+Immobiliare + Idealista + Casa.it
+↓
+Layer 2 — Local agencies
+JBC + усі локальні агентства
+↓
+Layer 3 — Developers
+усі знайдені забудовники + direct sales
+↓
+Layer 4 — Comune
+PUA + PI + permits + urbanisation + Albo Pretorio
+↓
+Layer 5 — Future projects
+Пошук:
+prossima costruzione
+nuovo residence
+area edificabile
+PUA
+demolizione ricostruzione
+permesso di costruire
+progetto approvato
+vendita diretta
+↓
+Layer 6 — Cross-check
+Один і той самий development:
+JBC → Immobiliare → Idealista → Casa.it → developer → Comune
+об'єднуємо в один Project ID, але окремі квартири залишаємо як Units.
+І найважливіше
+Для твого радара я б не ставив мету "20 об'єктів на локацію". Це може штучно обрізати або роздувати список.
+Правильна структура:
+Jesolo
+X unique projects
+Y individual units
+Z portal listings
+N planned/pipeline
+N pre-launch
+N ≤€400k
+N 3+ bedrooms
+N sea ≤300m
+І те саме для Caorle / Cavallino / San Donà / Treviso.
