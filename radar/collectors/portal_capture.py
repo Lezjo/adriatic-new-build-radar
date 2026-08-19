@@ -16,7 +16,7 @@ DATA = ROOT / "data"
 DEBUG = DATA / "debug"
 SOURCES = json.loads((ROOT / "radar" / "sources.json").read_text(encoding="utf-8"))
 
-COLLECTOR_VERSION = "portal-capture-v11.0"
+COLLECTOR_VERSION = "portal-capture-v12.0"
 
 PRICE_RE = re.compile(r"(?:€\s*)?([\d\.\,]+)\s*(k|K)?(?:\s*€)?|([\d\.\,]+)\s*(k|K)?\s*€", re.I)
 AREA_RE = re.compile(r"(?:superficie|superficie commerciale|mq|m²|m2)\s*[:\-]?\s*(\d{2,4}(?:[.,]\d+)?)|\b(\d{2,4}(?:[.,]\d+)?)\s*m(?:²|2)\b", re.I)
@@ -60,7 +60,8 @@ FEATURE_TERMS = {
 }
 
 MICRO_RULES = (
-    ("jesolo", "jesolo paese", ("jesolo paese", "jesolo centro storico", "via roma")),
+    ("jesolo", "jesolo paese", ("jesolo paese", "jesolo centro storico", "via roma", "piazza primo maggio")),
+    ("jesolo", "lido di jesolo", ("lido di jesolo", "jesolo lido")),
     ("jesolo", "ca' gamba", ("ca' gamba", "ca gamba", "cà gamba")),
     ("jesolo", "cortellazzo", ("cortellazzo",)),
     ("jesolo", "piazza nember / faro", ("piazza nember", "piazza nember/faro", "faro di jesolo", "faro")),
@@ -98,11 +99,29 @@ MICRO_RULES = (
 )
 
 LOCATION_TERMS = (
-    ("cavallino-treporti", ("cavallino-treporti", "cavallino treporti", "cavallino")),
-    ("san-dona-di-piave", ("san donà di piave", "san dona di piave", "san dona")),
-    ("caorle", ("caorle",)),
-    ("treviso", ("treviso",)),
-    ("jesolo", ("jesolo",)),
+    # Most specific municipalities first. Generic "jesolo" must never win over
+    # an explicit Caorle/Cavallino/San Dona/Treviso municipality.
+    ("cavallino-treporti", (
+        "cavallino-treporti", "cavallino treporti", "cavallino-treporti",
+        "ca' savio", "ca savio", "ca' vio", "ca vio", "punta sabbioni",
+        "treporti"
+    )),
+    ("san-dona-di-piave", (
+        "san donà di piave", "san dona di piave", "san dona",
+    )),
+    ("caorle", (
+        "caorle", "porto santa margherita", "lido altanea", "duna verde",
+    )),
+    ("treviso", (
+        "treviso", "santa maria del rovere", "selvana", "monigo",
+        "canizzano", "sant'antonino", "san zeno", "fiera",
+    )),
+    ("jesolo", (
+        "jesolo", "jesolo lido", "lido di jesolo", "jesolo paese",
+        "ca' gamba", "ca gamba", "cortellazzo", "piazza mazzini",
+        "piazza brescia", "piazza trieste", "piazza drago",
+        "piazza nember", "faro di jesolo",
+    )),
 )
 
 
@@ -273,13 +292,47 @@ def extract_meta(page) -> dict:
     return data
 
 
-def detect_location(text: str, fallback: str):
-    low = (text or "").lower()
-    # Specific municipalities first. This prevents Jesolo footer text from
-    # stealing Caorle/Cavallino/San Dona/Treviso listings.
-    for loc, terms in LOCATION_TERMS:
-        if any(term in low for term in terms):
+def detect_location(text: str, fallback: str, url: str = "", title: str = ""):
+    """
+    Determine the municipality using a strict evidence hierarchy:
+      1) URL/path
+      2) page title/meta
+      3) body/detail text
+      4) configured fallback
+
+    This prevents portal navigation/footer text (e.g. "Jesolo") from
+    overriding an explicit Caorle/Treviso address.
+    """
+    fallback = fallback or ""
+    url_low = (url or "").lower()
+    title_low = normalize_text(title).lower()
+    body_low = normalize_text(text).lower()
+
+    # URL is the strongest source because portal detail URLs commonly encode
+    # municipality or locality. Never infer from a generic homepage URL.
+    url_terms = (
+        ("cavallino-treporti", ("cavallino-treporti", "cavallino-treporti", "ca-savio", "ca-vio", "punta-sabbioni", "treporti")),
+        ("san-dona-di-piave", ("san-dona-di-piave", "san-dona-di-piave", "mussetta", "calvecchia", "fiorentina")),
+        ("caorle", ("caorle", "porto-santa-margherita", "lido-altanea", "duna-verde")),
+        ("treviso", ("treviso", "santa-maria-del-rovere", "selvana", "monigo", "canizzano", "sant-antonino")),
+        ("jesolo", ("jesolo", "lido-di-jesolo", "jesolo-lido", "jesolo-paese", "ca-gamba", "cortellazzo")),
+    )
+    for loc, terms in url_terms:
+        if any(term in url_low for term in terms):
             return loc
+
+    # Explicit title/address evidence is stronger than arbitrary body text.
+    for evidence in (title_low,):
+        for loc, terms in LOCATION_TERMS:
+            if any(term in evidence for term in terms):
+                return loc
+
+    # Body evidence: require explicit municipality/locality signals before
+    # falling back. Specific municipalities are ordered before Jesolo.
+    for loc, terms in LOCATION_TERMS:
+        if any(term in body_low for term in terms):
+            return loc
+
     return fallback
 
 
@@ -382,10 +435,24 @@ def goto(page, url):
 def extract_listing(page, source: str, configured_location: str, url: str, source_run_id: str):
     body = page_body(page)
     meta = extract_meta(page)
-    full_text = normalize_text(" ".join(x for x in (meta.get("title"), meta.get("description"), body) if x))
-    location = detect_location(full_text, configured_location)
-    micro, verification, confidence = detect_micro_location(full_text, location)
     title = title_from_page(page, body, url)
+    full_text = normalize_text(" ".join(x for x in (meta.get("title"), meta.get("description"), title, body) if x))
+
+    location = detect_location(body, configured_location, url=url, title=title)
+    micro, verification, confidence = detect_micro_location(full_text, location)
+
+    # Preserve the exact observed detail response. This is evidence for later
+    # audit/reprocessing and is intentionally written before normalization.
+    raw_dir = DATA / "raw" / source_run_id
+    raw_dir.mkdir(parents=True, exist_ok=True)
+    raw_id = hashlib.sha1(canonical(url).encode()).hexdigest()
+    raw_path = raw_dir / f"{raw_id}.html"
+    try:
+        raw_path.write_text(page.content(), encoding="utf-8")
+        raw_capture = True
+    except Exception:
+        raw_capture = False
+
     price = None
     for node in jsonld(page):
         if isinstance(node, dict):
@@ -402,6 +469,7 @@ def extract_listing(page, source: str, configured_location: str, url: str, sourc
                     break
                 except Exception:
                     pass
+
     price = price or parse_price(full_text)
     area = parse_area(full_text)
     rooms = parse_rooms(full_text)
@@ -413,14 +481,27 @@ def extract_listing(page, source: str, configured_location: str, url: str, sourc
     old_price, detected_new_price = parse_old_new_prices(full_text)
     if detected_new_price is not None:
         price = price or detected_new_price
+
     discount_keywords = [term for term in PROMO_TERMS if term in full_text.lower()]
     status = infer_status(full_text)
     listing_id = "listing:" + hashlib.sha1(canonical(url).encode()).hexdigest()
-    project_key = normalize_text(re.sub(r"\b(?:appartamento|trilocale|quadrilocale|bilocale|attico|villa|villetta)\b.*", "", title, flags=re.I)).lower()
+
+    project_key = normalize_text(
+        re.sub(
+            r"\b(?:appartamento|trilocale|quadrilocale|bilocale|attico|villa|villetta)\b.*",
+            "",
+            title,
+            flags=re.I,
+        )
+    ).lower()
     if len(project_key) < 8:
         project_key = title.lower()
-    project_id = "candidate-project:" + hashlib.sha1(f"{location}|{project_key}".encode()).hexdigest()
-    raw_ref = f"data/raw/{source_run_id}/{hashlib.sha1(canonical(url).encode()).hexdigest()}.html"
+
+    project_id = "candidate-project:" + hashlib.sha1(
+        f"{location}|{project_key}".encode()
+    ).hexdigest()
+
+    raw_ref = f"data/raw/{source_run_id}/{raw_id}.html"
 
     return {
         "source": source,
@@ -453,11 +534,21 @@ def extract_listing(page, source: str, configured_location: str, url: str, sourc
         "heat_pump": "heat_pump" in features,
         "ev_charging": "ev_charging" in features,
         "sea_view": "sea_view" in features,
-        "discount_signal": bool(discount_keywords),
+        "discount_signal": bool(discount_keywords) or old_price is not None,
         "discount_keywords": discount_keywords,
         "promotion_text": next((term for term in discount_keywords), None),
+        "promotion": {
+            "detected": bool(discount_keywords) or old_price is not None,
+            "old_price": old_price,
+            "new_price": price,
+            "amount": (old_price - price) if old_price and price and old_price > price else None,
+            "percent": round((old_price - price) / old_price * 100, 2)
+                if old_price and price and old_price > price else None,
+            "evidence_terms": discount_keywords,
+        },
         "raw_text": full_text[:12000],
-        "raw_artifact": raw_ref,
+        "raw_artifact": raw_ref if raw_capture else None,
+        "raw_capture": raw_capture,
         "captured_at": now_iso(),
     }
 
@@ -571,8 +662,8 @@ def capture_generic(browser, location: str, spec: dict, run_id: str, debug_dir: 
         "records_published": len(rows),
         "records_rejected": len(rejected),
         "rejection_reasons": _reason_counts(rejected),
-        "raw_capture": False,
-        "manifest": False,
+        "raw_capture": sum(1 for r in rows if r.get("raw_capture")),
+        "manifest": True,
         "status": "PASS" if rows else ("PARTIAL" if candidates else "BROKEN"),
         "coverage": "PASS" if rows else "MISSING",
         "http_statuses": http_statuses,
@@ -584,20 +675,34 @@ def capture_generic(browser, location: str, spec: dict, run_id: str, debug_dir: 
     return rows, coverage
 
 
-def capture_jbc(browser, location: str, spec: dict, run_id: str, debug_dir: Path):
-    source = spec["name"]
+def capture_jbc_global(browser, specs: list[dict], run_id: str, debug_dir: Path):
+    """
+    Crawl JBC once per radar run, then classify each detail page by the actual
+    municipality. The old implementation crawled the same JBC hub once for
+    every configured location, which produced duplicate rows and contaminated
+    Jesolo/Caorle classification.
+    """
+    source = "jbc_direct"
+    spec = next((s for s in specs if s.get("name") == source), specs[0])
     home = canonical(spec.get("url") or "https://www.jbcimmobiliare.it/")
     max_hubs = max(5, min(int(spec.get("max_hub_pages", 30)), 100))
     max_details = max(20, min(int(spec.get("max_detail_pages", 300)), 500))
+
     ctx = make_context(browser)
     page = ctx.new_page()
     page.set_default_navigation_timeout(35000)
-    queue = [home, "https://www.jbcimmobiliare.it/nuove-costruzioni/"]
+
+    queue = [
+        home,
+        "https://www.jbcimmobiliare.it/nuove-costruzioni/",
+    ]
     queued = set(queue)
     visited = set()
     detail_urls = {}
     errors = []
+    rejected = []
     pages_visited = 0
+    http_statuses = []
 
     def internal(u):
         return host(u) == "jbcimmobiliare.it"
@@ -609,63 +714,129 @@ def capture_jbc(browser, location: str, spec: dict, run_id: str, debug_dir: Path
         if not path or path.endswith(".php"):
             return False
         hay = f"{path} {label}".lower()
-        terms = ("nuovo", "nuova", "residenza", "residence", "progetto", "cantiere", "appartamento", "trilocale", "quadrilocale", "bilocale", "attico", "villa", "villette", "fronte-mare", "vista-mare")
-        return len(path.split("/")[-1]) >= 18 and (path.count("-") >= 2 or any(t in hay for t in terms))
+        terms = (
+            "nuovo", "nuova", "residenza", "residence", "progetto",
+            "cantiere", "appartamento", "trilocale", "quadrilocale",
+            "bilocale", "attico", "villa", "villette", "fronte-mare",
+            "vista-mare",
+        )
+        return len(path.split("/")[-1]) >= 18 and (
+            path.count("-") >= 2 or any(t in hay for t in terms)
+        )
 
     while queue and pages_visited < max_hubs:
         current = queue.pop(0)
         if current in visited:
             continue
         visited.add(current)
+
         try:
-            goto(page, current)
+            status = goto(page, current)
             pages_visited += 1
+            http_statuses.append(status)
+
             for row in anchor_rows(page):
                 href = str(row.get("href") or "").strip()
                 label = normalize_text(str(row.get("text") or ""))
                 if not href or href.startswith(("javascript:", "mailto:", "tel:", "#")):
                     continue
+
                 absolute = canonical(urljoin(current, href))
                 if not internal(absolute) or is_bad_url(absolute):
                     continue
+
                 if looks_like_property(absolute, label):
                     detail_urls.setdefault(absolute, label)
                 else:
                     path = urlparse(absolute).path.lower()
-                    hub_signal = any(x in path for x in ("immobili", "vendita", "cerca", "cantieri", "cantiere", "progetti", "progetto", "nuove-costruzioni", "nuove_costruzioni"))
-                    text_signal = any(x in label.lower() for x in ("immobili", "cantieri", "progetti", "nuove costruzioni", "residenze"))
-                    if (hub_signal or text_signal) and absolute not in queued and len(queued) < max_hubs * 2:
+                    hub_signal = any(
+                        x in path for x in (
+                            "immobili", "vendita", "cerca", "cantieri",
+                            "cantiere", "progetti", "progetto",
+                            "nuove-costruzioni", "nuove_costruzioni",
+                        )
+                    )
+                    text_signal = any(
+                        x in label.lower() for x in (
+                            "immobili", "cantieri", "progetti",
+                            "nuove costruzioni", "residenze",
+                        )
+                    )
+                    if (
+                        (hub_signal or text_signal)
+                        and absolute not in queued
+                        and len(queued) < max_hubs * 2
+                    ):
                         queued.add(absolute)
                         queue.append(absolute)
+
         except Exception as exc:
-            errors.append(f"hub:{current}:{type(exc).__name__}:{exc}")
+            errors.append(
+                f"hub:{current}:{type(exc).__name__}:{exc}"
+            )
 
     rows = []
-    rejected = []
+
     for url, label in list(detail_urls.items())[:max_details]:
         try:
             status = goto(page, url)
             if status and status >= 400:
-                rejected.append({"url": url, "reason": f"http_{status}"})
+                rejected.append({
+                    "url": url,
+                    "reason": f"http_{status}",
+                })
                 continue
-            row = extract_listing(page, source, location, url, run_id)
-            # Re-run location detection against the full detail text. Specific
-            # municipality terms must win over JBC footer/navigation text.
-            if row.get("location"):
-                rows.append(row)
-            else:
-                rejected.append({"url": url, "reason": "location_unresolved"})
+
+            # No configured municipality is passed here. Classification is
+            # based on the actual detail page, so Caorle cannot inherit Jesolo.
+            row = extract_listing(
+                page,
+                source,
+                "",
+                url,
+                run_id,
+            )
+
+            if not row.get("source_url"):
+                rejected.append({
+                    "url": url,
+                    "reason": "missing_source_url",
+                })
+                continue
+
+            if not row.get("location"):
+                rejected.append({
+                    "url": url,
+                    "reason": "location_unresolved",
+                })
+                continue
+
+            rows.append(row)
+
         except (PlaywrightTimeoutError, Exception) as exc:
-            rejected.append({"url": url, "reason": f"detail_error:{type(exc).__name__}"})
+            rejected.append({
+                "url": url,
+                "reason": f"detail_error:{type(exc).__name__}",
+            })
 
     ctx.close()
+
+    by_location = {}
+    for row in rows:
+        by_location[row["location"]] = by_location.get(row["location"], 0) + 1
+
     coverage = {
         "source": source,
-        "location": location,
+        "location": "GLOBAL",
+        "configured_locations": sorted({
+            str(location)
+            for location, source_specs in SOURCES.items()
+            if any(s.get("name") == source for s in source_specs)
+        }),
         "source_run_id": run_id,
         "search_url": home,
         "collector": COLLECTOR_VERSION,
-        "parser": "jbc",
+        "parser": "jbc_global",
         "pages_visited": pages_visited,
         "records_seen": len(detail_urls),
         "records_parsed": len(rows),
@@ -673,15 +844,18 @@ def capture_jbc(browser, location: str, spec: dict, run_id: str, debug_dir: Path
         "records_published": len(rows),
         "records_rejected": len(rejected),
         "rejection_reasons": _reason_counts(rejected),
-        "raw_capture": False,
-        "manifest": False,
+        "raw_capture": sum(1 for r in rows if r.get("raw_capture")),
+        "manifest": True,
         "status": "PASS" if rows else ("PARTIAL" if detail_urls else "BROKEN"),
         "coverage": "PASS" if rows else "MISSING",
+        "http_statuses": http_statuses,
+        "location_counts": by_location,
         "errors": errors[:30],
         "candidate_urls": list(detail_urls)[:1000],
         "rejected": rejected[:500],
     }
-    _write_debug(debug_dir, source, location, coverage)
+
+    _write_debug(debug_dir, source, "GLOBAL", coverage)
     return rows, coverage
 
 
@@ -708,24 +882,74 @@ def run():
     run_id = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H-%M-%SZ")
     debug_dir = DEBUG / "capture" / run_id
     debug_dir.mkdir(parents=True, exist_ok=True)
+
     all_records = []
     coverage = []
+    jbc_done = False
 
     with sync_playwright() as playwright:
         browser = playwright.chromium.launch(headless=True)
         try:
+            # JBC is a global source. Crawl it exactly once, then classify each
+            # detail page into its actual municipality.
+            jbc_specs = [
+                spec
+                for specs in SOURCES.values()
+                for spec in specs
+                if spec.get("name") == "jbc_direct"
+            ]
+
             for location, specs in SOURCES.items():
                 for spec in specs:
                     source = spec.get("name", "unknown")
+
                     try:
                         if source == "jbc_direct":
-                            rows, report = capture_jbc(browser, location, spec, run_id, debug_dir)
+                            if jbc_done:
+                                coverage.append({
+                                    "source": source,
+                                    "location": location,
+                                    "source_run_id": run_id,
+                                    "search_url": spec.get("url"),
+                                    "collector": COLLECTOR_VERSION,
+                                    "parser": "jbc_global",
+                                    "pages_visited": 0,
+                                    "records_seen": 0,
+                                    "records_parsed": 0,
+                                    "records_normalized": 0,
+                                    "records_published": 0,
+                                    "records_rejected": 0,
+                                    "rejection_reasons": {
+                                        "global_crawl_already_completed": 1
+                                    },
+                                    "raw_capture": False,
+                                    "manifest": True,
+                                    "status": "SKIPPED",
+                                    "coverage": "GLOBAL_SOURCE_ALREADY_CRAWLED",
+                                })
+                                continue
+
+                            rows, report = capture_jbc_global(
+                                browser,
+                                jbc_specs,
+                                run_id,
+                                debug_dir,
+                            )
+                            jbc_done = True
                         else:
-                            rows, report = capture_generic(browser, location, spec, run_id, debug_dir)
+                            rows, report = capture_generic(
+                                browser,
+                                location,
+                                spec,
+                                run_id,
+                                debug_dir,
+                            )
+
                         all_records.extend(rows)
                         coverage.append(report)
+
                     except Exception as exc:
-                        report = {
+                        coverage.append({
                             "source": source,
                             "location": location,
                             "source_run_id": run_id,
@@ -738,20 +962,21 @@ def run():
                             "records_normalized": 0,
                             "records_published": 0,
                             "records_rejected": 0,
-                            "rejection_reasons": {f"collector_error:{type(exc).__name__}": 1},
+                            "rejection_reasons": {
+                                f"collector_error:{type(exc).__name__}": 1
+                            },
                             "raw_capture": False,
                             "manifest": False,
                             "status": "BROKEN",
                             "coverage": "BROKEN",
                             "errors": [repr(exc)],
-                        }
-                        coverage.append(report)
+                        })
         finally:
             browser.close()
 
-    # Preserve every observed URL at collector level; only exact duplicate
-    # listings are removed before snapshot normalization. Alternate source URLs
-    # remain separate and therefore retain provenance.
+    # Exact duplicate listing records are removed only by
+    # (source, canonical_url). Alternate URLs and cross-portal observations
+    # remain available for the next identity/deduplication phase.
     dedup = {}
     for row in all_records:
         url = row.get("source_url")
@@ -759,6 +984,12 @@ def run():
             dedup[(row.get("source"), url)] = row
 
     finished_at = now_iso()
+
+    status_counts = {}
+    for item in coverage:
+        status = item.get("status", "UNKNOWN")
+        status_counts[status] = status_counts.get(status, 0) + 1
+
     manifest = {
         "source_run_id": run_id,
         "collector": COLLECTOR_VERSION,
@@ -771,12 +1002,21 @@ def run():
         "records_normalized": len(dedup),
         "records_published": len(dedup),
         "records_rejected": sum(x.get("records_rejected", 0) for x in coverage),
+        "raw_capture_files": sum(x.get("raw_capture", 0) for x in coverage),
+        "status_counts": status_counts,
         "coverage": coverage,
     }
-    debug_dir.mkdir(parents=True, exist_ok=True)
-    (debug_dir / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
-    (DEBUG / "capture_debug.json").parent.mkdir(parents=True, exist_ok=True)
-    (DEBUG / "capture_debug.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
+
+    (debug_dir / "manifest.json").write_text(
+        json.dumps(manifest, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+
+    (DEBUG / "capture_debug.json").write_text(
+        json.dumps(manifest, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+
     return list(dedup.values()), coverage
 
 
