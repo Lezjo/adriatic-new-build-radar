@@ -179,8 +179,17 @@
       "projects": 7,
       "units": 1,
       "listings": 7
+    },
+    {
+      "run_id": "2026-08-19T09-14-26Z",
+      "captured_at": "2026-08-19T09:14:26Z",
+      "status": "SUCCESS",
+      "records_published": 7,
+      "projects": 7,
+      "units": 1,
+      "listings": 7
     }
   ],
-  "last_run_id": "2026-08-19T08-17-04Z",
-  "updated_at": "2026-08-19T08:17:04Z"
+  "last_run_id": "2026-08-19T09-14-26Z",
+  "updated_at": "2026-08-19T09:14:26Z"
 }

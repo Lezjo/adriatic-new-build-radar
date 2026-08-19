@@ -1,18 +1,18 @@
 {
   "schema_version": "4.0",
-  "updated_at": "2026-08-19T08:17:04Z",
+  "updated_at": "2026-08-19T09:14:26Z",
   "units": [
     {
-      "unit_id": "unit:4184200c89781f22b2318724df3369163591f515",
-      "project_id": "project:c3ee0622882319d82de866738eaead53e978d300",
+      "unit_id": "unit:2e4f845b183e0f6a5b0f89dccd672af77f6d51b1",
+      "project_id": "project:23d454b517aeff61581bc2ec43ac58e114495430",
       "source_unit_id": "U23",
       "unit_label": "U23",
       "bedrooms": null,
       "rooms": null,
       "area_m2": 100.0,
       "floor": "del",
-      "first_seen": "2026-08-19T08:17:04Z",
-      "last_seen": "2026-08-19T08:17:04Z"
+      "first_seen": "2026-08-19T09:14:26Z",
+      "last_seen": "2026-08-19T09:14:26Z"
     }
   ]
 }
