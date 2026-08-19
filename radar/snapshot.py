@@ -1,22 +1,19 @@
 """
 Adriatic New Build Radar — snapshot.py
-Version: 5.0-location-integrity
+Version: 6.0-immutable-source-aware
 
-Purpose
--------
-Build the canonical daily/immutable snapshot from portal_capture.run().
+Builds the canonical radar snapshot from portal_capture.run().
 
-Critical rules:
-1. comune/municipality and micro_location are NEVER interchangeable.
-2. A successful pipeline does NOT mean successful market coverage.
-3. Mandatory sources with HTTP 403/empty capture are explicitly BROKEN/MISSING.
-4. Project -> Unit -> Listing -> Observation is preserved.
-5. Existing history remains readable.
-6. Price history is evidence-based; no fabricated baselines.
-7. A row without source_url is persisted as a rejection record, never silently dropped.
+Design rules:
+- Every execution gets an immutable data/runs/<run_id>/ directory.
+- Daily data/history/YYYY-MM-DD.json remains as a compact summary.
+- Source coverage is evidence, not an assumption.
+- A partial/broken mandatory capture NEVER gets published as FULL INVENTORY.
+- Project -> Unit -> Listing -> Observation is preserved.
+- Rows without source_url are written to rejections.json/run rejections.
+- Price history is evidence-based and exposes 1/7/30/90/180/365/all-time metrics.
+- Existing historical files remain readable.
 """
-
-from __future__ import annotations
 
 from __future__ import annotations
 
@@ -27,7 +24,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
 
-from radar.collectors.portal_capture import run
+from radar.collectors.portal_capture import run as capture_run
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -46,7 +43,7 @@ HISTORY = DATA / "history"
 RUNS = DATA / "runs"
 DEBUG = DATA / "debug"
 
-SCHEMA_VERSION = "5.0"
+SCHEMA_VERSION = "6.0"
 RETENTION_DAYS = 365
 BUDGET_TARGET = 400_000
 
@@ -58,8 +55,24 @@ MANDATORY_SOURCE_NAMES = {
     "jbc_direct",
 }
 
-# Canonical municipality registry.
-# IMPORTANT: micro-locations live separately and must never overwrite comune.
+PRICE_WINDOWS = (1, 7, 30, 90, 180, 365)
+
+DISCOUNT_PATTERNS = (
+    "ribassato",
+    "ribasso",
+    "prezzo ribassato",
+    "prezzo precedente",
+    "sconto",
+    "offerta",
+    "offerta speciale",
+    "promozione",
+    "promo",
+    "occasione",
+    "prezzo speciale",
+    "ultimo prezzo",
+    "ridotto",
+)
+
 LOCATION_REGISTRY: dict[str, dict[str, Any]] = {
     "jesolo": {
         "comune": "Jesolo",
@@ -132,9 +145,13 @@ LOCATION_REGISTRY: dict[str, dict[str, Any]] = {
         "micro_aliases": {
             "santa-maria-del-rovere": "Santa Maria del Rovere",
             "selvana": "Selvana",
+            "fiera": "Fiera",
+            "ghirada": "Ghirada",
             "monigo": "Monigo",
-            "canizzano": "Canizzano",
+            "san-zeno": "San Zeno",
             "sant-antonino": "Sant'Antonino",
+            "canizzano": "Canizzano",
+            "casier": "Casier",
         },
     },
 }
@@ -152,31 +169,18 @@ LOCATION_ALIASES = {
     "treviso": "treviso",
 }
 
-DISCOUNT_PATTERNS = (
-    "ribassato",
-    "ribasso",
-    "prezzo ribassato",
-    "prezzo precedente",
-    "sconto",
-    "offerta",
-    "offerta speciale",
-    "promozione",
-    "promo",
-    "occasione",
-    "prezzo speciale",
-    "ultimo prezzo",
-    "ridotto",
-)
-
-PRICE_WINDOWS = (1, 7, 30, 90, 180, 365)
-
 
 def utc_now() -> datetime:
     return datetime.now(timezone.utc)
 
 
 def iso(dt: datetime) -> str:
-    return dt.astimezone(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
+    return (
+        dt.astimezone(timezone.utc)
+        .replace(microsecond=0)
+        .isoformat()
+        .replace("+00:00", "Z")
+    )
 
 
 def run_id_for(dt: datetime) -> str:
@@ -230,36 +234,28 @@ def normalize_location(value: Any) -> str:
 
 
 def municipality_from_row(row: dict[str, Any]) -> str:
-    """
-    Return canonical municipality key.
-
-    Priority:
-      1. explicit municipality/comune
-      2. collector's location
-      3. conservative fallback
-
-    NEVER use micro_location as municipality.
-    """
     for key in ("comune", "municipality", "location"):
         value = row.get(key)
         if value:
             normalized = normalize_location(value)
             if normalized in LOCATION_REGISTRY:
                 return normalized
-
     return "unknown"
 
 
-def normalize_micro_location(value: Any, municipality: str) -> str | None:
+def normalize_micro_location(
+    value: Any,
+    municipality: str,
+) -> str | None:
     if not value:
         return None
-
     raw = slug(value)
-    registry = LOCATION_REGISTRY.get(municipality, {})
-    aliases = registry.get("micro_aliases", {})
+    aliases = LOCATION_REGISTRY.get(municipality, {}).get(
+        "micro_aliases",
+        {},
+    )
     if raw in aliases:
         return aliases[raw]
-
     cleaned = " ".join(str(value).strip().split())
     return cleaned or None
 
@@ -267,7 +263,6 @@ def normalize_micro_location(value: Any, municipality: str) -> str | None:
 def location_metadata(row: dict[str, Any]) -> dict[str, Any]:
     municipality = municipality_from_row(row)
     registry = LOCATION_REGISTRY.get(municipality, {})
-
     micro = normalize_micro_location(
         row.get("micro_location"),
         municipality,
@@ -297,7 +292,11 @@ def location_metadata(row: dict[str, Any]) -> dict[str, Any]:
 
 
 def normalized_title(title: Any) -> str:
-    return re.sub(r"\s+", " ", str(title or "untitled listing")).strip()[:300]
+    return re.sub(
+        r"\s+",
+        " ",
+        str(title or "untitled listing"),
+    ).strip()[:300]
 
 
 def project_name_from_title(title: str) -> str:
@@ -311,21 +310,29 @@ def project_name_from_title(title: str) -> str:
     return value if len(value) >= 5 else title
 
 
-def stable_project_id(row: dict[str, Any], location: dict[str, Any]) -> str:
+def stable_project_id(
+    row: dict[str, Any],
+    location: dict[str, Any],
+) -> str:
     explicit = row.get("project_id") or row.get("project_id_candidate")
     if explicit:
         return str(explicit)
 
     municipality = location["municipality"]
     micro = slug(location.get("micro_location") or "")
-    title = normalized_title(row.get("listing_title"))
-    project_name = project_name_from_title(title).lower()
+    project_name = project_name_from_title(
+        normalized_title(row.get("listing_title"))
+    ).lower()
 
-    key = f"{municipality}|{micro}|{project_name}"
-    return "project:" + sha1(key)
+    return "project:" + sha1(
+        f"{municipality}|{micro}|{project_name}"
+    )
 
 
-def stable_unit_id(row: dict[str, Any], project_id: str) -> str | None:
+def stable_unit_id(
+    row: dict[str, Any],
+    project_id: str,
+) -> str | None:
     source_unit = row.get("unit_id")
     if source_unit:
         return "unit:" + sha1(
@@ -342,20 +349,27 @@ def stable_unit_id(row: dict[str, Any], project_id: str) -> str | None:
         bool(row.get("terrace")),
     )
 
-    if any(x is not None for x in fields):
-        return "unit-candidate:" + sha1(f"{project_id}|{fields}")
+    if any(value is not None for value in fields):
+        return "unit-candidate:" + sha1(
+            f"{project_id}|{fields}"
+        )
 
     return None
 
 
 def stable_listing_id(row: dict[str, Any]) -> str:
     source = str(row.get("source") or "unknown").lower()
-    source_listing_id = str(row.get("listing_id") or "")
-    url = canonical_url(row.get("source_url")) or ""
+    source_listing_id = str(row.get("listing_id") or "").strip()
 
-    return "listing:" + sha1(
-        f"{source}|{source_listing_id}|{url}"
-    )
+    # Collector listing_id is already URL-derived, but keeping the
+    # source namespace prevents cross-portal collisions.
+    if source_listing_id:
+        return "listing:" + sha1(
+            f"{source}|{source_listing_id}"
+        )
+
+    url = canonical_url(row.get("source_url")) or ""
+    return "listing:" + sha1(f"{source}|{url}")
 
 
 def extract_bedrooms(row: dict[str, Any]) -> int | None:
@@ -372,17 +386,23 @@ def extract_bedrooms(row: dict[str, Any]) -> int | None:
     return int(match.group(1)) if match else None
 
 
-def feature_bool(row: dict[str, Any], *names: str) -> bool:
+def feature_bool(
+    row: dict[str, Any],
+    *names: str,
+) -> bool:
     for name in names:
         if name in row and row.get(name) is True:
             return True
 
-    features = {str(value).lower() for value in (row.get("features") or [])}
+    features = {
+        str(value).lower()
+        for value in (row.get("features") or [])
+    }
     text = str(row.get("raw_text") or "").lower()
 
     terms = {
         "parking": ("parcheggio", "posto auto"),
-        "garage": ("garage", "box auto"),
+        "garage": ("garage", "box auto", "autorimessa"),
         "terrace": ("terrazza", "terrazzo", "balcone"),
         "pool": ("piscina",),
         "sea_view": ("vista mare", "fronte mare"),
@@ -392,18 +412,18 @@ def feature_bool(row: dict[str, Any], *names: str) -> bool:
             "fotovoltaica",
             "pannelli solari",
         ),
-        "heat_pump": ("pompa di calore",),
+        "heat_pump": ("pompa di calore", "pompe di calore"),
         "ev_charging": (
             "ricarica auto elettrica",
             "colonnina",
             "ev charging",
+            "wallbox",
         ),
     }
 
-    selected = []
+    selected: list[str] = []
     for name in names:
-        if name in terms:
-            selected.extend(terms[name])
+        selected.extend(terms.get(name, ()))
 
     return any(
         term in features or term in text
@@ -438,18 +458,15 @@ def discount_evidence(row: dict[str, Any]) -> dict[str, Any]:
 
     amount = None
     percent = None
-
     if old_price and new_price and old_price > new_price:
         amount = old_price - new_price
         percent = round(amount / old_price * 100, 2)
 
-    signal = bool(
-        amount is not None
-        or (keywords and old_price is not None and new_price is not None)
-    )
-
     return {
-        "signal": signal,
+        "signal": bool(
+            amount is not None
+            or (keywords and old_price is not None and new_price is not None)
+        ),
         "keywords": keywords,
         "old_price": old_price,
         "new_price": new_price,
@@ -463,64 +480,50 @@ def make_entities(
     rows: list[dict[str, Any]],
     captured_at: str,
     run_id: str,
-):
+) -> tuple[
+    dict[str, dict[str, Any]],
+    dict[str, dict[str, Any]],
+    dict[str, dict[str, Any]],
+    list[dict[str, Any]],
+    list[dict[str, Any]],
+    list[dict[str, Any]],
+]:
     projects: dict[str, dict[str, Any]] = {}
     units: dict[str, dict[str, Any]] = {}
     listings: dict[str, dict[str, Any]] = {}
     observations: list[dict[str, Any]] = []
-    objects: list[dict[str, Any]] = []
-    rejections: list[dict[str, Any]] = []
+    legacy: list[dict[str, Any]] = []
+    rejected: list[dict[str, Any]] = []
 
-    for index, row in enumerate(rows):
+    for row in rows:
         url = canonical_url(row.get("source_url"))
-
         if not url:
-            rejections.append({
-                "rejection_id": "reject:" + sha1(
-                    f"{run_id}|{index}|missing-source-url"
-                ),
+            rejected.append({
                 "run_id": run_id,
-                "captured_at": captured_at,
                 "source": row.get("source"),
-                "rejected": True,
-                "rejection_reason": "missing_source_url",
+                "reason": "missing_source_url",
                 "row": row,
             })
             continue
 
         location = location_metadata(row)
-        municipality = location["municipality"]
-
         title = normalized_title(row.get("listing_title"))
         project_id = stable_project_id(row, location)
         unit_id = stable_unit_id(row, project_id)
         listing_id = stable_listing_id(row)
         source = str(row.get("source") or "unknown")
+        bedrooms = extract_bedrooms(row)
+        promo = discount_evidence(row)
 
-        if municipality == "unknown":
-            rejections.append({
-                "rejection_id": "reject:" + sha1(
-                    f"{run_id}|{listing_id}|location"
-                ),
-                "run_id": run_id,
-                "captured_at": captured_at,
-                "source": source,
-                "source_url": url,
-                "rejected": True,
-                "rejection_reason": "location_unresolved",
-                "row": row,
-            })
-
-        project = projects.setdefault(
-            project_id,
-            {
+        if project_id not in projects:
+            projects[project_id] = {
                 "project_id": project_id,
                 "name": project_name_from_title(title),
                 "region": location["region"],
                 "province": location["province"],
                 "comune": location["comune"],
-                "municipality": municipality,
-                "macro_zone": municipality,
+                "municipality": location["municipality"],
+                "macro_zone": location["macro_zone"],
                 "micro_location": location["micro_location"],
                 "location_verification_status": location[
                     "location_verification_status"
@@ -533,42 +536,61 @@ def make_entities(
                 "unit_ids": [],
                 "first_seen": captured_at,
                 "last_seen": captured_at,
-            },
-        )
+            }
 
+        project = projects[project_id]
         if source not in project["sources"]:
             project["sources"].append(source)
         if listing_id not in project["listing_ids"]:
             project["listing_ids"].append(listing_id)
         if unit_id and unit_id not in project["unit_ids"]:
             project["unit_ids"].append(unit_id)
-
         project["last_seen"] = captured_at
 
         if unit_id:
-            unit = units.setdefault(
+            units.setdefault(
                 unit_id,
                 {
                     "unit_id": unit_id,
                     "project_id": project_id,
                     "source_unit_id": row.get("unit_id"),
                     "unit_label": row.get("unit_id"),
-                    "bedrooms": extract_bedrooms(row),
+                    "bedrooms": bedrooms,
                     "rooms": row.get("rooms"),
                     "area_m2": row.get("area_m2"),
                     "floor": row.get("floor"),
+                    "energy_class": row.get("energy_class"),
+                    "parking": feature_bool(row, "parking"),
+                    "garage": feature_bool(row, "garage"),
+                    "terrace": feature_bool(row, "terrace"),
+                    "pool": feature_bool(row, "pool"),
+                    "pv_present": feature_bool(row, "pv"),
+                    "heat_pump": feature_bool(row, "heat_pump"),
+                    "ev_charging": feature_bool(row, "ev_charging"),
                     "first_seen": captured_at,
                     "last_seen": captured_at,
                 },
             )
-
-            for field in ("bedrooms", "rooms", "area_m2", "floor"):
-                if unit.get(field) is None and row.get(field) is not None:
-                    unit[field] = row.get(field)
-
+            unit = units[unit_id]
+            for key, value in (
+                ("bedrooms", bedrooms),
+                ("rooms", row.get("rooms")),
+                ("area_m2", row.get("area_m2")),
+                ("floor", row.get("floor")),
+                ("energy_class", row.get("energy_class")),
+            ):
+                if unit.get(key) is None and value is not None:
+                    unit[key] = value
             unit["last_seen"] = captured_at
 
-        promo = discount_evidence(row)
+        existing_listing = listings.get(listing_id)
+        observed_urls = (
+            list(existing_listing.get("observed_urls", []))
+            if existing_listing
+            else []
+        )
+        if url not in observed_urls:
+            observed_urls.append(url)
 
         listings[listing_id] = {
             "listing_id": listing_id,
@@ -577,18 +599,34 @@ def make_entities(
             "source": source,
             "source_listing_id": row.get("listing_id"),
             "source_url": url,
-            "observed_urls": [url],
+            "observed_urls": observed_urls,
             "listing_title": title,
             "status": row.get("status") or "ACTIVE",
-            "first_seen": captured_at,
+            "first_seen": (
+                existing_listing.get("first_seen", captured_at)
+                if existing_listing
+                else captured_at
+            ),
             "last_seen": captured_at,
             **location,
         }
 
+        price = row.get("price")
+        area = row.get("area_m2")
+        eur_m2 = (
+            round(price / area)
+            if isinstance(price, (int, float))
+            and isinstance(area, (int, float))
+            and area > 0
+            else None
+        )
+
+        observation_id = "obs:" + sha1(
+            f"{run_id}|{listing_id}|{url}"
+        )
+
         observations.append({
-            "observation_id": "obs:" + sha1(
-                f"{run_id}|{listing_id}|{url}"
-            ),
+            "observation_id": observation_id,
             "run_id": run_id,
             "captured_at": captured_at,
             "listing_id": listing_id,
@@ -597,15 +635,11 @@ def make_entities(
             "source": source,
             "source_url": url,
             "title": title,
-            "price": row.get("price"),
+            "price": price,
             "old_price": row.get("old_price"),
-            "area_m2": row.get("area_m2"),
-            "eur_m2": (
-                round(row["price"] / row["area_m2"])
-                if row.get("price") and row.get("area_m2")
-                else None
-            ),
-            "bedrooms": extract_bedrooms(row),
+            "area_m2": area,
+            "eur_m2": eur_m2,
+            "bedrooms": bedrooms,
             "rooms": row.get("rooms"),
             "floor": row.get("floor"),
             "energy_class": row.get("energy_class"),
@@ -620,27 +654,29 @@ def make_entities(
             "delivery": row.get("delivery"),
             "stage": row.get("stage"),
             "status": row.get("status") or "ACTIVE",
-            "features": row.get("features") or [],
-            "discount": promo,
+            "record_type": row.get("record_type"),
+            "raw_capture": row.get("raw_capture"),
+            "raw_artifact": row.get("raw_artifact"),
+            "raw_text": str(row.get("raw_text") or "")[:12000],
             **location,
-            "raw_capture_ref": row.get("raw_artifact"),
+            "promotion": promo,
+            "features": row.get("features") or [],
         })
 
-        objects.append({
+        legacy.append({
             "object_id": "obj:" + sha1(listing_id),
+            "location": location["municipality"],
+            "comune": location["comune"],
+            "municipality": location["municipality"],
             "project_id": project_id,
             "unit_id": unit_id,
             "listing_id": listing_id,
             "listing_title": title,
-            "price": row.get("price"),
+            "price": price,
             "old_price": row.get("old_price"),
-            "area_m2": row.get("area_m2"),
-            "eur_m2": (
-                round(row["price"] / row["area_m2"])
-                if row.get("price") and row.get("area_m2")
-                else None
-            ),
-            "bedrooms": extract_bedrooms(row),
+            "area_m2": area,
+            "eur_m2": eur_m2,
+            "bedrooms": bedrooms,
             "rooms": row.get("rooms"),
             "floor": row.get("floor"),
             "energy_class": row.get("energy_class"),
@@ -652,16 +688,20 @@ def make_entities(
             "pv_present": feature_bool(row, "pv"),
             "heat_pump": feature_bool(row, "heat_pump"),
             "ev_charging": feature_bool(row, "ev_charging"),
-            "delivery": row.get("delivery"),
-            "stage": row.get("stage"),
             "status": row.get("status") or "ACTIVE",
             "source": source,
             "source_url": url,
+            "micro_location": location["micro_location"],
+            "location_verification_status": location[
+                "location_verification_status"
+            ],
+            "location_verification_confidence": location[
+                "location_verification_confidence"
+            ],
             "first_seen": captured_at,
             "last_seen": captured_at,
             "discount_signal": promo["signal"],
             "discount_keywords": promo["keywords"],
-            **location,
         })
 
     return (
@@ -669,644 +709,668 @@ def make_entities(
         units,
         listings,
         observations,
-        objects,
-        rejections,
+        legacy,
+        rejected,
     )
 
 
-def source_coverage_status(report: dict[str, Any]) -> str:
-    source = report.get("source")
-
-    if report.get("status") == "SKIPPED":
-        return "PASS" if source == "jbc_direct" else "MISSING"
-
-    http_statuses = {
-        int(status)
-        for status in report.get("http_statuses", [])
-        if isinstance(status, (int, float))
-    }
-
-    records = int(report.get("records_published", 0) or 0)
-    seen = int(report.get("records_seen", 0) or 0)
-
-    if 403 in http_statuses or 401 in http_statuses:
-        return "BROKEN"
-
-    if records > 0:
-        return "PARTIAL" if report.get("records_rejected", 0) else "PASS"
-
-    if seen > 0:
-        return "PARTIAL"
-
-    if report.get("coverage") == "MISSING":
-        return "MISSING"
-
-    return "BROKEN"
-
-
-def build_source_audit(coverage: list[dict[str, Any]]) -> dict[str, Any]:
-    rows = []
-
-    for report in coverage:
-        item = dict(report)
-        item["audit_status"] = source_coverage_status(report)
-        item["mandatory"] = report.get("source") in MANDATORY_SOURCE_NAMES
-        rows.append(item)
-
-    mandatory = [row for row in rows if row.get("mandatory")]
-    broken = [
-        row for row in mandatory
-        if row["audit_status"] in {"BROKEN", "MISSING"}
-    ]
-    partial = [
-        row for row in mandatory
-        if row["audit_status"] == "PARTIAL"
-    ]
-
-    if broken:
-        overall = "DEGRADED"
-    elif partial:
-        overall = "PARTIAL"
-    else:
-        overall = "PASS"
-
-    return {
-        "overall_status": overall,
-        "mandatory_sources": sorted(MANDATORY_SOURCE_NAMES),
-        "mandatory_broken_or_missing": len(broken),
-        "mandatory_partial": len(partial),
-        "sources": rows,
-    }
-
-
-def merge_observations(
-    existing: list[dict[str, Any]],
-    current: list[dict[str, Any]],
-) -> list[dict[str, Any]]:
-    by_id = {
-        str(item.get("observation_id")): item
-        for item in existing
-        if item.get("observation_id")
-    }
-
-    for item in current:
-        key = str(item.get("observation_id"))
-        if key:
-            by_id[key] = item
-
-    return sorted(
-        by_id.values(),
-        key=lambda item: (
-            str(item.get("captured_at") or ""),
-            str(item.get("observation_id") or ""),
-        ),
+def load_price_history() -> dict[str, Any]:
+    payload = load(
+        PRICE_HISTORY,
+        {
+            "schema_version": "3.0",
+            "retention_days": RETENTION_DAYS,
+            "listings": {},
+        },
     )
+    if not isinstance(payload, dict):
+        payload = {}
+    payload.setdefault("schema_version", "3.0")
+    payload.setdefault("retention_days", RETENTION_DAYS)
+    payload.setdefault("listings", {})
+    return payload
 
 
-def price_history_for_listing(
-    listing_id: str,
+def update_price_history(
+    payload: dict[str, Any],
     observations: list[dict[str, Any]],
-    now: datetime,
+    captured_at: str,
 ) -> dict[str, Any]:
-    obs = [
-        item for item in observations
-        if item.get("listing_id") == listing_id
-        and isinstance(item.get("price"), (int, float))
-    ]
-    obs.sort(key=lambda item: str(item.get("captured_at") or ""))
+    listings = payload.setdefault("listings", {})
 
-    if not obs:
-        return {
-            "first_price": None,
-            "lowest_price": None,
-            "highest_price": None,
-            "current_price": None,
-            "first_seen": None,
-            "last_seen": None,
-            "number_of_price_changes": 0,
-            "baselines": {},
-        }
-
-    first_price = obs[0]["price"]
-    current_price = obs[-1]["price"]
-
-    changes = 0
-    previous = None
-    for item in obs:
-        price = item["price"]
-        if previous is not None and price != previous:
-            changes += 1
-        previous = price
-
-    result = {
-        "first_price": first_price,
-        "lowest_price": min(item["price"] for item in obs),
-        "highest_price": max(item["price"] for item in obs),
-        "current_price": current_price,
-        "first_seen": obs[0].get("captured_at"),
-        "last_seen": obs[-1].get("captured_at"),
-        "number_of_price_changes": changes,
-        "baselines": {},
-    }
-
-    for days in PRICE_WINDOWS:
-        target = now - timedelta(days=days)
-        eligible = []
-
-        for item in obs:
-            try:
-                timestamp = datetime.fromisoformat(
-                    str(item["captured_at"]).replace("Z", "+00:00")
-                )
-            except Exception:
-                continue
-
-            if timestamp <= target:
-                eligible.append((timestamp, item))
-
-        if not eligible:
-            result["baselines"][f"{days}d"] = {
-                "available": False,
-                "target_date": iso(target),
-                "actual_baseline_date": None,
-                "age_days": None,
-                "baseline_price": None,
-                "current_price": current_price,
-                "delta": None,
-                "delta_pct": None,
-            }
+    for obs in observations:
+        price = obs.get("price")
+        if not isinstance(price, (int, float)) or price <= 0:
             continue
 
-        timestamp, baseline = eligible[-1]
-        baseline_price = baseline["price"]
-        delta = current_price - baseline_price
-
-        result["baselines"][f"{days}d"] = {
-            "available": True,
-            "target_date": iso(target),
-            "actual_baseline_date": timestamp.isoformat().replace("+00:00", "Z"),
-            "age_days": round(
-                (now - timestamp).total_seconds() / 86400,
-                2,
-            ),
-            "baseline_price": baseline_price,
-            "current_price": current_price,
-            "delta": delta,
-            "delta_pct": (
-                round(delta / baseline_price * 100, 2)
-                if baseline_price
-                else None
-            ),
-        }
-
-    result["baselines"]["all_time"] = {
-        "available": True,
-        "target_date": None,
-        "actual_baseline_date": obs[0].get("captured_at"),
-        "age_days": None,
-        "baseline_price": first_price,
-        "current_price": current_price,
-        "delta": current_price - first_price,
-        "delta_pct": (
-            round((current_price - first_price) / first_price * 100, 2)
-            if first_price
-            else None
-        ),
-    }
-
-    return result
-
-
-def build_price_history(
-    observations: list[dict[str, Any]],
-    now: datetime,
-) -> dict[str, Any]:
-    listing_ids = {
-        item.get("listing_id")
-        for item in observations
-        if item.get("listing_id")
-    }
-
-    payload = {
-        "schema_version": "3.0",
-        "retention_days": RETENTION_DAYS,
-        "generated_at": iso(now),
-        "listings": {},
-    }
-
-    for listing_id in sorted(listing_ids):
-        payload["listings"][listing_id] = price_history_for_listing(
+        listing_id = obs["listing_id"]
+        history = listings.setdefault(
             listing_id,
-            observations,
-            now,
+            {
+                "observations": [],
+                "first_seen": captured_at,
+                "last_seen": captured_at,
+            },
         )
+
+        history["observations"].append({
+            "captured_at": captured_at,
+            "price": price,
+            "eur_m2": obs.get("eur_m2"),
+            "source": obs.get("source"),
+            "source_url": obs.get("source_url"),
+            "run_id": obs.get("run_id"),
+        })
+
+        history["first_seen"] = min(
+            history.get("first_seen", captured_at),
+            captured_at,
+        )
+        history["last_seen"] = max(
+            history.get("last_seen", captured_at),
+            captured_at,
+        )
+
+        history["observations"] = sorted(
+            history["observations"],
+            key=lambda item: item.get("captured_at", ""),
+        )
+
+    cutoff = utc_now() - timedelta(days=RETENTION_DAYS)
+    cutoff_iso = iso(cutoff)
+
+    for history in listings.values():
+        history["observations"] = [
+            item
+            for item in history.get("observations", [])
+            if item.get("captured_at", "") >= cutoff_iso
+        ]
 
     return payload
 
 
-def classify_budget(price: Any) -> str:
-    if not isinstance(price, (int, float)):
-        return "PRICE_UNKNOWN"
-    return "WITHIN_BUDGET" if price <= BUDGET_TARGET else "OVER_BUDGET"
+def price_metrics(
+    history: dict[str, Any],
+    captured_at: str,
+) -> dict[str, Any]:
+    observations = history.get("observations", [])
+    current = observations[-1] if observations else None
 
+    prices = [
+        item["price"]
+        for item in observations
+        if isinstance(item.get("price"), (int, float))
+    ]
 
-def build_current_objects(
-    objects: list[dict[str, Any]],
-    price_history: dict[str, Any],
-) -> list[dict[str, Any]]:
-    out = []
-
-    for obj in objects:
-        listing_id = obj.get("listing_id")
-        history = price_history.get("listings", {}).get(
-            listing_id,
-            {},
-        )
-
-        item = dict(obj)
-        item["budget_status"] = classify_budget(item.get("price"))
-        item["price_history"] = history
-        out.append(item)
-
-    return sorted(
-        out,
-        key=lambda item: (
-            str(item.get("municipality") or ""),
-            str(item.get("micro_location") or ""),
-            str(item.get("listing_title") or ""),
-        ),
-    )
-
-
-def preserve_entity_history(
-    old: list[dict[str, Any]],
-    current: list[dict[str, Any]],
-    key: str,
-) -> list[dict[str, Any]]:
-    by_key = {
-        str(item.get(key)): item
-        for item in old
-        if item.get(key)
+    result: dict[str, Any] = {
+        "current": current.get("price") if current else None,
+        "first": prices[0] if prices else None,
+        "low": min(prices) if prices else None,
+        "high": max(prices) if prices else None,
+        "all_time_change": None,
+        "all_time_change_percent": None,
     }
 
-    for item in current:
-        identity = str(item.get(key))
-        if not identity:
+    if len(prices) >= 2 and prices[0]:
+        result["all_time_change"] = prices[-1] - prices[0]
+        result["all_time_change_percent"] = round(
+            (prices[-1] - prices[0]) / prices[0] * 100,
+            2,
+        )
+
+    captured_dt = datetime.fromisoformat(
+        captured_at.replace("Z", "+00:00")
+    )
+
+    for days in PRICE_WINDOWS:
+        cutoff = captured_dt - timedelta(days=days)
+        candidates = [
+            item
+            for item in observations
+            if item.get("captured_at")
+            and datetime.fromisoformat(
+                item["captured_at"].replace("Z", "+00:00")
+            ) >= cutoff
+        ]
+
+        key = f"{days}d"
+        if candidates:
+            oldest = candidates[0].get("price")
+            latest = candidates[-1].get("price")
+            result[key] = {
+                "oldest": oldest,
+                "latest": latest,
+                "change": (
+                    latest - oldest
+                    if isinstance(oldest, (int, float))
+                    and isinstance(latest, (int, float))
+                    else None
+                ),
+                "change_percent": (
+                    round((latest - oldest) / oldest * 100, 2)
+                    if isinstance(oldest, (int, float))
+                    and isinstance(latest, (int, float))
+                    and oldest
+                    else None
+                ),
+                "observations": len(candidates),
+            }
+        else:
+            result[key] = {
+                "oldest": None,
+                "latest": None,
+                "change": None,
+                "change_percent": None,
+                "observations": 0,
+            }
+
+    return result
+
+
+def coverage_key(report: dict[str, Any]) -> tuple[str, str]:
+    return (
+        str(report.get("location") or "").lower(),
+        str(report.get("source") or "").lower(),
+    )
+
+
+def evaluate_coverage(
+    coverage: list[dict[str, Any]],
+) -> dict[str, Any]:
+    reports = list(coverage)
+
+    mandatory_expected: set[tuple[str, str]] = set()
+    for location, specs in load_sources().items():
+        for spec in specs:
+            source = str(spec.get("name") or "")
+            if source in MANDATORY_SOURCE_NAMES:
+                mandatory_expected.add(
+                    (str(location).lower(), source.lower())
+                )
+
+    # JBC is intentionally captured globally once. Its per-location SKIPPED
+    # reports are not failures when the GLOBAL crawl itself passed.
+    jbc_global = any(
+        r.get("source") == "jbc_direct"
+        and r.get("location") == "GLOBAL"
+        and r.get("status") == "PASS"
+        for r in reports
+    )
+
+    mandatory_results = []
+    missing = []
+    broken = []
+
+    for location, source in sorted(mandatory_expected):
+        if source == "jbc_direct" and jbc_global:
+            mandatory_results.append({
+                "location": location,
+                "source": source,
+                "status": "PASS",
+                "reason": "global_jbc_capture_passed",
+            })
             continue
 
-        previous = by_key.get(identity)
-        if previous:
-            merged = dict(previous)
-            merged.update(item)
+        matching = [
+            r for r in reports
+            if coverage_key(r) == (location, source)
+        ]
 
-            if previous.get("first_seen"):
-                merged["first_seen"] = previous["first_seen"]
+        if not matching:
+            missing.append({
+                "location": location,
+                "source": source,
+            })
+            mandatory_results.append({
+                "location": location,
+                "source": source,
+                "status": "MISSING",
+                "reason": "no_source_run_report",
+            })
+            continue
 
-            by_key[identity] = merged
-        else:
-            by_key[identity] = item
+        report = matching[-1]
+        status = str(report.get("status") or "BROKEN").upper()
 
-    return list(by_key.values())
-
-
-def write_immutable_run(
-    run_id: str,
-    started_at: str,
-    finished_at: str,
-    source_audit: dict[str, Any],
-    objects: list[dict[str, Any]],
-    projects: list[dict[str, Any]],
-    units: list[dict[str, Any]],
-    listings: list[dict[str, Any]],
-    observations: list[dict[str, Any]],
-    rejections: list[dict[str, Any]],
-    price_history: dict[str, Any],
-) -> None:
-    run_dir = RUNS / run_id
-    run_dir.mkdir(parents=True, exist_ok=True)
-
-    write_json(
-        run_dir / "run.json",
-        {
-            "schema_version": SCHEMA_VERSION,
-            "run_id": run_id,
-            "started_at": started_at,
-            "finished_at": finished_at,
-            "snapshot_status": source_audit["overall_status"],
-            "records": {
-                "objects": len(objects),
-                "projects": len(projects),
-                "units": len(units),
-                "listings": len(listings),
-                "observations": len(observations),
-                "rejections": len(rejections),
-            },
-            "source_audit": source_audit,
-        },
-    )
-
-    write_json(run_dir / "objects.json", objects)
-    write_json(run_dir / "projects.json", projects)
-    write_json(run_dir / "units.json", units)
-    write_json(run_dir / "listings.json", listings)
-    write_json(run_dir / "observations.json", observations)
-    write_json(run_dir / "rejections.json", rejections)
-    write_json(run_dir / "price_history.json", price_history)
-
-
-def write_daily_summary(
-    run_id: str,
-    run_date: str,
-    source_audit: dict[str, Any],
-    objects: list[dict[str, Any]],
-    projects: list[dict[str, Any]],
-    units: list[dict[str, Any]],
-    listings: list[dict[str, Any]],
-) -> None:
-    HISTORY.mkdir(parents=True, exist_ok=True)
-
-    write_json(
-        HISTORY / f"{run_date}.json",
-        {
-            "schema_version": SCHEMA_VERSION,
-            "run_date": run_date,
-            "latest_run_id": run_id,
-            "snapshot_status": source_audit["overall_status"],
-            "source_audit": source_audit,
-            "inventory": {
-                "objects": len(objects),
-                "projects": len(projects),
-                "units": len(units),
-                "listings": len(listings),
-                "priced_objects": sum(
-                    1 for item in objects
-                    if item.get("price") is not None
+        if status != "PASS":
+            broken.append({
+                "location": location,
+                "source": source,
+                "status": status,
+                "coverage": report.get("coverage"),
+                "rejection_reasons": report.get(
+                    "rejection_reasons",
+                    {},
                 ),
-                "within_budget": sum(
-                    1 for item in objects
-                    if item.get("budget_status") == "WITHIN_BUDGET"
-                ),
+            })
+
+        mandatory_results.append({
+            "location": location,
+            "source": source,
+            "status": "PASS" if status == "PASS" else status,
+            "reason": (
+                "source_run_passed"
+                if status == "PASS"
+                else "source_run_not_pass"
+            ),
+        })
+
+    all_mandatory_pass = not missing and not broken
+
+    return {
+        "mandatory_expected": sorted(
+            [
+                {
+                    "location": location,
+                    "source": source,
+                }
+                for location, source in mandatory_expected
+            ],
+            key=lambda x: (x["location"], x["source"]),
+        ),
+        "mandatory_results": mandatory_results,
+        "missing": missing,
+        "broken": broken,
+        "mandatory_complete": all_mandatory_pass,
+        "coverage_status": (
+            "COMPLETE"
+            if all_mandatory_pass
+            else "INCOMPLETE"
+        ),
+        "full_inventory_allowed": all_mandatory_pass,
+    }
+
+
+def load_sources() -> dict[str, list[dict[str, Any]]]:
+    path = ROOT / "radar" / "sources.json"
+    payload = load(path, {})
+    return payload if isinstance(payload, dict) else {}
+
+
+def source_summary(
+    coverage: list[dict[str, Any]],
+) -> dict[str, Any]:
+    summary: dict[str, Any] = {}
+
+    for report in coverage:
+        source = str(report.get("source") or "unknown")
+        item = summary.setdefault(
+            source,
+            {
+                "runs": 0,
+                "pass": 0,
+                "partial": 0,
+                "broken": 0,
+                "skipped": 0,
+                "records_seen": 0,
+                "records_parsed": 0,
+                "records_normalized": 0,
+                "records_published": 0,
+                "records_rejected": 0,
             },
-            "run_references": [run_id],
-        },
-    )
+        )
+
+        item["runs"] += 1
+        status = str(report.get("status") or "").lower()
+        if status in item:
+            item[status] += 1
+
+        for key in (
+            "records_seen",
+            "records_parsed",
+            "records_normalized",
+            "records_published",
+            "records_rejected",
+        ):
+            item[key] += int(report.get(key) or 0)
+
+    return summary
 
 
-def build_current_payload(
-    run_id: str,
-    started_at: str,
-    finished_at: str,
-    source_audit: dict[str, Any],
-    objects: list[dict[str, Any]],
-    projects: list[dict[str, Any]],
-    units: list[dict[str, Any]],
-    listings: list[dict[str, Any]],
+def build_inventory_metrics(
+    projects: dict[str, dict[str, Any]],
+    units: dict[str, dict[str, Any]],
+    listings: dict[str, dict[str, Any]],
     observations: list[dict[str, Any]],
 ) -> dict[str, Any]:
+    prices = [
+        o["price"]
+        for o in observations
+        if isinstance(o.get("price"), (int, float))
+    ]
+
     return {
+        "projects": len(projects),
+        "units": len(units),
+        "listings": len(listings),
+        "observations": len(observations),
+        "priced_observations": len(prices),
+        "locations": sorted(
+            {
+                o.get("municipality")
+                for o in observations
+                if o.get("municipality")
+            }
+        ),
+        "energy_class": {
+            "A4": sum(
+                1 for o in observations
+                if str(o.get("energy_class") or "").upper() == "A4"
+            ),
+            "A3": sum(
+                1 for o in observations
+                if str(o.get("energy_class") or "").upper() == "A3"
+            ),
+            "A2": sum(
+                1 for o in observations
+                if str(o.get("energy_class") or "").upper() == "A2"
+            ),
+            "A1": sum(
+                1 for o in observations
+                if str(o.get("energy_class") or "").upper() == "A1"
+            ),
+        },
+        "priority_profile": {
+            "3_bedrooms": sum(
+                1 for o in observations
+                if o.get("bedrooms") == 3
+            ),
+            "pv_present": sum(
+                1 for o in observations
+                if o.get("pv_present") is True
+            ),
+            "heat_pump": sum(
+                1 for o in observations
+                if o.get("heat_pump") is True
+            ),
+            "parking_or_garage": sum(
+                1 for o in observations
+                if o.get("parking") is True
+                or o.get("garage") is True
+            ),
+            "terrace": sum(
+                1 for o in observations
+                if o.get("terrace") is True
+            ),
+        },
+        "price": {
+            "min": min(prices) if prices else None,
+            "max": max(prices) if prices else None,
+            "median": (
+                sorted(prices)[len(prices) // 2]
+                if prices
+                else None
+            ),
+            "budget_target": BUDGET_TARGET,
+            "within_budget": sum(
+                1 for price in prices
+                if price <= BUDGET_TARGET
+            ),
+        },
+    }
+
+
+def purge_old_runs() -> None:
+    cutoff = utc_now() - timedelta(days=RETENTION_DAYS)
+    if not RUNS.exists():
+        return
+
+    for child in RUNS.iterdir():
+        if not child.is_dir():
+            continue
+
+        try:
+            run_dt = datetime.strptime(
+                child.name,
+                "%Y-%m-%dT%H-%M-%SZ",
+            ).replace(tzinfo=timezone.utc)
+        except ValueError:
+            continue
+
+        if run_dt < cutoff:
+            for path in sorted(
+                child.rglob("*"),
+                reverse=True,
+            ):
+                if path.is_file():
+                    path.unlink(missing_ok=True)
+                elif path.is_dir():
+                    path.rmdir()
+            child.rmdir()
+
+
+def main() -> int:
+    started = utc_now()
+    run_id = run_id_for(started)
+    captured_at = iso(started)
+
+    run_dir = RUNS / run_id
+    run_dir.mkdir(parents=True, exist_ok=False)
+
+    try:
+        rows, coverage = capture_run()
+    except Exception as exc:
+        failure = {
+            "schema_version": SCHEMA_VERSION,
+            "run_id": run_id,
+            "started_at": captured_at,
+            "finished_at": iso(utc_now()),
+            "status": "FAILED",
+            "error": repr(exc),
+        }
+        write_json(run_dir / "run.json", failure)
+        write_json(
+            DEBUG / f"{run_id}_FAILED.json",
+            failure,
+        )
+        raise
+
+    projects, units, listings, observations, legacy, rejected = (
+        make_entities(
+            rows,
+            captured_at,
+            run_id,
+        )
+    )
+
+    coverage_eval = evaluate_coverage(coverage)
+    inventory_metrics = build_inventory_metrics(
+        projects,
+        units,
+        listings,
+        observations,
+    )
+
+    # Price history is updated only with actually captured observations.
+    price_history = update_price_history(
+        load_price_history(),
+        observations,
+        captured_at,
+    )
+
+    price_metrics_by_listing = {}
+    for listing_id, history in price_history["listings"].items():
+        price_metrics_by_listing[listing_id] = price_metrics(
+            history,
+            captured_at,
+        )
+
+    for observation in observations:
+        observation["price_history_metrics"] = (
+            price_metrics_by_listing.get(
+                observation["listing_id"],
+                {},
+            )
+        )
+
+    run_payload = {
         "schema_version": SCHEMA_VERSION,
         "run_id": run_id,
-        "captured_at": finished_at,
-        "last_live_capture": finished_at,
-        "snapshot_status": source_audit["overall_status"],
-        "data_quality": {
-            "green_only_when_all_mandatory_sources_pass": True,
-            "mandatory_source_failures": source_audit[
-                "mandatory_broken_or_missing"
-            ],
-            "mandatory_source_partial": source_audit[
-                "mandatory_partial"
-            ],
-        },
-        "inventory": {
-            "objects": len(objects),
+        "started_at": captured_at,
+        "finished_at": iso(utc_now()),
+        "status": "SUCCESS",
+        "inventory_mode": (
+            "FULL_INVENTORY"
+            if coverage_eval["full_inventory_allowed"]
+            else "PARTIAL_CAPTURE"
+        ),
+        "coverage_status": coverage_eval["coverage_status"],
+        "full_inventory_allowed": coverage_eval[
+            "full_inventory_allowed"
+        ],
+        "source_summary": source_summary(coverage),
+        "coverage": coverage,
+        "coverage_evaluation": coverage_eval,
+        "metrics": inventory_metrics,
+        "records": {
+            "rows_captured": len(rows),
             "projects": len(projects),
             "units": len(units),
             "listings": len(listings),
             "observations": len(observations),
-            "priced_objects": sum(
-                1 for item in objects
-                if item.get("price") is not None
-            ),
-            "budget_target": BUDGET_TARGET,
+            "rejected": len(rejected),
         },
-        "locations": sorted(
-            {
-                item.get("municipality")
-                for item in objects
-                if item.get("municipality")
-                and item.get("municipality") != "unknown"
-            }
-        ),
-        "source_audit": source_audit,
-        "run_path": f"data/runs/{run_id}/run.json",
-        "objects_file": "data/objects.json",
-        "projects_file": "data/projects.json",
-        "units_file": "data/units.json",
-        "listings_file": "data/listings.json",
-        "observations_file": "data/observations.json",
-        "rejections_file": "data/rejections.json",
-        "price_history_file": "data/price_history.json",
-        "price_history_retention_days": RETENTION_DAYS,
     }
 
-
-def write_debug(
-    run_id: str,
-    source_audit: dict[str, Any],
-    objects: list[dict[str, Any]],
-    rejections: list[dict[str, Any]],
-) -> None:
-    debug_run = DEBUG / "snapshot" / run_id
-    debug_run.mkdir(parents=True, exist_ok=True)
-
-    write_json(debug_run / "source_audit.json", source_audit)
-
+    # Immutable run artifacts.
+    write_json(run_dir / "run.json", run_payload)
     write_json(
-        debug_run / "inventory_stats.json",
-        {
-            "objects": len(objects),
-            "priced": sum(
-                1 for item in objects
-                if item.get("price") is not None
-            ),
-            "unknown_municipality": sum(
-                1 for item in objects
-                if item.get("municipality") == "unknown"
-            ),
-            "rejections": len(rejections),
-        },
+        run_dir / "projects.json",
+        list(projects.values()),
     )
-
-
-def main() -> None:
-    started_dt = utc_now()
-    started_at = iso(started_dt)
-    run_id = run_id_for(started_dt)
-
-    rows, coverage = run()
-
-    finished_dt = utc_now()
-    finished_at = iso(finished_dt)
-
-    source_audit = build_source_audit(coverage)
-
-    (
-        current_projects,
-        current_units,
-        current_listings,
-        current_observations,
-        current_objects,
-        current_rejections,
-    ) = make_entities(
-        rows,
-        finished_at,
-        run_id,
+    write_json(
+        run_dir / "units.json",
+        list(units.values()),
     )
-
-    old_projects = load(PROJECTS, [])
-    old_units = load(UNITS, [])
-    old_listings = load(LISTINGS, [])
-    old_observations = load(OBSERVATIONS, [])
-
-    if not isinstance(old_projects, list):
-        old_projects = []
-    if not isinstance(old_units, list):
-        old_units = []
-    if not isinstance(old_listings, list):
-        old_listings = []
-    if not isinstance(old_observations, list):
-        old_observations = []
-
-    projects = preserve_entity_history(
-        old_projects,
-        list(current_projects.values()),
-        "project_id",
+    write_json(
+        run_dir / "listings.json",
+        list(listings.values()),
     )
-
-    units = preserve_entity_history(
-        old_units,
-        list(current_units.values()),
-        "unit_id",
-    )
-
-    listings = preserve_entity_history(
-        old_listings,
-        list(current_listings.values()),
-        "listing_id",
-    )
-
-    observations = merge_observations(
-        old_observations,
-        current_observations,
-    )
-
-    price_history = build_price_history(
+    write_json(
+        run_dir / "observations.json",
         observations,
-        finished_dt,
     )
-
-    objects = build_current_objects(
-        current_objects,
+    write_json(
+        run_dir / "objects.json",
+        legacy,
+    )
+    write_json(
+        run_dir / "rejections.json",
+        rejected,
+    )
+    write_json(
+        run_dir / "coverage.json",
+        coverage,
+    )
+    write_json(
+        run_dir / "price_history.json",
         price_history,
     )
 
-    write_immutable_run(
-        run_id=run_id,
-        started_at=started_at,
-        finished_at=finished_at,
-        source_audit=source_audit,
-        objects=objects,
-        projects=list(current_projects.values()),
-        units=list(current_units.values()),
-        listings=list(current_listings.values()),
-        observations=current_observations,
-        rejections=current_rejections,
-        price_history=price_history,
-    )
-
-    write_json(OBJECTS, objects)
-    write_json(PROJECTS, projects)
-    write_json(UNITS, units)
-    write_json(LISTINGS, listings)
+    # Canonical data is updated from the current capture, but only the
+    # inventory mode is allowed to determine whether the UI may call it FULL.
+    write_json(PROJECTS, list(projects.values()))
+    write_json(UNITS, list(units.values()))
+    write_json(LISTINGS, list(listings.values()))
     write_json(OBSERVATIONS, observations)
-    write_json(REJECTIONS, current_rejections)
+    write_json(OBJECTS, legacy)
+    write_json(REJECTIONS, rejected)
     write_json(PRICE_HISTORY, price_history)
 
-    current_payload = build_current_payload(
-        run_id,
-        started_at,
-        finished_at,
-        source_audit,
-        objects,
-        projects,
-        units,
-        listings,
-        observations,
-    )
+    daily_summary = {
+        "schema_version": SCHEMA_VERSION,
+        "run_id": run_id,
+        "date": started.date().isoformat(),
+        "captured_at": captured_at,
+        "inventory_mode": run_payload["inventory_mode"],
+        "coverage_status": run_payload["coverage_status"],
+        "full_inventory_allowed": run_payload[
+            "full_inventory_allowed"
+        ],
+        "metrics": inventory_metrics,
+        "records": run_payload["records"],
+        "source_summary": run_payload["source_summary"],
+        "coverage_evaluation": coverage_eval,
+        "immutable_run": f"data/runs/{run_id}/run.json",
+    }
 
-    write_json(CURRENT, current_payload)
-
-    write_daily_summary(
-        run_id,
-        finished_at[:10],
-        source_audit,
-        objects,
-        projects,
-        units,
-        listings,
-    )
-
-    write_debug(
-        run_id,
-        source_audit,
-        objects,
-        current_rejections,
-    )
-
+    # Keep the old daily location while making each execution immutable.
     write_json(
-        DEBUG / "snapshot_debug.json",
+        HISTORY / f"{started.date().isoformat()}.json",
+        daily_summary,
+    )
+
+    # Current is a presentation-oriented manifest, not a source of truth.
+    current = {
+        "schema_version": SCHEMA_VERSION,
+        "generated_at": iso(utc_now()),
+        "run_id": run_id,
+        "inventory_mode": run_payload["inventory_mode"],
+        "coverage_status": run_payload["coverage_status"],
+        "full_inventory_allowed": run_payload[
+            "full_inventory_allowed"
+        ],
+        "budget_target": BUDGET_TARGET,
+        "retention_days": RETENTION_DAYS,
+        "metrics": inventory_metrics,
+        "source_summary": run_payload["source_summary"],
+        "coverage_evaluation": coverage_eval,
+        "projects": list(projects.values()),
+        "units": list(units.values()),
+        "listings": list(listings.values()),
+        "observations": observations,
+        "rejections": rejected,
+        "price_history": price_metrics_by_listing,
+        "immutable_run": {
+            "run_id": run_id,
+            "path": f"data/runs/{run_id}/run.json",
+        },
+    }
+
+    write_json(CURRENT, current)
+
+    # Human-readable capture summary for Actions diagnostics.
+    write_json(
+        DEBUG / "capture_debug.json",
         {
             "schema_version": SCHEMA_VERSION,
             "run_id": run_id,
-            "started_at": started_at,
-            "finished_at": finished_at,
-            "snapshot_status": source_audit["overall_status"],
-            "records": {
-                "collector_rows": len(rows),
-                "objects": len(objects),
-                "projects": len(projects),
-                "units": len(units),
-                "listings": len(listings),
-                "observations_total": len(observations),
-                "rejections": len(current_rejections),
-            },
-            "source_audit": source_audit,
+            "inventory_mode": run_payload["inventory_mode"],
+            "coverage_status": run_payload["coverage_status"],
+            "full_inventory_allowed": run_payload[
+                "full_inventory_allowed"
+            ],
+            "coverage_evaluation": coverage_eval,
+            "source_summary": run_payload["source_summary"],
+            "metrics": inventory_metrics,
+            "immutable_run": f"data/runs/{run_id}/run.json",
         },
     )
+
+    purge_old_runs()
 
     print(
         json.dumps(
             {
-                "schema_version": SCHEMA_VERSION,
                 "run_id": run_id,
-                "snapshot_status": source_audit["overall_status"],
-                "collector_rows": len(rows),
-                "objects": len(objects),
+                "inventory_mode": run_payload["inventory_mode"],
+                "coverage_status": run_payload["coverage_status"],
+                "full_inventory_allowed": run_payload[
+                    "full_inventory_allowed"
+                ],
                 "projects": len(projects),
                 "units": len(units),
                 "listings": len(listings),
                 "observations": len(observations),
-                "rejections": len(current_rejections),
-                "mandatory_source_failures": source_audit[
-                    "mandatory_broken_or_missing"
-                ],
+                "rejected": len(rejected),
             },
             ensure_ascii=False,
             indent=2,
         )
     )
 
+    return 0
+
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())
