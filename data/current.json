@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0",
   "run_id": "2026-08-16T16:30:00+02:00",
-  "run_date": "2026-08-18",
+  "run_date": "2026-08-19",
   "generated_from": "Adriatic New Build Radar — Master Report",
   "locations": [
     "Caorle",
@@ -153,7 +153,7 @@
   "live_capture_total": 7,
   "captured_concrete_total": 7,
   "snapshot_status": "SUCCESS",
-  "last_live_capture": "2026-08-18T06:44:54.675969+00:00",
+  "last_live_capture": "2026-08-19T06:45:25.430928+00:00",
   "capture_coverage": [
     {
       "location": "jesolo",
