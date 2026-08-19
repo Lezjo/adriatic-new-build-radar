@@ -1312,11 +1312,10 @@ def main() -> int:
         # exclusively under the immutable run directory and expose its
         # status through current.json below.
         pass
-    write_json(UNITS, list(units.values()))
-    write_json(LISTINGS, list(listings.values()))
-    write_json(OBSERVATIONS, observations)
-    write_json(OBJECTS, legacy)
-    write_json(REJECTIONS, rejected)
+
+    # Price history is an evidence ledger and may receive observations from
+    # a partial run. It is deliberately independent from public inventory
+    # publication.
     write_json(PRICE_HISTORY, price_history)
 
     daily_summary = {
