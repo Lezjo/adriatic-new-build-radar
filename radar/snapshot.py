@@ -1,6 +1,6 @@
 """
 Adriatic New Build Radar — snapshot.py
-Version: 6.0-immutable-source-aware
+Version: 6.1-safe-partial-publish
 
 Builds the canonical radar snapshot from portal_capture.run().
 
@@ -43,7 +43,7 @@ HISTORY = DATA / "history"
 RUNS = DATA / "runs"
 DEBUG = DATA / "debug"
 
-SCHEMA_VERSION = "6.0"
+SCHEMA_VERSION = "6.1"
 RETENTION_DAYS = 365
 BUDGET_TARGET = 400_000
 
@@ -776,16 +776,11 @@ def update_price_history(
             key=lambda item: item.get("captured_at", ""),
         )
 
-    cutoff = utc_now() - timedelta(days=RETENTION_DAYS)
-    cutoff_iso = iso(cutoff)
-
-    for history in listings.values():
-        history["observations"] = [
-            item
-            for item in history.get("observations", [])
-            if item.get("captured_at", "") >= cutoff_iso
-        ]
-
+    # Do not destructively prune price history here. The immutable run
+    # archive is retention-managed separately, while price history should
+    # remain an evidence ledger for as long as the repository retains it.
+    # This also prevents the field named "first" from silently becoming
+    # "first observation within the last 365 days".
     return payload
 
 
@@ -804,16 +799,17 @@ def price_metrics(
 
     result: dict[str, Any] = {
         "current": current.get("price") if current else None,
-        "first": prices[0] if prices else None,
-        "low": min(prices) if prices else None,
-        "high": max(prices) if prices else None,
-        "all_time_change": None,
-        "all_time_change_percent": None,
+        "first_recorded": prices[0] if prices else None,
+        "low_recorded": min(prices) if prices else None,
+        "high_recorded": max(prices) if prices else None,
+        "ledger_change": None,
+        "ledger_change_percent": None,
+        "observations_count": len(prices),
     }
 
     if len(prices) >= 2 and prices[0]:
-        result["all_time_change"] = prices[-1] - prices[0]
-        result["all_time_change_percent"] = round(
+        result["ledger_change"] = prices[-1] - prices[0]
+        result["ledger_change_percent"] = round(
             (prices[-1] - prices[0]) / prices[0] * 100,
             2,
         )
@@ -1232,6 +1228,28 @@ def main() -> int:
         },
     }
 
+    # Decide publication against the last known-good canonical snapshot.
+    previous_current = load(CURRENT, {})
+    previous_full = (
+        isinstance(previous_current, dict)
+        and previous_current.get("full_inventory_allowed") is True
+        and previous_current.get("inventory_mode") == "FULL_INVENTORY"
+    )
+    publish_inventory = (
+        run_payload["full_inventory_allowed"]
+        or not previous_full
+    )
+    run_payload["public_inventory_action"] = (
+        "PUBLISH_CURRENT_RUN"
+        if publish_inventory
+        else "KEEP_LAST_KNOWN_GOOD"
+    )
+    run_payload["last_known_good_run_id"] = (
+        run_id
+        if run_payload["full_inventory_allowed"]
+        else previous_current.get("last_known_good_run_id")
+    )
+
     # Immutable run artifacts.
     write_json(run_dir / "run.json", run_payload)
     write_json(
@@ -1267,9 +1285,33 @@ def main() -> int:
         price_history,
     )
 
-    # Canonical data is updated from the current capture, but only the
-    # inventory mode is allowed to determine whether the UI may call it FULL.
-    write_json(PROJECTS, list(projects.values()))
+    # IMPORTANT: a partial capture must never replace the last known-good
+    # canonical inventory. We still persist the partial run and its newly
+    # observed price evidence, but the public inventory remains unchanged.
+    previous_current = load(CURRENT, {})
+    previous_full = (
+        isinstance(previous_current, dict)
+        and previous_current.get("full_inventory_allowed") is True
+        and previous_current.get("inventory_mode") == "FULL_INVENTORY"
+    )
+
+    publish_inventory = (
+        run_payload["full_inventory_allowed"]
+        or not previous_full
+    )
+
+    if publish_inventory:
+        write_json(PROJECTS, list(projects.values()))
+        write_json(UNITS, list(units.values()))
+        write_json(LISTINGS, list(listings.values()))
+        write_json(OBSERVATIONS, observations)
+        write_json(OBJECTS, legacy)
+        write_json(REJECTIONS, rejected)
+    else:
+        # Keep the last complete inventory files intact. Save partial data
+        # exclusively under the immutable run directory and expose its
+        # status through current.json below.
+        pass
     write_json(UNITS, list(units.values()))
     write_json(LISTINGS, list(listings.values()))
     write_json(OBSERVATIONS, observations)
@@ -1301,6 +1343,39 @@ def main() -> int:
     )
 
     # Current is a presentation-oriented manifest, not a source of truth.
+    if publish_inventory:
+        public_projects = list(projects.values())
+        public_units = list(units.values())
+        public_listings = list(listings.values())
+        public_observations = observations
+        public_rejections = rejected
+        public_metrics = inventory_metrics
+    else:
+        public_projects = previous_current.get(
+            "projects",
+            load(PROJECTS, []),
+        )
+        public_units = previous_current.get(
+            "units",
+            load(UNITS, []),
+        )
+        public_listings = previous_current.get(
+            "listings",
+            load(LISTINGS, []),
+        )
+        public_observations = previous_current.get(
+            "observations",
+            load(OBSERVATIONS, []),
+        )
+        public_rejections = previous_current.get(
+            "rejections",
+            load(REJECTIONS, []),
+        )
+        public_metrics = previous_current.get(
+            "metrics",
+            {},
+        )
+
     current = {
         "schema_version": SCHEMA_VERSION,
         "generated_at": iso(utc_now()),
@@ -1310,16 +1385,27 @@ def main() -> int:
         "full_inventory_allowed": run_payload[
             "full_inventory_allowed"
         ],
+        "public_inventory_source": (
+            "current_run"
+            if publish_inventory
+            else "last_known_good_full_run"
+        ),
+        "last_known_good_run_id": (
+            run_id
+            if publish_inventory and run_payload["full_inventory_allowed"]
+            else previous_current.get("last_known_good_run_id")
+        ),
         "budget_target": BUDGET_TARGET,
         "retention_days": RETENTION_DAYS,
-        "metrics": inventory_metrics,
+        "metrics": public_metrics,
+        "current_run_metrics": inventory_metrics,
         "source_summary": run_payload["source_summary"],
         "coverage_evaluation": coverage_eval,
-        "projects": list(projects.values()),
-        "units": list(units.values()),
-        "listings": list(listings.values()),
-        "observations": observations,
-        "rejections": rejected,
+        "projects": public_projects,
+        "units": public_units,
+        "listings": public_listings,
+        "observations": public_observations,
+        "rejections": public_rejections,
         "price_history": price_metrics_by_listing,
         "immutable_run": {
             "run_id": run_id,
