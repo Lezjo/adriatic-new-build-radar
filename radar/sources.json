@@ -1,72 +1,25 @@
 {
-  "jesolo": [
-    {
-      "name": "idealista_new_build",
-      "url": "https://www.idealista.it/vendita-case/jesolo-venezia/con-nuova-costruzione/",
-      "max_pages": 100
-    },
-    {
-      "name": "idealista_projects",
-      "url": "https://www.idealista.it/vendita-nuove_costruzioni/jesolo-venezia/",
-      "max_pages": 100
-    },
-    {
-      "name": "casa_new_build",
-      "url": "https://www.casa.it/vendita/residenziale/in-nuove-costruzioni/jesolo/",
-      "max_pages": 100
-    },
-    {
-      "name": "jbc_direct",
-      "url": "https://www.jbcimmobiliare.it/",
-      "max_pages": 20
-    }
-  ],
-  "caorle": [
-    {
-      "name": "idealista_new_build",
-      "url": "https://www.idealista.it/vendita-case/caorle-venezia/con-nuova-costruzione/",
-      "max_pages": 100
-    },
-    {
-      "name": "jbc_direct",
-      "url": "https://www.jbcimmobiliare.it/",
-      "max_pages": 20
-    }
-  ],
-  "cavallino-treporti": [
-    {
-      "name": "idealista_new_build",
-      "url": "https://www.idealista.it/vendita-case/cavallino-treporti-venezia/con-nuova-costruzione/",
-      "max_pages": 100
-    },
-    {
-      "name": "idealista_apartments",
-      "url": "https://www.idealista.it/vendita-case/cavallino-treporti-venezia/con-appartamenti%2Cnuova-costruzione/",
-      "max_pages": 100
-    }
-  ],
-  "san-dona-di-piave": [
-    {
-      "name": "idealista_new_build",
-      "url": "https://www.idealista.it/vendita-case/san-dona-di-piave-venezia/con-nuova-costruzione/",
-      "max_pages": 100
-    },
-    {
-      "name": "casa_new_build",
-      "url": "https://www.casa.it/vendita/residenziale/in-nuove-costruzioni/san-dona-di-piave/",
-      "max_pages": 100
-    }
-  ],
-  "treviso": [
-    {
-      "name": "idealista_projects",
-      "url": "https://www.idealista.it/vendita-nuove_costruzioni/treviso-treviso/",
-      "max_pages": 100
-    },
-    {
-      "name": "idealista_new_build",
-      "url": "https://www.idealista.it/vendita-case/treviso-treviso/con-nuova-costruzione/",
-      "max_pages": 100
-    }
+  "schema_version": "3.1",
+  "registry_updated_at": "2026-09-18T00:00:00Z",
+  "sources": [
+    {"source_id":"immobiliare_jesolo_new_build","source_name":"Immobiliare.it","source_type":"portal","layer":"commercial","location":"Jesolo","search_url":"https://www.immobiliare.it/nuove-costruzioni/jesolo/","enabled":true,"mandatory":true,"collector":"portal"},
+    {"source_id":"immobiliare_caorle_new_build","source_name":"Immobiliare.it","source_type":"portal","layer":"commercial","location":"Caorle","search_url":"https://www.immobiliare.it/nuove-costruzioni/caorle/","enabled":true,"mandatory":true,"collector":"portal"},
+    {"source_id":"immobiliare_cavallino_treporti_new_build","source_name":"Immobiliare.it","source_type":"portal","layer":"commercial","location":"Cavallino-Treporti","search_url":"https://www.immobiliare.it/nuove-costruzioni/appartamenti-cavallino-treporti/","enabled":true,"mandatory":true,"collector":"portal"},
+    {"source_id":"immobiliare_san_dona_di_piave_new_build","source_name":"Immobiliare.it","source_type":"portal","layer":"commercial","location":"San Donà di Piave","search_url":"https://www.immobiliare.it/nuove-costruzioni/san-dona-di-piave/","enabled":true,"mandatory":true,"collector":"portal"},
+    {"source_id":"idealista_jesolo_new_build","source_name":"Idealista","source_type":"portal","layer":"commercial","location":"Jesolo","search_url":"https://www.idealista.it/vendita-case/jesolo-venezia/con-nuova-costruzione/","enabled":true,"mandatory":true,"collector":"portal"},
+    {"source_id":"idealista_san_dona_di_piave_new_build","source_name":"Idealista","source_type":"portal","layer":"commercial","location":"San Donà di Piave","search_url":"https://www.idealista.it/vendita-case/san-dona-di-piave-venezia/con-nuova-costruzione/","enabled":true,"mandatory":true,"collector":"portal"},
+    {"source_id":"idealista_cavallino_treporti_new_build","source_name":"Idealista","source_type":"portal","layer":"commercial","location":"Cavallino-Treporti","search_url":"https://www.idealista.it/vendita-case/cavallino-treporti-venezia/con-nuova-costruzione/","enabled":true,"mandatory":true,"collector":"portal"},
+    {"source_id":"casa_jesolo_new_build","source_name":"Casa.it","source_type":"portal","layer":"commercial","location":"Jesolo","search_url":"https://www.casa.it/vendita/residenziale/in-nuove-costruzioni/jesolo/","enabled":true,"mandatory":true,"collector":"portal"},
+    {"source_id":"casa_cavallino_treporti_new_build","source_name":"Casa.it","source_type":"portal","layer":"commercial","location":"Cavallino-Treporti","search_url":"https://www.casa.it/vendita/residenziale/in-nuove-costruzioni/cavallino-treporti/","enabled":true,"mandatory":true,"collector":"portal"},
+    {"source_id":"casa_san_dona_di_piave_new_build","source_name":"Casa.it","source_type":"portal","layer":"commercial","location":"San Donà di Piave","search_url":"https://www.casa.it/vendita/residenziale/in-nuove-costruzioni/san-dona-di-piave/","enabled":true,"mandatory":true,"collector":"portal"},
+    {"source_id":"jbc_official_inventory","source_name":"JBC Immobiliare — official","source_type":"agency","layer":"commercial","location":"Adriatic coverage","search_url":"https://www.jbcimmobiliare.it/","enabled":true,"mandatory":true,"collector":"jbc_global","max_hub_pages":5,"max_detail_pages":20},
+    {"source_id":"jbc_nuove_costruzioni","source_name":"JBC Immobiliare — Nuove Costruzioni","source_type":"agency","layer":"commercial","location":"Adriatic coverage","search_url":"https://www.jbcimmobiliare.it/nuove-costruzioni/","enabled":true,"mandatory":true,"collector":"jbc_global","max_hub_pages":5,"max_detail_pages":20},
+    {"source_id":"jbc_immobiliare_profile","source_name":"JBC Immobiliare.it profile","source_type":"portal","layer":"commercial","location":"Adriatic coverage","search_url":"https://www.immobiliare.it/agenzie-immobiliari/417291/jbc-ponte-di-piave-treviso/","enabled":true,"mandatory":true,"collector":"portal"},
+    {"source_id":"planning_jesolo","source_name":"Comune di Jesolo — planning","source_type":"official","layer":"planning","location":"Jesolo","search_url":"https://www.comune.jesolo.ve.it/","enabled":false,"mandatory":false,"collector":"official_discovery","status":"REGISTERED_NEEDS_ADAPTER"},
+    {"source_id":"planning_caorle","source_name":"Comune di Caorle — planning","source_type":"official","layer":"planning","location":"Caorle","search_url":"https://www.comune.caorle.ve.it/piani-urbanistici/","enabled":false,"mandatory":false,"collector":"official_discovery","status":"REGISTERED_NEEDS_ADAPTER"},
+    {"source_id":"planning_cavallino_treporti","source_name":"Comune di Cavallino-Treporti — planning","source_type":"official","layer":"planning","location":"Cavallino-Treporti","search_url":"https://www.comune.cavallinotreporti.ve.it/home/vivere/Territorio/Edilizia-ed-urbanistica.html","enabled":false,"mandatory":false,"collector":"official_discovery","status":"REGISTERED_NEEDS_ADAPTER"},
+    {"source_id":"planning_san_dona_di_piave","source_name":"Comune di San Donà di Piave — planning","source_type":"official","layer":"planning","location":"San Donà di Piave","search_url":"https://www.comune.sandonadipiave.net/","enabled":false,"mandatory":false,"collector":"official_discovery","status":"REGISTERED_NEEDS_ADAPTER"},
+    {"source_id":"planning_treviso","source_name":"Comune di Treviso — planning","source_type":"official","layer":"planning","location":"Treviso","search_url":"https://www.comune.treviso.it/","enabled":false,"mandatory":false,"collector":"official_discovery","status":"REGISTERED_NEEDS_ADAPTER"},
+    {"source_id":"developer_direct_sale_discovery","source_name":"Developer/direct-sale discovery","source_type":"developer","layer":"discovery","location":"Adriatic coverage","search_url":null,"enabled":false,"mandatory":false,"collector":"future_discovery","status":"REGISTERED_NEEDS_SOURCE_URLS"}
   ]
 }

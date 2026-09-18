@@ -1,0 +1,13 @@
+{
+  "schema_version": "3.1",
+  "locations": [
+    {"comune":"Jesolo","cluster":"Jesolo Paese / Residential Core","micro_locations":["Jesolo Paese","Jesolo Centro","Via Roma","Piave Vecchia","Via Cesare Battisti","Via Equilio"]},
+    {"comune":"Jesolo","cluster":"Ca' Gamba / North Residential","micro_locations":["Ca' Gamba","Ca' Fuser","Ca' Stocco","Ca' Martin","Borgo INA","Via Rusti","Via Morettina","Via Pazienti","Via Pineda","Via Cristo Re"]},
+    {"comune":"Jesolo","cluster":"Jesolo Lido","micro_locations":["Lido di Jesolo","Faro / Piazza Nember","Pineta","Piazza Mazzini","Piazza Brescia","Piazza Trieste","Piazza Drago","Piazza Milano","Piazza Torino","Piazza Marconi","Piazza Carducci","Piazza Casabianca","Piazza Marina","Piazza Europa","Piazza Aurora"]},
+    {"comune":"Caorle","cluster":"Caorle","micro_locations":["Centro Storico","Levante","Ponente","Porto Santa Margherita","Lido Altanea","Duna Verde","Brussa","Sansonessa"]},
+    {"comune":"Cavallino-Treporti","cluster":"Cavallino-Treporti","micro_locations":["Cavallino","Ca' Savio","Ca' Vio","Treporti","Punta Sabbioni","Lio Maggiore","Lio Piccolo","Saccagnana","Mesole","Cà di Valle","Cà Ballarin","Cà Pasquali"]},
+    {"comune":"San Donà di Piave","cluster":"San Donà di Piave","micro_locations":["San Donà centro","Mussetta","Mussetta di Sopra","Calvecchia","Fiorentina","Fossà","Chiesanuova","Palazzetto","Grassaga","Isiata"]},
+    {"comune":"Treviso","cluster":"Treviso + family ring","micro_locations":["Treviso Centro","Santa Maria del Rovere","Selvana","Fiera","Ghirada","Monigo","San Zeno","Sant'Antonino","Canizzano","Santa Bona","San Pelajo","Sant'Angelo","San Lazzaro","San Giuseppe","Silea","Casier","Carbonera","Villorba","Ponzano Veneto","Paese","Quinto di Treviso","Zero Branco","Preganziol","Mogliano Veneto","Roncade"]},
+    {"comune":"Adriatic expansion","cluster":"Expansion watch","micro_locations":["Eraclea Mare","Porto Santa Margherita","Chioggia / Sottomarina","Rosolina Mare","Bibione / San Michele al Tagliamento","Lignano Sabbiadoro","Grado","Cesenatico","Cervia","Milano Marittima","Rimini","Riccione","Cattolica","Misano Adriatico","Bellaria-Igea Marina"]}
+  ]
+}

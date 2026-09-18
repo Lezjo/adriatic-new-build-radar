@@ -1,11 +1,17 @@
 from __future__ import annotations
 import hashlib,json,re,time
 from pathlib import Path
+from datetime import datetime, timezone
 from urllib.parse import urljoin,urlparse,parse_qsl,urlencode,urlunparse
-from playwright.sync_api import sync_playwright,TimeoutError as PlaywrightTimeoutError
+try:
+    from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeoutError
+except ModuleNotFoundError:  # Allows audit/migrations to run without a browser runtime.
+    sync_playwright = None
+    PlaywrightTimeoutError = TimeoutError
+from radar.model import classify_location
 
 ROOT=Path(__file__).resolve().parents[2]
-SOURCES=json.loads((ROOT/"radar"/"sources.json").read_text(encoding="utf-8"))
+REGISTRY=json.loads((ROOT/"radar"/"sources.json").read_text(encoding="utf-8"))
 PRICE_RE=re.compile(r"(?:€\s*)?([\d\.\,]+)\s*(k|K)?(?:\s*€)?",re.I)
 AREA_RE=re.compile(r"(\d{2,4}(?:[.,]\d+)?)\s*m(?:²|2)",re.I)
 ROOM_RE=re.compile(r"(\d+)\s*(?:locali|camere|rooms?|stanze)",re.I)
@@ -106,13 +112,14 @@ def detail(page,source,location,u,fallback=""):
     energy=None
     em=re.search(r"(?:energetica|energia|classe)\s*[:\-]?\s*([A-G][1-4]?)",body,re.I)
     if em:energy=em.group(1).upper()
-    loc=location
-    for c in ("jesolo paese","jesolo","caorle","cavallino-treporti","san donà di piave","treviso"):
-        if c in body.lower():loc=c;break
+    loc, location_confidence, location_evidence = classify_location(
+        title=name or title, url=u, address=None, body=body,
+        fallback=None if location == "Adriatic coverage" else location,
+    )
     features=[x for x in ("garage","parcheggio","posto auto","piscina","ascensore","aria condizionata","pannelli solari","pannelli fotovoltaici","vista mare","fronte mare","terrazza","giardino","area fitness","posto spiaggia","pompa di calore") if x in body.lower()]
     status="PLANNED" if re.search(r"consegna\s+(?:primavera|estate|autunno|inverno|\w+)\s+202[6-9]",body,re.I) else "ACTIVE"
     rid="url:"+hashlib.sha1(canonical(u).encode()).hexdigest()
-    return {"source":source,"source_url":canonical(u),"location":loc,"listing_id":rid,"listing_title":re.sub(r"\s+"," ",(name or title or u.rsplit("/",1)[-1].replace("-"," "))).strip()[:300],"price":price,"area_m2":area,"rooms":rooms,"floor":floor,"energy_class":energy,"unit_id":unit,"record_type":"UNIT" if unit else "PROJECT","status":status,"features":features,"raw_text":body[:5000],"captured_at":time.strftime("%Y-%m-%dT%H:%M:%SZ",time.gmtime())}
+    return {"source":source,"source_id":source,"source_url":canonical(u),"location":loc,"location_confidence":location_confidence,"location_evidence":location_evidence,"listing_id":rid,"listing_title":re.sub(r"\s+"," ",(name or title or u.rsplit("/",1)[-1].replace("-"," "))).strip()[:300],"price":price,"area_m2":area,"rooms":rooms,"floor":floor,"energy_class":energy,"unit_id":unit,"record_type":"UNIT" if unit else "PROJECT","status":status,"features":features,"raw_text":body[:5000],"captured_at":time.strftime("%Y-%m-%dT%H:%M:%SZ",time.gmtime())}
 
 def generic_extract(page,source,location,url):
     out=[];seen=set()
@@ -137,8 +144,8 @@ def capture_jbc(browser, location, spec, debug):
     It also handles sitemap indexes, direct property slugs and JS/lazy links.
     """
     source = spec["name"]
-    max_hubs = max(5, int(spec.get("max_hub_pages", 20)))
-    max_details = max(20, int(spec.get("max_detail_pages", 250)))
+    max_hubs = max(3, int(spec.get("max_hub_pages", 5)))
+    max_details = max(10, int(spec.get("max_detail_pages", 20)))
     max_sitemap_urls = max(100, int(spec.get("max_sitemap_urls", 1000)))
     JBC_HOME = "https://www.jbcimmobiliare.it/"
 
@@ -155,7 +162,7 @@ def capture_jbc(browser, location, spec, debug):
     )
     ctx.set_default_timeout(12000)
     page = ctx.new_page()
-    page.set_default_navigation_timeout(35000)
+    page.set_default_navigation_timeout(15000)
 
     hub_queue, queued_hubs, visited_hubs = [], set(), set()
     detail_urls, errors = {}, []
@@ -560,7 +567,12 @@ def capture_source(browser,location,spec):
             if url in seen:break
             seen.add(url)
             try:
-                r=page.goto(url,wait_until="domcontentloaded",timeout=60000);status=r.status if r else None;title=page.title();page.wait_for_timeout(2500)
+                r=page.goto(url,wait_until="domcontentloaded",timeout=60000);status=r.status if r else None;title=page.title()
+                # A hard block is evidence, not an empty market. Stop this
+                # source immediately so all remaining sources still run.
+                if status is not None and status >= 400:
+                    error=f"HTTP {status}"; break
+                page.wait_for_timeout(1200)
                 for _ in range(5):page.mouse.wheel(0,1800);page.wait_for_timeout(600)
                 rows.extend(generic_extract(page,spec["name"],location,url));nxt=next_page(page,url,seen)
                 if not nxt:break
@@ -580,18 +592,83 @@ def capture_source(browser,location,spec):
         f.write_text(json.dumps(old,ensure_ascii=False,indent=2),encoding="utf-8")
     except:pass
     ded={x["source_url"]:x for x in rows}
-    return list(ded.values()),pages
+    return list(ded.values()), pages, error
 
-def run():
-    all_records=[];coverage=[]
+def _iso():
+    return datetime.now(timezone.utc).isoformat()
+
+
+def _legacy_spec(source):
+    """Bridge the V3 registry to the collectors without losing source identity."""
+    return {
+        "name": source["source_id"],
+        "url": source["search_url"],
+        # Portal pagination is intentionally bounded; source manifests expose
+        # the bound so a blocked/changed page cannot turn a daily run infinite.
+        "max_pages": source.get("max_pages", 5),
+        "max_hub_pages": source.get("max_hub_pages", 20),
+        "max_detail_pages": source.get("max_detail_pages", 80),
+        "max_sitemap_urls": source.get("max_sitemap_urls", 1000),
+    }
+
+
+def run(run_id=None):
+    """Capture each enabled registry source once and persist every discovered row.
+
+    `raw` is an evidence layer, not a cache: a subsequent normalizer may reject
+    a row, but it must never make the source observation disappear.
+    """
+    if sync_playwright is None:
+        raise RuntimeError("Playwright is not installed. Install radar/requirements.txt before a live capture.")
+    run_id = run_id or datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+    started_at = _iso()
+    sources = [s for s in REGISTRY.get("sources", []) if s.get("enabled") and s.get("search_url")]
+    raw_root = ROOT / "data" / "raw" / run_id
+    manifest = {"schema_version": "3.1", "run_id": run_id, "started_at": started_at, "finished_at": None, "captures": []}
+    all_records = []
     with sync_playwright() as p:
         browser=p.chromium.launch(headless=True)
-        for location,specs in SOURCES.items():
-            for spec in specs:
-                rows,pages=capture_source(browser,location,spec);all_records.extend(rows)
-                coverage.append({"location":location,"source":spec["name"],"start_url":spec["url"],"pages_captured":pages,"records_captured":len(rows)})
+        for source in sources:
+            capture_started = _iso()
+            rows, pages = [], 0
+            errors = []
+            try:
+                rows, pages, capture_error = capture_source(browser, source["location"], _legacy_spec(source))
+                if capture_error:
+                    errors.append(capture_error)
+            except Exception as exc:
+                errors.append(f"{type(exc).__name__}: {exc!r}")
+            source_dir = raw_root / source["source_id"]
+            source_dir.mkdir(parents=True, exist_ok=True)
+            raw_refs = []
+            for index, row in enumerate(rows):
+                row = dict(row)
+                row["source_id"] = source["source_id"]
+                row["source_name"] = source["source_name"]
+                row["configured_location"] = source["location"]
+                raw_path = source_dir / f"listing-{index:05d}.json"
+                row["raw_reference"] = str(raw_path.relative_to(ROOT))
+                # Persist the exact record handed to normalization, including provenance.
+                raw_path.write_text(json.dumps(row, ensure_ascii=False, indent=2), encoding="utf-8")
+                raw_refs.append(row["raw_reference"])
+                all_records.append(row)
+            manifest["captures"].append({
+                "source_id": source["source_id"], "source_name": source["source_name"],
+                "location": source["location"], "requested_url": source["search_url"],
+                "started_at": capture_started, "finished_at": _iso(),
+                "pages_visited": pages, "records_seen": len(rows), "records_parsed": len(rows),
+                "records_normalized": None, "records_published": None, "records_rejected": None,
+                "rejection_reason_counts": {}, "errors": errors,
+                "status": "ERROR" if errors else ("ZERO_VERIFIED" if not rows else "SUCCESS"),
+                "mandatory": source.get("mandatory", False),
+                "raw_references": raw_refs,
+            })
         browser.close()
-    return all_records,coverage
+    manifest["finished_at"] = _iso()
+    manifests = ROOT / "data" / "manifests"
+    manifests.mkdir(parents=True, exist_ok=True)
+    (manifests / f"{run_id}.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
+    return all_records, manifest
 
 if __name__=="__main__":
-    records,coverage=run();print(json.dumps({"records":len(records),"coverage":coverage},ensure_ascii=False,indent=2))
+    records,manifest=run();print(json.dumps({"records":len(records),"manifest":manifest},ensure_ascii=False,indent=2))

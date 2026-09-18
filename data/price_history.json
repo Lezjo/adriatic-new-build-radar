@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "3.1",
   "retention_days": 365,
   "listings": {
     "https://www.jbcimmobiliare.it/prestigiosa-villa-singola-con-parco-e-piscina-nuova-modalita-di-acquisto-jesolo": [
@@ -97,7 +97,81 @@
         "source": "jbc_direct",
         "listing_title": "Nuovo Bilocale in Residence al Lido Altanea a Caorle appartamento in Nuove Costruzioni a Caorle - JBC Immobiliare"
       }
+    ],
+    "url:b515505a89599b432bfeb87f60d4f1aea69c05b5": [
+      {
+        "observed_at": "2026-09-18T11:29:42.265778+00:00",
+        "run_id": "migration-20260918T112942Z",
+        "price": 600000,
+        "old_price": null,
+        "new_price": null,
+        "source_id": "jbc_official_inventory",
+        "canonical_url": "https://www.jbcimmobiliare.it/prestigiosa-villa-singola-con-parco-e-piscina-nuova-modalita-di-acquisto-jesolo",
+        "title": "Prestigiosa Villa singola con parco e piscina: nuova modalità di acquisto villa in Nuove Costruzioni a Jesolo - JBC Immobiliare"
+      }
+    ],
+    "url:b84072b9e09e10721eba8b1b20e5f11f587d776c": [
+      {
+        "observed_at": "2026-09-18T11:29:42.265778+00:00",
+        "run_id": "migration-20260918T112942Z",
+        "price": 336000,
+        "old_price": null,
+        "new_price": null,
+        "source_id": "jbc_official_inventory",
+        "canonical_url": "https://www.jbcimmobiliare.it/trilocale-di-nuova-costruzione-vista-mare-a-caorle-caorle",
+        "title": "Trilocale di Nuova Costruzione Vista Mare a Caorle appartamento in Nuove Costruzioni a Caorle - JBC Immobiliare"
+      }
+    ],
+    "url:402804a3562ac66d070cd83bda8e8bab477dccef": [
+      {
+        "observed_at": "2026-09-18T11:29:42.265778+00:00",
+        "run_id": "migration-20260918T112942Z",
+        "price": 482000,
+        "old_price": null,
+        "new_price": null,
+        "source_id": "jbc_official_inventory",
+        "canonical_url": "https://www.jbcimmobiliare.it/quadrilocale-nuovo-con-vista-mare-a-jesolo-lido-jesolo",
+        "title": "Quadrilocale Nuovo con Vista Mare a Jesolo Lido appartamento in Nuove Costruzioni a Jesolo - JBC Immobiliare"
+      }
+    ],
+    "url:b3d9347d87f5650509bbee3eb22b3393a2210fdd": [
+      {
+        "observed_at": "2026-09-18T11:29:42.265778+00:00",
+        "run_id": "migration-20260918T112942Z",
+        "price": 255000,
+        "old_price": null,
+        "new_price": null,
+        "source_id": "jbc_official_inventory",
+        "canonical_url": "https://www.jbcimmobiliare.it/nuovo-bilocale-piano-terra-con-giardino-residence-al-lido-altanea-caorle",
+        "title": "Nuovo Bilocale | Piano Terra con Giardino - Residence al Lido Altanea appartamento in Nuove Costruzioni a Caorle - JBC Immobiliare"
+      }
+    ],
+    "url:a3310e6a81581d09925dbbc054cc1e97cba30862": [
+      {
+        "observed_at": "2026-09-18T11:29:42.265778+00:00",
+        "run_id": "migration-20260918T112942Z",
+        "price": 418000,
+        "old_price": null,
+        "new_price": null,
+        "source_id": "jbc_official_inventory",
+        "canonical_url": "https://www.jbcimmobiliare.it/nuovo-trilocale-con-giardino-esclusivo-residence-altanea-a-caorle-caorle",
+        "title": "Nuovo Trilocale con Giardino Esclusivo | Residence Altanea a Caorle appartamento in Nuove Costruzioni a Caorle - JBC Immobiliare"
+      }
+    ],
+    "url:1de43e321dd2ef51f9177464d3580567df1427ff": [
+      {
+        "observed_at": "2026-09-18T11:29:42.265778+00:00",
+        "run_id": "migration-20260918T112942Z",
+        "price": 246000,
+        "old_price": null,
+        "new_price": null,
+        "source_id": "jbc_official_inventory",
+        "canonical_url": "https://www.jbcimmobiliare.it/nuovo-bilocale-in-residence-al-lido-altanea-a-caorle-caorle",
+        "title": "Nuovo Bilocale in Residence al Lido Altanea a Caorle appartamento in Nuove Costruzioni a Caorle - JBC Immobiliare"
+      }
     ]
   },
-  "updated_at": "2026-08-18T06:46:39.721725+00:00"
+  "updated_at": "2026-09-18T11:29:42.265778+00:00",
+  "key": "listing_id",
+  "retention": "all_time"
 }
