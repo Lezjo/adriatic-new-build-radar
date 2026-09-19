@@ -1,13 +1,362 @@
 {
   "schema_version": "3.1",
   "locations": [
-    {"comune":"Jesolo","cluster":"Jesolo Paese / Residential Core","micro_locations":["Jesolo Paese","Jesolo Centro","Via Roma","Piave Vecchia","Via Cesare Battisti","Via Equilio"]},
-    {"comune":"Jesolo","cluster":"Ca' Gamba / North Residential","micro_locations":["Ca' Gamba","Ca' Fuser","Ca' Stocco","Ca' Martin","Borgo INA","Via Rusti","Via Morettina","Via Pazienti","Via Pineda","Via Cristo Re"]},
-    {"comune":"Jesolo","cluster":"Jesolo Lido","micro_locations":["Lido di Jesolo","Faro / Piazza Nember","Pineta","Piazza Mazzini","Piazza Brescia","Piazza Trieste","Piazza Drago","Piazza Milano","Piazza Torino","Piazza Marconi","Piazza Carducci","Piazza Casabianca","Piazza Marina","Piazza Europa","Piazza Aurora"]},
-    {"comune":"Caorle","cluster":"Caorle","micro_locations":["Centro Storico","Levante","Ponente","Porto Santa Margherita","Lido Altanea","Duna Verde","Brussa","Sansonessa"]},
-    {"comune":"Cavallino-Treporti","cluster":"Cavallino-Treporti","micro_locations":["Cavallino","Ca' Savio","Ca' Vio","Treporti","Punta Sabbioni","Lio Maggiore","Lio Piccolo","Saccagnana","Mesole","Cà di Valle","Cà Ballarin","Cà Pasquali"]},
-    {"comune":"San Donà di Piave","cluster":"San Donà di Piave","micro_locations":["San Donà centro","Mussetta","Mussetta di Sopra","Calvecchia","Fiorentina","Fossà","Chiesanuova","Palazzetto","Grassaga","Isiata"]},
-    {"comune":"Treviso","cluster":"Treviso + family ring","micro_locations":["Treviso Centro","Santa Maria del Rovere","Selvana","Fiera","Ghirada","Monigo","San Zeno","Sant'Antonino","Canizzano","Santa Bona","San Pelajo","Sant'Angelo","San Lazzaro","San Giuseppe","Silea","Casier","Carbonera","Villorba","Ponzano Veneto","Paese","Quinto di Treviso","Zero Branco","Preganziol","Mogliano Veneto","Roncade"]},
-    {"comune":"Adriatic expansion","cluster":"Expansion watch","micro_locations":["Eraclea Mare","Porto Santa Margherita","Chioggia / Sottomarina","Rosolina Mare","Bibione / San Michele al Tagliamento","Lignano Sabbiadoro","Grado","Cesenatico","Cervia","Milano Marittima","Rimini","Riccione","Cattolica","Misano Adriatico","Bellaria-Igea Marina"]}
+    {
+      "comune": "Jesolo",
+      "cluster": "Jesolo Paese / Residential Core",
+      "micro_locations": [
+        "Jesolo Paese",
+        "Jesolo Centro",
+        "Via Roma",
+        "Piave Vecchia",
+        "Via Cesare Battisti",
+        "Via Equilio"
+      ]
+    },
+    {
+      "comune": "Jesolo",
+      "cluster": "Ca' Gamba / North Residential",
+      "micro_locations": [
+        "Ca' Gamba",
+        "Ca' Fuser",
+        "Ca' Stocco",
+        "Ca' Martin",
+        "Borgo INA",
+        "Via Rusti",
+        "Via Morettina",
+        "Via Pazienti",
+        "Via Pineda",
+        "Via Cristo Re"
+      ]
+    },
+    {
+      "comune": "Jesolo",
+      "cluster": "Jesolo Lido",
+      "micro_locations": [
+        "Lido di Jesolo",
+        "Faro / Piazza Nember",
+        "Pineta",
+        "Piazza Mazzini",
+        "Piazza Brescia",
+        "Piazza Trieste",
+        "Piazza Drago",
+        "Piazza Milano",
+        "Piazza Torino",
+        "Piazza Marconi",
+        "Piazza Carducci",
+        "Piazza Casabianca",
+        "Piazza Marina",
+        "Piazza Europa",
+        "Piazza Aurora"
+      ]
+    },
+    {
+      "comune": "Caorle",
+      "cluster": "Caorle",
+      "micro_locations": [
+        "Centro Storico",
+        "Levante",
+        "Ponente",
+        "Porto Santa Margherita",
+        "Lido Altanea",
+        "Duna Verde",
+        "Brussa",
+        "Sansonessa"
+      ]
+    },
+    {
+      "comune": "Cavallino-Treporti",
+      "cluster": "Cavallino-Treporti",
+      "micro_locations": [
+        "Cavallino",
+        "Ca' Savio",
+        "Ca' Vio",
+        "Treporti",
+        "Punta Sabbioni",
+        "Lio Maggiore",
+        "Lio Piccolo",
+        "Saccagnana",
+        "Mesole",
+        "Cà di Valle",
+        "Cà Ballarin",
+        "Cà Pasquali"
+      ]
+    },
+    {
+      "comune": "San Donà di Piave",
+      "cluster": "San Donà di Piave",
+      "micro_locations": [
+        "San Donà centro",
+        "Mussetta",
+        "Mussetta di Sopra",
+        "Calvecchia",
+        "Fiorentina",
+        "Fossà",
+        "Chiesanuova",
+        "Palazzetto",
+        "Grassaga",
+        "Isiata"
+      ]
+    },
+    {
+      "comune": "Treviso",
+      "cluster": "Treviso + family ring",
+      "micro_locations": [
+        "Treviso Centro",
+        "Santa Maria del Rovere",
+        "Selvana",
+        "Fiera",
+        "Ghirada",
+        "Monigo",
+        "San Zeno",
+        "Sant'Antonino",
+        "Canizzano",
+        "Santa Bona",
+        "San Pelajo",
+        "Sant'Angelo",
+        "San Lazzaro",
+        "San Giuseppe",
+        "Silea",
+        "Casier",
+        "Carbonera",
+        "Villorba",
+        "Ponzano Veneto",
+        "Paese",
+        "Quinto di Treviso",
+        "Zero Branco",
+        "Preganziol",
+        "Mogliano Veneto",
+        "Roncade"
+      ]
+    },
+    {
+      "comune": "Adriatic expansion",
+      "cluster": "Expansion watch",
+      "micro_locations": [
+        "Eraclea Mare",
+        "Porto Santa Margherita",
+        "Chioggia / Sottomarina",
+        "Rosolina Mare",
+        "Bibione / San Michele al Tagliamento",
+        "Lignano Sabbiadoro",
+        "Grado",
+        "Cesenatico",
+        "Cervia",
+        "Milano Marittima",
+        "Rimini",
+        "Riccione",
+        "Cattolica",
+        "Misano Adriatico",
+        "Bellaria-Igea Marina"
+      ]
+    },
+    {
+      "comune": "Bologna",
+      "cluster": "Bologna metro",
+      "micro_locations": [
+        "Savena",
+        "San Ruffillo / Via Toscana / Monte Donato",
+        "Murri",
+        "Santo Stefano / Colli",
+        "Costa-Saragozza",
+        "San Donato / Fiera",
+        "San Donato-San Vitale",
+        "Corticella",
+        "Borgo Panigale / Casteldebole",
+        "Santa Viola",
+        "Navile / Lame"
+      ],
+      "inventory_status": "CONFIGURED_NO_VERIFIED_LISTINGS",
+      "registry_slug": "bologna"
+    },
+    {
+      "comune": "Zola Predosa",
+      "cluster": "Bologna metro",
+      "micro_locations": [
+        "Zola Predosa centro",
+        "Riale",
+        "Ponte Ronca",
+        "Crespellano-facing areas"
+      ],
+      "inventory_status": "CONFIGURED_NO_VERIFIED_LISTINGS",
+      "registry_slug": "zola-predosa"
+    },
+    {
+      "comune": "Casalecchio di Reno",
+      "cluster": "Bologna metro",
+      "micro_locations": [
+        "Casalecchio centro",
+        "Ceretolo",
+        "San Biagio",
+        "Bologna / Zola-facing areas"
+      ],
+      "inventory_status": "CONFIGURED_NO_VERIFIED_LISTINGS",
+      "registry_slug": "casalecchio-di-reno"
+    },
+    {
+      "comune": "San Lazzaro di Savena",
+      "cluster": "Bologna metro",
+      "micro_locations": [
+        "San Lazzaro centro",
+        "Idice",
+        "Ponticella",
+        "La Mura San Carlo",
+        "Farneto"
+      ],
+      "inventory_status": "CONFIGURED_NO_VERIFIED_LISTINGS",
+      "registry_slug": "san-lazzaro-di-savena"
+    },
+    {
+      "comune": "Castenaso",
+      "cluster": "Bologna metro",
+      "micro_locations": [
+        "Castenaso centro",
+        "Villanova",
+        "Fiesso",
+        "Marano"
+      ],
+      "inventory_status": "CONFIGURED_NO_VERIFIED_LISTINGS",
+      "registry_slug": "castenaso"
+    },
+    {
+      "comune": "Granarolo dell'Emilia",
+      "cluster": "Bologna metro",
+      "micro_locations": [
+        "Granarolo centro",
+        "Quarto Inferiore",
+        "Cadriano"
+      ],
+      "inventory_status": "CONFIGURED_NO_VERIFIED_LISTINGS",
+      "registry_slug": "granarolo-dell-emilia"
+    },
+    {
+      "comune": "Ozzano dell'Emilia",
+      "cluster": "Bologna metro",
+      "micro_locations": [
+        "Ozzano centro",
+        "Tolara",
+        "Ponte Rizzoli",
+        "collinare areas"
+      ],
+      "inventory_status": "CONFIGURED_NO_VERIFIED_LISTINGS",
+      "registry_slug": "ozzano-dell-emilia"
+    },
+    {
+      "comune": "Castel Maggiore",
+      "cluster": "Bologna metro",
+      "micro_locations": [
+        "Castel Maggiore centro",
+        "Trebbo di Reno",
+        "Primo Maggio"
+      ],
+      "inventory_status": "CONFIGURED_NO_VERIFIED_LISTINGS",
+      "registry_slug": "castel-maggiore"
+    },
+    {
+      "comune": "Calderara di Reno",
+      "cluster": "Bologna metro",
+      "micro_locations": [
+        "Calderara centro",
+        "Lippo",
+        "Bargellino"
+      ],
+      "inventory_status": "CONFIGURED_NO_VERIFIED_LISTINGS",
+      "registry_slug": "calderara-di-reno"
+    },
+    {
+      "comune": "Anzola dell'Emilia",
+      "cluster": "Bologna metro",
+      "micro_locations": [
+        "Anzola centro",
+        "Lavino di Mezzo",
+        "Ponte Samoggia"
+      ],
+      "inventory_status": "CONFIGURED_NO_VERIFIED_LISTINGS",
+      "registry_slug": "anzola-dell-emilia"
+    },
+    {
+      "comune": "Valsamoggia",
+      "cluster": "Bologna metro",
+      "micro_locations": [
+        "Crespellano",
+        "Bazzano",
+        "Monteveglio"
+      ],
+      "inventory_status": "CONFIGURED_NO_VERIFIED_LISTINGS",
+      "registry_slug": "valsamoggia"
+    },
+    {
+      "comune": "Sasso Marconi",
+      "cluster": "Bologna metro",
+      "micro_locations": [
+        "Sasso Marconi centro",
+        "Borgonuovo",
+        "Pontecchio Marconi",
+        "collinare residential areas"
+      ],
+      "inventory_status": "CONFIGURED_NO_VERIFIED_LISTINGS",
+      "registry_slug": "sasso-marconi"
+    },
+    {
+      "comune": "Pianoro",
+      "cluster": "Bologna metro",
+      "micro_locations": [
+        "Pianoro centro",
+        "Rastignano",
+        "Carteria di Sesto"
+      ],
+      "inventory_status": "CONFIGURED_NO_VERIFIED_LISTINGS",
+      "registry_slug": "pianoro"
+    },
+    {
+      "comune": "Castelfranco Emilia",
+      "cluster": "Bologna metro",
+      "micro_locations": [
+        "Castelfranco centro",
+        "Panzano",
+        "Gaggio di Piano",
+        "Manzolino"
+      ],
+      "inventory_status": "CONFIGURED_NO_VERIFIED_LISTINGS",
+      "registry_slug": "castelfranco-emilia"
+    },
+    {
+      "comune": "Nonantola",
+      "cluster": "Bologna metro",
+      "micro_locations": [
+        "Nonantola centro",
+        "residential expansion zones"
+      ],
+      "inventory_status": "CONFIGURED_NO_VERIFIED_LISTINGS",
+      "registry_slug": "nonantola"
+    },
+    {
+      "comune": "San Cesario sul Panaro",
+      "cluster": "Bologna metro",
+      "micro_locations": [
+        "San Cesario centro",
+        "Panaro corridor"
+      ],
+      "inventory_status": "CONFIGURED_NO_VERIFIED_LISTINGS",
+      "registry_slug": "san-cesario-sul-panaro"
+    },
+    {
+      "comune": "Modena",
+      "cluster": "Bologna–Modena corridor",
+      "micro_locations": [
+        "Buon Pastore",
+        "Musicisti",
+        "Sant'Agnese",
+        "Villaggio Zeta",
+        "Vaciglio",
+        "Morane",
+        "Cognento",
+        "Saliceta San Giuliano",
+        "Baggiovara",
+        "southern / western residential belt"
+      ],
+      "inventory_status": "CONFIGURED_NO_VERIFIED_LISTINGS",
+      "registry_slug": "modena"
+    }
   ]
 }

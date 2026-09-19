@@ -98,5 +98,412 @@
       "url": "https://www.immobiliare.it/nuove-costruzioni/treviso/",
       "max_pages": 100
     }
+  ],
+  "bologna-first-belt": [
+    {
+      "name": "idealista_new_build",
+      "url": "https://www.idealista.it/vendita-case/bologna-bologna/con-nuova-costruzione/",
+      "max_pages": 5,
+      "mandatory": true,
+      "scope": "commercial"
+    },
+    {
+      "name": "casa_new_build",
+      "url": "https://www.casa.it/vendita/residenziale/in-nuove-costruzioni/bologna/",
+      "max_pages": 5,
+      "mandatory": true,
+      "scope": "commercial"
+    }
+  ],
+  "Bologna": [
+    {
+      "name": "immobiliare_new_build",
+      "url": "https://www.immobiliare.it/nuove-costruzioni/bologna/",
+      "max_pages": 5,
+      "mandatory": true,
+      "scope": "commercial"
+    },
+    {
+      "name": "idealista_new_build",
+      "url": "https://www.idealista.it/vendita-case/bologna/con-nuova-costruzione/",
+      "max_pages": 5,
+      "mandatory": true,
+      "scope": "commercial"
+    },
+    {
+      "name": "casa_new_build",
+      "url": "https://www.casa.it/vendita/residenziale/in-nuove-costruzioni/bologna/",
+      "max_pages": 5,
+      "mandatory": true,
+      "scope": "commercial"
+    }
+  ],
+  "Zola Predosa": [
+    {
+      "name": "immobiliare_new_build",
+      "url": "https://www.immobiliare.it/nuove-costruzioni/zola-predosa/",
+      "max_pages": 5,
+      "mandatory": true,
+      "scope": "commercial"
+    },
+    {
+      "name": "idealista_new_build",
+      "url": "https://www.idealista.it/vendita-case/zola-predosa/con-nuova-costruzione/",
+      "max_pages": 5,
+      "mandatory": true,
+      "scope": "commercial"
+    },
+    {
+      "name": "casa_new_build",
+      "url": "https://www.casa.it/vendita/residenziale/in-nuove-costruzioni/zola-predosa/",
+      "max_pages": 5,
+      "mandatory": true,
+      "scope": "commercial"
+    }
+  ],
+  "Casalecchio di Reno": [
+    {
+      "name": "immobiliare_new_build",
+      "url": "https://www.immobiliare.it/nuove-costruzioni/casalecchio-di-reno/",
+      "max_pages": 5,
+      "mandatory": true,
+      "scope": "commercial"
+    },
+    {
+      "name": "idealista_new_build",
+      "url": "https://www.idealista.it/vendita-case/casalecchio-di-reno/con-nuova-costruzione/",
+      "max_pages": 5,
+      "mandatory": true,
+      "scope": "commercial"
+    },
+    {
+      "name": "casa_new_build",
+      "url": "https://www.casa.it/vendita/residenziale/in-nuove-costruzioni/casalecchio-di-reno/",
+      "max_pages": 5,
+      "mandatory": true,
+      "scope": "commercial"
+    }
+  ],
+  "San Lazzaro di Savena": [
+    {
+      "name": "immobiliare_new_build",
+      "url": "https://www.immobiliare.it/nuove-costruzioni/san-lazzaro-di-savena/",
+      "max_pages": 5,
+      "mandatory": true,
+      "scope": "commercial"
+    },
+    {
+      "name": "idealista_new_build",
+      "url": "https://www.idealista.it/vendita-case/san-lazzaro-di-savena/con-nuova-costruzione/",
+      "max_pages": 5,
+      "mandatory": true,
+      "scope": "commercial"
+    },
+    {
+      "name": "casa_new_build",
+      "url": "https://www.casa.it/vendita/residenziale/in-nuove-costruzioni/san-lazzaro-di-savena/",
+      "max_pages": 5,
+      "mandatory": true,
+      "scope": "commercial"
+    }
+  ],
+  "Castenaso": [
+    {
+      "name": "immobiliare_new_build",
+      "url": "https://www.immobiliare.it/nuove-costruzioni/castenaso/",
+      "max_pages": 5,
+      "mandatory": true,
+      "scope": "commercial"
+    },
+    {
+      "name": "idealista_new_build",
+      "url": "https://www.idealista.it/vendita-case/castenaso/con-nuova-costruzione/",
+      "max_pages": 5,
+      "mandatory": true,
+      "scope": "commercial"
+    },
+    {
+      "name": "casa_new_build",
+      "url": "https://www.casa.it/vendita/residenziale/in-nuove-costruzioni/castenaso/",
+      "max_pages": 5,
+      "mandatory": true,
+      "scope": "commercial"
+    }
+  ],
+  "Granarolo dell'Emilia": [
+    {
+      "name": "immobiliare_new_build",
+      "url": "https://www.immobiliare.it/nuove-costruzioni/granarolo-dell-emilia/",
+      "max_pages": 5,
+      "mandatory": true,
+      "scope": "commercial"
+    },
+    {
+      "name": "idealista_new_build",
+      "url": "https://www.idealista.it/vendita-case/granarolo-dell-emilia/con-nuova-costruzione/",
+      "max_pages": 5,
+      "mandatory": true,
+      "scope": "commercial"
+    },
+    {
+      "name": "casa_new_build",
+      "url": "https://www.casa.it/vendita/residenziale/in-nuove-costruzioni/granarolo-dell-emilia/",
+      "max_pages": 5,
+      "mandatory": true,
+      "scope": "commercial"
+    }
+  ],
+  "Ozzano dell'Emilia": [
+    {
+      "name": "immobiliare_new_build",
+      "url": "https://www.immobiliare.it/nuove-costruzioni/ozzano-dell-emilia/",
+      "max_pages": 5,
+      "mandatory": true,
+      "scope": "commercial"
+    },
+    {
+      "name": "idealista_new_build",
+      "url": "https://www.idealista.it/vendita-case/ozzano-dell-emilia/con-nuova-costruzione/",
+      "max_pages": 5,
+      "mandatory": true,
+      "scope": "commercial"
+    },
+    {
+      "name": "casa_new_build",
+      "url": "https://www.casa.it/vendita/residenziale/in-nuove-costruzioni/ozzano-dell-emilia/",
+      "max_pages": 5,
+      "mandatory": true,
+      "scope": "commercial"
+    }
+  ],
+  "Castel Maggiore": [
+    {
+      "name": "immobiliare_new_build",
+      "url": "https://www.immobiliare.it/nuove-costruzioni/castel-maggiore/",
+      "max_pages": 5,
+      "mandatory": true,
+      "scope": "commercial"
+    },
+    {
+      "name": "idealista_new_build",
+      "url": "https://www.idealista.it/vendita-case/castel-maggiore/con-nuova-costruzione/",
+      "max_pages": 5,
+      "mandatory": true,
+      "scope": "commercial"
+    },
+    {
+      "name": "casa_new_build",
+      "url": "https://www.casa.it/vendita/residenziale/in-nuove-costruzioni/castel-maggiore/",
+      "max_pages": 5,
+      "mandatory": true,
+      "scope": "commercial"
+    }
+  ],
+  "Calderara di Reno": [
+    {
+      "name": "immobiliare_new_build",
+      "url": "https://www.immobiliare.it/nuove-costruzioni/calderara-di-reno/",
+      "max_pages": 5,
+      "mandatory": true,
+      "scope": "commercial"
+    },
+    {
+      "name": "idealista_new_build",
+      "url": "https://www.idealista.it/vendita-case/calderara-di-reno/con-nuova-costruzione/",
+      "max_pages": 5,
+      "mandatory": true,
+      "scope": "commercial"
+    },
+    {
+      "name": "casa_new_build",
+      "url": "https://www.casa.it/vendita/residenziale/in-nuove-costruzioni/calderara-di-reno/",
+      "max_pages": 5,
+      "mandatory": true,
+      "scope": "commercial"
+    }
+  ],
+  "Anzola dell'Emilia": [
+    {
+      "name": "immobiliare_new_build",
+      "url": "https://www.immobiliare.it/nuove-costruzioni/anzola-dell-emilia/",
+      "max_pages": 5,
+      "mandatory": true,
+      "scope": "commercial"
+    },
+    {
+      "name": "idealista_new_build",
+      "url": "https://www.idealista.it/vendita-case/anzola-dell-emilia/con-nuova-costruzione/",
+      "max_pages": 5,
+      "mandatory": true,
+      "scope": "commercial"
+    },
+    {
+      "name": "casa_new_build",
+      "url": "https://www.casa.it/vendita/residenziale/in-nuove-costruzioni/anzola-dell-emilia/",
+      "max_pages": 5,
+      "mandatory": true,
+      "scope": "commercial"
+    }
+  ],
+  "Valsamoggia": [
+    {
+      "name": "immobiliare_new_build",
+      "url": "https://www.immobiliare.it/nuove-costruzioni/valsamoggia/",
+      "max_pages": 5,
+      "mandatory": true,
+      "scope": "commercial"
+    },
+    {
+      "name": "idealista_new_build",
+      "url": "https://www.idealista.it/vendita-case/valsamoggia/con-nuova-costruzione/",
+      "max_pages": 5,
+      "mandatory": true,
+      "scope": "commercial"
+    },
+    {
+      "name": "casa_new_build",
+      "url": "https://www.casa.it/vendita/residenziale/in-nuove-costruzioni/valsamoggia/",
+      "max_pages": 5,
+      "mandatory": true,
+      "scope": "commercial"
+    }
+  ],
+  "Sasso Marconi": [
+    {
+      "name": "immobiliare_new_build",
+      "url": "https://www.immobiliare.it/nuove-costruzioni/sasso-marconi/",
+      "max_pages": 5,
+      "mandatory": true,
+      "scope": "commercial"
+    },
+    {
+      "name": "idealista_new_build",
+      "url": "https://www.idealista.it/vendita-case/sasso-marconi/con-nuova-costruzione/",
+      "max_pages": 5,
+      "mandatory": true,
+      "scope": "commercial"
+    },
+    {
+      "name": "casa_new_build",
+      "url": "https://www.casa.it/vendita/residenziale/in-nuove-costruzioni/sasso-marconi/",
+      "max_pages": 5,
+      "mandatory": true,
+      "scope": "commercial"
+    }
+  ],
+  "Pianoro": [
+    {
+      "name": "immobiliare_new_build",
+      "url": "https://www.immobiliare.it/nuove-costruzioni/pianoro/",
+      "max_pages": 5,
+      "mandatory": true,
+      "scope": "commercial"
+    },
+    {
+      "name": "idealista_new_build",
+      "url": "https://www.idealista.it/vendita-case/pianoro/con-nuova-costruzione/",
+      "max_pages": 5,
+      "mandatory": true,
+      "scope": "commercial"
+    },
+    {
+      "name": "casa_new_build",
+      "url": "https://www.casa.it/vendita/residenziale/in-nuove-costruzioni/pianoro/",
+      "max_pages": 5,
+      "mandatory": true,
+      "scope": "commercial"
+    }
+  ],
+  "Castelfranco Emilia": [
+    {
+      "name": "immobiliare_new_build",
+      "url": "https://www.immobiliare.it/nuove-costruzioni/castelfranco-emilia/",
+      "max_pages": 5,
+      "mandatory": true,
+      "scope": "commercial"
+    },
+    {
+      "name": "idealista_new_build",
+      "url": "https://www.idealista.it/vendita-case/castelfranco-emilia/con-nuova-costruzione/",
+      "max_pages": 5,
+      "mandatory": true,
+      "scope": "commercial"
+    },
+    {
+      "name": "casa_new_build",
+      "url": "https://www.casa.it/vendita/residenziale/in-nuove-costruzioni/castelfranco-emilia/",
+      "max_pages": 5,
+      "mandatory": true,
+      "scope": "commercial"
+    }
+  ],
+  "Nonantola": [
+    {
+      "name": "immobiliare_new_build",
+      "url": "https://www.immobiliare.it/nuove-costruzioni/nonantola/",
+      "max_pages": 5,
+      "mandatory": true,
+      "scope": "commercial"
+    },
+    {
+      "name": "idealista_new_build",
+      "url": "https://www.idealista.it/vendita-case/nonantola/con-nuova-costruzione/",
+      "max_pages": 5,
+      "mandatory": true,
+      "scope": "commercial"
+    },
+    {
+      "name": "casa_new_build",
+      "url": "https://www.casa.it/vendita/residenziale/in-nuove-costruzioni/nonantola/",
+      "max_pages": 5,
+      "mandatory": true,
+      "scope": "commercial"
+    }
+  ],
+  "San Cesario sul Panaro": [
+    {
+      "name": "immobiliare_new_build",
+      "url": "https://www.immobiliare.it/nuove-costruzioni/san-cesario-sul-panaro/",
+      "max_pages": 5,
+      "mandatory": true,
+      "scope": "commercial"
+    },
+    {
+      "name": "idealista_new_build",
+      "url": "https://www.idealista.it/vendita-case/san-cesario-sul-panaro/con-nuova-costruzione/",
+      "max_pages": 5,
+      "mandatory": true,
+      "scope": "commercial"
+    },
+    {
+      "name": "casa_new_build",
+      "url": "https://www.casa.it/vendita/residenziale/in-nuove-costruzioni/san-cesario-sul-panaro/",
+      "max_pages": 5,
+      "mandatory": true,
+      "scope": "commercial"
+    }
+  ],
+  "Modena": [
+    {
+      "name": "immobiliare_new_build",
+      "url": "https://www.immobiliare.it/nuove-costruzioni/modena/",
+      "max_pages": 5,
+      "mandatory": true,
+      "scope": "commercial"
+    },
+    {
+      "name": "idealista_new_build",
+      "url": "https://www.idealista.it/vendita-case/modena/con-nuova-costruzione/",
+      "max_pages": 5,
+      "mandatory": true,
+      "scope": "commercial"
+    },
+    {
+      "name": "casa_new_build",
+      "url": "https://www.casa.it/vendita/residenziale/in-nuove-costruzioni/modena/",
+      "max_pages": 5,
+      "mandatory": true,
+      "scope": "commercial"
+    }
   ]
 }

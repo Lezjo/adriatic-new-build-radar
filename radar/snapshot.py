@@ -230,7 +230,10 @@ def normalize_location(value: Any) -> str:
         .replace("–", "-")
         .split()
     )
-    return LOCATION_ALIASES.get(raw, raw.replace(" ", "-"))
+    # Keep a configured Comune verbatim when it has no legacy alias yet.
+    # This makes newly added V3.2 locations flow through inventory immediately
+    # instead of collapsing into an untracked slug.
+    return LOCATION_ALIASES.get(raw, raw)
 
 
 def municipality_from_row(row: dict[str, Any]) -> str:
