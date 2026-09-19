@@ -1,0 +1,64 @@
+{
+  "source": "jbc_nuove_costruzioni",
+  "source_id": "jbc_nuove_costruzioni",
+  "source_url": "https://www.jbcimmobiliare.it/en/immobili/5104735-trilocali-di-nuova-costruzione-con-piscina-a-caorle",
+  "location": "Caorle",
+  "location_confidence": "high",
+  "location_evidence": [
+    {
+      "field": "url",
+      "location": "Caorle",
+      "terms": [
+        "caorle"
+      ],
+      "score": 8
+    },
+    {
+      "field": "title",
+      "location": "Caorle",
+      "terms": [
+        "caorle"
+      ],
+      "score": 6
+    },
+    {
+      "field": "body",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo"
+      ],
+      "score": 1
+    },
+    {
+      "field": "body",
+      "location": "Caorle",
+      "terms": [
+        "caorle",
+        "altanea"
+      ],
+      "score": 2
+    }
+  ],
+  "listing_id": "url:9c221dbce5365bc16f20b3df8330b13442b38b0e",
+  "listing_title": "Trilocali di Nuova Costruzione con Piscina a Caorle — JBC Immobiliare",
+  "price": 329000,
+  "area_m2": 83.0,
+  "rooms": null,
+  "floor": "plans",
+  "energy_class": null,
+  "unit_id": null,
+  "record_type": "PROJECT",
+  "status": "ACTIVE",
+  "features": [
+    "posto auto",
+    "piscina",
+    "aria condizionata",
+    "pannelli fotovoltaici",
+    "giardino"
+  ],
+  "raw_text": "IT EN DE MENU HOME / PROPERTIES / TRILOCALI DI NUOVA COSTRUZIONE CON PISCINA A CAORLE FOR SALE · APARTMENT Trilocali di Nuova Costruzione con Piscina a Caorle CAORLE · VENEZIA PRICE €329,000 Photos (25) Floor plans (2) 1 / 25 FLOOR AREA 83 m² BEDROOMS 2 BATHROOMS 1 LIFT No ENERGY CLASS A4 Overview Welcome to your new home in Caorle! Imagine a house where the sea is just a stroll away, where greenery accompanies every moment of the day, and where relaxation begins as soon as you cross the threshold. In Lido Altanea, one of the most sought-after areas of Caorle, a new residence with a pool is emerging, nestled in a tranquil and well-kept environment, only 200 meters from the beach. The project is currently at an advanced rough stage with delivery expected by the end of 2027, offering elegant newly built three-room apartments designed for those looking for a modern, efficient, and comfortable seaside home. Ground floor apartments feature a bright living area with living room and kitchenette, covered porch, and private garden—ideal spaces to fully enjoy the beautiful season and create moments to share with family. The sleeping area consists of two bedrooms: one master bedroom and one double bedroom—with options available for either one or two bathrooms based on individual needs. First-floor units are distinguished by their spacious habitable terraces—perfect for outdoor dining, relaxing moments, and enjoyable summer evenings. Each apartment will be constructed according to energy class A4 standards featuring photovoltaic systems along with innovative technologies that emphasize residential comfort while minimizing consumption. Each solution includes its own covered parking space. To make your new home even more personal we collaborate with an interior design specialist who will assist buyers in selecting custom solutions. The construction site is already open for visits by appointment: an opportunity to see the project up close and choose the option that best suits your needs. Contact us for availability information, floor plans and specifications. JBC Jesolo - Piazza Drago 18, Jesolo Phone: +39 339 841 6857 Email: info@jbcimmobiliare.it Property details REFERENCE 5104735 PROPERTY TYPE Apartment AVAILABILITY Libero PROPERTY CONDITION Sconosciuto YEAR / PERIOD 2026 HEATING Autonomo SERVICE CHARGES 100 ENERGY PERFORMANCE 0 kWh/m2anno Location Viale delle Rondini Caorle · Venezia OPEN LOCATION ON MAP → Features and highlights ✓ Aria condizionata ✓ Giardino ✓ Posto auto ✓ Soggiorno con angolo cottura ✓ Piano terra ✓ Primo piano ✓ Posizione al mare ✓ Immobile nuovo ✓ Predisposizione allarme ✓ Pannelli fotovoltaici ✓ Piscina ✓ Porticato ✓ Accesso per persone con disabilità ✓ Animali ammessi ✓ Tapparelle motorizzate ✓ Porta blindata ✓ Terrazzi: 1 ✓ Piani totali edificio: 1 ✓ Locali: 3 ✓ Vista aperta ✓ Fatturato: 0 € ✓ Fee di ingresso: 0 € ✓ Volumetria: 0 m³ ✓ Superficie giardino: 30 m² ✓ Superficie aree esterne: 0 m² ✓ Altezza piano: 0 m ✓ Potenza cabina elettrica: 0 kW ✓ Distanza dal mare: 200 m Description in other languages Italian German French Request information Contact: Elisa Zanetti · ezanetti@jbcimmobiliare.it Leave your contact details to receive the full property information and arrange a private viewing. FULL NAME * PHONE NUMBER * EMAIL ADDRESS * MESSAGE Data submitted through this form is processed to handle your request, as described in our Privacy Policy. REQUEST INFORMATION REQUEST INFORMATION SEND REQUEST Data submitted through this form is processed to handle your request, as described in our Privacy Policy. JBC IMMOBILIARE “Where your home comes to life” Real estate agency specialising in the sale of apartments, houses and commercial properties. INSTAGRAM FACEBOOK PROPERTIES New Developments Properties for Sale Property Valuation AGENCY About Us Franchising Join Our Team Our Offices OFFICES JESOLO +39 339 841 6857 ODERZO +39 340 467 5474 EMAIL info@jbcimmobiliare.it © 2026 JBC Immobiliare di Manuele Sutto VAT IT04841350277 · Piazza Drago 18, 30016 Jesolo (VE) Privacy Policy Cookie Policy Cookie preferences Before you continue This site sets no cookies of its own. The interactive map on the Offices page uses Google Maps and only loads if you consent: until then it stays a plain link to Google Maps, with no cookie set. Cookie Policy NECESSARY ONLY ACCEPT",
+  "captured_at": "2026-09-18T11:53:01Z",
+  "source_name": "JBC Immobiliare — Nuove Costruzioni",
+  "configured_location": "Adriatic coverage",
+  "raw_reference": "data/raw/2026-09-18T11-31-54Z/jbc_nuove_costruzioni/listing-00188.json"
+}

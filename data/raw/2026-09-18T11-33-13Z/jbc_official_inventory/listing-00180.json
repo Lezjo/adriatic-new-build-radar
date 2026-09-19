@@ -1,0 +1,55 @@
+{
+  "source": "jbc_official_inventory",
+  "source_id": "jbc_official_inventory",
+  "source_url": "https://www.jbcimmobiliare.it/en/immobili/5029091-appartamenti-trilocali-con-terrazza-o-giardino-privato-a-jesolo",
+  "location": "Jesolo",
+  "location_confidence": "high",
+  "location_evidence": [
+    {
+      "field": "url",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo"
+      ],
+      "score": 8
+    },
+    {
+      "field": "title",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo"
+      ],
+      "score": 6
+    },
+    {
+      "field": "body",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo"
+      ],
+      "score": 1
+    }
+  ],
+  "listing_id": "url:ff4af6e8f0b1cbcb79d4063045f00f2b31c8d304",
+  "listing_title": "Appartamenti Trilocali con Terrazza o Giardino Privato a Jesolo — JBC Immobiliare",
+  "price": 375000,
+  "area_m2": 90.0,
+  "rooms": null,
+  "floor": "plans",
+  "energy_class": null,
+  "unit_id": null,
+  "record_type": "PROJECT",
+  "status": "ACTIVE",
+  "features": [
+    "posto auto",
+    "aria condizionata",
+    "pannelli fotovoltaici",
+    "terrazza",
+    "giardino"
+  ],
+  "raw_text": "IT EN DE MENU HOME / PROPERTIES / APPARTAMENTI TRILOCALI CON TERRAZZA O GIARDINO PRIVATO A JESOLO FOR SALE · APARTMENT Appartamenti Trilocali con Terrazza o Giardino Privato a Jesolo PIAZZA MARCONI - DRAGO · JESOLO · VENEZIA PRICE €375,000 Photos (27) Floor plans (0) 1 / 27 FLOOR AREA 90 m² BEDROOMS 2 BATHROOMS 1 LIFT No ENERGY CLASS A3 Overview Welcome to your new home in Jesolo! In the most authentic and sought-after heart of Jesolo, just a few steps from the central Piazza Drago and only 400 meters from the sea, stands Residence EQUILIUM. This exclusive residential context, completed in 2022 and consisting of only 6 housing units, has been designed for those who wish to live in the city center without sacrificing tranquility. The structure is distinguished by high construction standards classified as energy class A3 and the use of cutting-edge technologies, including a heat pump system that ensures excellent living comfort throughout every season of the year and lasting value over time. Within this Residence, we offer four three-room apartments for sale, characterized by impeccable and functional internal space distribution. Each unit opens onto a generous and bright living area with an open-space living room and kitchen, designed as the heart of the home. The sleeping area includes a spacious master bedroom, a comfortable single bedroom, a modern bathroom, and an essential storage room. Exclusive ground floor solution: this apartment features a private garden perfect for enjoying moments of relaxation outdoors and comes with two parking spaces equipped with charging stations. Offered at a price of €375,000 (unfurnished). Three units on the first floor: all featuring a splendid private solarium terrace measuring 45 sqm along with an uncovered parking space equipped with electric vehicle charging station. Depending on exposure and desired furnishing options you can choose between an unfurnished variant at €440,000 North exposure or opt for maximum convenience with furnished options starting at €460,000 where one highlights is already furnished central unit. Each first-floor solution is complemented by an uncovered parking space already prepared for electric vehicle charging. The sale is subject to registration tax. The sale comes from individuals. A concrete real estate proposal attended to detail ready to be lived in the heart of Jesolo Lido. Contact us for more information or to schedule a visit. JBC Jesolo - Piazza Drago 18, Jesolo Cell: +39 339 8416857 Email: info@jbcimmobiliare.it Property details REFERENCE 5029091 PROPERTY TYPE Apartment AVAILABILITY Libero PROPERTY CONDITION Ottimo YEAR / PERIOD 2022 HEATING Autonomo, a pavimento SERVICE CHARGES 550 ENERGY PERFORMANCE 0 kWh/m2anno Location Via Equilio 30 Piazza Marconi - Drago · Jesolo · Venezia OPEN LOCATION ON MAP → Features and highlights ✓ Aria condizionata ✓ Ingresso indipendente ✓ Posto auto ✓ Soggiorno con angolo cottura ✓ Allarme ✓ Piano terra ✓ Primo piano ✓ Posizione al mare ✓ Pannelli fotovoltaici ✓ Accesso per persone con disabilità ✓ Animali ammessi ✓ Tapparelle motorizzate ✓ Porta blindata ✓ Ripostigli: 1 ✓ Terrazzi: 1 ✓ Piani totali edificio: 2 ✓ Locali: 3 ✓ Vista aperta ✓ Fatturato: 0 € ✓ Fee di ingresso: 0 € ✓ Volumetria: 0 m³ ✓ Superficie giardino: 0 m² ✓ Superficie aree esterne: 0 m² ✓ Altezza piano: 0 m ✓ Potenza cabina elettrica: 0 kW ✓ Distanza dal mare: 400 m Description in other languages Italian German Portuguese Russian Request information Contact: Marco Carlesso · m.carlesso@jbcimmobiliare.it Leave your contact details to receive the full property information and arrange a private viewing. FULL NAME * PHONE NUMBER * EMAIL ADDRESS * MESSAGE Data submitted through this form is processed to handle your request, as described in our Privacy Policy. REQUEST INFORMATION REQUEST INFORMATION SEND REQUEST Data submitted through this form is processed to handle your request, as described in our Privacy Policy. JBC IMMOBILIARE “Where your home comes to life” Real estate agency specialising in the sale of apartments, houses and commercial properties. INSTAGRAM FACEBOOK PROPERTIES New Developments Properties for Sale Property Valuation AGENCY About Us Franchising Join Our Team Our Offices OFFICES JESOLO +39 339 841 6857 ODERZO +39 340 467 5474 EMAIL info@jbcimmobiliare.it © 2026 JBC Immobiliare di Manuele Sutto VAT IT04841350277 · Piazza Drago 18, 30016 Jesolo (VE) Privacy Policy Cookie Policy Cookie preferences Before you continue This site sets no cookies of its own. The interactive map on the Offices page uses Google Maps and only loads if you consent: until then it stays a plain link to Google Maps, with no cookie set. Cookie Policy NECESSARY ONLY ACCEPT",
+  "captured_at": "2026-09-18T11:42:45Z",
+  "source_name": "JBC Immobiliare — official",
+  "configured_location": "Adriatic coverage",
+  "raw_reference": "data/raw/2026-09-18T11-33-13Z/jbc_official_inventory/listing-00180.json"
+}

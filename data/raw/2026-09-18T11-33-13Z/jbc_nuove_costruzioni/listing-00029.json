@@ -1,0 +1,46 @@
+{
+  "source": "jbc_nuove_costruzioni",
+  "source_id": "jbc_nuove_costruzioni",
+  "source_url": "https://www.jbcimmobiliare.it/en/immobili/5127594-teatro-esclusive-nuove-residenze-nel-cuore-di-conegliano",
+  "location": null,
+  "location_confidence": "unknown",
+  "location_evidence": [
+    {
+      "field": "body",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo"
+      ],
+      "score": 1
+    },
+    {
+      "field": "body",
+      "location": "Treviso",
+      "terms": [
+        "treviso"
+      ],
+      "score": 1
+    }
+  ],
+  "listing_id": "url:518e15f799c223107ed98ae2401867c188ac88f6",
+  "listing_title": "TEATRO – Esclusive Nuove Residenze nel cuore di Conegliano — JBC Immobiliare",
+  "price": null,
+  "area_m2": 100.0,
+  "rooms": null,
+  "floor": "plans",
+  "energy_class": null,
+  "unit_id": null,
+  "record_type": "PROJECT",
+  "status": "ACTIVE",
+  "features": [
+    "garage",
+    "aria condizionata",
+    "pannelli fotovoltaici",
+    "giardino"
+  ],
+  "raw_text": "IT EN DE MENU HOME / NEW DEVELOPMENTS / TEATRO – ESCLUSIVE NUOVE RESIDENZE NEL CUORE DI CONEGLIANO NEW DEVELOPMENT · APARTMENT TEATRO – Esclusive Nuove Residenze nel cuore di Conegliano CONEGLIANO - CENTRO · CONEGLIANO · TREVISO PRICE Price on request Photos (16) Floor plans (0) 1 / 16 FLOOR AREA 100 m² BEDROOMS 3 BATHROOMS 2 LIFT Yes ENERGY CLASS A4 Overview In the heart of Conegliano, just a few steps from the Cathedral, the Accademia Theater, and the historic center, TEATRO is born: an exclusive residential project on Via Teatro Vecchio, designed for those who wish to live in a city with elegance, privacy, and contemporary style. This development consists of only five residences where architecture meets design and each apartment becomes a unique space crafted to offer comfort, brightness, and quality living. Available options include functional ground-floor apartments, spacious homes with three bedrooms and two bathrooms, one residence with a terrace and approximately 300 sqm of private garden, as well as a spectacular panoramic penthouse with two terraces. Commercial areas vary approximately from about 92 to 143 sqm allowing you to choose the solution that best fits your needs. The proposal also includes cellars, accessory rooms, technical spaces, and large garages. High-quality materials, refined finishes and environments defined by contemporary design tell a new idea of living where aesthetics and functionality coexist in perfect harmony. To make each residence even more personal there is also a dedicated interior design service available: specialized decorators can create completely customized solutions and furnishings designed to enhance the spaces and style of each apartment or penthouse. The location is one of the main strengths of this development. The Cathedral of Conegliano is about 300 meters away; the train station around 500 meters; while Conegliano Castle is approximately 650 meters distant. Shops, restaurants services & cultural places are conveniently reachable on foot. TEATRO is ideally suited for anyone looking for prestigious primary residence in central Conegliano or valuable real estate investment within an exclusive project consisting of few units. Here daily life takes center stage. Availability prices & features for individual residences upon request. Images & graphic representations are illustrative purposes only. Areas finishes & characteristics must be verified concerning individual property unit. Contact us for more information JBC Immobiliare Piazza Drago n.18 Jesolo Lido (VE) Mobile: +39 3398416857 | Email: info@jbcimmobiliare.it Property details REFERENCE 5127594 PROPERTY TYPE Apartment AVAILABILITY Libero PROPERTY CONDITION Nuovo YEAR / PERIOD 2026 HEATING Termopompa, a pavimento SERVICE CHARGES 10 ENERGY PERFORMANCE 0 kWh/m2anno Location Via del Teatro Vecchio 17 Conegliano - Centro · Conegliano · Treviso OPEN LOCATION ON MAP → Features and highlights ✓ Cucina ✓ Soggiorno ✓ Garage ✓ Aria condizionata ✓ Posizione in collina ✓ Immobile nuovo ✓ Immobile di prestigio ✓ Pannelli fotovoltaici ✓ Locali: 4 ✓ Fatturato: 0 € ✓ Fee di ingresso: 0 € ✓ Volumetria: 0 m³ ✓ Superficie giardino: 0 m² ✓ Superficie aree esterne: 0 m² ✓ Altezza piano: 0 m ✓ Potenza cabina elettrica: 0 kW ✓ Distanza dal mare: 0 m Description in other languages Italian German French Request information Contact: Manuele Sutto · info@jbcimmobiliare.it Leave your contact details to receive the full property information and arrange a private viewing. FULL NAME * PHONE NUMBER * EMAIL ADDRESS * MESSAGE Data submitted through this form is processed to handle your request, as described in our Privacy Policy. REQUEST INFORMATION REQUEST INFORMATION SEND REQUEST Data submitted through this form is processed to handle your request, as described in our Privacy Policy. JBC IMMOBILIARE “Where your home comes to life” Real estate agency specialising in the sale of apartments, houses and commercial properties. INSTAGRAM FACEBOOK PROPERTIES New Developments Properties for Sale Property Valuation AGENCY About Us Franchising Join Our Team Our Offices OFFICES JESOLO +39 339 841 6857 ODERZO +39 340 467 5474 EMAIL info@jbcimmobiliare.it © 2026 JBC Immobiliare di Manuele Sutto VAT IT04841350277 · Piazza Drago 18, 30016 Jesolo (VE) Privacy Policy Cookie Policy Cookie preferences Before you continue This site sets no cookies of its own. The interactive map on the Offices page uses Google Maps and only loads if you consent: until then it stays a plain link to Google Maps, with no cookie set. Cookie Policy NECESSARY ONLY ACCEPT",
+  "captured_at": "2026-09-18T11:48:11Z",
+  "source_name": "JBC Immobiliare — Nuove Costruzioni",
+  "configured_location": "Adriatic coverage",
+  "raw_reference": "data/raw/2026-09-18T11-33-13Z/jbc_nuove_costruzioni/listing-00029.json"
+}

@@ -1,0 +1,55 @@
+{
+  "source": "jbc_nuove_costruzioni",
+  "source_id": "jbc_nuove_costruzioni",
+  "source_url": "https://www.jbcimmobiliare.it/en/immobili/5127109-spaziosi-garage-in-vendita-zona-faro-lido-di-jesolo",
+  "location": "Jesolo",
+  "location_confidence": "high",
+  "location_evidence": [
+    {
+      "field": "url",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo",
+        "lido di jesolo"
+      ],
+      "score": 16
+    },
+    {
+      "field": "title",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo",
+        "lido di jesolo"
+      ],
+      "score": 12
+    },
+    {
+      "field": "body",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo",
+        "lido di jesolo"
+      ],
+      "score": 2
+    }
+  ],
+  "listing_id": "url:ea42dad9f279b7805271149ef9259584b7b70533",
+  "listing_title": "Spaziosi Garage in Vendita | Zona Faro – Lido di Jesolo — JBC Immobiliare",
+  "price": 41000,
+  "area_m2": 21.0,
+  "rooms": null,
+  "floor": "plans",
+  "energy_class": null,
+  "unit_id": null,
+  "record_type": "PROJECT",
+  "status": "ACTIVE",
+  "features": [
+    "garage",
+    "giardino"
+  ],
+  "raw_text": "IT EN DE MENU HOME / PROPERTIES / SPAZIOSI GARAGE IN VENDITA | ZONA FARO – LIDO DI JESOLO FOR SALE · GARAGE Spaziosi Garage in Vendita | Zona Faro – Lido di Jesolo FARO · JESOLO · VENEZIA PRICE €41,000 Photos (7) Floor plans (1) 1 / 7 FLOOR AREA 21 m² LIFT No ENERGY CLASS Non soggetto Overview In a highly strategic location just a few steps from Piazza Nember, we offer for sale two individual garages situated side by side. Ideal both as storage for cars and summer equipment, as well as an investment opportunity to generate income. The properties, located on the ground floor with easy access and ample maneuvering space, have generous sizes of 19 m² and 21 m² respectively. Maximum flexibility in purchasing is offered, with the possibility to acquire them either as a single block or separately, depending on different needs. For more details, price information or to arrange an onsite visit please contact us: JBC Jesolo - Piazza Drago 18, Jesolo Phone: +39 339 841 6857 Email: info@jbcimmobiliare.it. **Photos are for illustrative purposes only. Some images have been processed using Artificial Intelligence.** Property details REFERENCE 5127109 PROPERTY TYPE Garage AVAILABILITY Libero PROPERTY CONDITION Buono YEAR / PERIOD 2001 SERVICE CHARGES 0 ENERGY PERFORMANCE 0 kWh/m2anno Location Piazza Tommaso Nember Faro · Jesolo · Venezia OPEN LOCATION ON MAP → Features and highlights ✓ Piano terra ✓ Posizione al mare ✓ Piani totali edificio: 2 ✓ Fatturato: 0 € ✓ Fee di ingresso: 0 € ✓ Volumetria: 0 m³ ✓ Superficie giardino: 0 m² ✓ Superficie aree esterne: 0 m² ✓ Altezza piano: 0 m ✓ Potenza cabina elettrica: 0 kW ✓ Distanza dal mare: 200 m Description in other languages Italian German Russian Request information Contact: Federico Di Pillo · fdipillosdl@gmail.com Leave your contact details to receive the full property information and arrange a private viewing. FULL NAME * PHONE NUMBER * EMAIL ADDRESS * MESSAGE Data submitted through this form is processed to handle your request, as described in our Privacy Policy. REQUEST INFORMATION REQUEST INFORMATION SEND REQUEST Data submitted through this form is processed to handle your request, as described in our Privacy Policy. JBC IMMOBILIARE “Where your home comes to life” Real estate agency specialising in the sale of apartments, houses and commercial properties. INSTAGRAM FACEBOOK PROPERTIES New Developments Properties for Sale Property Valuation AGENCY About Us Franchising Join Our Team Our Offices OFFICES JESOLO +39 339 841 6857 ODERZO +39 340 467 5474 EMAIL info@jbcimmobiliare.it © 2026 JBC Immobiliare di Manuele Sutto VAT IT04841350277 · Piazza Drago 18, 30016 Jesolo (VE) Privacy Policy Cookie Policy Cookie preferences Before you continue This site sets no cookies of its own. The interactive map on the Offices page uses Google Maps and only loads if you consent: until then it stays a plain link to Google Maps, with no cookie set. Cookie Policy NECESSARY ONLY ACCEPT",
+  "captured_at": "2026-09-18T11:53:59Z",
+  "source_name": "JBC Immobiliare — Nuove Costruzioni",
+  "configured_location": "Adriatic coverage",
+  "raw_reference": "data/raw/2026-09-18T11-33-13Z/jbc_nuove_costruzioni/listing-00200.json"
+}

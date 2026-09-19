@@ -1,0 +1,56 @@
+{
+  "source": "jbc_nuove_costruzioni",
+  "source_id": "jbc_nuove_costruzioni",
+  "source_url": "https://www.jbcimmobiliare.it/en/immobili/4902097-attico-unico-al-piano-piscina-panoramica-jesolo",
+  "location": "Jesolo",
+  "location_confidence": "high",
+  "location_evidence": [
+    {
+      "field": "url",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo"
+      ],
+      "score": 8
+    },
+    {
+      "field": "title",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo"
+      ],
+      "score": 6
+    },
+    {
+      "field": "body",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo",
+        "piazza mazzini"
+      ],
+      "score": 2
+    }
+  ],
+  "listing_id": "url:8b5b13cfbce590c607e7ffdb9e9363048bed5a7f",
+  "listing_title": "Attico Unico Al Piano | Piscina Panoramica – Jesolo — JBC Immobiliare",
+  "price": 880000,
+  "area_m2": 130.0,
+  "rooms": null,
+  "floor": "plans",
+  "energy_class": null,
+  "unit_id": null,
+  "record_type": "PROJECT",
+  "status": "ACTIVE",
+  "features": [
+    "garage",
+    "piscina",
+    "aria condizionata",
+    "fronte mare",
+    "giardino"
+  ],
+  "raw_text": "IT EN DE MENU HOME / PROPERTIES / ATTICO UNICO AL PIANO | PISCINA PANORAMICA – JESOLO FOR SALE · PENTHOUSE Attico Unico Al Piano | Piscina Panoramica – Jesolo PIAZZA MAZZINI · JESOLO · VENEZIA PRICE €880,000 Photos (19) Floor plans (0) 1 / 19 FLOOR AREA 130 m² BEDROOMS 3 BATHROOMS 2 LIFT Yes ENERGY CLASS A3 Overview Welcome to your new home in Jesolo! In the heart of Jesolo Lido, in the renowned setting of Piazza Mazzini and just steps from the sea, this exclusive unique penthouse occupies the entire seventh level of an elegant residence with only seven housing units. The property makes a strong impression from the very first moment due to its exceptional natural brightness and perfect dialogue between indoor and outdoor spaces. The living area, refined and featuring contemporary design, flows seamlessly onto a large livable terrace: a true outdoor lounge with glimpses of the sea, designed for sunlit breakfasts, sunset aperitifs, and pleasant summer dinners. The sleeping area welcomes three spacious bedrooms, including an elegant master suite with en-suite bathroom, as well as a second designer bathroom serving the house. Crowning the property is the rooftop of the residence: a panoramic terrace reserved exclusively for residents, enriched by a spectacular pool from which one can dominate Jesolo's skyline while losing oneself in views of the sea in total tranquility. The independence of being on the top floor, exclusivity of sharing a pool with very few units, and convenience of having Via Bafile, beach access and all services within walking distance make this dwelling truly rare opportunity in Jesolo Lido’s real estate market. Ideal for those seeking prestigious accommodation characterized by spacious areas, three bedrooms, terrace overlooking sea views and high-level comfort. Economic details: Price of penthouse: €880.000 Possibility to purchase separate accessories: Garage: €50.000 Private cellar: €20.000 --- Total value for entire property (including penthouse garage and cellar): €950.000 --- Contact us for more information: JBC Jesolo - Piazza Drago 18, Jesolo Number: +39 339 841 6857 Email: info@jbcimmobiliare.it Property details REFERENCE 4902097 PROPERTY TYPE Penthouse AVAILABILITY Libero PROPERTY CONDITION Ottimo YEAR / PERIOD 2021 HEATING Autonomo, a pavimento ENERGY PERFORMANCE 0 kWh/m2anno Location Via Andrea Bafile 26° accesso al mare Piazza Mazzini · Jesolo · Venezia OPEN LOCATION ON MAP → Features and highlights ✓ Soggiorno ✓ Garage ✓ Cantina ✓ Aria condizionata ✓ Soggiorno con angolo cottura ✓ Posizione al mare ✓ Piscina ✓ Frigorifero ✓ Lavatrice ✓ Lavastoviglie ✓ Televisione ✓ Forno ✓ Cucina arredata ✓ Tapparelle motorizzate ✓ Ripostigli: 1 ✓ Terrazzi: 3 ✓ Piani totali edificio: 8 ✓ Piano: 7 ✓ Locali: 5 ✓ Fronte mare ✓ Fatturato: 0 € ✓ Fee di ingresso: 0 € ✓ Volumetria: 0 m³ ✓ Superficie giardino: 0 m² ✓ Superficie aree esterne: 0 m² ✓ Altezza piano: 0 m ✓ Potenza cabina elettrica: 0 kW ✓ Distanza dal mare: 0 m Description in other languages Italian German French Request information Contact: Federico Di Pillo · fdipillosdl@gmail.com Leave your contact details to receive the full property information and arrange a private viewing. FULL NAME * PHONE NUMBER * EMAIL ADDRESS * MESSAGE Data submitted through this form is processed to handle your request, as described in our Privacy Policy. REQUEST INFORMATION REQUEST INFORMATION SEND REQUEST Data submitted through this form is processed to handle your request, as described in our Privacy Policy. JBC IMMOBILIARE “Where your home comes to life” Real estate agency specialising in the sale of apartments, houses and commercial properties. INSTAGRAM FACEBOOK PROPERTIES New Developments Properties for Sale Property Valuation AGENCY About Us Franchising Join Our Team Our Offices OFFICES JESOLO +39 339 841 6857 ODERZO +39 340 467 5474 EMAIL info@jbcimmobiliare.it © 2026 JBC Immobiliare di Manuele Sutto VAT IT04841350277 · Piazza Drago 18, 30016 Jesolo (VE) Privacy Policy Cookie Policy Cookie preferences Before you continue This site sets no cookies of its own. The interactive map on the Offices page uses Google Maps and only loads if you consent: until then it stays a plain link to Google Maps, with no cookie set. Cookie Policy NECESSARY ONLY ACCEPT",
+  "captured_at": "2026-09-18T11:52:34Z",
+  "source_name": "JBC Immobiliare — Nuove Costruzioni",
+  "configured_location": "Adriatic coverage",
+  "raw_reference": "data/raw/2026-09-18T11-31-54Z/jbc_nuove_costruzioni/listing-00175.json"
+}

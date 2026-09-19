@@ -1,0 +1,59 @@
+{
+  "source": "jbc_official_inventory",
+  "source_id": "jbc_official_inventory",
+  "source_url": "https://www.jbcimmobiliare.it/en/immobili/4994664-nuovo-trilocale-con-piscina-fronte-mare-a-jesolo",
+  "location": "Jesolo",
+  "location_confidence": "high",
+  "location_evidence": [
+    {
+      "field": "url",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo"
+      ],
+      "score": 8
+    },
+    {
+      "field": "title",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo"
+      ],
+      "score": 6
+    },
+    {
+      "field": "body",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo"
+      ],
+      "score": 1
+    }
+  ],
+  "listing_id": "url:8dabb9492258a12aa4a5d33c0e24d44a816e6fda",
+  "listing_title": "Nuovo Trilocale con Piscina | Fronte Mare | a Jesolo — JBC Immobiliare",
+  "price": 482000,
+  "area_m2": 90.0,
+  "rooms": null,
+  "floor": "plans",
+  "energy_class": null,
+  "unit_id": null,
+  "record_type": "PROJECT",
+  "status": "ACTIVE",
+  "features": [
+    "posto auto",
+    "piscina",
+    "aria condizionata",
+    "pannelli solari",
+    "pannelli fotovoltaici",
+    "vista mare",
+    "fronte mare",
+    "giardino",
+    "area fitness"
+  ],
+  "raw_text": "IT EN DE MENU HOME / NEW DEVELOPMENTS / NUOVO TRILOCALE CON PISCINA | FRONTE MARE | A JESOLO NEW DEVELOPMENT · APARTMENT Nuovo Trilocale con Piscina | Fronte Mare | a Jesolo PIAZZA TORINO · JESOLO · VENEZIA PRICE €482,000 Photos (0) Floor plans (0) JBC Images of this property are available on request. FLOOR AREA 90 m² BEDROOMS 2 BATHROOMS 2 LIFT No ENERGY CLASS A4 Overview Welcome to your new home in Jesolo Lido! This exclusive newly built three-room apartment is located on the fifth floor of the prestigious W-ONE residence, in the heart of Jesolo Lido. Characterized by maximum efficiency with an Energy Class A4 rating, this property (Unit U20) offers perfectly optimized spaces consisting of a bright open-plan living area, two cozy bedrooms, two meticulously finished bathrooms, and a beautiful livable terrace. The property also includes a private parking space and a reserved beach spot. - The Spaces of the Three-Room Apartment and the Livable Terrace The living area stands out for its extraordinary brightness and harmoniously merges with the large livable terrace, creating the ideal environment for outdoor dinners and moments of pure relaxation. The sleeping area consists of two comfortable bedrooms and two contemporary designed bathrooms, crafted to ensure maximum daily functionality within a refined modern style. - Exclusive Services of the Residence Living in W-ONE means accessing a superior comfort experience. Outside there is a spacious communal pool perfect for summer days, while inside there is an equipped gym accessible 24/7. The private parking space and reserved beach spot guarantee you can enjoy the summer season in total privacy and convenience, with the sea just steps away from home. - Benefits and Purchase Services The investment becomes even more advantageous thanks to Sisma Bonus Acquisti; the proposed price has already been calculated net of tax benefits. For those who want a tailored solution, our interior designers are available to define materials and finishes that customize your home according to your style. Additionally, if you need to sell your current property, we manage all aspects of trade-in by enhancing your real estate value so that transitioning into your new home is simple and worry-free. Live by the sea directly at home! Contact us for more information or to schedule a visit: JBC Immobiliare Piazza Drago n.18, Jesolo Lido (VE) Cell: 339 8416857 | Email: info@jbcimmobiliare.it Property details REFERENCE 4994664 PROPERTY TYPE Apartment AVAILABILITY Libero PROPERTY CONDITION Nuovo YEAR / PERIOD 2026 SERVICE CHARGES 100 ENERGY PERFORMANCE 0 kWh/m2anno Location Via Olanda Piazza Torino · Jesolo · Venezia OPEN LOCATION ON MAP → Features and highlights ✓ Aria condizionata ✓ Posto auto ✓ Soggiorno con angolo cottura ✓ Posizione al mare ✓ Immobile nuovo ✓ Pannelli solari ✓ Pannelli fotovoltaici ✓ Piscina ✓ Area fitness ✓ Piani totali edificio: 7 ✓ Piano: 5 ✓ Locali: 3 ✓ Vista mare ✓ Fatturato: 0 € ✓ Fee di ingresso: 0 € ✓ Volumetria: 0 m³ ✓ Superficie giardino: 0 m² ✓ Superficie aree esterne: 0 m² ✓ Altezza piano: 0 m ✓ Potenza cabina elettrica: 0 kW ✓ Distanza dal mare: 100 m Finishes Finiture di pregio Description in other languages Italian German Request information Contact: Manuele Sutto · info@jbcimmobiliare.it Leave your contact details to receive the full property information and arrange a private viewing. FULL NAME * PHONE NUMBER * EMAIL ADDRESS * MESSAGE Data submitted through this form is processed to handle your request, as described in our Privacy Policy. REQUEST INFORMATION REQUEST INFORMATION SEND REQUEST Data submitted through this form is processed to handle your request, as described in our Privacy Policy. JBC IMMOBILIARE “Where your home comes to life” Real estate agency specialising in the sale of apartments, houses and commercial properties. INSTAGRAM FACEBOOK PROPERTIES New Developments Properties for Sale Property Valuation AGENCY About Us Franchising Join Our Team Our Offices OFFICES JESOLO +39 339 841 6857 ODERZO +39 340 467 5474 EMAIL info@jbcimmobiliare.it © 2026 JBC Immobiliare di Manuele Sutto VAT IT04841350277 · Piazza Drago 18, 30016 Jesolo (VE) Privacy Policy Cookie Policy Cookie preferences Before you continue This site sets no cookies of its own. The interactive map on the Offices page uses Google Maps and only loads if you consent: until then it stays a plain link to Google Maps, with no cookie set. Cookie Policy NECESSARY ONLY ACCEPT",
+  "captured_at": "2026-09-18T11:37:52Z",
+  "source_name": "JBC Immobiliare — official",
+  "configured_location": "Adriatic coverage",
+  "raw_reference": "data/raw/2026-09-18T11-31-54Z/jbc_official_inventory/listing-00077.json"
+}

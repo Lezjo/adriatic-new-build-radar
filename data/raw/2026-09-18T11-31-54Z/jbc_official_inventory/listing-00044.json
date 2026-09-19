@@ -1,0 +1,54 @@
+{
+  "source": "jbc_official_inventory",
+  "source_id": "jbc_official_inventory",
+  "source_url": "https://www.jbcimmobiliare.it/immobili/5110274-luminoso-bilocale-con-terrazzo-vicino-al-mare-a-jesolo-lido",
+  "location": "Jesolo",
+  "location_confidence": "high",
+  "location_evidence": [
+    {
+      "field": "url",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo"
+      ],
+      "score": 8
+    },
+    {
+      "field": "title",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo"
+      ],
+      "score": 6
+    },
+    {
+      "field": "body",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo"
+      ],
+      "score": 1
+    }
+  ],
+  "listing_id": "url:7b4d87afbfa71d8bc17186799db6f9ea72ee52e5",
+  "listing_title": "Luminoso Bilocale con Terrazzo | vicino al Mare | A Jesolo Lido — JBC Immobiliare",
+  "price": 185000,
+  "area_m2": 50.0,
+  "rooms": null,
+  "floor": null,
+  "energy_class": "E",
+  "unit_id": null,
+  "record_type": "PROJECT",
+  "status": "ACTIVE",
+  "features": [
+    "garage",
+    "ascensore",
+    "aria condizionata",
+    "giardino"
+  ],
+  "raw_text": "IT EN DE MENU HOME / IMMOBILI / LUMINOSO BILOCALE CON TERRAZZO | VICINO AL MARE | A JESOLO LIDO VENDITA · APPARTAMENTO Luminoso Bilocale con Terrazzo | vicino al Mare | A Jesolo Lido FARO · JESOLO · VENEZIA PREZZO 185.000 € Fotografie (12) Planimetrie (0) 1 / 12 SUPERFICIE 50 m² CAMERE DA LETTO 1 BAGNI 1 ASCENSORE Sì CLASSE ENERGETICA In definizione Presentazione Benvenuti nella vostra nuova casa a Jesolo! Situato al primo piano, a pochissimi passi dal mare, questo bilocale è pensato per chi cerca il perfetto equilibrio tra praticità, comfort e atmosfera marina. La zona giorno ti accoglie in uno spazio luminoso e ben organizzato, dove il soggiorno open space e la cucina a vista convivono armoniosamente, creando l'ambiente ideale sia per la vita di tutti i giorni sia per indimenticabili momenti di vacanza. Proseguendo verso la zona notte, un disimpegno ti accompagna a un bagno funzionale e a una camera matrimoniale dalle metrature generose. A completare la proprietà c'è un piacevole terrazzo, lo sfogo esterno perfetto per godersi il relax all'aria aperta e respirare la brezza del mare. Che tu stia cercando il tuo rifugio personale o un’opportunità strategica ad alto rendimento, questa proprietà rappresenta una vera certezza. La posizione invidiabile e la fortissima richiesta di locazioni turistiche a Jesolo Lido la rendono infatti un investimento sicuro, capace di garantire un'ottima e costante redditività nel tempo. E per vivere la località in totale spensieratezza — o aggiungere un valore imbattibile sul mercato degli affitti — c'è la possibilità di acquistare separatamente un comodo garage di proprietà: un vero e proprio privilegio per la zona del Lido. Contattaci per maggiori informazioni o per fissare una visita. JBC Jesolo - Piazza Drago 18, Jesolo Numero: +39 339 841 6857 Email: info@jbcimmobiliare.it Dettagli dell’immobile RIFERIMENTO 5110274 TIPOLOGIA Appartamento DISPONIBILITÀ Libero STATO IMMOBILE Buono ANNO / EPOCA 2001 RISCALDAMENTO Autonomo SPESE CONDOMINIALI 70 PRESTAZIONE ENERGETICA 0 kWh/m2anno Posizione Via Gorizia 85 Faro · Jesolo · Venezia APRI LA POSIZIONE SULLA MAPPA → Caratteristiche ed elementi di pregio ✓ Aria condizionata ✓ Soggiorno con angolo cottura ✓ Primo piano ✓ Posizione al mare ✓ Caldaia a condensazione ✓ Terrazzi: 1 ✓ Piani totali edificio: 4 ✓ Piano: 1 ✓ Locali: 2 ✓ Fatturato: 0 € ✓ Fee di ingresso: 0 € ✓ Volumetria: 0 m³ ✓ Superficie giardino: 0 m² ✓ Superficie aree esterne: 0 m² ✓ Altezza piano: 0 m ✓ Potenza cabina elettrica: 0 kW ✓ Distanza dal mare: 150 m Descrizione in altre lingue Tedesco Inglese Russo Richiedi informazioni Referente: Federico Di Pillo · fdipillosdl@gmail.com Lasciaci i tuoi riferimenti per ricevere la scheda dettagliata e programmare un sopralluogo riservato. NOME E COGNOME * RECAPITO TELEFONICO * INDIRIZZO E-MAIL * MESSAGGIO I dati inviati con questo modulo vengono trattati per gestire la tua richiesta, come descritto nella nostra Privacy Policy. RICHIEDI INFORMAZIONI RICHIEDI INFORMAZIONI INVIA RICHIESTA I dati inviati con questo modulo vengono trattati per gestire la tua richiesta, come descritto nella nostra Privacy Policy. JBC IMMOBILIARE “Where your home comes to life” Agenzia immobiliare specializzata nella vendita di appartamenti, case e locali commerciali. INSTAGRAM FACEBOOK IMMOBILI Nuove Costruzioni Vendita Immobili Valutazione Immobile AGENZIA Chi Siamo Franchising Lavora con Noi Le Nostre Sedi SEDI JESOLO +39 339 841 6857 ODERZO +39 340 467 5474 E-MAIL info@jbcimmobiliare.it © 2026 JBC Immobiliare di Manuele Sutto P.IVA IT04841350277 · Piazza Drago 18, 30016 Jesolo (VE) Privacy Policy Cookie Policy Preferenze cookie Prima di continuare Il sito non installa cookie propri. La mappa interattiva nella pagina Sedi usa Google Maps e si attiva solo se acconsenti: fino ad allora resta un link a Google Maps, senza alcun cookie. Cookie Policy SOLO NECESSARI ACCETTA",
+  "captured_at": "2026-09-18T11:36:22Z",
+  "source_name": "JBC Immobiliare — official",
+  "configured_location": "Adriatic coverage",
+  "raw_reference": "data/raw/2026-09-18T11-31-54Z/jbc_official_inventory/listing-00044.json"
+}

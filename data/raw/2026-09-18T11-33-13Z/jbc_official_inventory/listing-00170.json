@@ -1,0 +1,54 @@
+{
+  "source": "jbc_official_inventory",
+  "source_id": "jbc_official_inventory",
+  "source_url": "https://www.jbcimmobiliare.it/en/immobili/5111406-esclusiva-villetta-di-testa-nel-cuore-del-golf-jesolo-village",
+  "location": "Jesolo",
+  "location_confidence": "high",
+  "location_evidence": [
+    {
+      "field": "url",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo"
+      ],
+      "score": 8
+    },
+    {
+      "field": "title",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo"
+      ],
+      "score": 6
+    },
+    {
+      "field": "body",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo"
+      ],
+      "score": 1
+    }
+  ],
+  "listing_id": "url:b00db0fddc3d96bc21ede8791e4ce0457d6456c6",
+  "listing_title": "Esclusiva Villetta di Testa nel Cuore del Golf Jesolo Village — JBC Immobiliare",
+  "price": 419000,
+  "area_m2": 120.0,
+  "rooms": null,
+  "floor": "plans",
+  "energy_class": null,
+  "unit_id": null,
+  "record_type": "PROJECT",
+  "status": "ACTIVE",
+  "features": [
+    "posto auto",
+    "piscina",
+    "aria condizionata",
+    "giardino"
+  ],
+  "raw_text": "IT EN DE MENU HOME / PROPERTIES / ESCLUSIVA VILLETTA DI TESTA NEL CUORE DEL GOLF JESOLO VILLAGE FOR SALE · TOWNHOUSE Esclusiva Villetta di Testa nel Cuore del Golf Jesolo Village LIDO OVEST · JESOLO · VENEZIA PRICE €419,000 Photos (49) Floor plans (3) 1 / 49 FLOOR AREA 120 m² BEDROOMS 2 BATHROOMS 2 LIFT No ENERGY CLASS D Overview Welcome to your new home in Jesolo! In the prestigious setting of Golf Jesolo Village, one of the most sought-after and exclusive areas of Jesolo, surrounded by greenery and tranquility just minutes from the sea, we offer for sale a beautiful end townhouse characterized by spacious private areas, great independence, and a privileged position within the village. An ideal solution for those who wish to experience Jesolo in every season, away from chaos but with all comforts at hand, within a well-maintained environment where nature, relaxation, and quality of life meet. The property welcomes you on the ground floor with a bright and spacious living room with an open kitchen—a convivial space that opens directly to the outside where a pleasant patio overlooking the private garden becomes the perfect place for outdoor lunches, dinners with friends, and moments of absolute relaxation immersed in greenery. Also on this level is a bathroom with shower and a convenient storage room. Ascending to the first floor leads us to the sleeping area consisting of a master bedroom with private terrace, a second double bedroom, and a windowed bathroom with bathtub designed for functionality and comfort for family members and guests alike. An additional level leads up to an enchanting private solarium—an exclusive space where you can enjoy sunshine throughout the day while admiring stunning views over green golf parklands creating an unparalleled corner of tranquility. The townhouse enjoys excellent exposure which ensures brightness and pleasant environments during much of the day. The radiator heating also allows comfortable living even during winter months. Within this village community residents can take advantage of large communal swimming pool complete with children's area as well as jacuzzi zone; plus there’s always bar restaurant available making it ideal to fully enjoy common spaces without sacrificing convenience. Possibility to separately purchase covered parking space equipped with canopy along side small storage unit priced at €12.000. An exclusive residence perfect either as primary dwelling vacation home or premium investment opportunity—for anyone dreaming about owning house nestled amidst lush surroundings here in Jesolo enjoying privilege residing unique secluded context . Contact us for more information or schedule appointment: JBC Jesolo – Piazza Drago ,18 Tel 39 339 8416857 | Mail : info@jbcimmobiliare.it **Photos are purely illustrative purpose some images have been processed through Artificial Intelligence.** Property details REFERENCE 5111406 PROPERTY TYPE Townhouse AVAILABILITY Libero PROPERTY CONDITION Buono YEAR / PERIOD 2005 HEATING Autonomo SERVICE CHARGES 250 ENERGY PERFORMANCE 114.1 kWh/m2anno Location Via Peter Reichegger 126 Lido Ovest · Jesolo · Venezia OPEN LOCATION ON MAP → Features and highlights ✓ Cantina ✓ Aria condizionata ✓ Arredato ✓ Giardino ✓ Posto auto ✓ Soggiorno con angolo cottura ✓ Piano terra ✓ Posizione al mare ✓ Giardino condominiale ✓ Piscina ✓ Accesso per persone con disabilità ✓ Frigorifero ✓ Lavatrice ✓ Lavastoviglie ✓ Cassaforte ✓ Animali ammessi ✓ Televisione ✓ Forno ✓ Caldaia a condensazione ✓ Cucina arredata ✓ Portineria ✓ Porta blindata ✓ Ripostigli: 1 ✓ Terrazzi: 2 ✓ Piani totali edificio: 2 ✓ Locali: 3 ✓ Vista giardino ✓ Fatturato: 0 € ✓ Fee di ingresso: 0 € ✓ Volumetria: 0 m³ ✓ Superficie giardino: 218 m² ✓ Superficie aree esterne: 0 m² ✓ Altezza piano: 0 m ✓ Potenza cabina elettrica: 0 kW ✓ Distanza dal mare: 1000 m Description in other languages Italian German French Request information Contact: Elisa Zanetti · ezanetti@jbcimmobiliare.it Leave your contact details to receive the full property information and arrange a private viewing. FULL NAME * PHONE NUMBER * EMAIL ADDRESS * MESSAGE Data submitted through this form is processed to handle your request, as described in our Privacy Policy. REQUEST INFORMATION REQUEST INFORMATION SEND REQUEST Data submitted through this form is processed to handle your request, as described in our Privacy Policy. JBC IMMOBILIARE “Where your home comes to life” Real estate agency specialising in the sale of apartments, houses and commercial properties. INSTAGRAM FACEBOOK PROPERTIES New Developments Properties for Sale Property Valuation AGENCY About Us Franchising Join Our Team Our Offices OFFICES JESOLO +39 339 841 6857 ODERZO +39 340 467 5474 EMAIL info@jbcimmobiliare.it © 2026 JBC Immobiliare di Manuele Sutto VAT IT04841350277 · Piazza Drago 18, 30016 Jesolo (VE) Privacy Policy Cookie Policy Cookie preferences Before you continue This site sets no cookies of its own. The interactive map on the Offices pag",
+  "captured_at": "2026-09-18T11:42:09Z",
+  "source_name": "JBC Immobiliare — official",
+  "configured_location": "Adriatic coverage",
+  "raw_reference": "data/raw/2026-09-18T11-33-13Z/jbc_official_inventory/listing-00170.json"
+}

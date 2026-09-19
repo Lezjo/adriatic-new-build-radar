@@ -1,0 +1,52 @@
+{
+  "source": "jbc_nuove_costruzioni",
+  "source_id": "jbc_nuove_costruzioni",
+  "source_url": "https://www.jbcimmobiliare.it/en/immobili/4989068-casa-singola-con-giardino-a-jesolo-lido",
+  "location": "Jesolo",
+  "location_confidence": "high",
+  "location_evidence": [
+    {
+      "field": "url",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo"
+      ],
+      "score": 8
+    },
+    {
+      "field": "title",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo"
+      ],
+      "score": 6
+    },
+    {
+      "field": "body",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo"
+      ],
+      "score": 1
+    }
+  ],
+  "listing_id": "url:29cc983b4ad14e0f81e61312919dbb96541cc8df",
+  "listing_title": "Casa Singola con Giardino a Jesolo Lido — JBC Immobiliare",
+  "price": 550000,
+  "area_m2": 120.0,
+  "rooms": null,
+  "floor": "plans",
+  "energy_class": null,
+  "unit_id": null,
+  "record_type": "PROJECT",
+  "status": "ACTIVE",
+  "features": [
+    "aria condizionata",
+    "giardino"
+  ],
+  "raw_text": "IT EN DE MENU HOME / PROPERTIES / CASA SINGOLA CON GIARDINO A JESOLO LIDO FOR SALE · DETACHED HOUSE Casa Singola con Giardino a Jesolo Lido PIAZZA AURORA · JESOLO · VENEZIA PRICE €550,000 Photos (17) Floor plans (1) 1 / 17 FLOOR AREA 120 m² BEDROOMS 3 BATHROOMS 2 LIFT No ENERGY CLASS E Overview Welcome to your new home in Jesolo Lido! Just a few steps from Piazza Aurora and only 350 meters from the sea, we offer a single house surrounded by approximately 200 square meters of private garden, a space that provides privacy, tranquility, and the opportunity to enjoy summer in total freedom. The property spans about 100 square meters on one level and consists of spacious and well-distributed areas: entrance hall, a bright living room, separate kitchen, storage room, three generously sized double bedrooms—one with an en-suite bathroom featuring a windowed shower—and an additional bathroom with bathtub. Completing the property is a convenient external storage shed. This solution represents an increasingly rare opportunity: an independent house with private garden just minutes away from the beach, ideal as either an exclusive summer residence or as year-round living accommodation. Additionally, the property offers enormous potential for enhancement: thanks to the outdoor spaces it’s possible to create a splendid private pool and transform the property into an elegant contemporary villa in the heart of Jesolo through modern renovation. A solution for those who desire independence, livable outdoor spaces, and a central location without sacrificing privacy. Contact us for more information or to schedule an appointment: JBC Jesolo – Piazza Drago, 18 Tel. +39 339 841 6857 | Mail: info@jbcimmobiliare.it **The photos are purely illustrative. Some images have been processed using Artificial Intelligence.** Property details REFERENCE 4989068 PROPERTY TYPE Detached house AVAILABILITY Libero PROPERTY CONDITION Discreto YEAR / PERIOD 1970 HEATING Autonomo ENERGY PERFORMANCE 151.64 kWh/m2anno Location Via Vincenzo Monti Piazza Aurora · Jesolo · Venezia OPEN LOCATION ON MAP → Features and highlights ✓ Cucina ✓ Soggiorno ✓ Cantina ✓ Aria condizionata ✓ Arredato ✓ Giardino ✓ Ingresso indipendente ✓ Posizione al mare ✓ Piano rialzato ✓ Animali ammessi ✓ Cucina arredata ✓ Ripostigli: 1 ✓ Terrazzi: 1 ✓ Piani totali edificio: 1 ✓ Locali: 4 ✓ Vista aperta ✓ Fatturato: 0 € ✓ Fee di ingresso: 0 € ✓ Volumetria: 0 m³ ✓ Superficie giardino: 200 m² ✓ Superficie aree esterne: 0 m² ✓ Altezza piano: 0 m ✓ Potenza cabina elettrica: 0 kW ✓ Distanza dal mare: 350 m Description in other languages Italian German Russian Request information Contact: Elisa Zanetti · ezanetti@jbcimmobiliare.it Leave your contact details to receive the full property information and arrange a private viewing. FULL NAME * PHONE NUMBER * EMAIL ADDRESS * MESSAGE Data submitted through this form is processed to handle your request, as described in our Privacy Policy. REQUEST INFORMATION REQUEST INFORMATION SEND REQUEST Data submitted through this form is processed to handle your request, as described in our Privacy Policy. JBC IMMOBILIARE “Where your home comes to life” Real estate agency specialising in the sale of apartments, houses and commercial properties. INSTAGRAM FACEBOOK PROPERTIES New Developments Properties for Sale Property Valuation AGENCY About Us Franchising Join Our Team Our Offices OFFICES JESOLO +39 339 841 6857 ODERZO +39 340 467 5474 EMAIL info@jbcimmobiliare.it © 2026 JBC Immobiliare di Manuele Sutto VAT IT04841350277 · Piazza Drago 18, 30016 Jesolo (VE) Privacy Policy Cookie Policy Cookie preferences Before you continue This site sets no cookies of its own. The interactive map on the Offices page uses Google Maps and only loads if you consent: until then it stays a plain link to Google Maps, with no cookie set. Cookie Policy NECESSARY ONLY ACCEPT",
+  "captured_at": "2026-09-18T11:53:11Z",
+  "source_name": "JBC Immobiliare — Nuove Costruzioni",
+  "configured_location": "Adriatic coverage",
+  "raw_reference": "data/raw/2026-09-18T11-33-13Z/jbc_nuove_costruzioni/listing-00176.json"
+}

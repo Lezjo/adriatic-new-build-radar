@@ -1,0 +1,53 @@
+{
+  "source": "jbc_nuove_costruzioni",
+  "source_id": "jbc_nuove_costruzioni",
+  "source_url": "https://www.jbcimmobiliare.it/en/immobili/5130299-unique-piazza-calvi-nuova-costruzione-esclusiva-nel-cuore-di-conegliano",
+  "location": null,
+  "location_confidence": "unknown",
+  "location_evidence": [
+    {
+      "field": "body",
+      "location": "Jesolo Paese",
+      "terms": [
+        "via roma"
+      ],
+      "score": 1
+    },
+    {
+      "field": "body",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo"
+      ],
+      "score": 1
+    },
+    {
+      "field": "body",
+      "location": "Treviso",
+      "terms": [
+        "treviso"
+      ],
+      "score": 1
+    }
+  ],
+  "listing_id": "url:8ca50e56d397599ed31ebade65583c2a15360045",
+  "listing_title": "UNIQUE Piazza Calvi - Nuova Costruzione Esclusiva nel Cuore di Conegliano — JBC Immobiliare",
+  "price": null,
+  "area_m2": 126.0,
+  "rooms": null,
+  "floor": "plans",
+  "energy_class": null,
+  "unit_id": null,
+  "record_type": "PROJECT",
+  "status": "ACTIVE",
+  "features": [
+    "garage",
+    "aria condizionata",
+    "giardino"
+  ],
+  "raw_text": "IT EN DE MENU HOME / NEW DEVELOPMENTS / UNIQUE PIAZZA CALVI - NUOVA COSTRUZIONE ESCLUSIVA NEL CUORE DI CONEGLIANO NEW DEVELOPMENT · APARTMENT UNIQUE Piazza Calvi - Nuova Costruzione Esclusiva nel Cuore di Conegliano CONEGLIANO - CENTRO · CONEGLIANO · TREVISO PRICE Price on request Photos (17) Floor plans (0) 1 / 17 FLOOR AREA 126 m² BEDROOMS 3 BATHROOMS 2 LIFT Yes ENERGY CLASS A4 Overview UNIQUE | The excellence of living in Conegliano In the heart of Conegliano, just steps away from the charm of the historic center and the allure of UNESCO heritage Hills, UNIQUE rises: an avant-garde architectural masterpiece designed for those seeking a perfect balance between contemporary design, privacy, and maximum energy efficiency. The building develops over seven levels, enhanced by an iconic \"green\" facade and a state-of-the-art eco-sustainable concept aimed at ensuring maximum living comfort in every season. The Residences; Each housing solution is conceived to offer bright spaces, generous sizes, and private outdoor areas, complemented by a practical double garage and relevant cellar. The Garden Residence (Ground Floor): A prestigious apartment of 126 sqm articulated into three bedrooms and three bathrooms that extends outward with a private garden of 150 sqm with independent access — a reserved oasis in the heart of the city. Noble Floors (Floors 1–4): Spacious units (from 135 to 138 sqm) characterized by two or three bedrooms, two bathrooms and splendid outdoor spaces to enjoy all year round among loggias, large terraces, and bioclimatic greenhouses. The Penthouse (Top Floor): A rare beautiful dwelling measuring 253 sqm free on all four sides. It features four bedrooms, three bathrooms embraced by over 70 sqm of terraces and loggias offering panoramic breathtaking views over Castle Conegliano. Rooftops: Atop the complex are three exclusive private relaxation spaces (ranging from 42 to 75 sqm), directly accessible via reserved elevator. Living at UNIQUE means combining independence and tranquility within a high-profile residence with convenience thanks to its strategic location: indeed it is only 220 meters from the train station and 250 meters from Conegliano's historic Duomo. Information & Private Visits Development & marketing managed by JBC Real Estate Phone: +39 3408350235 | Email: info@jbcimmobiliare.it Web: www.jbcimmobiliare.it Locations: Jesolo Lido (VE) — Piazza Drago 18 | Oderzo (TV) — Via Roma 32/34 Property details REFERENCE 5130299 PROPERTY TYPE Apartment AVAILABILITY Libero PROPERTY CONDITION Nuovo YEAR / PERIOD 2026 HEATING A pavimento ENERGY PERFORMANCE 0 kWh/m2anno Location Piazza Calvi Conegliano - Centro · Conegliano · Treviso OPEN LOCATION ON MAP → Features and highlights ✓ Cucina ✓ Soggiorno ✓ Aria condizionata ✓ Soggiorno con angolo cottura ✓ Piano terra ✓ Primo piano ✓ Posizione in collina ✓ Immobile nuovo ✓ Immobile di prestigio ✓ Accesso per persone con disabilità ✓ Terrazzi: 2 ✓ Piani totali edificio: 7 ✓ Locali: 5 ✓ Vista monti ✓ Fatturato: 0 € ✓ Fee di ingresso: 0 € ✓ Volumetria: 0 m³ ✓ Superficie giardino: 0 m² ✓ Superficie aree esterne: 0 m² ✓ Altezza piano: 0 m ✓ Potenza cabina elettrica: 0 kW ✓ Distanza dal mare: 0 m Description in other languages Italian German French Russian Request information Contact: Manuele Sutto · info@jbcimmobiliare.it Leave your contact details to receive the full property information and arrange a private viewing. FULL NAME * PHONE NUMBER * EMAIL ADDRESS * MESSAGE Data submitted through this form is processed to handle your request, as described in our Privacy Policy. REQUEST INFORMATION REQUEST INFORMATION SEND REQUEST Data submitted through this form is processed to handle your request, as described in our Privacy Policy. JBC IMMOBILIARE “Where your home comes to life” Real estate agency specialising in the sale of apartments, houses and commercial properties. INSTAGRAM FACEBOOK PROPERTIES New Developments Properties for Sale Property Valuation AGENCY About Us Franchising Join Our Team Our Offices OFFICES JESOLO +39 339 841 6857 ODERZO +39 340 467 5474 EMAIL info@jbcimmobiliare.it © 2026 JBC Immobiliare di Manuele Sutto VAT IT04841350277 · Piazza Drago 18, 30016 Jesolo (VE) Privacy Policy Cookie Policy Cookie preferences Before you continue This site sets no cookies of its own. The interactive map on the Offices page uses Google Maps and only loads if you consent: until then it stays a plain link to Google Maps, with no cookie set. Cookie Policy NECESSARY ONLY ACCEPT",
+  "captured_at": "2026-09-18T11:47:43Z",
+  "source_name": "JBC Immobiliare — Nuove Costruzioni",
+  "configured_location": "Adriatic coverage",
+  "raw_reference": "data/raw/2026-09-18T11-31-54Z/jbc_nuove_costruzioni/listing-00030.json"
+}

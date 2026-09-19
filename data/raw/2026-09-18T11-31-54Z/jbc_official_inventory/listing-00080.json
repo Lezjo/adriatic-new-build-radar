@@ -1,0 +1,78 @@
+{
+  "source": "jbc_official_inventory",
+  "source_id": "jbc_official_inventory",
+  "source_url": "https://www.jbcimmobiliare.it/en/immobili/4996267-villa-moderna-con-piscina-jesolo-paese",
+  "location": null,
+  "location_confidence": "unknown",
+  "location_evidence": [
+    {
+      "field": "url",
+      "location": "Jesolo Paese",
+      "terms": [
+        "jesolo paese"
+      ],
+      "score": 8
+    },
+    {
+      "field": "url",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo"
+      ],
+      "score": 8
+    },
+    {
+      "field": "title",
+      "location": "Jesolo Paese",
+      "terms": [
+        "jesolo paese"
+      ],
+      "score": 6
+    },
+    {
+      "field": "title",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo"
+      ],
+      "score": 6
+    },
+    {
+      "field": "body",
+      "location": "Jesolo Paese",
+      "terms": [
+        "jesolo paese"
+      ],
+      "score": 1
+    },
+    {
+      "field": "body",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo"
+      ],
+      "score": 1
+    }
+  ],
+  "listing_id": "url:f99ada0e25a6dd663eeb98a5f387004516f80422",
+  "listing_title": "Villa Moderna con Piscina – Jesolo Paese — JBC Immobiliare",
+  "price": 590000,
+  "area_m2": 200.0,
+  "rooms": null,
+  "floor": "plans",
+  "energy_class": null,
+  "unit_id": null,
+  "record_type": "PROJECT",
+  "status": "ACTIVE",
+  "features": [
+    "garage",
+    "piscina",
+    "aria condizionata",
+    "giardino"
+  ],
+  "raw_text": "IT EN DE MENU HOME / NEW DEVELOPMENTS / VILLA MODERNA CON PISCINA – JESOLO PAESE NEW DEVELOPMENT · VILLA Villa Moderna con Piscina – Jesolo Paese JESOLO PAESE · JESOLO · VENEZIA PRICE €590,000 Photos (13) Floor plans (0) 1 / 13 FLOOR AREA 200 m² BEDROOMS 3 BATHROOMS 2 LIFT No ENERGY CLASS A4 Overview Welcome to your new home in Jesolo Paese! In the new and sought-after residential area of Jesolo Paese, Campana zone, ideal for those who desire privacy, design, and comfortable living. The property is developed entirely on a single level, distinguished by modern architectural lines and spacious bright environments. The living area of over 45 sqm represents the heart of the house: an elegant and functional space perfect for enjoying moments of togetherness in a refined setting. Outside, a covered porch overlooking the private pool creates a natural continuity between indoors and outdoors, offering an ideal space for outdoor lunches and evenings. The sleeping area consists of: Three spacious bedrooms designed to ensure maximum comfort and privacy, Two modern bathrooms made with quality finishes designed to meet every need. The property is built according to the highest construction standards, energy class A4, ensuring maximum energy savings, sustainability, and quality living. Possibility of customizing interiors thanks to collaboration with specialized partners in design and furnishings to create a tailor-made home. We consider exchanges to facilitate purchase. Ideal solution both as a primary residence or as a valuable investment. For more details, information on price or to arrange an appointment please contact us: JBC Jesolo – Piazza Drago 18, Jesolo (VE) Manuele +39 340 835 0235 Tel: +39 339 841 6857 | Mail: info@jbcimmobiliare.it **Photos are purely illustrative. Some images have been processed using Artificial Intelligence.** Property details REFERENCE 4996267 PROPERTY TYPE Villa AVAILABILITY Non definito PROPERTY CONDITION Nuovo YEAR / PERIOD 2027 HEATING Autonomo SERVICE CHARGES 0 ENERGY PERFORMANCE 5.67 kWh/m2anno Location Via Cà Gamba 2^ Traversa Jesolo Paese · Jesolo · Venezia OPEN LOCATION ON MAP → Features and highlights ✓ Cucina ✓ Soggiorno ✓ Garage ✓ Aria condizionata ✓ Giardino ✓ Soggiorno con angolo cottura ✓ Allarme ✓ Lavanderia ✓ Primo piano ✓ Posizione al mare ✓ Immobile nuovo ✓ Piscina ✓ Accesso per persone con disabilità ✓ Animali ammessi ✓ Porta blindata ✓ Locali: 5 ✓ Fatturato: 0 € ✓ Fee di ingresso: 0 € ✓ Volumetria: 0 m³ ✓ Superficie giardino: 0 m² ✓ Superficie aree esterne: 0 m² ✓ Altezza piano: 0 m ✓ Potenza cabina elettrica: 0 kW ✓ Distanza dal mare: 0 m Description in other languages Italian German Russian Request information Contact: Manuele Sutto · info@jbcimmobiliare.it Leave your contact details to receive the full property information and arrange a private viewing. FULL NAME * PHONE NUMBER * EMAIL ADDRESS * MESSAGE Data submitted through this form is processed to handle your request, as described in our Privacy Policy. REQUEST INFORMATION REQUEST INFORMATION SEND REQUEST Data submitted through this form is processed to handle your request, as described in our Privacy Policy. JBC IMMOBILIARE “Where your home comes to life” Real estate agency specialising in the sale of apartments, houses and commercial properties. INSTAGRAM FACEBOOK PROPERTIES New Developments Properties for Sale Property Valuation AGENCY About Us Franchising Join Our Team Our Offices OFFICES JESOLO +39 339 841 6857 ODERZO +39 340 467 5474 EMAIL info@jbcimmobiliare.it © 2026 JBC Immobiliare di Manuele Sutto VAT IT04841350277 · Piazza Drago 18, 30016 Jesolo (VE) Privacy Policy Cookie Policy Cookie preferences Before you continue This site sets no cookies of its own. The interactive map on the Offices page uses Google Maps and only loads if you consent: until then it stays a plain link to Google Maps, with no cookie set. Cookie Policy NECESSARY ONLY ACCEPT",
+  "captured_at": "2026-09-18T11:38:01Z",
+  "source_name": "JBC Immobiliare — official",
+  "configured_location": "Adriatic coverage",
+  "raw_reference": "data/raw/2026-09-18T11-31-54Z/jbc_official_inventory/listing-00080.json"
+}

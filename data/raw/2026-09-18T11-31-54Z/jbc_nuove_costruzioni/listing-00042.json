@@ -1,0 +1,52 @@
+{
+  "source": "jbc_nuove_costruzioni",
+  "source_id": "jbc_nuove_costruzioni",
+  "source_url": "https://www.jbcimmobiliare.it/en/immobili/5031696-home-b6-1-nuovo-bilocale-a-jesolo",
+  "location": "Jesolo",
+  "location_confidence": "high",
+  "location_evidence": [
+    {
+      "field": "url",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo"
+      ],
+      "score": 8
+    },
+    {
+      "field": "title",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo"
+      ],
+      "score": 6
+    },
+    {
+      "field": "body",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo"
+      ],
+      "score": 1
+    }
+  ],
+  "listing_id": "url:174d82f25fa80fc039d4e007e3f7fb59cf56c09e",
+  "listing_title": "HOME B6.1 - NUOVO BILOCALE A JESOLO — JBC Immobiliare",
+  "price": 240000,
+  "area_m2": 60.0,
+  "rooms": null,
+  "floor": "plans",
+  "energy_class": null,
+  "unit_id": null,
+  "record_type": "PROJECT",
+  "status": "ACTIVE",
+  "features": [
+    "garage",
+    "giardino"
+  ],
+  "raw_text": "IT EN DE MENU HOME / NEW DEVELOPMENTS / HOME B6.1 - NUOVO BILOCALE A JESOLO NEW DEVELOPMENT · APARTMENT HOME B6.1 - NUOVO BILOCALE A JESOLO JESOLO · VENEZIA PRICE €240,000 Photos (8) Floor plans (0) 1 / 8 FLOOR AREA 60 m² BEDROOMS 1 BATHROOMS 1 LIFT No ENERGY CLASS In definizione Overview DELIVERY DECEMBER 2027 - NEW EXCLUSIVE RESIDENCE OF ONLY 6 UNITS HOME 5.1 is born in one of the most interesting and rapidly evolving areas of the territory, a contemporary residential project designed for those who wish to live in a modern, efficient home that will retain its value over time. An exclusive residence with only 6 units, consisting of two-bedroom and three-bedroom apartments, designed to offer high-quality living, daily comfort, and superior construction performance. Clean architectural lines, bright environments, private outdoor spaces, and innovative construction technologies give rise to a new concept of living: more evolved, more sustainable, more intelligent. HOME 5.1 LOOKS TO THE FUTURE! DISTINCTIVE FEATURES: - HEAVY STEEL STRUCTURE HOME 5.1 is constructed with a heavy steel structure featuring high performance—an advanced building solution that guarantees great solidity, long durability and significant seismic performance. A modern technology offering precision in construction reliability over time and concrete structural value: unlike traditional buildings where materials may degrade or lose value over time; steel maintains its worth as raw material. - NZEB CLASS: NEARLY ZERO ENERGY BUILDING The project is developed according to NZEB (Nearly Zero Energy Building) standards ensuring reduced consumption levels while providing elevated energy efficiency along with maximum housing comfort. Advanced thermal insulation combined with acoustic solutions ensures comfortable living conditions throughout all seasons allowing residents to enjoy their homes sustainably and intelligently. - PRIVATE OUTDOOR SPACES Each unit features terraces and private outdoor spaces conceived as natural extensions of the living area, making them ideal settings for relaxation zones installing bioclimatic pergolas or enjoying moments outdoors with complete privacy & independence from neighbors’ activities . - GUARANTEED ACCESSIBILITY HOME 5.1 has been designed keeping accessibility functional through every phase life might bring forth; a modern elevator eliminates architectural barriers guaranteeing convenience practicality freedom movement everyone irrespective age physical ability can navigate comfortably within this space . THE RESIDENCES: inclusive apartments ranging between two bedrooms three characterized by bright open-plan lounges serviced elevators complemented terraces dedicated parking spots available on-site too! The design offers customizable finishes enhanced soundproofing climate control delivering perfect harmony combining DESIGN COMFORT FUNCTIONALITY into cohesive whole experience ! each room meticulously crafted create atmosphere equilibrium lightness wellbeing everyday life , internal layouts distinguished smart distribution blending contemporary aesthetics practical considerations seamlessly together . Selected materials attention detail customization options allow creation truly tailored home suited individual needs preferences perfectly ! HOME represents ideal solution whether seeking reside stylish strategic location investment property poised appreciate future growth potential. Property details REFERENCE 5031696 PROPERTY TYPE Apartment AVAILABILITY Libero PROPERTY CONDITION Nuovo YEAR / PERIOD 2027 SERVICE CHARGES 10 ENERGY PERFORMANCE 0 kWh/m2anno Location Via Cà Gamba 2^ Traversa Jesolo · Venezia OPEN LOCATION ON MAP → Features and highlights ✓ Cucina ✓ Soggiorno ✓ Garage ✓ Soggiorno con angolo cottura ✓ Piano terra ✓ Posizione al mare ✓ Immobile nuovo ✓ Locali: 2 ✓ Fatturato: 0 € ✓ Fee di ingresso: 0 € ✓ Volumetria: 0 m³ ✓ Superficie giardino: 0 m² ✓ Superficie aree esterne: 0 m² ✓ Altezza piano: 0 m ✓ Potenza cabina elettrica: 0 kW ✓ Distanza dal mare: 0 m Finishes Di lusso Description in other languages Italian German Russian Request information Contact: Riccardo Silvestrin · riccardo.silve96@gmail.com Leave your contact details to receive the full property information and arrange a private viewing. FULL NAME * PHONE NUMBER * EMAIL ADDRESS * MESSAGE Data submitted through this form is processed to handle your request, as described in our Privacy Policy. REQUEST INFORMATION REQUEST INFORMATION SEND REQUEST Data submitted through this form is processed to handle your request, as described in our Privacy Policy. JBC IMMOBILIARE “Where your home comes to life” Real estate agency specialising in the sale of apartments, houses and commercial properties. INSTAGRAM FACEBOOK PROPERTIES New Developments Properties for Sale Property Valuation AGENCY About Us Franchising Join Our Team Our Offices OFFICES JESOLO +39 339 841 6857 ODERZO +39 340 467 5474 EMAIL info@jbcimmobiliare.it © 2026 JBC Immobiliare di Manuele Su",
+  "captured_at": "2026-09-18T11:48:07Z",
+  "source_name": "JBC Immobiliare — Nuove Costruzioni",
+  "configured_location": "Adriatic coverage",
+  "raw_reference": "data/raw/2026-09-18T11-31-54Z/jbc_nuove_costruzioni/listing-00042.json"
+}

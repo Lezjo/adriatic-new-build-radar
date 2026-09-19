@@ -1,0 +1,45 @@
+{
+  "source": "jbc_nuove_costruzioni",
+  "source_id": "jbc_nuove_costruzioni",
+  "source_url": "https://www.jbcimmobiliare.it/en/immobili/5107738-nuovo-appartamento-trilocale-con-terrazzo-vivibile",
+  "location": null,
+  "location_confidence": "unknown",
+  "location_evidence": [
+    {
+      "field": "body",
+      "location": "Jesolo Paese",
+      "terms": [
+        "jesolo paese"
+      ],
+      "score": 1
+    },
+    {
+      "field": "body",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo"
+      ],
+      "score": 1
+    }
+  ],
+  "listing_id": "url:598901360d4aa47c9f9b5204e9ed25c190a248cb",
+  "listing_title": "Nuovo Appartamento Trilocale con Terrazzo Vivibile — JBC Immobiliare",
+  "price": 335000,
+  "area_m2": 100.0,
+  "rooms": null,
+  "floor": "plans",
+  "energy_class": null,
+  "unit_id": null,
+  "record_type": "PROJECT",
+  "status": "ACTIVE",
+  "features": [
+    "aria condizionata",
+    "pannelli fotovoltaici",
+    "giardino"
+  ],
+  "raw_text": "IT EN DE MENU HOME / PROPERTIES / NUOVO APPARTAMENTO TRILOCALE CON TERRAZZO VIVIBILE FOR SALE · APARTMENT Nuovo Appartamento Trilocale con Terrazzo Vivibile JESOLO PAESE · JESOLO · VENEZIA PRICE €335,000 Photos (36) Floor plans (1) 1 / 36 FLOOR AREA 100 m² BEDROOMS 2 BATHROOMS 2 LIFT Yes ENERGY CLASS A4 Overview Welcome to your new home in Jesolo Paese! If you are looking for a practically new, modern, and ready-to-live-in house, this is a proposal that stands out. Located in an elegant residential context of only six units, built in 2025, this refined apartment combines comfort, technology, and quality construction in one of the most sought-after areas of Jesolo Paese. The location is ideal: quiet, private, and away from traffic—just two minutes from the center and all major services while the beach is only two kilometers away. Situated on the second floor and served by an elevator, the property welcomes you with a beautiful living area of about 40 square meters facing south where natural light becomes the protagonist throughout the day. The open kitchen perfectly integrates into the environment and opens onto a spacious livable terrace of approximately 20 square meters—ideal for outdoor lunches or dinners with friends or simply enjoying moments of relaxation. Inside the living area there’s also a convenient veranda used as a laundry room while a first windowed bathroom complete with shower serves this space. The hallway leads to the sleeping area which consists of one master bedroom and one double bedroom both having direct access to another terrace along with a second windowed bathroom equipped with another shower box. This dwelling has been designed to offer maximum living comfort thanks to its A4 energy class rating; it features photovoltaic systems; underfloor heating; air conditioning system; and top-of-the-line finishes ensuring high energy efficiency combined with low management costs. Completing this offering are two comfortable covered parking spaces available separately at an overall price of €25,000 as well as a private cellar also purchasable separately priced at €10,000—a solution providing maximum flexibility allowing buyers to customize their purchase based on personal needs. Another element making this proposal truly exclusive is its furnishing crafted entirely custom-made using high-quality materials & finishes aimed at enhancing each room's elegance & functionality. Furniture can be purchased separately giving potential owners an opportunity to move into meticulously curated homes ready for immediate occupation right from day one. What makes this opportunity even more appealing is its fiscal aspect: despite being very recently constructed (completed in 2025), since it's sold by private sellers buyers benefit from ordinary tax regime without VAT typically applied when purchasing directly from developers—a significant economic advantage translating into considerable savings during acquisition phase itself! A solution tailored specifically towards those unwilling compromise seeking recent efficient contemporary taste dwellings nestled within exclusive serene settings just minutes away beaches alongside essential amenities nearby too! Contact us for further information or schedule viewings today! JBC Jesolo - Piazza Drago 18, Jesolo Phone Number : +39 339 841 6857 Email: info@jbcimmobiliare.it Property details REFERENCE 5107738 PROPERTY TYPE Apartment AVAILABILITY Libero PROPERTY CONDITION Ottimo YEAR / PERIOD 2025 HEATING Autonomo, a pavimento SERVICE CHARGES 100 ENERGY PERFORMANCE 0 kWh/m2anno Location Via Guido Piovene 7 Jesolo Paese · Jesolo · Venezia OPEN LOCATION ON MAP → Features and highlights ✓ Cantina ✓ Aria condizionata ✓ Soggiorno con angolo cottura ✓ Allarme ✓ Lavanderia ✓ Ultimo piano ✓ Posizione al mare ✓ Pannelli fotovoltaici ✓ Accesso per persone con disabilità ✓ Animali ammessi ✓ Domotica ✓ Tapparelle motorizzate ✓ Porta blindata ✓ Terrazzi: 2 ✓ Piani totali edificio: 2 ✓ Piano: 2 ✓ Locali: 3 ✓ Vista aperta ✓ Fatturato: 0 € ✓ Fee di ingresso: 0 € ✓ Volumetria: 0 m³ ✓ Superficie giardino: 0 m² ✓ Superficie aree esterne: 0 m² ✓ Altezza piano: 0 m ✓ Potenza cabina elettrica: 0 kW ✓ Distanza dal mare: 2000 m Description in other languages Italian German French Request information Contact: Elisa Zanetti · ezanetti@jbcimmobiliare.it Leave your contact details to receive the full property information and arrange a private viewing. FULL NAME * PHONE NUMBER * EMAIL ADDRESS * MESSAGE Data submitted through this form is processed to handle your request, as described in our Privacy Policy. REQUEST INFORMATION REQUEST INFORMATION SEND REQUEST Data submitted through this form is processed to handle your request, as described in our Privacy Policy. JBC IMMOBILIARE “Where your home comes to life” Real estate agency specialising in the sale of apartments, houses and commercial properties. INSTAGRAM FACEBOOK PROPERTIES New Developments Properties for Sale Property Valuation AGENCY About Us F",
+  "captured_at": "2026-09-18T11:53:41Z",
+  "source_name": "JBC Immobiliare — Nuove Costruzioni",
+  "configured_location": "Adriatic coverage",
+  "raw_reference": "data/raw/2026-09-18T11-33-13Z/jbc_nuove_costruzioni/listing-00191.json"
+}

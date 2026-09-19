@@ -1,0 +1,75 @@
+{
+  "source": "jbc_nuove_costruzioni",
+  "source_id": "jbc_nuove_costruzioni",
+  "source_url": "https://www.jbcimmobiliare.it/en/immobili/5126250-terreni-campana-nuove-opportunita-a-jesolo-paese",
+  "location": null,
+  "location_confidence": "unknown",
+  "location_evidence": [
+    {
+      "field": "url",
+      "location": "Jesolo Paese",
+      "terms": [
+        "jesolo paese"
+      ],
+      "score": 8
+    },
+    {
+      "field": "url",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo"
+      ],
+      "score": 8
+    },
+    {
+      "field": "title",
+      "location": "Jesolo Paese",
+      "terms": [
+        "jesolo paese"
+      ],
+      "score": 6
+    },
+    {
+      "field": "title",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo"
+      ],
+      "score": 6
+    },
+    {
+      "field": "body",
+      "location": "Jesolo Paese",
+      "terms": [
+        "jesolo paese"
+      ],
+      "score": 1
+    },
+    {
+      "field": "body",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo"
+      ],
+      "score": 1
+    }
+  ],
+  "listing_id": "url:7cb749320c9d1aa8c7f518a59bc31494921dae42",
+  "listing_title": "Terreni Campana - Nuove Opportunità a Jesolo Paese — JBC Immobiliare",
+  "price": 154000,
+  "area_m2": 750.0,
+  "rooms": null,
+  "floor": "plans",
+  "energy_class": null,
+  "unit_id": null,
+  "record_type": "PROJECT",
+  "status": "ACTIVE",
+  "features": [
+    "giardino"
+  ],
+  "raw_text": "IT EN DE MENU HOME / PROPERTIES / TERRENI CAMPANA - NUOVE OPPORTUNITÀ A JESOLO PAESE FOR SALE · LAND Terreni Campana - Nuove Opportunità a Jesolo Paese JESOLO PAESE · JESOLO · VENEZIA PRICE €154,000 Photos (7) Floor plans (1) 1 / 7 FLOOR AREA 750 m² LIFT No ENERGY CLASS In definizione Overview Building Lots in Campana Area - Jesolo Paese Various sizes available | Complete assistance at 360° Create the house of your dreams in the new and sought-after residential area of Jesolo Paese. Located in the new development \"Reparto Campana\", these lands offer the perfect balance between the tranquility of a modern context, proximity to central services, and convenience to beaches. Strengths of the \"Reparto Campana\" Development: - Strategic location: Just minutes from downtown and the sea. - Maximum flexibility: Lots of various sizes, perfect for single-family homes, duplexes or custom projects. - Rapidly expanding area: A secure investment in a carefully urbanized neighborhood. A complete service at 360° - Forget about stress, bureaucracy, and construction management. With our \"Turnkey\" service, our team of professionals is by your side every step of the way: - Consultation and Lot Selection: We find the perfect size for your needs. - Custom Design: We develop your future home’s layout together with you. - Paperwork and Construction: We manage all bureaucratic processes and oversee construction work step by step. - Furnishing and Finishes: We guide you through choosing interiors to deliver a ready-to-live-in home. Building a house has never been so simple: you bring the dreams; we take care of the rest! For more details, price information or to schedule an appointment, contact us: JBC Jesolo – Piazza Drago 18, Jesolo Manuele +39 340 835 0235 tel: +39 339 841 6857 | email: info@jbcimmobiliare.it **The photos are purely illustrative. Some images have been processed using Artificial Intelligence.** Property details REFERENCE 5126250 PROPERTY TYPE Land AVAILABILITY Libero PROPERTY CONDITION Sconosciuto YEAR / PERIOD 1900 SERVICE CHARGES 0 ENERGY PERFORMANCE 0 kWh/m2anno Location Via Marzaiola Jesolo Paese · Jesolo · Venezia OPEN LOCATION ON MAP → Features and highlights ✓ Urbanizzato ✓ Vista aperta ✓ Fatturato: 0 € ✓ Fee di ingresso: 0 € ✓ Volumetria: 170 m³ ✓ Superficie giardino: 0 m² ✓ Superficie aree esterne: 0 m² ✓ Altezza piano: 0 m ✓ Potenza cabina elettrica: 0 kW ✓ Distanza dal mare: 0 m Description in other languages Italian German Russian Request information Contact: Manuele Sutto · info@jbcimmobiliare.it Leave your contact details to receive the full property information and arrange a private viewing. FULL NAME * PHONE NUMBER * EMAIL ADDRESS * MESSAGE Data submitted through this form is processed to handle your request, as described in our Privacy Policy. REQUEST INFORMATION REQUEST INFORMATION SEND REQUEST Data submitted through this form is processed to handle your request, as described in our Privacy Policy. JBC IMMOBILIARE “Where your home comes to life” Real estate agency specialising in the sale of apartments, houses and commercial properties. INSTAGRAM FACEBOOK PROPERTIES New Developments Properties for Sale Property Valuation AGENCY About Us Franchising Join Our Team Our Offices OFFICES JESOLO +39 339 841 6857 ODERZO +39 340 467 5474 EMAIL info@jbcimmobiliare.it © 2026 JBC Immobiliare di Manuele Sutto VAT IT04841350277 · Piazza Drago 18, 30016 Jesolo (VE) Privacy Policy Cookie Policy Cookie preferences Before you continue This site sets no cookies of its own. The interactive map on the Offices page uses Google Maps and only loads if you consent: until then it stays a plain link to Google Maps, with no cookie set. Cookie Policy NECESSARY ONLY ACCEPT",
+  "captured_at": "2026-09-18T11:53:23Z",
+  "source_name": "JBC Immobiliare — Nuove Costruzioni",
+  "configured_location": "Adriatic coverage",
+  "raw_reference": "data/raw/2026-09-18T11-31-54Z/jbc_nuove_costruzioni/listing-00199.json"
+}

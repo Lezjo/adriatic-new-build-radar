@@ -1,0 +1,48 @@
+{
+  "source": "jbc_official_inventory",
+  "source_id": "jbc_official_inventory",
+  "source_url": "https://www.jbcimmobiliare.it/en/immobili/5127593-borghetto-sul-meschio-vittorio-veneto",
+  "location": null,
+  "location_confidence": "unknown",
+  "location_evidence": [
+    {
+      "field": "body",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo"
+      ],
+      "score": 1
+    },
+    {
+      "field": "body",
+      "location": "Treviso",
+      "terms": [
+        "treviso"
+      ],
+      "score": 1
+    }
+  ],
+  "listing_id": "url:739f616dc0e46523724021dce30f220a85485b59",
+  "listing_title": "Borghetto Sul Meschio - Vittorio Veneto — JBC Immobiliare",
+  "price": null,
+  "area_m2": 100.0,
+  "rooms": null,
+  "floor": "plans",
+  "energy_class": null,
+  "unit_id": null,
+  "record_type": "PROJECT",
+  "status": "ACTIVE",
+  "features": [
+    "garage",
+    "posto auto",
+    "aria condizionata",
+    "pannelli fotovoltaici",
+    "terrazza",
+    "giardino"
+  ],
+  "raw_text": "IT EN DE MENU HOME / NEW DEVELOPMENTS / BORGHETTO SUL MESCHIO - VITTORIO VENETO NEW DEVELOPMENT · APARTMENT Borghetto Sul Meschio - Vittorio Veneto VITTORIO VENETO · TREVISO PRICE Price on request Photos (15) Floor plans (0) 1 / 15 FLOOR AREA 100 m² BEDROOMS 3 BATHROOMS 2 LIFT Yes ENERGY CLASS A4 Overview There are places that you inhabit. And places capable of evoking emotions every day. In Vittorio Veneto, along the banks of the Meschio River, the ancient Rizzardi-Galvani Paper Mill is reborn: a historic complex whose origins date back to 1635, now at the center of an important architectural recovery project. Thus Borghetto sul Meschio is born, a new way of living where the charm of history meets contemporary comfort, immersed in a landscape of water, nature, and silence. The project includes 20 exclusive residences divided between La Terrazza and La Torre, with areas ranging from about 70 to over 200 square meters. The different housing types are designed to meet various needs: apartments with large private gardens, bright terraces, panoramic loggias and penthouses characterized by stunning views over the village and surrounding landscape. The interiors feature generous spaces with large openings and a careful selection of materials and finishes. Natural light accompanies each space creating a continuous dialogue between architecture, greenery and landscape; each residence has one or more parking spaces covered by a distributed garden while the complex also includes storage dedicated to bicycles. An added value for those who wish to experience the area and take advantage of the pedestrian-bicycle path that runs alongside the Meschio River located just steps from the property. Borghetto sul Meschio is not just a residential project but represents the rebirth of a place destined to become a new reference point for Vittorio Veneto. Next to residences there will be spaces dedicated to hospitality and catering inserted into an environment rich in historical and environmental value. The location combines tranquility with practicality: central Vittorio Veneto, hospitals as well as access points for A27 motorway can all be reached within minutes while Conegliano and Prosecco Hills offer territories full of culture,nature,and gastronomic excellence.Borghetto sulMeschiois idealforthose seeking prestigious primary residence,a second home immersed in beauty or distinctive real estate investment within unique regeneration efforts.Here,the past isn’t forgotten—it comes back alive transforming itself intoa placewhereonecanimagine their future. FURNISHED PENTHOUSE OPTIONS: To make each residence even more personal,a dedicated interior design service is available:specialized designers can create tailor-made furnishing solutions designedto enhance thespaces,the styleandfeaturesofeach apartmentorpenthouse. Availabilityandpricesuponrequest. Imagesandgraphicrepresentationsarepurelyillustrative.Surfaceareasfinishesandcharacteristicsofindividualunitsmustbeverifiedinthecorrespondingcommercialandcontractualdocumentation. Contact us for more information: JBC Immobiliare, Piazza Drago n.18,JesoLido(VE) Mobile:+39 3398416857|Email:info@jbcimmobiliare.it Property details REFERENCE 5127593 PROPERTY TYPE Apartment AVAILABILITY Libero PROPERTY CONDITION Nuovo YEAR / PERIOD 2026 HEATING Autonomo SERVICE CHARGES 10 ENERGY PERFORMANCE 0 kWh/m2anno Location via Luigi Galvani Vittorio Veneto · Treviso OPEN LOCATION ON MAP → Features and highlights ✓ Cucina ✓ Soggiorno ✓ Garage ✓ Mansarda ✓ Aria condizionata ✓ Giardino ✓ Garage doppio ✓ Posto auto ✓ Soggiorno con angolo cottura ✓ Piano terra ✓ Primo piano ✓ Piano intermedio ✓ Ultimo piano ✓ Posizione in montagna ✓ Posizione termale ✓ Immobile nuovo ✓ Immobile di prestigio ✓ Giardino condominiale ✓ Camino ✓ Pannelli fotovoltaici ✓ Caldaia a condensazione ✓ Ripostigli: 1 ✓ Terrazzi: 1 ✓ Poggioli: 1 ✓ Piani totali edificio: 3 ✓ Piano: 2 ✓ Locali: 6 ✓ Vista monti ✓ Fatturato: 0 € ✓ Fee di ingresso: 0 € ✓ Volumetria: 0 m³ ✓ Superficie giardino: 0 m² ✓ Superficie aree esterne: 0 m² ✓ Altezza piano: 0 m ✓ Potenza cabina elettrica: 0 kW ✓ Distanza dal mare: 0 m Finishes di alto livello Description in other languages Italian German French Russian Request information Contact: Manuele Sutto · info@jbcimmobiliare.it Leave your contact details to receive the full property information and arrange a private viewing. FULL NAME * PHONE NUMBER * EMAIL ADDRESS * MESSAGE Data submitted through this form is processed to handle your request, as described in our Privacy Policy. REQUEST INFORMATION REQUEST INFORMATION SEND REQUEST Data submitted through this form is processed to handle your request, as described in our Privacy Policy. JBC IMMOBILIARE “Where your home comes to life” Real estate agency specialising in the sale of apartments, houses and commercial properties. INSTAGRAM FACEBOOK PROPERTIES New Developments Properties for Sale Property Valuation AGENCY About Us Franchising Join Our Team Our Offices OFFI",
+  "captured_at": "2026-09-18T11:37:22Z",
+  "source_name": "JBC Immobiliare — official",
+  "configured_location": "Adriatic coverage",
+  "raw_reference": "data/raw/2026-09-18T11-31-54Z/jbc_official_inventory/listing-00067.json"
+}

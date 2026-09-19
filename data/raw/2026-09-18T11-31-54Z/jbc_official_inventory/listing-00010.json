@@ -1,0 +1,57 @@
+{
+  "source": "jbc_official_inventory",
+  "source_id": "jbc_official_inventory",
+  "source_url": "https://www.jbcimmobiliare.it/immobili/4624243-piano-terra-esclusivo-oasi-con-piscina-a-jesolo",
+  "location": "Jesolo",
+  "location_confidence": "high",
+  "location_evidence": [
+    {
+      "field": "url",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo"
+      ],
+      "score": 8
+    },
+    {
+      "field": "title",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo"
+      ],
+      "score": 6
+    },
+    {
+      "field": "body",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo"
+      ],
+      "score": 1
+    }
+  ],
+  "listing_id": "url:f4afe670688f0cc3d50b148ac4048f38b4498d14",
+  "listing_title": "Piano Terra Esclusivo | Oasi con Piscina a Jesolo — JBC Immobiliare",
+  "price": 420000,
+  "area_m2": 75.0,
+  "rooms": null,
+  "floor": "TERRA",
+  "energy_class": "E",
+  "unit_id": null,
+  "record_type": "PROJECT",
+  "status": "ACTIVE",
+  "features": [
+    "garage",
+    "piscina",
+    "ascensore",
+    "aria condizionata",
+    "pannelli solari",
+    "pannelli fotovoltaici",
+    "giardino"
+  ],
+  "raw_text": "IT EN DE MENU HOME / IMMOBILI / PIANO TERRA ESCLUSIVO | OASI CON PISCINA A JESOLO VENDITA · APPARTAMENTO Piano Terra Esclusivo | Oasi con Piscina a Jesolo PIAZZA NEMBER · JESOLO · VENEZIA PREZZO 420.000 € Fotografie (20) Planimetrie (0) 1 / 20 SUPERFICIE 75 m² CAMERE DA LETTO 2 BAGNI 1 ASCENSORE No CLASSE ENERGETICA A4 Presentazione Benvenuti nella vostra nuova casa a Jesolo! Immerso nell’atmosfera riservata ed esclusiva di un residence concepito come una vera e propria oasi di relax, questo appartamento al piano terra rappresenta il connubio perfetto tra indipendenza, comfort e stile di vita outdoor. A valorizzare il complesso una straordinaria piscina, perfetta cornice per chi desidera momenti di puro relax in un contesto riservato ed esclusivo. L'abitazione si distingue per la sua disposizione tra gli ambienti interni ed esterni. Il soggiorno con angolo cottura, luminoso e ben proporzionato, si apre direttamente su uno splendido portico coperto: un vero e proprio prolungamento della zona giorno all'aria aperta, ideale per pranzi e momenti di relax, sfociando nell'ampio cortile esclusivo di proprietà. Un secondo portico e un ulteriore cortile riservato sul retro garantiscono privacy e molteplici spazi da vivere in ogni momento della giornata. La zona notte è distribuita con estrema razionalità attorno a un disimpegno centrale, che divide con cura la privacy delle due ampie camere da letto e serve il bagno padronale. A completare l'esclusività della proprietà vi è un comodo locale accessorio esterno, perfetto come zona deposito o spazio di servizio. Una dimora unica, pensata per chi cerca la quiete di un giardino privato e l'esclusività di un'oasi con piscina, senza rinunciare alla funzionalità di spazi interni perfettamente organizzati. Contattaci per maggiori informazioni e per prenotare una visita: JBC Immobiliare Piazza Drago n.18, Jesolo Lido (VE) Cellulare: 339 8416857 | Mail: info@jbcimmobiliare.it Dettagli dell’immobile RIFERIMENTO 4624243 TIPOLOGIA Appartamento DISPONIBILITÀ Libero STATO IMMOBILE Ottimo ANNO / EPOCA 2020 RISCALDAMENTO Autonomo SPESE CONDOMINIALI 200 PRESTAZIONE ENERGETICA 0 kWh/m2anno Posizione Via Rovigo Piazza Nember · Jesolo · Venezia APRI LA POSIZIONE SULLA MAPPA → Caratteristiche ed elementi di pregio ✓ Garage ✓ Aria condizionata ✓ Arredato ✓ Giardino ✓ Soggiorno con angolo cottura ✓ Allarme ✓ Piano terra ✓ Posizione al mare ✓ Predisposizione allarme ✓ Pannelli solari ✓ Pannelli fotovoltaici ✓ Piscina ✓ Animali ammessi ✓ Cucina arredata ✓ Domotica ✓ Piani totali edificio: 2 ✓ Locali: 3 ✓ Fatturato: 0 € ✓ Fee di ingresso: 0 € ✓ Volumetria: 0 m³ ✓ Superficie giardino: 50 m² ✓ Superficie aree esterne: 0 m² ✓ Altezza piano: 0 m ✓ Potenza cabina elettrica: 0 kW ✓ Distanza dal mare: 400 m Descrizione in altre lingue Tedesco Inglese Richiedi informazioni Referente: Riccardo Silvestrin · riccardo.silve96@gmail.com Lasciaci i tuoi riferimenti per ricevere la scheda dettagliata e programmare un sopralluogo riservato. NOME E COGNOME * RECAPITO TELEFONICO * INDIRIZZO E-MAIL * MESSAGGIO I dati inviati con questo modulo vengono trattati per gestire la tua richiesta, come descritto nella nostra Privacy Policy. RICHIEDI INFORMAZIONI RICHIEDI INFORMAZIONI INVIA RICHIESTA I dati inviati con questo modulo vengono trattati per gestire la tua richiesta, come descritto nella nostra Privacy Policy. JBC IMMOBILIARE “Where your home comes to life” Agenzia immobiliare specializzata nella vendita di appartamenti, case e locali commerciali. INSTAGRAM FACEBOOK IMMOBILI Nuove Costruzioni Vendita Immobili Valutazione Immobile AGENZIA Chi Siamo Franchising Lavora con Noi Le Nostre Sedi SEDI JESOLO +39 339 841 6857 ODERZO +39 340 467 5474 E-MAIL info@jbcimmobiliare.it © 2026 JBC Immobiliare di Manuele Sutto P.IVA IT04841350277 · Piazza Drago 18, 30016 Jesolo (VE) Privacy Policy Cookie Policy Preferenze cookie Prima di continuare Il sito non installa cookie propri. La mappa interattiva nella pagina Sedi usa Google Maps e si attiva solo se acconsenti: fino ad allora resta un link a Google Maps, senza alcun cookie. Cookie Policy SOLO NECESSARI ACCETTA",
+  "captured_at": "2026-09-18T11:34:54Z",
+  "source_name": "JBC Immobiliare — official",
+  "configured_location": "Adriatic coverage",
+  "raw_reference": "data/raw/2026-09-18T11-31-54Z/jbc_official_inventory/listing-00010.json"
+}

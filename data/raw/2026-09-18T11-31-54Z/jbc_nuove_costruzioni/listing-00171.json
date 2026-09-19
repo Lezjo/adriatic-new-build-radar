@@ -1,0 +1,39 @@
+{
+  "source": "jbc_nuove_costruzioni",
+  "source_id": "jbc_nuove_costruzioni",
+  "source_url": "https://www.jbcimmobiliare.it/en/immobili/5127858-merville-casa-nel-parco",
+  "location": "Jesolo",
+  "location_confidence": "medium",
+  "location_evidence": [
+    {
+      "field": "body",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo"
+      ],
+      "score": 1
+    }
+  ],
+  "listing_id": "url:f72f60151d261d09e21cb6a170f78a5da5dca4a3",
+  "listing_title": "Merville - Casa nel Parco — JBC Immobiliare",
+  "price": 1050000,
+  "area_m2": 120.0,
+  "rooms": null,
+  "floor": "plans",
+  "energy_class": null,
+  "unit_id": null,
+  "record_type": "PROJECT",
+  "status": "ACTIVE",
+  "features": [
+    "garage",
+    "piscina",
+    "aria condizionata",
+    "vista mare",
+    "giardino"
+  ],
+  "raw_text": "IT EN DE MENU HOME / PROPERTIES / MERVILLE - CASA NEL PARCO FOR SALE · APARTMENT Merville - Casa nel Parco JESOLO · VENEZIA PRICE €1,050,000 Photos (25) Floor plans (0) 1 / 25 FLOOR AREA 120 m² LIFT No ENERGY CLASS C Overview JESOLO PINETA – RESIDENCE MERVILLE Within the prestigious Residence Merville – House in the Park, we offer for sale an elegant three-room apartment located in one of the most exclusive and recognizable residential contexts of the Jesolo coastline. The apartment features a bright living area with an open kitchen, two bedrooms, and pleasant outdoor spaces, ideal for enjoying moments of relaxation immersed in greenery and tranquility of the pine forest. The kitchen and furnishings enhance the environment with refined finishes, contemporary lines, and high-quality materials. The complex was designed by architect Gonçalo Byrne together with landscape designer João Ferreira Nunes, set within a seaside pine forest of approximately 50,000 square meters and includes a wonderful private park spanning about 20,000 square meters. Residents can enjoy numerous exclusive services: * large swimming pools with hydromassage areas and water games; * direct access to the beach; * fully glazed communal gym; * sauna and changing rooms; * spacious well-maintained green areas; * bar and restaurant within the complex; * parking lots and underground garages. Residence Merville also utilizes advanced energy systems including geothermal energy, photovoltaics, and heat recovery to ensure comfortable living conditions along with high efficiency. An ideal solution both as a prestigious seaside home or as a high-level real estate investment in a unique position between the greenery of the pine forest and Jesolo's sea. For more information, documentation or to arrange a visit: JBC IMMOBILIARE Piazza Drago 18 – Jesolo Contact us to discover all details about this property. Property details REFERENCE 5127858 PROPERTY TYPE Apartment AVAILABILITY Libero PROPERTY CONDITION Ottimo YEAR / PERIOD 2015 HEATING Autonomo SERVICE CHARGES 250 ENERGY PERFORMANCE 0 kWh/m2anno Location Viale Oriente 112 Jesolo · Venezia OPEN LOCATION ON MAP → Features and highlights ✓ Soggiorno ✓ Aria condizionata ✓ Soggiorno con angolo cottura ✓ Immobile di prestigio ✓ Piscina ✓ Terrazzi: 1 ✓ Poggioli: 1 ✓ Piani totali edificio: 3 ✓ Piano: 2 ✓ Locali: 3 ✓ Vista mare ✓ Fatturato: 0 € ✓ Fee di ingresso: 0 € ✓ Volumetria: 0 m³ ✓ Superficie giardino: 0 m² ✓ Superficie aree esterne: 0 m² ✓ Altezza piano: 0 m ✓ Potenza cabina elettrica: 0 kW ✓ Distanza dal mare: 150 m Description in other languages Italian German French Request information Contact: Manuele Sutto · info@jbcimmobiliare.it Leave your contact details to receive the full property information and arrange a private viewing. FULL NAME * PHONE NUMBER * EMAIL ADDRESS * MESSAGE Data submitted through this form is processed to handle your request, as described in our Privacy Policy. REQUEST INFORMATION REQUEST INFORMATION SEND REQUEST Data submitted through this form is processed to handle your request, as described in our Privacy Policy. JBC IMMOBILIARE “Where your home comes to life” Real estate agency specialising in the sale of apartments, houses and commercial properties. INSTAGRAM FACEBOOK PROPERTIES New Developments Properties for Sale Property Valuation AGENCY About Us Franchising Join Our Team Our Offices OFFICES JESOLO +39 339 841 6857 ODERZO +39 340 467 5474 EMAIL info@jbcimmobiliare.it © 2026 JBC Immobiliare di Manuele Sutto VAT IT04841350277 · Piazza Drago 18, 30016 Jesolo (VE) Privacy Policy Cookie Policy Cookie preferences Before you continue This site sets no cookies of its own. The interactive map on the Offices page uses Google Maps and only loads if you consent: until then it stays a plain link to Google Maps, with no cookie set. Cookie Policy NECESSARY ONLY ACCEPT",
+  "captured_at": "2026-09-18T11:52:26Z",
+  "source_name": "JBC Immobiliare — Nuove Costruzioni",
+  "configured_location": "Adriatic coverage",
+  "raw_reference": "data/raw/2026-09-18T11-31-54Z/jbc_nuove_costruzioni/listing-00171.json"
+}

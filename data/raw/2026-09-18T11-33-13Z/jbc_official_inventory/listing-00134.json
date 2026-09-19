@@ -1,0 +1,46 @@
+{
+  "source": "jbc_official_inventory",
+  "source_id": "jbc_official_inventory",
+  "source_url": "https://jbcimmobiliare.it/en/immobili/4983758-nuova-bifamiliare-a-ponte-crepaldo",
+  "location": null,
+  "location_confidence": "unknown",
+  "location_evidence": [
+    {
+      "field": "body",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo"
+      ],
+      "score": 1
+    },
+    {
+      "field": "body",
+      "location": "San Donà di Piave",
+      "terms": [
+        "san donà"
+      ],
+      "score": 1
+    }
+  ],
+  "listing_id": "url:9a8ae5b12559175432e7d31db2358f11047f8563",
+  "listing_title": "Nuova Bifamiliare a Ponte Crepaldo — JBC Immobiliare",
+  "price": 345000,
+  "area_m2": 151.0,
+  "rooms": null,
+  "floor": "plans",
+  "energy_class": null,
+  "unit_id": null,
+  "record_type": "PROJECT",
+  "status": "ACTIVE",
+  "features": [
+    "garage",
+    "aria condizionata",
+    "pannelli fotovoltaici",
+    "giardino"
+  ],
+  "raw_text": "IT EN DE MENU HOME / NEW DEVELOPMENTS / NUOVA BIFAMILIARE A PONTE CREPALDO NEW DEVELOPMENT · SEMI-DETACHED HOUSE Nuova Bifamiliare a Ponte Crepaldo PONTE CREPALDO · ERACLEA · VENEZIA PRICE €345,000 Photos (11) Floor plans (2) 1 / 11 FLOOR AREA 151 m² BEDROOMS 4 BATHROOMS 2 LIFT No ENERGY CLASS A4 Overview Welcome to your new home in Ponte Crepaldo! Inside a modern semi-detached house, designed to offer comfort, quality, and maximum living independence. The property will be built with an energy class A4 rating and equipped with the most advanced technological solutions to ensure maximum comfort and high energy efficiency, including underfloor heating, heat pump, photovoltaic system of 6 kW, provision for controlled mechanical ventilation in every room, PVC windows with triple glazing, armored entrance door, garage with motorized sectional door and preparation for alarm system. The residence spans two levels for a total area of approximately 151 sqm, including terraces and parking space, as well as a private outdoor area. The interior spaces are designed to provide bright, modern and well-organized environments ideal for the daily life of a family. On the ground floor is the living area characterized by a spacious open space with living room and kitchen; a welcoming and functional environment perfect also for hosting guests. This level is completed by a bathroom with ante-bathroom, a practical storage room and an internal staircase leading to the upper floor. The sleeping area on the first floor features four generously sized bedrooms along with one bathroom and an hallway that ensures comfortable distribution of spaces. Outside, the property offers two terraces perfect for moments of relaxation outdoors as well as private parking space adjacent to it. The location is set within a quiet residential context but well-serviced: Eraclea beach can be reached in about 10 minutes; Jesolo in about 20 minutes while San Donà di Piave enjoys convenient connections. An ideal solution for those seeking tranquility ,comfortand proximityto theseaside without sacrificing service convenience . We look forwardto seeing you at our officesfor information ,plansand availability . JBC Jesolo - Piazza Drago18 ,Jesolo Mobile :3398416857 Mail :info@jbcimmobiliare.it Property details REFERENCE 4983758 PROPERTY TYPE Semi-detached house AVAILABILITY Libero PROPERTY CONDITION Nuovo YEAR / PERIOD 2026 HEATING Autonomo, a pavimento SERVICE CHARGES 0 ENERGY PERFORMANCE 0 kWh/m2anno Location Via Don Bruno Trento Ponte Crepaldo · Eraclea · Venezia OPEN LOCATION ON MAP → Features and highlights ✓ Cucina ✓ Soggiorno ✓ Garage ✓ Aria condizionata ✓ Giardino ✓ Ingresso indipendente ✓ Soggiorno con angolo cottura ✓ Allarme ✓ Lavanderia ✓ Piano terra ✓ Primo piano ✓ Immobile nuovo ✓ Immobile di prestigio ✓ Pannelli fotovoltaici ✓ Animali ammessi ✓ Tapparelle motorizzate ✓ Porta blindata ✓ Terrazzi: 2 ✓ Piani totali edificio: 2 ✓ Locali: 6 ✓ Vista aperta ✓ Fatturato: 0 € ✓ Fee di ingresso: 0 € ✓ Volumetria: 0 m³ ✓ Superficie giardino: 0 m² ✓ Superficie aree esterne: 0 m² ✓ Altezza piano: 0 m ✓ Potenza cabina elettrica: 0 kW ✓ Distanza dal mare: 0 m Description in other languages Italian German French Request information Contact: Marco Carlesso · m.carlesso@jbcimmobiliare.it Leave your contact details to receive the full property information and arrange a private viewing. FULL NAME * PHONE NUMBER * EMAIL ADDRESS * MESSAGE Data submitted through this form is processed to handle your request, as described in our Privacy Policy. REQUEST INFORMATION REQUEST INFORMATION SEND REQUEST Data submitted through this form is processed to handle your request, as described in our Privacy Policy. JBC IMMOBILIARE “Where your home comes to life” Real estate agency specialising in the sale of apartments, houses and commercial properties. INSTAGRAM FACEBOOK PROPERTIES New Developments Properties for Sale Property Valuation AGENCY About Us Franchising Join Our Team Our Offices OFFICES JESOLO +39 339 841 6857 ODERZO +39 340 467 5474 EMAIL info@jbcimmobiliare.it © 2026 JBC Immobiliare di Manuele Sutto VAT IT04841350277 · Piazza Drago 18, 30016 Jesolo (VE) Privacy Policy Cookie Policy Cookie preferences Before you continue This site sets no cookies of its own. The interactive map on the Offices page uses Google Maps and only loads if you consent: until then it stays a plain link to Google Maps, with no cookie set. Cookie Policy NECESSARY ONLY ACCEPT",
+  "captured_at": "2026-09-18T11:40:51Z",
+  "source_name": "JBC Immobiliare — official",
+  "configured_location": "Adriatic coverage",
+  "raw_reference": "data/raw/2026-09-18T11-33-13Z/jbc_official_inventory/listing-00134.json"
+}

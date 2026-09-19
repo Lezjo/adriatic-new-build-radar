@@ -1,0 +1,54 @@
+{
+  "source": "jbc_official_inventory",
+  "source_id": "jbc_official_inventory",
+  "source_url": "https://www.jbcimmobiliare.it/en/immobili/4990000-villa-singola-con-piscina-vicino-al-mare-a-jesolo",
+  "location": "Jesolo",
+  "location_confidence": "high",
+  "location_evidence": [
+    {
+      "field": "url",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo"
+      ],
+      "score": 8
+    },
+    {
+      "field": "title",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo"
+      ],
+      "score": 6
+    },
+    {
+      "field": "body",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo"
+      ],
+      "score": 1
+    }
+  ],
+  "listing_id": "url:234b9fdef5cdfd05843c6ab9e655afe0deb0bfb1",
+  "listing_title": "Villa Singola con Piscina vicino al Mare a Jesolo — JBC Immobiliare",
+  "price": null,
+  "area_m2": 150.0,
+  "rooms": null,
+  "floor": "plans",
+  "energy_class": null,
+  "unit_id": null,
+  "record_type": "PROJECT",
+  "status": "ACTIVE",
+  "features": [
+    "piscina",
+    "aria condizionata",
+    "pannelli fotovoltaici",
+    "giardino"
+  ],
+  "raw_text": "IT EN DE MENU HOME / PROPERTIES / VILLA SINGOLA CON PISCINA VICINO AL MARE A JESOLO FOR SALE · DETACHED HOUSE Villa Singola con Piscina vicino al Mare a Jesolo PIAZZA MARCONI - DRAGO · JESOLO · VENEZIA PRICE Price on request Photos (43) Floor plans (0) 1 / 43 FLOOR AREA 150 m² BEDROOMS 4 BATHROOMS 3 LIFT No ENERGY CLASS A4 Overview Welcome to your new home in Jesolo! Located in Jesolo, just 200 meters from the sea, stands a single-family villa built in 2020 that redefines the concept of living in Jesolo. It is not just a house but an ecosystem of design and technology. On the ground floor, there is a bright open space that combines kitchen, dining room, and living area seamlessly connecting to the private outdoor area: a garden featuring an elegant pool and a porch designed for enjoying summer without boundaries between indoor and outdoor spaces. Every detail is managed by home automation and heated by state-of-the-art underfloor heating systems. The sleeping area develops over two upper levels, ensuring privacy and versatility: On the first floor, we find a master bedroom alongside a double room; both communicate through a spacious shared terrace. In front of the double room lies a third single bedroom, all served by a master bathroom and practical storage space. The second and final floor is entirely dedicated to the Master Suite: A loft-style environment with walk-in closet, dedicated bathroom, and private sun terrace—ideal for those seeking an intimate panoramic retreat. Privacy is total, especially as you ascend floors: while the first level hosts three bedrooms served by large terraces, the top floor becomes true sanctuary—a unique Master Suite complete with walk-in closet, dedicated bathroom ,and private sun terrace. The undeniable value of this property is underscored by its CasaClima certification: an independent public protocol (EU Directive 2010/31/EU) guaranteeing exceptional construction quality and energy sustainability for clients—a seal of transparency protecting your investment over time. Bold design meets technological soul with the sea just steps away. Don't wait for the future: come live it now! For more details or information on pricing or to schedule an appointment contact us: JBC Jesolo – Piazza Drago 18, Jesolo Tel: +39 339 841 6857 | Mail: info@jbcimmobiliare.it **Photos are purely illustrative. Some images have been processed using Artificial Intelligence.** Property details REFERENCE 4990000 PROPERTY TYPE Detached house AVAILABILITY Libero PROPERTY CONDITION Ottimo YEAR / PERIOD 2020 HEATING Autonomo, a pavimento SERVICE CHARGES 0 ENERGY PERFORMANCE 5.85 kWh/m2anno Location Via Nicolò Tommaseo Piazza Marconi - Drago · Jesolo · Venezia OPEN LOCATION ON MAP → Features and highlights ✓ Giardino ✓ Terrazzo abitabile ✓ Aria condizionata ✓ Arredato ✓ Ingresso indipendente ✓ Soggiorno con angolo cottura ✓ Allarme ✓ Lavanderia ✓ Piano terra ✓ Primo piano ✓ Ultimo piano ✓ Posizione al mare ✓ Pannelli fotovoltaici ✓ Piscina ✓ Porticato ✓ Frigorifero ✓ Lavatrice ✓ Lavastoviglie ✓ Animali ammessi ✓ Televisione ✓ Forno ✓ Caldaia a condensazione ✓ Cucina arredata ✓ Domotica ✓ Tapparelle motorizzate ✓ Porta blindata ✓ Ripostigli: 2 ✓ Terrazzi: 2 ✓ Piani totali edificio: 2 ✓ Piano: 2 ✓ Locali: 5 ✓ Vista aperta ✓ Fatturato: 0 € ✓ Fee di ingresso: 0 € ✓ Volumetria: 0 m³ ✓ Superficie giardino: 300 m² ✓ Superficie aree esterne: 0 m² ✓ Altezza piano: 0 m ✓ Potenza cabina elettrica: 0 kW ✓ Distanza dal mare: 300 m Description in other languages Italian German Request information Contact: Federico Di Pillo · fdipillosdl@gmail.com Leave your contact details to receive the full property information and arrange a private viewing. FULL NAME * PHONE NUMBER * EMAIL ADDRESS * MESSAGE Data submitted through this form is processed to handle your request, as described in our Privacy Policy. REQUEST INFORMATION REQUEST INFORMATION SEND REQUEST Data submitted through this form is processed to handle your request, as described in our Privacy Policy. JBC IMMOBILIARE “Where your home comes to life” Real estate agency specialising in the sale of apartments, houses and commercial properties. INSTAGRAM FACEBOOK PROPERTIES New Developments Properties for Sale Property Valuation AGENCY About Us Franchising Join Our Team Our Offices OFFICES JESOLO +39 339 841 6857 ODERZO +39 340 467 5474 EMAIL info@jbcimmobiliare.it © 2026 JBC Immobiliare di Manuele Sutto VAT IT04841350277 · Piazza Drago 18, 30016 Jesolo (VE) Privacy Policy Cookie Policy Cookie preferences Before you continue This site sets no cookies of its own. The interactive map on the Offices page uses Google Maps and only loads if you consent: until then it stays a plain link to Google Maps, with no cookie set. Cookie Policy NECESSARY ONLY ACCEPT",
+  "captured_at": "2026-09-18T11:41:53Z",
+  "source_name": "JBC Immobiliare — official",
+  "configured_location": "Adriatic coverage",
+  "raw_reference": "data/raw/2026-09-18T11-31-54Z/jbc_official_inventory/listing-00177.json"
+}

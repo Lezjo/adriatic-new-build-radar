@@ -1,0 +1,57 @@
+{
+  "source": "jbc_official_inventory",
+  "source_id": "jbc_official_inventory",
+  "source_url": "https://www.jbcimmobiliare.it/immobili/5113013-appartamento-trilocale-vista-mare-a-jesolo-lido",
+  "location": "Jesolo",
+  "location_confidence": "high",
+  "location_evidence": [
+    {
+      "field": "url",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo"
+      ],
+      "score": 8
+    },
+    {
+      "field": "title",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo"
+      ],
+      "score": 6
+    },
+    {
+      "field": "body",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo",
+        "piazza milano"
+      ],
+      "score": 2
+    }
+  ],
+  "listing_id": "url:33721e159d360c7c64a1289cea426f723ef9dd82",
+  "listing_title": "Appartamento Trilocale Vista Mare a Jesolo Lido — JBC Immobiliare",
+  "price": 465000,
+  "area_m2": 75.0,
+  "rooms": null,
+  "floor": "di",
+  "energy_class": "E",
+  "unit_id": null,
+  "record_type": "PROJECT",
+  "status": "ACTIVE",
+  "features": [
+    "posto auto",
+    "ascensore",
+    "aria condizionata",
+    "vista mare",
+    "terrazza",
+    "giardino"
+  ],
+  "raw_text": "IT EN DE MENU HOME / IMMOBILI / APPARTAMENTO TRILOCALE VISTA MARE A JESOLO LIDO VENDITA · APPARTAMENTO Appartamento Trilocale Vista Mare a Jesolo Lido PIAZZA MILANO · JESOLO · VENEZIA PREZZO 465.000 € Fotografie (28) Planimetrie (0) 1 / 28 SUPERFICIE 75 m² CAMERE DA LETTO 2 BAGNI 1 ASCENSORE Sì CLASSE ENERGETICA A4 Presentazione UN’OPPORTUNITÀ RARA E INTROVABILE A JESOLO! -- Anno di Costruzione 2021 | Vendita Soggetta a Imposta di Registro, NO IVA! -- L'appartamento viene venduto COMPLETAMENTE arredato con mobili di prestigio e di altissimo livello, curati nei minimi dettagli e pronti da vivere subito! Situato al terzo piano di un’elegante palazzina di sole otto unità abitative servita da ascensore, l’immobile si trova a soli 200 metri dalla spiaggia, nei pressi di Piazza Milano: una zona piacevolmente tranquilla, ma con tutti i comfort, i locali e i servizi a portata di mano. Varcata la soglia, l'ingresso ci accoglie in una zona living straordinariamente luminosa e spaziosa. Da qui l'ambiente si apre naturale verso l'esterno grazie a una splendida terrazza vivibile: uno spazio perfetto per pranzare all'aperto, sorseggiare un aperitivo al tramonto o semplicemente rilassarsi ammirando lo scorcio e la vista del mare all'orizzonte. A garantire riservatezza e silenzio ci pensa un disimpegno con una porta scorrevole, che conduce al reparto notte. Gli ambienti comprendono una spaziosa camera matrimoniale, una seconda camera doppia estremamente versatile e un bagno moderno con finiture di pregio. A completare questa proprietà unica troviamo l'immancabile posto auto di proprietà, un valore aggiunto fondamentale per dimenticarsi dell'auto e godersi il mare in totale serenità. Contattaci per maggiori informazioni o per fissare una visita; Marco – JBC Immobiliare Cellulare: 339 841 6857 Mail: info@jbcimmobiliare.it Dettagli dell’immobile RIFERIMENTO 5113013 TIPOLOGIA Appartamento DISPONIBILITÀ Libero STATO IMMOBILE Ottimo ANNO / EPOCA 2021 RISCALDAMENTO Autonomo, a pavimento SPESE CONDOMINIALI 50 PRESTAZIONE ENERGETICA 0 kWh/m2anno Posizione Via Olanda 137 Piazza Milano · Jesolo · Venezia APRI LA POSIZIONE SULLA MAPPA → Caratteristiche ed elementi di pregio ✓ Aria condizionata ✓ Arredato ✓ Posto auto ✓ Soggiorno con angolo cottura ✓ Posizione al mare ✓ Accesso per persone con disabilità ✓ Frigorifero ✓ Lavatrice ✓ Lavastoviglie ✓ Animali ammessi ✓ Televisione ✓ Forno ✓ Caldaia a condensazione ✓ Cucina arredata ✓ Tapparelle motorizzate ✓ Porta blindata ✓ Terrazzi: 2 ✓ Piani totali edificio: 4 ✓ Piano: 3 ✓ Locali: 3 ✓ Vista mare ✓ Fatturato: 0 € ✓ Fee di ingresso: 0 € ✓ Volumetria: 0 m³ ✓ Superficie giardino: 0 m² ✓ Superficie aree esterne: 0 m² ✓ Altezza piano: 0 m ✓ Potenza cabina elettrica: 0 kW ✓ Distanza dal mare: 200 m Descrizione in altre lingue Arabo Tedesco Inglese Russo Richiedi informazioni Referente: Marco Carlesso · m.carlesso@jbcimmobiliare.it Lasciaci i tuoi riferimenti per ricevere la scheda dettagliata e programmare un sopralluogo riservato. NOME E COGNOME * RECAPITO TELEFONICO * INDIRIZZO E-MAIL * MESSAGGIO I dati inviati con questo modulo vengono trattati per gestire la tua richiesta, come descritto nella nostra Privacy Policy. RICHIEDI INFORMAZIONI RICHIEDI INFORMAZIONI INVIA RICHIESTA I dati inviati con questo modulo vengono trattati per gestire la tua richiesta, come descritto nella nostra Privacy Policy. JBC IMMOBILIARE “Where your home comes to life” Agenzia immobiliare specializzata nella vendita di appartamenti, case e locali commerciali. INSTAGRAM FACEBOOK IMMOBILI Nuove Costruzioni Vendita Immobili Valutazione Immobile AGENZIA Chi Siamo Franchising Lavora con Noi Le Nostre Sedi SEDI JESOLO +39 339 841 6857 ODERZO +39 340 467 5474 E-MAIL info@jbcimmobiliare.it © 2026 JBC Immobiliare di Manuele Sutto P.IVA IT04841350277 · Piazza Drago 18, 30016 Jesolo (VE) Privacy Policy Cookie Policy Preferenze cookie Prima di continuare Il sito non installa cookie propri. La mappa interattiva nella pagina Sedi usa Google Maps e si attiva solo se acconsenti: fino ad allora resta un link a Google Maps, senza alcun cookie. Cookie Policy SOLO NECESSARI ACCETTA",
+  "captured_at": "2026-09-18T11:36:27Z",
+  "source_name": "JBC Immobiliare — official",
+  "configured_location": "Adriatic coverage",
+  "raw_reference": "data/raw/2026-09-18T11-31-54Z/jbc_official_inventory/listing-00046.json"
+}

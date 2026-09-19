@@ -1,0 +1,54 @@
+{
+  "source": "jbc_nuove_costruzioni",
+  "source_id": "jbc_nuove_costruzioni",
+  "source_url": "https://www.jbcimmobiliare.it/immobili/4989068-casa-singola-con-giardino-a-jesolo-lido",
+  "location": "Jesolo",
+  "location_confidence": "high",
+  "location_evidence": [
+    {
+      "field": "url",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo"
+      ],
+      "score": 8
+    },
+    {
+      "field": "title",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo"
+      ],
+      "score": 6
+    },
+    {
+      "field": "body",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo"
+      ],
+      "score": 1
+    }
+  ],
+  "listing_id": "url:8d2f90ff32d946259db0853a943707f99617dae6",
+  "listing_title": "Casa Singola con Giardino a Jesolo Lido — JBC Immobiliare",
+  "price": 550000,
+  "area_m2": 120.0,
+  "rooms": null,
+  "floor": "rialzato",
+  "energy_class": "E",
+  "unit_id": null,
+  "record_type": "PROJECT",
+  "status": "ACTIVE",
+  "features": [
+    "piscina",
+    "ascensore",
+    "aria condizionata",
+    "giardino"
+  ],
+  "raw_text": "IT EN DE MENU HOME / IMMOBILI / CASA SINGOLA CON GIARDINO A JESOLO LIDO VENDITA · CASA SINGOLA Casa Singola con Giardino a Jesolo Lido PIAZZA AURORA · JESOLO · VENEZIA PREZZO 550.000 € Fotografie (17) Planimetrie (1) 1 / 17 SUPERFICIE 120 m² CAMERE DA LETTO 3 BAGNI 2 ASCENSORE No CLASSE ENERGETICA E Presentazione Benvenuti nella vostra nuova casa a Jesolo Lido! A pochi passi da piazza Aurora e a soli 350 metri dal mare, proponiamo una casa singola circondata da circa 200 mq di giardino privato, uno spazio che regala privacy, tranquillità e la possibilità di vivere l’estate in totale libertà. L’abitazione si sviluppa su circa 100 mq, su un unico livello, ed è composta da ambienti ampi e ben distribuiti: ingresso, un luminoso soggiorno, cucina separata, ripostiglio, tre camere matrimoniali di generose dimensioni, di cui una con bagno privato finestrato dotato di doccia, oltre ad un secondo bagno con vasca. Completa la proprietà un comodo magazzino esterno. Questa soluzione rappresenta un’opportunità sempre più difficile da trovare: una casa indipendente con giardino privato a pochi minuti a piedi dalla spiaggia, ideale sia come residenza estiva esclusiva sia come abitazione da vivere tutto l’anno. L’immobile offre inoltre un enorme potenziale di valorizzazione: grazie agli spazi esterni è possibile realizzare una splendida piscina privata e, con una ristrutturazione moderna, trasformare la proprietà in una villa elegante e contemporanea nel cuore di Jesolo. Una soluzione per chi desidera indipendenza, spazi esterni vivibili e una posizione centrale senza rinunciare alla privacy. Contattaci per maggiori informazioni o per fissare un appuntamento: JBC Jesolo – Piazza Drago, 18 Tel. +39 339 841 6857 | Mail: info@jbcimmobiliare.it **Le foto hanno scopo puramente illustrativo. Alcune immagini sono state elaborate tramite Intelligenza Artificiale.** Dettagli dell’immobile RIFERIMENTO 4989068 TIPOLOGIA Casa singola DISPONIBILITÀ Libero STATO IMMOBILE Discreto ANNO / EPOCA 1970 RISCALDAMENTO Autonomo PRESTAZIONE ENERGETICA 151,64 kWh/m2anno Posizione Via Vincenzo Monti Piazza Aurora · Jesolo · Venezia APRI LA POSIZIONE SULLA MAPPA → Caratteristiche ed elementi di pregio ✓ Cucina ✓ Soggiorno ✓ Cantina ✓ Aria condizionata ✓ Arredato ✓ Giardino ✓ Ingresso indipendente ✓ Posizione al mare ✓ Piano rialzato ✓ Animali ammessi ✓ Cucina arredata ✓ Ripostigli: 1 ✓ Terrazzi: 1 ✓ Piani totali edificio: 1 ✓ Locali: 4 ✓ Vista aperta ✓ Fatturato: 0 € ✓ Fee di ingresso: 0 € ✓ Volumetria: 0 m³ ✓ Superficie giardino: 200 m² ✓ Superficie aree esterne: 0 m² ✓ Altezza piano: 0 m ✓ Potenza cabina elettrica: 0 kW ✓ Distanza dal mare: 350 m Descrizione in altre lingue Tedesco Inglese Russo Richiedi informazioni Referente: Elisa Zanetti · ezanetti@jbcimmobiliare.it Lasciaci i tuoi riferimenti per ricevere la scheda dettagliata e programmare un sopralluogo riservato. NOME E COGNOME * RECAPITO TELEFONICO * INDIRIZZO E-MAIL * MESSAGGIO I dati inviati con questo modulo vengono trattati per gestire la tua richiesta, come descritto nella nostra Privacy Policy. RICHIEDI INFORMAZIONI RICHIEDI INFORMAZIONI INVIA RICHIESTA I dati inviati con questo modulo vengono trattati per gestire la tua richiesta, come descritto nella nostra Privacy Policy. JBC IMMOBILIARE “Where your home comes to life” Agenzia immobiliare specializzata nella vendita di appartamenti, case e locali commerciali. INSTAGRAM FACEBOOK IMMOBILI Nuove Costruzioni Vendita Immobili Valutazione Immobile AGENZIA Chi Siamo Franchising Lavora con Noi Le Nostre Sedi SEDI JESOLO +39 339 841 6857 ODERZO +39 340 467 5474 E-MAIL info@jbcimmobiliare.it © 2026 JBC Immobiliare di Manuele Sutto P.IVA IT04841350277 · Piazza Drago 18, 30016 Jesolo (VE) Privacy Policy Cookie Policy Preferenze cookie Prima di continuare Il sito non installa cookie propri. La mappa interattiva nella pagina Sedi usa Google Maps e si attiva solo se acconsenti: fino ad allora resta un link a Google Maps, senza alcun cookie. Cookie Policy SOLO NECESSARI ACCETTA",
+  "captured_at": "2026-09-18T11:49:38Z",
+  "source_name": "JBC Immobiliare — Nuove Costruzioni",
+  "configured_location": "Adriatic coverage",
+  "raw_reference": "data/raw/2026-09-18T11-33-13Z/jbc_nuove_costruzioni/listing-00072.json"
+}

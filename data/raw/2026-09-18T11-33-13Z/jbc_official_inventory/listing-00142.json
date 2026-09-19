@@ -1,0 +1,61 @@
+{
+  "source": "jbc_official_inventory",
+  "source_id": "jbc_official_inventory",
+  "source_url": "https://jbcimmobiliare.it/en/immobili/5095677-trifamiliare-nuova-costruzione-a-jesolo",
+  "location": "Jesolo",
+  "location_confidence": "high",
+  "location_evidence": [
+    {
+      "field": "url",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo"
+      ],
+      "score": 8
+    },
+    {
+      "field": "title",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo"
+      ],
+      "score": 6
+    },
+    {
+      "field": "body",
+      "location": "Jesolo Paese",
+      "terms": [
+        "jesolo paese"
+      ],
+      "score": 1
+    },
+    {
+      "field": "body",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo"
+      ],
+      "score": 1
+    }
+  ],
+  "listing_id": "url:c28f24da8b6255dc4d084fe345ae6190dfad0f37",
+  "listing_title": "Trifamiliare | Nuova costruzione a Jesolo — JBC Immobiliare",
+  "price": 420000,
+  "area_m2": 130.0,
+  "rooms": null,
+  "floor": "plans",
+  "energy_class": null,
+  "unit_id": null,
+  "record_type": "PROJECT",
+  "status": "ACTIVE",
+  "features": [
+    "aria condizionata",
+    "pannelli fotovoltaici",
+    "giardino"
+  ],
+  "raw_text": "IT EN DE MENU HOME / NEW DEVELOPMENTS / TRIFAMILIARE | NUOVA COSTRUZIONE A JESOLO NEW DEVELOPMENT · THREE-FAMILY HOUSE Trifamiliare | Nuova costruzione a Jesolo JESOLO PAESE · JESOLO · VENEZIA PRICE €420,000 Photos (16) Floor plans (0) 1 / 16 FLOOR AREA 130 m² BEDROOMS 3 BATHROOMS 2 LIFT No ENERGY CLASS A4 Overview Welcome to your new home in Jesolo: the perfect balance between Sea, Comfort, and Nature. Located in one of the most strategic and rapidly expanding residential areas of the city, this stunning complex consisting of three portions of villas under construction offers the best of both worlds. The homes are positioned exactly between the tranquility and human-scale services of Jesolo Paese and the energy, beaches, and entertainment of Jesolo Lido, both reachable within just five minutes by car or via the convenience of a bike path. This is the ideal solution for those seeking maximum privacy without sacrificing proximity to the sea or convenient road connections, all complemented by a beautiful direct view over a wonderful public park. Emphasizing modern architecture and sustainability, this project aims to enhance the territory through a new concept of living where comfort, privacy, and quality construction coexist harmoniously. Each residence features its own private garden—a reserved space to enjoy year-round—perfect for relaxation, family time, and outdoor gatherings. The design solutions adopted ensure maximum independence among residences while creating an exclusive context that is elegant and fully immersed in greenery. The central unit develops harmoniously across two levels. On the ground floor welcomes guests with a spacious bright living area featuring an open kitchen exceeding 40 square meters designed to enhance daily life in a contemporary environment; completing this level are a functional bathroom,a practical hallway,and technical room. Ascending to the upper floor leads you into the sleeping area which includes two bedrooms,two dedicated terraces,a second bathroom,and ample attic space providing versatile spaces with appropriate privacy for every family member. Outside,the porchand private garden ideally extend indoor spaces creatingthe perfect environmentto relax outdoors throughout every season enrichedbythe convenienceofprivate parking. The two lateral end units free on three sides offer similar distribution but with even more expansive views towards outside.The ground-floor day zone opens ontoa brightly lit living areawithanopen kitchenalsoover40squaremeters servedbyaservicebathroomanda comfortablehallway.The upper flooris entirely dedicatedto restand versatilityfeaturingtwo bedrooms overlookingtwoterraces,a second master bath,and alargeattic customizablesuitableforpersonalorprofessionalneeds.Aroundthe house,the generouscornerprivategardenwithporchbecomesanidealsettingfororganizinglunchesanddinnersincompanyor enjoyingnatureintotalprivacycompletedbyaindispensableprivateparkingspace. Delivery is expected by summer 2027. Contact us for more information: JBC Jesolo - Piazza Drago 18,Jeso lo Number: +39 3398416857 Email: info@jbcimmobiliare.it Property details REFERENCE 5095677 PROPERTY TYPE Three-family house AVAILABILITY Libero PROPERTY CONDITION Nuovo YEAR / PERIOD 2027 HEATING Autonomo, termopompa, a pavimento SERVICE CHARGES 0 ENERGY PERFORMANCE 0 kWh/m2anno Location Via Carlo Goldoni Jesolo Paese · Jesolo · Venezia OPEN LOCATION ON MAP → Features and highlights ✓ Mansarda ✓ Giardino ✓ Soggiorno con angolo cottura ✓ Piano terra ✓ Primo piano ✓ Posizione al mare ✓ Immobile nuovo ✓ Predisposizione aria condizionata ✓ Predisposizione allarme ✓ Pannelli fotovoltaici ✓ Porticato ✓ Animali ammessi ✓ Porta blindata ✓ Ripostigli: 1 ✓ Terrazzi: 2 ✓ Piani totali edificio: 2 ✓ Locali: 5 ✓ Fatturato: 0 € ✓ Fee di ingresso: 0 € ✓ Volumetria: 0 m³ ✓ Superficie giardino: 275 m² ✓ Superficie aree esterne: 0 m² ✓ Altezza piano: 0 m ✓ Potenza cabina elettrica: 0 kW ✓ Distanza dal mare: 0 m Description in other languages Italian German French Request information Contact: Federico Di Pillo · fdipillosdl@gmail.com Leave your contact details to receive the full property information and arrange a private viewing. FULL NAME * PHONE NUMBER * EMAIL ADDRESS * MESSAGE Data submitted through this form is processed to handle your request, as described in our Privacy Policy. REQUEST INFORMATION REQUEST INFORMATION SEND REQUEST Data submitted through this form is processed to handle your request, as described in our Privacy Policy. JBC IMMOBILIARE “Where your home comes to life” Real estate agency specialising in the sale of apartments, houses and commercial properties. INSTAGRAM FACEBOOK PROPERTIES New Developments Properties for Sale Property Valuation AGENCY About Us Franchising Join Our Team Our Offices OFFICES JESOLO +39 339 841 6857 ODERZO +39 340 467 5474 EMAIL info@jbcimmobiliare.it © 2026 JBC Immobiliare di Manuele Sutto VAT IT04841350277 · Piazza Drago 18, 30016 Jesolo (VE) Privacy Policy Cookie Poli",
+  "captured_at": "2026-09-18T11:41:07Z",
+  "source_name": "JBC Immobiliare — official",
+  "configured_location": "Adriatic coverage",
+  "raw_reference": "data/raw/2026-09-18T11-33-13Z/jbc_official_inventory/listing-00142.json"
+}

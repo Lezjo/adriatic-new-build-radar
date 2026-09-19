@@ -1,0 +1,66 @@
+{
+  "source": "jbc_official_inventory",
+  "source_id": "jbc_official_inventory",
+  "source_url": "https://jbcimmobiliare.it/en/immobili/5114397-nuovo-bilocale-piano-terra-con-giardino-residence-al-lido-altanea",
+  "location": "Caorle",
+  "location_confidence": "high",
+  "location_evidence": [
+    {
+      "field": "url",
+      "location": "Caorle",
+      "terms": [
+        "altanea"
+      ],
+      "score": 8
+    },
+    {
+      "field": "title",
+      "location": "Caorle",
+      "terms": [
+        "altanea"
+      ],
+      "score": 6
+    },
+    {
+      "field": "body",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo"
+      ],
+      "score": 1
+    },
+    {
+      "field": "body",
+      "location": "Caorle",
+      "terms": [
+        "caorle",
+        "porto santa margherita",
+        "altanea"
+      ],
+      "score": 3
+    }
+  ],
+  "listing_id": "url:5e47ae5dd6ad68ad699ce6a61dda55a237eef813",
+  "listing_title": "Nuovo Bilocale | Piano Terra con Giardino - Residence al Lido Altanea — JBC Immobiliare",
+  "price": 255000,
+  "area_m2": 64.0,
+  "rooms": null,
+  "floor": "TERRA",
+  "energy_class": null,
+  "unit_id": null,
+  "record_type": "PROJECT",
+  "status": "ACTIVE",
+  "features": [
+    "posto auto",
+    "piscina",
+    "aria condizionata",
+    "pannelli fotovoltaici",
+    "vista mare",
+    "giardino"
+  ],
+  "raw_text": "IT EN DE MENU HOME / NEW DEVELOPMENTS / NUOVO BILOCALE | PIANO TERRA CON GIARDINO - RESIDENCE AL LIDO ALTANEA NEW DEVELOPMENT · APARTMENT Nuovo Bilocale | Piano Terra con Giardino - Residence al Lido Altanea PORTO SANTA MARGHERITA · CAORLE · VENEZIA PRICE €255,000 Photos (12) Floor plans (1) 1 / 12 FLOOR AREA 64 m² BEDROOMS 1 BATHROOMS 1 LIFT No ENERGY CLASS A4 Overview Welcome to your new home in Caorle! Just a few steps from the beach of Lido Altanea, a new concept of seaside living comes to life. This modern residence, nestled in a quiet and private setting less than 200 meters from the beach, is designed for those seeking the perfect balance between comfort, nature, and total relaxation. The project, currently under construction with completion expected by the end of 2027, offers refined newly built apartments: the perfect retreat for those dreaming of an elegant seaside residence that is efficient and designed to provide moments of pure well-being. This apartment, located on a corner among only four ground floor units, stands out for its maximum independence privilege, double private exposure and complete continuity between indoor and outdoor spaces. The heart of the home is the bright open space living area that opens directly onto a spacious covered terrace: a true outdoor lounge where you can enjoy moments of pure relaxation at any time of day. A hallway leads to the sleeping area which features a modern functional bathroom and a large master bedroom overlooking its own rear private garden: an intimate and quiet oasis where you can wake up every morning immersed in tranquility. Completing the amenities of this residence is a magnificent swimming pool exclusively for residents' use. Each unit is designed to ensure maximum energy savings and high residential comfort. Additionally, to make this two-room apartment truly yours, we collaborate with specialists in interior design who will guide you step by step in choosing tailored solutions and furnishings. The construction site is already available for visits by appointment: a unique opportunity to see the project up close and start imagining your new life by the sea. Contact us for availability information, floor plans, and specifications. JBC Jesolo - Piazza Drago 18, Jesolo Phone number: +39 339 841 6857 Email: info@jbcimmobiliare.it Property details REFERENCE 5114397 PROPERTY TYPE Apartment AVAILABILITY Libero PROPERTY CONDITION Nuovo YEAR / PERIOD 2026 HEATING Autonomo SERVICE CHARGES 100 ENERGY PERFORMANCE 0 kWh/m2anno Location Via delle Rondini Porto Santa Margherita · Caorle · Venezia OPEN LOCATION ON MAP → Features and highlights ✓ Aria condizionata ✓ Giardino ✓ Posto auto ✓ Soggiorno con angolo cottura ✓ Piano terra ✓ Posizione al mare ✓ Immobile nuovo ✓ Al grezzo ✓ Pannelli fotovoltaici ✓ Piscina ✓ Animali ammessi ✓ Porta blindata ✓ Terrazzi: 1 ✓ Piani totali edificio: 2 ✓ Locali: 2 ✓ Vista mare ✓ Fatturato: 0 € ✓ Fee di ingresso: 0 € ✓ Volumetria: 0 m³ ✓ Superficie giardino: 30 m² ✓ Superficie aree esterne: 0 m² ✓ Altezza piano: 0 m ✓ Potenza cabina elettrica: 0 kW ✓ Distanza dal mare: 200 m Description in other languages Italian Arabic German French Portuguese Russian Request information Contact: Elisa Zanetti · ezanetti@jbcimmobiliare.it Leave your contact details to receive the full property information and arrange a private viewing. FULL NAME * PHONE NUMBER * EMAIL ADDRESS * MESSAGE Data submitted through this form is processed to handle your request, as described in our Privacy Policy. REQUEST INFORMATION REQUEST INFORMATION SEND REQUEST Data submitted through this form is processed to handle your request, as described in our Privacy Policy. JBC IMMOBILIARE “Where your home comes to life” Real estate agency specialising in the sale of apartments, houses and commercial properties. INSTAGRAM FACEBOOK PROPERTIES New Developments Properties for Sale Property Valuation AGENCY About Us Franchising Join Our Team Our Offices OFFICES JESOLO +39 339 841 6857 ODERZO +39 340 467 5474 EMAIL info@jbcimmobiliare.it © 2026 JBC Immobiliare di Manuele Sutto VAT IT04841350277 · Piazza Drago 18, 30016 Jesolo (VE) Privacy Policy Cookie Policy Cookie preferences Before you continue This site sets no cookies of its own. The interactive map on the Offices page uses Google Maps and only loads if you consent: until then it stays a plain link to Google Maps, with no cookie set. Cookie Policy NECESSARY ONLY ACCEPT",
+  "captured_at": "2026-09-18T11:40:47Z",
+  "source_name": "JBC Immobiliare — official",
+  "configured_location": "Adriatic coverage",
+  "raw_reference": "data/raw/2026-09-18T11-31-54Z/jbc_official_inventory/listing-00146.json"
+}

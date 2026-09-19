@@ -1,0 +1,37 @@
+{
+  "source": "jbc_official_inventory",
+  "source_id": "jbc_official_inventory",
+  "source_url": "https://www.jbcimmobiliare.it/de/immobili/5124874-trilocale-zona-centrale-a-fossalta-di-piave",
+  "location": "Jesolo",
+  "location_confidence": "medium",
+  "location_evidence": [
+    {
+      "field": "body",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo"
+      ],
+      "score": 1
+    }
+  ],
+  "listing_id": "url:dc031f6bec16230f54dd2df0fa9089e144bb9902",
+  "listing_title": "Trilocale Zona Centrale a Fossalta di Piave — JBC Immobiliare",
+  "price": 163000,
+  "area_m2": 90.0,
+  "rooms": null,
+  "floor": null,
+  "energy_class": null,
+  "unit_id": null,
+  "record_type": "PROJECT",
+  "status": "ACTIVE",
+  "features": [
+    "garage",
+    "aria condizionata",
+    "giardino"
+  ],
+  "raw_text": "IT EN DE MENÜ HOME / IMMOBILIEN / TRILOCALE ZONA CENTRALE A FOSSALTA DI PIAVE VERKAUF · WOHNUNG Trilocale Zona Centrale a Fossalta di Piave FOSSALTA DI PIAVE - CENTRO · FOSSALTA DI PIAVE · VENEZIA PREIS 163.000 € Fotos (11) Grundrisse (1) 1 / 11 FLÄCHE 90 m² SCHLAFZIMMER 2 BADEZIMMER 1 AUFZUG Nein ENERGIEKLASSE In definizione Beschreibung Willkommen in Ihrem neuen Zuhause in Fossalta di Piave! Im Herzen von Fossalta di Piave, nur wenige Schritte von allen wichtigen Dienstleistungen entfernt, aber eingebettet in eine ruhige und private Umgebung, bieten wir zum Verkauf eine helle Dreizimmerwohnung im ersten Stock an. Die Wohnung zeichnet sich durch eine praktische und gut organisierte Innenaufteilung aus. Betritt man die Schwelle, wird man von einem komfortablen Eingangsflur empfangen, der harmonisch alle Räume des Hauses verteilt. Auf der einen Seite befindet sich der einladende offene Wohnbereich mit Wohnzimmer und offener Küchenzeile, flankiert von einem praktischen Fensterbad. Auf der anderen Seite führt ein Flur zur Schlafzone, die aus einem geräumigen Schlafzimmer und einem zweiten vielseitigen Zimmer besteht, das perfekt als Kinderzimmer, Büro oder Gästezimmer geeignet ist. Der wahre Mehrwert der Immobilie ist der Außenbereich: Ein Teil des privaten Gartens innerhalb des grünen Gemeinschaftsbereichs - die ideale Ecke zum Entspannen im Freien, um gemeinsame Momente zu genießen oder die Kinder sicher spielen zu lassen. Die Immobilie wird schließlich durch eine bequeme private Garage ergänzt. Es ist die perfekte Lösung für junge Paare, Familien oder für jeden, der den Komfort des Zentrums sucht ohne auf die Privatsphäre eines eigenen Gartens verzichten zu müssen. Ein Haus bereit dich willkommen zu heißen und dir maximalen Komfort zu schenken! Kontaktiere uns für weitere Informationen: JBC Jesolo - Piazza Drago 18, Jesolo Nummer: +39 339 841 6857 Email: info@jbcimmobiliare.it Details zur Immobilie REFERENZ 5124874 OBJEKTART Wohnung VERFÜGBARKEIT Libero ZUSTAND DER IMMOBILIE Buono BAUJAHR / EPOCHE 2000 HEIZUNG Autonomo NEBENKOSTEN 0 ENERGIEEFFIZIENZ 0 kWh/m2anno Lage Via Giuseppe Mazzini Fossalta di Piave - Centro · Fossalta di Piave · Venezia LAGE AUF DER KARTE ÖFFNEN → Ausstattung und besondere Merkmale ✓ Garage ✓ Aria condizionata ✓ Giardino ✓ Soggiorno con angolo cottura ✓ Primo piano ✓ Cucina arredata ✓ Porta blindata ✓ Piani totali edificio: 2 ✓ Piano: 1 ✓ Locali: 3 ✓ Fatturato: 0 € ✓ Fee di ingresso: 0 € ✓ Volumetria: 0 m³ ✓ Superficie giardino: 50 m² ✓ Superficie aree esterne: 0 m² ✓ Altezza piano: 0 m ✓ Potenza cabina elettrica: 0 kW ✓ Distanza dal mare: 0 m Beschreibung in anderen Sprachen Italienisch Englisch Informationen anfordern Ansprechpartner: Riccardo Silvestrin · riccardo.silve96@gmail.com Hinterlassen Sie uns Ihre Kontaktdaten, um das detaillierte Exposé zu erhalten und eine private Besichtigung zu vereinbaren. VOR- UND NACHNAME * TELEFONNUMMER * E-MAIL-ADRESSE * NACHRICHT Die über dieses Formular gesendeten Daten werden zur Bearbeitung Ihrer Anfrage verarbeitet, wie in unserer Privacy Policy. INFORMATIONEN ANFORDERN INFORMATIONEN ANFORDERN ANFRAGE SENDEN Die über dieses Formular gesendeten Daten werden zur Bearbeitung Ihrer Anfrage verarbeitet, wie in unserer Privacy Policy. JBC IMMOBILIARE “Where your home comes to life” Immobilienagentur spezialisiert auf den Verkauf von Wohnungen, Häusern und Gewerbeflächen. INSTAGRAM FACEBOOK IMMOBILIEN Neubauprojekte Immobilien Immobilienbewertung AGENTUR Über uns Franchise Karriere Unsere Standorte STANDORTE JESOLO +39 339 841 6857 ODERZO +39 340 467 5474 E-MAIL info@jbcimmobiliare.it © 2026 JBC Immobiliare di Manuele Sutto USt-IdNr. IT04841350277 · Piazza Drago 18, 30016 Jesolo (VE) Privacy Policy Cookie Policy Cookie-Einstellungen Bevor Sie fortfahren Diese Website setzt keine eigenen Cookies. Die interaktive Karte auf der Seite Standorte nutzt Google Maps und wird nur nach Ihrer Zustimmung geladen: bis dahin bleibt es ein einfacher Link zu Google Maps, ohne Cookie. Cookie-Richtlinie NUR NOTWENDIGE AKZEPTIEREN",
+  "captured_at": "2026-09-18T11:43:57Z",
+  "source_name": "JBC Immobiliare — official",
+  "configured_location": "Adriatic coverage",
+  "raw_reference": "data/raw/2026-09-18T11-31-54Z/jbc_official_inventory/listing-00229.json"
+}

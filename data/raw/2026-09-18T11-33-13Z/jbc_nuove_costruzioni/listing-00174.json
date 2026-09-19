@@ -1,0 +1,59 @@
+{
+  "source": "jbc_nuove_costruzioni",
+  "source_id": "jbc_nuove_costruzioni",
+  "source_url": "https://www.jbcimmobiliare.it/en/immobili/4627100-ville-di-prestigio-zona-faro-a-jesolo",
+  "location": "Jesolo",
+  "location_confidence": "high",
+  "location_evidence": [
+    {
+      "field": "url",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo"
+      ],
+      "score": 8
+    },
+    {
+      "field": "title",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo"
+      ],
+      "score": 6
+    },
+    {
+      "field": "body",
+      "location": "Jesolo Paese",
+      "terms": [
+        "via roma"
+      ],
+      "score": 1
+    },
+    {
+      "field": "body",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo"
+      ],
+      "score": 1
+    }
+  ],
+  "listing_id": "url:50f26bb7fd790242c857e21e5cbc1ca9091a73b6",
+  "listing_title": "Ville di Prestigio - Zona Faro a Jesolo — JBC Immobiliare",
+  "price": 558000,
+  "area_m2": 200.0,
+  "rooms": null,
+  "floor": "plans",
+  "energy_class": null,
+  "unit_id": null,
+  "record_type": "PROJECT",
+  "status": "ACTIVE",
+  "features": [
+    "giardino"
+  ],
+  "raw_text": "IT EN DE MENU HOME / PROPERTIES / VILLE DI PRESTIGIO - ZONA FARO A JESOLO FOR SALE · VILLA Ville di Prestigio - Zona Faro a Jesolo FARO · JESOLO · VENEZIA PRICE €558,000 Photos (10) Floor plans (0) 1 / 10 FLOOR AREA 200 m² BEDROOMS 4 BATHROOMS 2 LIFT No ENERGY CLASS A4 Overview Welcome to your new home in Jesolo! In the picturesque area of the Faro di Jesolo, just a short walk from the marina and the center, two exclusive high-end villas are being built, designed to offer maximum living comfort in a context of tranquility and privacy. The homes, developed over two levels, boast spacious interiors with bright and functional environments. Ground floor: 100 sqm on one level, airy and well-distributed. First floor: additional living spaces of equal size, featuring underfloor heating and state-of-the-art finishes. All enhanced by an elegant white beamed porch overlooking a private garden of 1,500 sqm, ideal for moments of relaxation or conviviality or to create your dream pool. Why choose these villas: - Luxury finishes and modern technology. - Extensive customization options with support from our interior design team. - Perfect solution for year-round living or as an exclusive holiday residence. - Strategic location: relaxation and privacy just steps from the center and the sea. - Trade-in option available for easier purchase process. Do you need to sell your house to buy this? With JBC Real Estate you have the opportunity to evaluate trading in your property so that moving into your new residence is simple and worry-free. The area is undergoing significant development; a new tourist village accommodating 2,400 guests will be created here generating about 80 jobs. The affected area spans 20 hectares between Via La Bassa and Ponte di Via Roma Destra. Plans include bungalows, mobile homes, glamping sites, pitches for campers as well as staff accommodations. The project also includes building a scenic bike path along the Sile River alongside revitalizing two areas. Discover the pleasure of living at the heart of Jesolo Lido in a complex that combines modern design with comfort and luxury. Contact us for more information or to schedule a visit at our offices. For further details regarding pricing or scheduling an appointment please contact us: jbc Jesolo – Piazza Drago 18 ,Jesolo Manuele +39 3408350235 Tel: +39 3398416857 | Email: info@jbcimmobiliare.it **Photos are purely illustrative purposes only some images have been processed using Artificial Intelligence** Property details REFERENCE 4627100 PROPERTY TYPE Villa AVAILABILITY Libero PROPERTY CONDITION Sconosciuto YEAR / PERIOD 2025 SERVICE CHARGES 0 ENERGY PERFORMANCE 0 kWh/m2anno Location Via la Bassa Faro · Jesolo · Venezia OPEN LOCATION ON MAP → Features and highlights ✓ Cucina ✓ Soggiorno ✓ Mansarda ✓ Giardino ✓ Soggiorno con angolo cottura ✓ Lavanderia ✓ Posizione al mare ✓ Immobile nuovo ✓ Immobile di prestigio ✓ Sottotetto ✓ Piano: 2 ✓ Locali: 7 ✓ Fatturato: 0 € ✓ Fee di ingresso: 0 € ✓ Volumetria: 0 m³ ✓ Superficie giardino: 1500 m² ✓ Superficie aree esterne: 0 m² ✓ Altezza piano: 0 m ✓ Potenza cabina elettrica: 0 kW ✓ Distanza dal mare: 0 m Finishes Di prestigio Description in other languages Italian German Russian Request information Contact: Manuele Sutto · info@jbcimmobiliare.it Leave your contact details to receive the full property information and arrange a private viewing. FULL NAME * PHONE NUMBER * EMAIL ADDRESS * MESSAGE Data submitted through this form is processed to handle your request, as described in our Privacy Policy. REQUEST INFORMATION REQUEST INFORMATION SEND REQUEST Data submitted through this form is processed to handle your request, as described in our Privacy Policy. JBC IMMOBILIARE “Where your home comes to life” Real estate agency specialising in the sale of apartments, houses and commercial properties. INSTAGRAM FACEBOOK PROPERTIES New Developments Properties for Sale Property Valuation AGENCY About Us Franchising Join Our Team Our Offices OFFICES JESOLO +39 339 841 6857 ODERZO +39 340 467 5474 EMAIL info@jbcimmobiliare.it © 2026 JBC Immobiliare di Manuele Sutto VAT IT04841350277 · Piazza Drago 18, 30016 Jesolo (VE) Privacy Policy Cookie Policy Cookie preferences Before you continue This site sets no cookies of its own. The interactive map on the Offices page uses Google Maps and only loads if you consent: until then it stays a plain link to Google Maps, with no cookie set. Cookie Policy NECESSARY ONLY ACCEPT",
+  "captured_at": "2026-09-18T11:53:07Z",
+  "source_name": "JBC Immobiliare — Nuove Costruzioni",
+  "configured_location": "Adriatic coverage",
+  "raw_reference": "data/raw/2026-09-18T11-33-13Z/jbc_nuove_costruzioni/listing-00174.json"
+}

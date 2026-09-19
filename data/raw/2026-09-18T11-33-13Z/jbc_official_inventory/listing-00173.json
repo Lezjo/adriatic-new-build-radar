@@ -1,0 +1,56 @@
+{
+  "source": "jbc_official_inventory",
+  "source_id": "jbc_official_inventory",
+  "source_url": "https://www.jbcimmobiliare.it/en/immobili/4624243-piano-terra-esclusivo-oasi-con-piscina-a-jesolo",
+  "location": "Jesolo",
+  "location_confidence": "high",
+  "location_evidence": [
+    {
+      "field": "url",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo"
+      ],
+      "score": 8
+    },
+    {
+      "field": "title",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo"
+      ],
+      "score": 6
+    },
+    {
+      "field": "body",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo"
+      ],
+      "score": 1
+    }
+  ],
+  "listing_id": "url:125736d6b97e1ef88bfc9dddf46272b5db691a77",
+  "listing_title": "Piano Terra Esclusivo | Oasi con Piscina a Jesolo — JBC Immobiliare",
+  "price": 420000,
+  "area_m2": 75.0,
+  "rooms": null,
+  "floor": "TERRA",
+  "energy_class": null,
+  "unit_id": null,
+  "record_type": "PROJECT",
+  "status": "ACTIVE",
+  "features": [
+    "garage",
+    "piscina",
+    "aria condizionata",
+    "pannelli solari",
+    "pannelli fotovoltaici",
+    "giardino"
+  ],
+  "raw_text": "IT EN DE MENU HOME / PROPERTIES / PIANO TERRA ESCLUSIVO | OASI CON PISCINA A JESOLO FOR SALE · APARTMENT Piano Terra Esclusivo | Oasi con Piscina a Jesolo PIAZZA NEMBER · JESOLO · VENEZIA PRICE €420,000 Photos (20) Floor plans (0) 1 / 20 FLOOR AREA 75 m² BEDROOMS 2 BATHROOMS 1 LIFT No ENERGY CLASS A4 Overview Welcome to your new home in Jesolo! Nestled in the reserved and exclusive atmosphere of a residence designed as a true oasis of relaxation, this ground floor apartment represents the perfect blend of independence, comfort, and outdoor living. Enhancing the complex is an extraordinary swimming pool, a perfect setting for those seeking moments of pure relaxation in a private and exclusive context. The property stands out for its layout between indoor and outdoor spaces. The bright and well-proportioned living room with kitchenette opens directly onto a splendid covered porch: a true extension of the living area outdoors, ideal for lunches and moments of relaxation, flowing into the spacious exclusive courtyard. A second porch and an additional private courtyard at the back ensure privacy and multiple areas to enjoy at any time of day. The sleeping area is thoughtfully distributed around a central hallway that carefully separates the privacy of two large bedrooms while serving the master bathroom. Completing the exclusivity of this property is a convenient external accessory room, perfect as storage or service space. A unique dwelling designed for those seeking tranquility in their own private garden along with the exclusivity of an oasis with pool without sacrificing functionality from perfectly organized internal spaces. Contact us for more information and to schedule a visit: JBC Real Estate Piazza Drago n.18, Jesolo Lido (VE) Mobile: 339 8416857 | Email: info@jbcimmobiliare.it Property details REFERENCE 4624243 PROPERTY TYPE Apartment AVAILABILITY Libero PROPERTY CONDITION Ottimo YEAR / PERIOD 2020 HEATING Autonomo SERVICE CHARGES 200 ENERGY PERFORMANCE 0 kWh/m2anno Location Via Rovigo Piazza Nember · Jesolo · Venezia OPEN LOCATION ON MAP → Features and highlights ✓ Garage ✓ Aria condizionata ✓ Arredato ✓ Giardino ✓ Soggiorno con angolo cottura ✓ Allarme ✓ Piano terra ✓ Posizione al mare ✓ Predisposizione allarme ✓ Pannelli solari ✓ Pannelli fotovoltaici ✓ Piscina ✓ Animali ammessi ✓ Cucina arredata ✓ Domotica ✓ Piani totali edificio: 2 ✓ Locali: 3 ✓ Fatturato: 0 € ✓ Fee di ingresso: 0 € ✓ Volumetria: 0 m³ ✓ Superficie giardino: 50 m² ✓ Superficie aree esterne: 0 m² ✓ Altezza piano: 0 m ✓ Potenza cabina elettrica: 0 kW ✓ Distanza dal mare: 400 m Description in other languages Italian German Request information Contact: Riccardo Silvestrin · riccardo.silve96@gmail.com Leave your contact details to receive the full property information and arrange a private viewing. FULL NAME * PHONE NUMBER * EMAIL ADDRESS * MESSAGE Data submitted through this form is processed to handle your request, as described in our Privacy Policy. REQUEST INFORMATION REQUEST INFORMATION SEND REQUEST Data submitted through this form is processed to handle your request, as described in our Privacy Policy. JBC IMMOBILIARE “Where your home comes to life” Real estate agency specialising in the sale of apartments, houses and commercial properties. INSTAGRAM FACEBOOK PROPERTIES New Developments Properties for Sale Property Valuation AGENCY About Us Franchising Join Our Team Our Offices OFFICES JESOLO +39 339 841 6857 ODERZO +39 340 467 5474 EMAIL info@jbcimmobiliare.it © 2026 JBC Immobiliare di Manuele Sutto VAT IT04841350277 · Piazza Drago 18, 30016 Jesolo (VE) Privacy Policy Cookie Policy Cookie preferences Before you continue This site sets no cookies of its own. The interactive map on the Offices page uses Google Maps and only loads if you consent: until then it stays a plain link to Google Maps, with no cookie set. Cookie Policy NECESSARY ONLY ACCEPT",
+  "captured_at": "2026-09-18T11:42:23Z",
+  "source_name": "JBC Immobiliare — official",
+  "configured_location": "Adriatic coverage",
+  "raw_reference": "data/raw/2026-09-18T11-33-13Z/jbc_official_inventory/listing-00173.json"
+}

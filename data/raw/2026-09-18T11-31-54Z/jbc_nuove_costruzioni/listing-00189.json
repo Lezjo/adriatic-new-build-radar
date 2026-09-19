@@ -1,0 +1,39 @@
+{
+  "source": "jbc_nuove_costruzioni",
+  "source_id": "jbc_nuove_costruzioni",
+  "source_url": "https://www.jbcimmobiliare.it/en/immobili/5104819-prestigiosa-villa-singola-con-parco-e-piscina-nuova-modalita-di-acquisto",
+  "location": "Jesolo",
+  "location_confidence": "medium",
+  "location_evidence": [
+    {
+      "field": "body",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo"
+      ],
+      "score": 1
+    }
+  ],
+  "listing_id": "url:ad7fc9d924d39406b5591fb509ffdff0ca44e893",
+  "listing_title": "Prestigiosa Villa singola con parco e piscina: nuova modalità di acquisto — JBC Immobiliare",
+  "price": 600000,
+  "area_m2": 300.0,
+  "rooms": null,
+  "floor": "plans",
+  "energy_class": null,
+  "unit_id": null,
+  "record_type": "PROJECT",
+  "status": "ACTIVE",
+  "features": [
+    "piscina",
+    "aria condizionata",
+    "pannelli fotovoltaici",
+    "giardino",
+    "area fitness"
+  ],
+  "raw_text": "IT EN DE MENU HOME / PROPERTIES / PRESTIGIOSA VILLA SINGOLA CON PARCO E PISCINA: NUOVA MODALITÀ DI ACQUISTO FOR SALE · VILLA Prestigiosa Villa singola con parco e piscina: nuova modalità di acquisto JESOLO · VENEZIA PRICE €600,000 Photos (45) Floor plans (0) 1 / 45 FLOOR AREA 300 m² BEDROOMS 4 BATHROOMS 3 LIFT No ENERGY CLASS A4 Overview Jbc offers for sale a stunning villa through auction. ItaliaBidHouse is a true Real Estate Auction House. We operate as the official platform for conducting auctions, ensuring transparency, legal security, and dedicated support both for sellers and buyers in collaboration with the best real estate agencies. For any detailed information about the auction, registration procedures, and participation methods, we invite you to contact our offices directly. The villa of your dreams: 5,000 sqm of parkland, pool, and outdoor SPA on the outskirts of Jesolo. Simply fantastic. Monumental spaces, absolute privacy, and the luxury of a private home SPA. This extraordinary villa is a masterpiece of comfort and style. What makes it unique: The Park: 5,000 m² of private parkland—a green oasis perfect for outdoor events or letting children play while enjoying maximum privacy. The Pool Area: A scenic eight by four-meter pool with equipped sunbathing area—the centerpiece of your summer days and sunset aperitifs. The Outdoor SPA: A spectacular external sauna for 10 people combined with a hot tub provides total relaxation experience all year round. Inside the villa constantly interacts with the outside thanks to large windows that flood rooms with natural light. Inside, the villa reveals its magnificence with impeccable elegant space distribution. At the heart of this home lies an enormous spectacular open space featuring living room and kitchen—an impressive environment flooded with light from large windows framing the park; perfect for welcoming guests or enjoying family time in a fluid contemporary atmosphere. Adding unmistakable warmth to this space is magnificent original terracotta flooring that perfectly complements breathtaking exposed beams overhead made from expertly reclaimed original rafters and tiles—all surrounded by architectural elements that showcase undoubtedly unique refined taste. The sleeping area has been designed to ensure utmost comfort & privacy offering four spacious bedrooms along three refined bathrooms fitted out in high-quality finishes—a fantastic residence where internal space harmonizes seamlessly with exterior luxury! A wonderful property ready to welcome your most beautiful moments! For more information JBC Jesolo - Piazza Drago 18 , Jesolo Phone Number : +39 339 841 6857 Email : info@jbcimmobiliare.it Property details REFERENCE 5104819 PROPERTY TYPE Villa AVAILABILITY Libero PROPERTY CONDITION Ottimo YEAR / PERIOD 2019 HEATING Autonomo SERVICE CHARGES 0 ENERGY PERFORMANCE 0 kWh/m2anno Location Via San Marco Jesolo · Venezia OPEN LOCATION ON MAP → Features and highlights ✓ Cucina ✓ Soggiorno ✓ Aria condizionata ✓ Arredato ✓ Giardino ✓ Ingresso indipendente ✓ Lavanderia ✓ Piano terra ✓ Primo piano ✓ Immobile nuovo ✓ Camino ✓ Pannelli fotovoltaici ✓ Piscina ✓ Area fitness ✓ Frigorifero ✓ Lavatrice ✓ Lavastoviglie ✓ Cassaforte ✓ Animali ammessi ✓ Televisione ✓ Forno ✓ Caldaia a condensazione ✓ Cucina arredata ✓ Porta blindata ✓ Poggioli: oltre 3 ✓ Piani totali edificio: 2 ✓ Piano: 2 ✓ Locali: 5 ✓ Fatturato: 0 € ✓ Fee di ingresso: 0 € ✓ Volumetria: 0 m³ ✓ Superficie giardino: 5000 m² ✓ Superficie aree esterne: 0 m² ✓ Altezza piano: 0 m ✓ Potenza cabina elettrica: 0 kW ✓ Distanza dal mare: 0 m Description in other languages Italian German French Request information Contact: Federico Di Pillo · fdipillosdl@gmail.com Leave your contact details to receive the full property information and arrange a private viewing. FULL NAME * PHONE NUMBER * EMAIL ADDRESS * MESSAGE Data submitted through this form is processed to handle your request, as described in our Privacy Policy. REQUEST INFORMATION REQUEST INFORMATION SEND REQUEST Data submitted through this form is processed to handle your request, as described in our Privacy Policy. JBC IMMOBILIARE “Where your home comes to life” Real estate agency specialising in the sale of apartments, houses and commercial properties. INSTAGRAM FACEBOOK PROPERTIES New Developments Properties for Sale Property Valuation AGENCY About Us Franchising Join Our Team Our Offices OFFICES JESOLO +39 339 841 6857 ODERZO +39 340 467 5474 EMAIL info@jbcimmobiliare.it © 2026 JBC Immobiliare di Manuele Sutto VAT IT04841350277 · Piazza Drago 18, 30016 Jesolo (VE) Privacy Policy Cookie Policy Cookie preferences Before you continue This site sets no cookies of its own. The interactive map on the Offices page uses Google Maps and only loads if you consent: until then it stays a plain link to Google Maps, with no cookie set. Cookie Policy NECESSARY ONLY ACCEPT",
+  "captured_at": "2026-09-18T11:53:03Z",
+  "source_name": "JBC Immobiliare — Nuove Costruzioni",
+  "configured_location": "Adriatic coverage",
+  "raw_reference": "data/raw/2026-09-18T11-31-54Z/jbc_nuove_costruzioni/listing-00189.json"
+}

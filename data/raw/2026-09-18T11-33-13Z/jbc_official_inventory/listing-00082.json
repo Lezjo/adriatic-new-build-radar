@@ -1,0 +1,52 @@
+{
+  "source": "jbc_official_inventory",
+  "source_id": "jbc_official_inventory",
+  "source_url": "https://www.jbcimmobiliare.it/en/immobili/5031709-home-b6-1-nuovi-trilocali-a-jesolo",
+  "location": "Jesolo",
+  "location_confidence": "high",
+  "location_evidence": [
+    {
+      "field": "url",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo"
+      ],
+      "score": 8
+    },
+    {
+      "field": "title",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo"
+      ],
+      "score": 6
+    },
+    {
+      "field": "body",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo"
+      ],
+      "score": 1
+    }
+  ],
+  "listing_id": "url:e7565167bf8cf5ea3221933d7b55b858735f01f4",
+  "listing_title": "HOME B6.1 - NUOVI TRILOCALI A JESOLO — JBC Immobiliare",
+  "price": 290000,
+  "area_m2": 90.0,
+  "rooms": null,
+  "floor": "plans",
+  "energy_class": null,
+  "unit_id": null,
+  "record_type": "PROJECT",
+  "status": "ACTIVE",
+  "features": [
+    "garage",
+    "giardino"
+  ],
+  "raw_text": "IT EN DE MENU HOME / NEW DEVELOPMENTS / HOME B6.1 - NUOVI TRILOCALI A JESOLO NEW DEVELOPMENT · APARTMENT HOME B6.1 - NUOVI TRILOCALI A JESOLO JESOLO · VENEZIA PRICE €290,000 Photos (8) Floor plans (0) 1 / 8 FLOOR AREA 90 m² BEDROOMS 2 BATHROOMS 2 LIFT No ENERGY CLASS In definizione Overview DELIVERY DECEMBER 2027 - NEW EXCLUSIVE RESIDENCE OF ONLY 6 HOUSING UNITS HOME 5.1 - is born in one of the most interesting and rapidly evolving areas of the territory, a contemporary residential project designed for those who wish to live in a modern, efficient home that is destined to maintain its value over time. An exclusive residence with only 6 units, including two-bedroom and three-bedroom apartments, designed to offer quality living, daily comfort, and superior construction performance. Clean architectural lines, bright environments, private outdoor spaces, and innovative building technologies give rise to a new concept of living: more evolved, more sustainable, more intelligent. HOME 5.1 LOOKS TO THE FUTURE! DISTINCTIVE FEATURES: - HEAVY STEEL STRUCTURE HOME 5.1 is built with high-performance heavy steel structure; an advanced construction solution that ensures high solidity, long durability and important seismic performance. A modern technology that offers construction precision, reliability over time and concrete structural value: unlike traditional constructions, steel maintains its value as raw material over time. - NZEB CLASS: NEARLY ZERO ENERGY BUILDING The project is developed according to NZEB (Nearly Zero Energy Building) standards to guarantee reduced consumption levels ,high energy efficiency ,and maximum housing comfort . Advanced thermal insulation ,acoustic insulation technologies ,and always comfortable environments in every season allow you to live sustainably and intelligently. - PRIVATE OUTDOOR SPACES Each apartment has terraces and private outdoor spaces conceived as a natural extension of the living area . Ideal settings for creating relaxation areas ,installing bioclimatic pergolas,and enjoying moments outdoors with total privacy and independence. - GUARANTEED ACCESSIBILITY HOME 5.1 is designed to be accessible and functional at every stage of life . The modern elevator eliminates architectural barriers ensuring convenience practicality,and freedom of movement for all. THE RESIDENCES: includ e two-bedroom and three-bedroom apartments characterized by modern bright living areas served by elevators complete with terraces private outdoor spaces dedicated parking spots . The project offers customizable finishes elevated thermal acoustic comfort high energy efficiency guaranteeing perfect blend between DESIGN COMFORT AND FUNCTIONALITY . Every environment has been studied to provide a sense of balance brightness everyday well-being . Internal spaces stand out due their intelligent distribution capable combining contemporary aesthetics practical livability.Selected materials curated details customization options allow create truly tailor-made home.Home represents ideal solution both for those wishing reside within strategic context also anyone looking real estate investment intended appreciate overtime. Property details REFERENCE 5031709 PROPERTY TYPE Apartment AVAILABILITY Libero PROPERTY CONDITION Nuovo YEAR / PERIOD 2027 ENERGY PERFORMANCE 0 kWh/m2anno Location Via Cà Gamba 2^ Traversa Jesolo · Venezia OPEN LOCATION ON MAP → Features and highlights ✓ Cucina ✓ Soggiorno ✓ Garage ✓ Piano terra ✓ Posizione al mare ✓ Immobile nuovo ✓ Locali: 3 ✓ Vista aperta ✓ Fatturato: 0 € ✓ Fee di ingresso: 0 € ✓ Volumetria: 0 m³ ✓ Superficie giardino: 0 m² ✓ Superficie aree esterne: 0 m² ✓ Altezza piano: 0 m ✓ Potenza cabina elettrica: 0 kW ✓ Distanza dal mare: 0 m Description in other languages Italian German French Russian Request information Contact: Riccardo Silvestrin · riccardo.silve96@gmail.com Leave your contact details to receive the full property information and arrange a private viewing. FULL NAME * PHONE NUMBER * EMAIL ADDRESS * MESSAGE Data submitted through this form is processed to handle your request, as described in our Privacy Policy. REQUEST INFORMATION REQUEST INFORMATION SEND REQUEST Data submitted through this form is processed to handle your request, as described in our Privacy Policy. JBC IMMOBILIARE “Where your home comes to life” Real estate agency specialising in the sale of apartments, houses and commercial properties. INSTAGRAM FACEBOOK PROPERTIES New Developments Properties for Sale Property Valuation AGENCY About Us Franchising Join Our Team Our Offices OFFICES JESOLO +39 339 841 6857 ODERZO +39 340 467 5474 EMAIL info@jbcimmobiliare.it © 2026 JBC Immobiliare di Manuele Sutto VAT IT04841350277 · Piazza Drago 18, 30016 Jesolo (VE) Privacy Policy Cookie Policy Cookie preferences Before you continue This site sets no cookies of its own. The interactive map on the Offices page uses Google Maps and only loads if you consent: until then it stays a plain link to Google Maps, with no cookie",
+  "captured_at": "2026-09-18T11:38:38Z",
+  "source_name": "JBC Immobiliare — official",
+  "configured_location": "Adriatic coverage",
+  "raw_reference": "data/raw/2026-09-18T11-33-13Z/jbc_official_inventory/listing-00082.json"
+}

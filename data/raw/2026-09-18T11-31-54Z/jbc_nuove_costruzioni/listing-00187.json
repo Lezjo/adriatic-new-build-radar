@@ -1,0 +1,45 @@
+{
+  "source": "jbc_nuove_costruzioni",
+  "source_id": "jbc_nuove_costruzioni",
+  "source_url": "https://www.jbcimmobiliare.it/en/immobili/5098853-appartamento-trilocale-con-terrazzo-abitabile",
+  "location": null,
+  "location_confidence": "unknown",
+  "location_evidence": [
+    {
+      "field": "body",
+      "location": "Jesolo Paese",
+      "terms": [
+        "jesolo paese"
+      ],
+      "score": 1
+    },
+    {
+      "field": "body",
+      "location": "Jesolo",
+      "terms": [
+        "jesolo"
+      ],
+      "score": 1
+    }
+  ],
+  "listing_id": "url:f26719c435ecd4f38b3adc0ba529e4e7be2dc34f",
+  "listing_title": "Appartamento Trilocale con Terrazzo Abitabile — JBC Immobiliare",
+  "price": 295000,
+  "area_m2": 90.0,
+  "rooms": null,
+  "floor": "plans",
+  "energy_class": null,
+  "unit_id": null,
+  "record_type": "PROJECT",
+  "status": "ACTIVE",
+  "features": [
+    "aria condizionata",
+    "pannelli fotovoltaici",
+    "giardino"
+  ],
+  "raw_text": "IT EN DE MENU HOME / PROPERTIES / APPARTAMENTO TRILOCALE CON TERRAZZO ABITABILE FOR SALE · APARTMENT Appartamento Trilocale con Terrazzo Abitabile JESOLO PAESE · JESOLO · VENEZIA PRICE €295,000 Photos (33) Floor plans (1) 1 / 33 FLOOR AREA 90 m² BEDROOMS 2 BATHROOMS 2 LIFT No ENERGY CLASS A4 Overview Welcome to your new home in Jesolo Paese! Imagine coming home after a long day at work and finding the silence, greenery, and tranquility of an elegant residence, knowing that the sea is just a few minutes away. Only 2 km from the beach, this stunning duplex apartment within Residence Oasi is the ideal choice for those looking to live in a modern, private context immersed in peace without sacrificing any amenities. The property is located in a building with only six units, ensuring privacy and an exclusive atmosphere. The large livable terrace, completely south-facing and overlooking greenery, becomes a true extension of the living area: the perfect place to have breakfast in the sun, dine outdoors or enjoy moments of relaxation surrounded by nature. The entrance leads to a bright open-plan living area with kitchen nook, dining room and lounge designed to provide welcoming and functional spaces. On the same level there’s a practical hallway used as laundry space along with a first bathroom featuring windows and shower. A staircase leads up to the attic sleeping area where you will find a spacious master bedroom, a single bedroom and another windowed bathroom with shower providing comfort and practicality for all family members. Built in 2018, this property boasts prestigious energy class A4 status; it features photovoltaic systems and underfloor heating which ensure low consumption levels while maximizing living comfort throughout every season allowing for year-round residency whether as primary accommodation or refined vacation retreat. Completing this offering are two covered parking spaces alongside very minimal condominium fees making this proposal even more appealing. A ready-to-live-in house where quality construction meets energy efficiency; well-distributed spaces bathed in light thanks to its southern exposure combined together create splendid views over green areas merging into one serene style lifestyle close enough yet far removed from seaside chaos! Contact us for further information or schedule your visit! JBC Jesolo - Piazza Drago 18, Jesolo Phone: +39 339 841 6857 Email: info@jbcimmobiliare.it Property details REFERENCE 5098853 PROPERTY TYPE Apartment AVAILABILITY Libero PROPERTY CONDITION Ottimo YEAR / PERIOD 2018 HEATING Autonomo, a pavimento SERVICE CHARGES 30 ENERGY PERFORMANCE 13.36 kWh/m2anno Location VIA MORIGLIONE 27 Jesolo Paese · Jesolo · Venezia OPEN LOCATION ON MAP → Features and highlights ✓ Aria condizionata ✓ Arredato ✓ Soggiorno con angolo cottura ✓ Primo piano ✓ Predisposizione allarme ✓ Pannelli fotovoltaici ✓ Sottotetto ✓ Frigorifero ✓ Lavatrice ✓ Lavastoviglie ✓ Animali ammessi ✓ Televisione ✓ Forno ✓ Cucina arredata ✓ Tapparelle motorizzate ✓ Porta blindata ✓ Terrazzi: 2 ✓ Piani totali edificio: 2 ✓ Piano: 1 ✓ Locali: 3 ✓ Vista aperta ✓ Fatturato: 0 € ✓ Fee di ingresso: 0 € ✓ Volumetria: 0 m³ ✓ Superficie giardino: 0 m² ✓ Superficie aree esterne: 0 m² ✓ Altezza piano: 0 m ✓ Potenza cabina elettrica: 0 kW ✓ Distanza dal mare: 2000 m Description in other languages Italian German French Request information Contact: Elisa Zanetti · ezanetti@jbcimmobiliare.it Leave your contact details to receive the full property information and arrange a private viewing. FULL NAME * PHONE NUMBER * EMAIL ADDRESS * MESSAGE Data submitted through this form is processed to handle your request, as described in our Privacy Policy. REQUEST INFORMATION REQUEST INFORMATION SEND REQUEST Data submitted through this form is processed to handle your request, as described in our Privacy Policy. JBC IMMOBILIARE “Where your home comes to life” Real estate agency specialising in the sale of apartments, houses and commercial properties. INSTAGRAM FACEBOOK PROPERTIES New Developments Properties for Sale Property Valuation AGENCY About Us Franchising Join Our Team Our Offices OFFICES JESOLO +39 339 841 6857 ODERZO +39 340 467 5474 EMAIL info@jbcimmobiliare.it © 2026 JBC Immobiliare di Manuele Sutto VAT IT04841350277 · Piazza Drago 18, 30016 Jesolo (VE) Privacy Policy Cookie Policy Cookie preferences Before you continue This site sets no cookies of its own. The interactive map on the Offices page uses Google Maps and only loads if you consent: until then it stays a plain link to Google Maps, with no cookie set. Cookie Policy NECESSARY ONLY ACCEPT",
+  "captured_at": "2026-09-18T11:52:59Z",
+  "source_name": "JBC Immobiliare — Nuove Costruzioni",
+  "configured_location": "Adriatic coverage",
+  "raw_reference": "data/raw/2026-09-18T11-31-54Z/jbc_nuove_costruzioni/listing-00187.json"
+}
