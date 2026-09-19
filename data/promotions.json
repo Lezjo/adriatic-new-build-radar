@@ -1,5 +1,96 @@
 {
   "schema_version": "3.1",
-  "run_id": "migration-20260918T112942Z",
-  "promotions": []
+  "run_id": "2026-09-18T11-33-13Z",
+  "promotions": [
+    {
+      "promotion_id": "promotion:df5c773d86d075e77936e2691c223ab406e3f4e7",
+      "old_price": null,
+      "new_price": 41000,
+      "discount_amount": null,
+      "discount_percent": null,
+      "promotion_text": "IT EN DE MENU HOME / IMMOBILI / SPAZIOSI GARAGE IN VENDITA | ZONA FARO – LIDO DI JESOLO VENDITA · GARAGE Spaziosi Garage in Vendita | Zona Faro – Lido di Jesolo FARO · JESOLO · VENEZIA PREZZO 41.000 € Fotografie (7) Planimetrie (1) 1 / 7 SUPERFICIE 21 m² ASCENSORE No CLASSE ENERGETICA Non soggetto Presentazione In una posizione fortemente strategica e a pochissimi passi da Piazza Nember, proponiamo in vendita due garage singoli situati uno di fianco all'altro. Ideale sia come ricovero per auto e",
+      "promotion_type": "keyword_signal",
+      "source_id": "jbc_official_inventory",
+      "evidence": [
+        "offerta"
+      ],
+      "listing_id": "url:af9e33407696d26233cf9e4850807fd021a212c3",
+      "detected_at": "2026-09-18T11:55:42.660343+00:00"
+    },
+    {
+      "promotion_id": "promotion:1a21142ecfafa6b599a3c98d1a4fe4495f417fa9",
+      "old_price": null,
+      "new_price": null,
+      "discount_amount": null,
+      "discount_percent": null,
+      "promotion_text": "IT EN DE MENU HOME / NEW DEVELOPMENTS / GREENCARPET | APPARTAMENTI ESCLUSIVI - FRONTE MARE - LIDO DI JESOLO NEW DEVELOPMENT · APARTMENT GreenCarpet | Appartamenti Esclusivi - Fronte Mare - Lido di Jesolo PINETA · JESOLO · VENEZIA PRICE Price on request Photos (38) Floor plans (0) 1 / 38 BEDROOMS 3 BATHROOMS 2 LIFT Yes ENERGY CLASS A4 Overview GreenCarpet is a seafront residential project that will be developed in the Pineta of Jesolo, but it is primarily the desire to introduce a recognizable, d",
+      "promotion_type": "keyword_signal",
+      "source_id": "jbc_official_inventory",
+      "evidence": [
+        "promo"
+      ],
+      "listing_id": "url:0b45485f83857af9ef99b15d8d7ebfa724b39948",
+      "detected_at": "2026-09-18T11:55:42.660343+00:00"
+    },
+    {
+      "promotion_id": "promotion:96b90926ae29ece99fc2b7c4c1522b7331520f86",
+      "old_price": null,
+      "new_price": null,
+      "discount_amount": null,
+      "discount_percent": null,
+      "promotion_text": "IT EN DE MENU HOME / NEW DEVELOPMENTS / GREENCARPET | APPARTAMENTI ESCLUSIVI - FRONTE MARE - LIDO DI JESOLO NEW DEVELOPMENT · APARTMENT GreenCarpet | Appartamenti Esclusivi - Fronte Mare - Lido di Jesolo PINETA · JESOLO · VENEZIA PRICE Price on request Photos (38) Floor plans (0) 1 / 38 BEDROOMS 3 BATHROOMS 2 LIFT Yes ENERGY CLASS A4 Overview GreenCarpet is a seafront residential project that will be developed in the Pineta of Jesolo, but it is primarily the desire to introduce a recognizable, d",
+      "promotion_type": "keyword_signal",
+      "source_id": "jbc_official_inventory",
+      "evidence": [
+        "promo"
+      ],
+      "listing_id": "url:514f77e2d5f55f5ae443bccdd9295afed74b5835",
+      "detected_at": "2026-09-18T11:55:42.660343+00:00"
+    },
+    {
+      "promotion_id": "promotion:8deeba183be02613f674a363cb077e96b65b0123",
+      "old_price": null,
+      "new_price": null,
+      "discount_amount": null,
+      "discount_percent": null,
+      "promotion_text": "IT EN DE MENU HOME / NEW DEVELOPMENTS / GREENCARPET | APPARTAMENTI ESCLUSIVI - FRONTE MARE - LIDO DI JESOLO NEW DEVELOPMENT · APARTMENT GreenCarpet | Appartamenti Esclusivi - Fronte Mare - Lido di Jesolo PINETA · JESOLO · VENEZIA PRICE Price on request Photos (38) Floor plans (0) 1 / 38 BEDROOMS 3 BATHROOMS 2 LIFT Yes ENERGY CLASS A4 Overview GreenCarpet is a seafront residential project that will be developed in the Pineta of Jesolo, but it is primarily the desire to introduce a recognizable, d",
+      "promotion_type": "keyword_signal",
+      "source_id": "jbc_nuove_costruzioni",
+      "evidence": [
+        "promo"
+      ],
+      "listing_id": "url:0b45485f83857af9ef99b15d8d7ebfa724b39948",
+      "detected_at": "2026-09-18T11:55:42.660343+00:00"
+    },
+    {
+      "promotion_id": "promotion:19604ea524adb36bdcdcb08c110a56b330d78c55",
+      "old_price": null,
+      "new_price": 41000,
+      "discount_amount": null,
+      "discount_percent": null,
+      "promotion_text": "IT EN DE MENU HOME / IMMOBILI / SPAZIOSI GARAGE IN VENDITA | ZONA FARO – LIDO DI JESOLO VENDITA · GARAGE Spaziosi Garage in Vendita | Zona Faro – Lido di Jesolo FARO · JESOLO · VENEZIA PREZZO 41.000 € Fotografie (7) Planimetrie (1) 1 / 7 SUPERFICIE 21 m² ASCENSORE No CLASSE ENERGETICA Non soggetto Presentazione In una posizione fortemente strategica e a pochissimi passi da Piazza Nember, proponiamo in vendita due garage singoli situati uno di fianco all'altro. Ideale sia come ricovero per auto e",
+      "promotion_type": "keyword_signal",
+      "source_id": "jbc_nuove_costruzioni",
+      "evidence": [
+        "offerta"
+      ],
+      "listing_id": "url:af9e33407696d26233cf9e4850807fd021a212c3",
+      "detected_at": "2026-09-18T11:55:42.660343+00:00"
+    },
+    {
+      "promotion_id": "promotion:a070c190b506d0e32cb2c5533e33a20e7e30fc22",
+      "old_price": null,
+      "new_price": null,
+      "discount_amount": null,
+      "discount_percent": null,
+      "promotion_text": "IT EN DE MENU HOME / NEW DEVELOPMENTS / GREENCARPET | APPARTAMENTI ESCLUSIVI - FRONTE MARE - LIDO DI JESOLO NEW DEVELOPMENT · APARTMENT GreenCarpet | Appartamenti Esclusivi - Fronte Mare - Lido di Jesolo PINETA · JESOLO · VENEZIA PRICE Price on request Photos (38) Floor plans (0) 1 / 38 BEDROOMS 3 BATHROOMS 2 LIFT Yes ENERGY CLASS A4 Overview GreenCarpet is a seafront residential project that will be developed in the Pineta of Jesolo, but it is primarily the desire to introduce a recognizable, d",
+      "promotion_type": "keyword_signal",
+      "source_id": "jbc_nuove_costruzioni",
+      "evidence": [
+        "promo"
+      ],
+      "listing_id": "url:514f77e2d5f55f5ae443bccdd9295afed74b5835",
+      "detected_at": "2026-09-18T11:55:42.660343+00:00"
+    }
+  ]
 }

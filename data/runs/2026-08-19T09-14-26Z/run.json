@@ -1,18 +1,14 @@
 {
   "schema_version": "4.0",
   "run_id": "2026-08-19T09-14-26Z",
-  "run_date": "2026-08-19",
-  "last_live_capture": "2026-08-19T09:14:26Z",
-  "snapshot_status": "SUCCESS",
-  "run_path": "data/runs/2026-08-19T09-14-26Z/run.json",
-  "objects_file": "data/objects.json",
-  "projects_file": "data/projects.json",
-  "units_file": "data/units.json",
-  "listings_file": "data/listings.json",
-  "observations_file": "data/observations.json",
-  "price_history_file": "data/price_history.json",
-  "price_history_retention_days": 365,
-  "capture_coverage": [
+  "captured_at": "2026-08-19T09:14:26Z",
+  "status": "SUCCESS",
+  "records_seen": 7,
+  "records_parsed": 7,
+  "records_normalized": 7,
+  "records_published": 7,
+  "records_rejected": 0,
+  "source_runs": [
     {
       "source": "immobiliare_new_build",
       "location": "jesolo",
@@ -479,43 +475,10 @@
       "rejected": []
     }
   ],
-  "records_seen": 7,
-  "records_parsed": 7,
-  "records_normalized": 7,
-  "records_published": 7,
-  "records_rejected": 0,
   "counts": {
     "projects": 7,
     "units": 1,
     "listings": 7,
     "observations": 7
-  },
-  "locations": [
-    "jesolo-paese",
-    "jesolo-paese",
-    "jesolo-paese",
-    "lido-altanea",
-    "lido-altanea",
-    "lido-altanea",
-    "lido-altanea"
-  ],
-  "live_capture_total": 7,
-  "portal_inventory_total": 1158,
-  "mandatory_sources_complete": false,
-  "price_history_stats": {
-    "priced_objects": 0,
-    "with_1d": 0,
-    "with_7d": 0,
-    "with_30d": 0,
-    "with_90d": 0,
-    "with_180d": 0,
-    "with_365d": 0,
-    "discount_signals": 4
-  },
-  "quality": {
-    "immutable_run": true,
-    "raw_capture_manifest": "data/debug/capture/2026-08-19T09-14-26Z/manifest.json",
-    "source_run_contract": true,
-    "no_empty_publish": true
   }
 }

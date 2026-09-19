@@ -1,113 +1,127 @@
 {
-  "schema_version": "3.1",
-  "run_id": "migration-20260918T112942Z",
+  "schema_version": "4.0",
+  "updated_at": "2026-08-19T09:14:26Z",
   "projects": [
     {
-      "project_id": "project:2881c4f1e54cd54d69230a25ef1da8417ab12646",
-      "project_name": "Nuovo Trilocale con Giardino Esclusivo | Residence Altanea a Caorle appartamento in Nuove Costruzioni a Caorle - JBC Immobiliare",
-      "location": "Caorle",
+      "project_id": "project:d872b9150fcac9c5e5ac5402482f9751e85e614a",
+      "name": "GreenCarpet | Appartamenti Esclusivi - Fronte Mare - Lido di Jesolo appartamento in Nuove Costruzioni a Jesolo - JBC Immobiliare",
+      "macro_zone": "jesolo-paese",
+      "micro_location": "jesolo-paese",
+      "location_verification_status": "VERIFIED_TEXT",
+      "location_verification_confidence": 0.9,
+      "sources": [
+        "jbc_direct"
+      ],
       "listing_ids": [
-        "url:a3310e6a81581d09925dbbc054cc1e97cba30862"
+        "listing:8580fdebcdd8a31a99a4b179c5b18c4e5ca1412d"
       ],
       "unit_ids": [],
-      "source_ids": [
-        "jbc_official_inventory"
-      ],
-      "observed_urls": [
-        "https://www.jbcimmobiliare.it/nuovo-trilocale-con-giardino-esclusivo-residence-altanea-a-caorle-caorle"
-      ]
+      "first_seen": "2026-08-19T09:14:26Z",
+      "last_seen": "2026-08-19T09:14:26Z"
     },
     {
-      "project_id": "project:58d023dc30faea7c85eed6d5c3a74c2c69a2c99c",
-      "project_name": "Quadrilocale Nuovo con Vista Mare a Jesolo Lido appartamento in Nuove Costruzioni a Jesolo - JBC Immobiliare",
-      "location": "Jesolo",
+      "project_id": "project:6564266d60b6fef9bb14578b8a58484b33bd53bb",
+      "name": "Prestigiosa Villa singola con parco e piscina: nuova modalità di acquisto villa in Nuove Costruzioni a Jesolo - JBC Immobiliare",
+      "macro_zone": "jesolo-paese",
+      "micro_location": "jesolo-paese",
+      "location_verification_status": "VERIFIED_TEXT",
+      "location_verification_confidence": 0.9,
+      "sources": [
+        "jbc_direct"
+      ],
       "listing_ids": [
-        "url:402804a3562ac66d070cd83bda8e8bab477dccef"
+        "listing:f76a57607e97e29b321c9b4da613181aaac62852"
+      ],
+      "unit_ids": [],
+      "first_seen": "2026-08-19T09:14:26Z",
+      "last_seen": "2026-08-19T09:14:26Z"
+    },
+    {
+      "project_id": "project:023a960030a6d4545da2752e69b025fbe7895ffe",
+      "name": "Trilocale di Nuova Costruzione Vista Mare a Caorle appartamento in Nuove Costruzioni a Caorle - JBC Immobiliare",
+      "macro_zone": "lido-altanea",
+      "micro_location": "lido-altanea",
+      "location_verification_status": "VERIFIED_TEXT",
+      "location_verification_confidence": 0.9,
+      "sources": [
+        "jbc_direct"
+      ],
+      "listing_ids": [
+        "listing:0aa0ce401f367fc4a5aec4e69186f931453a9c5d"
+      ],
+      "unit_ids": [],
+      "first_seen": "2026-08-19T09:14:26Z",
+      "last_seen": "2026-08-19T09:14:26Z"
+    },
+    {
+      "project_id": "project:23d454b517aeff61581bc2ec43ac58e114495430",
+      "name": "Quadrilocale Nuovo con Vista Mare a Jesolo Lido appartamento in Nuove Costruzioni a Jesolo - JBC Immobiliare",
+      "macro_zone": "jesolo-paese",
+      "micro_location": "jesolo-paese",
+      "location_verification_status": "VERIFIED_TEXT",
+      "location_verification_confidence": 0.9,
+      "sources": [
+        "jbc_direct"
+      ],
+      "listing_ids": [
+        "listing:cec9252f1c8ae7b25fbf2babb808390ac1b8e283"
       ],
       "unit_ids": [
-        "unit:5b024c756945e30efcbd0ef831ff8c7bc873a2b6"
+        "unit:2e4f845b183e0f6a5b0f89dccd672af77f6d51b1"
       ],
-      "source_ids": [
-        "jbc_official_inventory"
-      ],
-      "observed_urls": [
-        "https://www.jbcimmobiliare.it/quadrilocale-nuovo-con-vista-mare-a-jesolo-lido-jesolo"
-      ]
+      "first_seen": "2026-08-19T09:14:26Z",
+      "last_seen": "2026-08-19T09:14:26Z"
     },
     {
-      "project_id": "project:8a3a2a2ed613ea79c87412ab9d0542b5858d9a79",
-      "project_name": "Nuovo Bilocale in Residence al Lido Altanea a Caorle appartamento in Nuove Costruzioni a Caorle - JBC Immobiliare",
-      "location": "Caorle",
+      "project_id": "project:513058b96f7266e6c158f92278c2b6e38223aa8e",
+      "name": "Nuovo Bilocale | Piano Terra con Giardino - Residence al Lido Altanea appartamento in Nuove Costruzioni a Caorle - JBC Immobiliare",
+      "macro_zone": "lido-altanea",
+      "micro_location": "lido-altanea",
+      "location_verification_status": "VERIFIED_TEXT",
+      "location_verification_confidence": 0.9,
+      "sources": [
+        "jbc_direct"
+      ],
       "listing_ids": [
-        "url:1de43e321dd2ef51f9177464d3580567df1427ff"
+        "listing:09e55ee377a7839117b335d14bf63da4ebbec918"
       ],
       "unit_ids": [],
-      "source_ids": [
-        "jbc_official_inventory"
-      ],
-      "observed_urls": [
-        "https://www.jbcimmobiliare.it/nuovo-bilocale-in-residence-al-lido-altanea-a-caorle-caorle"
-      ]
+      "first_seen": "2026-08-19T09:14:26Z",
+      "last_seen": "2026-08-19T09:14:26Z"
     },
     {
-      "project_id": "project:a1c915aec2be1f5663a6972cfa2955f2f2b9dcc3",
-      "project_name": "Nuovo Bilocale | Piano Terra con Giardino - Residence al Lido Altanea appartamento in Nuove Costruzioni a Caorle - JBC Immobiliare",
-      "location": "Caorle",
+      "project_id": "project:e7efd88759712023c0f71a4ef78945078df13701",
+      "name": "Nuovo Trilocale con Giardino Esclusivo | Residence Altanea a Caorle appartamento in Nuove Costruzioni a Caorle - JBC Immobiliare",
+      "macro_zone": "lido-altanea",
+      "micro_location": "lido-altanea",
+      "location_verification_status": "VERIFIED_TEXT",
+      "location_verification_confidence": 0.9,
+      "sources": [
+        "jbc_direct"
+      ],
       "listing_ids": [
-        "url:b3d9347d87f5650509bbee3eb22b3393a2210fdd"
+        "listing:4b8eb9ed456239a0e2c6cd8ffda0693b5fc415ce"
       ],
       "unit_ids": [],
-      "source_ids": [
-        "jbc_official_inventory"
-      ],
-      "observed_urls": [
-        "https://www.jbcimmobiliare.it/nuovo-bilocale-piano-terra-con-giardino-residence-al-lido-altanea-caorle"
-      ]
+      "first_seen": "2026-08-19T09:14:26Z",
+      "last_seen": "2026-08-19T09:14:26Z"
     },
     {
-      "project_id": "project:c5b0336e0d016e0ea670cee05c13c4307b1b9c19",
-      "project_name": "GreenCarpet | Appartamenti Esclusivi - Fronte Mare - Lido di Jesolo appartamento in Nuove Costruzioni a Jesolo - JBC Immobiliare",
-      "location": "Jesolo",
+      "project_id": "project:ba8a32de58a2d243a67bc02598a782500183f954",
+      "name": "Nuovo Bilocale in Residence al Lido Altanea a Caorle appartamento in Nuove Costruzioni a Caorle - JBC Immobiliare",
+      "macro_zone": "lido-altanea",
+      "micro_location": "lido-altanea",
+      "location_verification_status": "VERIFIED_TEXT",
+      "location_verification_confidence": 0.9,
+      "sources": [
+        "jbc_direct"
+      ],
       "listing_ids": [
-        "url:068bd5ce64c6d5111ef41b04252ebaf8bd39c57c"
+        "listing:227a927fcd8953c94f4364714aa83ef7fa5748ed"
       ],
       "unit_ids": [],
-      "source_ids": [
-        "jbc_official_inventory"
-      ],
-      "observed_urls": [
-        "https://www.jbcimmobiliare.it/greencarpet-appartamenti-esclusivi-fronte-mare-lido-di-jesolo-jesolo"
-      ]
-    },
-    {
-      "project_id": "project:da93c60543301a27f753d19fdf33ce4349104e49",
-      "project_name": "Prestigiosa Villa singola con parco e piscina: nuova modalità di acquisto villa in Nuove Costruzioni a Jesolo - JBC Immobiliare",
-      "location": "Jesolo",
-      "listing_ids": [
-        "url:b515505a89599b432bfeb87f60d4f1aea69c05b5"
-      ],
-      "unit_ids": [],
-      "source_ids": [
-        "jbc_official_inventory"
-      ],
-      "observed_urls": [
-        "https://www.jbcimmobiliare.it/prestigiosa-villa-singola-con-parco-e-piscina-nuova-modalita-di-acquisto-jesolo"
-      ]
-    },
-    {
-      "project_id": "project:e47348a0ab01d8a9c6d1435617a6467fe25abcaf",
-      "project_name": "Trilocale di Nuova Costruzione Vista Mare a Caorle appartamento in Nuove Costruzioni a Caorle - JBC Immobiliare",
-      "location": "Caorle",
-      "listing_ids": [
-        "url:b84072b9e09e10721eba8b1b20e5f11f587d776c"
-      ],
-      "unit_ids": [],
-      "source_ids": [
-        "jbc_official_inventory"
-      ],
-      "observed_urls": [
-        "https://www.jbcimmobiliare.it/trilocale-di-nuova-costruzione-vista-mare-a-caorle-caorle"
-      ]
+      "first_seen": "2026-08-19T09:14:26Z",
+      "last_seen": "2026-08-19T09:14:26Z"
     }
   ]
 }

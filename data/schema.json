@@ -1,37 +1,2124 @@
 {
-  "schema_version": "2.0",
-  "fields": {
-    "run_id": "ISO timestamp of radar run",
-    "run_date": "YYYY-MM-DD",
-    "inventory_counts": "Per-location portal inventory, live capture count and captured concrete rows",
-    "previous_snapshot": "Previous snapshot metadata; null for first run",
-    "sections": "Rendered report sections; future radar runs may replace/update these without changing index.html"
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lezjo.github.io/adriatic-new-build-radar/schema/v3.1.json",
+  "title": "Adriatic New Build Radar — Canonical Data Schema",
+  "description": "Canonical V3.1 data contract for Source → SourceRun → RawCapture → Observation → Listing → Unit → Project → PriceObservation / Promotion → Analysis → UI.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "schema_name",
+    "generated_at",
+    "sources",
+    "source_runs",
+    "raw_captures",
+    "observations",
+    "projects",
+    "units",
+    "listings",
+    "price_observations",
+    "promotions",
+    "locations",
+    "micro_locations",
+    "audit_results"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "3.1.0"
+    },
+    "schema_name": {
+      "type": "string",
+      "const": "adriatic-new-build-radar-canonical"
+    },
+    "generated_at": {
+      "$ref": "#/$defs/dateTime"
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Source"
+      }
+    },
+    "source_runs": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/SourceRun"
+      }
+    },
+    "raw_captures": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/RawCapture"
+      }
+    },
+    "observations": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Observation"
+      }
+    },
+    "projects": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Project"
+      }
+    },
+    "units": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Unit"
+      }
+    },
+    "listings": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Listing"
+      }
+    },
+    "price_observations": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/PriceObservation"
+      }
+    },
+    "promotions": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Promotion"
+      }
+    },
+    "locations": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Location"
+      }
+    },
+    "micro_locations": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/MicroLocation"
+      }
+    },
+    "audit_results": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/AuditResult"
+      }
+    }
   },
-  "future_object_fields": [
-    "project_id",
-    "unit_id",
-    "listing_id",
-    "project",
-    "location",
-    "status",
-    "price",
-    "area_m2",
-    "eur_m2",
-    "bedrooms",
-    "rooms",
-    "floor",
-    "parking",
-    "garage",
-    "terrace",
-    "pool",
-    "sea_distance_m",
-    "delivery",
-    "source",
-    "source_url",
-    "first_seen",
-    "last_seen",
-    "previous_price",
-    "price_delta",
-    "availability"
-  ]
+  "$defs": {
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "dateTime": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "nonEmptyString": {
+      "type": "string",
+      "minLength": 1
+    },
+    "nullableString": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "nullableNumber": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "nullableInteger": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "currency": {
+      "type": "string",
+      "enum": [
+        "EUR"
+      ]
+    },
+    "Coordinates": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "latitude": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": -90,
+          "maximum": 90
+        },
+        "longitude": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": -180,
+          "maximum": 180
+        },
+        "elevation_m": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "source": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "captured_at": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/dateTime"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      }
+    },
+    "Evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "source_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_run_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "observation_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "raw_capture_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_url": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/url"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "evidence_text": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "evidence_type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "verified_at": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/dateTime"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      }
+    },
+    "Provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_id",
+        "source_run_id",
+        "observed_at"
+      ],
+      "properties": {
+        "source_id": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "source_run_id": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "observation_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "raw_capture_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_url": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/url"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "observed_at": {
+          "$ref": "#/$defs/dateTime"
+        }
+      }
+    },
+    "LocationRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "location_id",
+        "verification_status",
+        "verification_confidence"
+      ],
+      "properties": {
+        "location_id": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "macro_zone_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "micro_location_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "verification_status": {
+          "type": "string",
+          "enum": [
+            "verified",
+            "inferred",
+            "unknown"
+          ]
+        },
+        "verification_confidence": {
+          "$ref": "#/$defs/confidence"
+        },
+        "address_evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          }
+        }
+      }
+    },
+    "MarketPrice": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "amount": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "currency": {
+          "$ref": "#/$defs/currency"
+        },
+        "price_per_m2": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "basis": {
+          "type": "string",
+          "enum": [
+            "asking",
+            "estimated_market_value",
+            "actual_transaction",
+            "unknown"
+          ]
+        },
+        "observed_at": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/dateTime"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "evidence": {
+          "$ref": "#/$defs/Evidence"
+        }
+      }
+    },
+    "ScoreSet": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "living": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 10
+        },
+        "investment": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 10
+        },
+        "rental": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 10
+        },
+        "growth": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 10
+        },
+        "liquidity": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 10
+        },
+        "family": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 10
+        },
+        "risk": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 10
+        }
+      }
+    },
+    "Source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_id",
+        "source_name",
+        "source_type",
+        "tier",
+        "mandatory",
+        "enabled"
+      ],
+      "properties": {
+        "source_id": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "source_name": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "source_type": {
+          "type": "string",
+          "enum": [
+            "official_primary",
+            "market_primary",
+            "developer",
+            "local_agency",
+            "portal",
+            "rental",
+            "tourism",
+            "planning",
+            "mapping",
+            "secondary"
+          ]
+        },
+        "tier": {
+          "type": "integer",
+          "enum": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        "mandatory": {
+          "type": "boolean"
+        },
+        "enabled": {
+          "type": "boolean"
+        },
+        "base_url": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/url"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "location_scope": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/nonEmptyString"
+          }
+        },
+        "micro_location_scope": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/nonEmptyString"
+          }
+        },
+        "collector": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "parser": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "collector_version": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "official": {
+          "type": "boolean"
+        },
+        "notes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "SourceRun": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_run_id",
+        "source_id",
+        "run_id",
+        "started_at",
+        "status",
+        "coverage_status",
+        "records_seen",
+        "records_parsed",
+        "records_normalized",
+        "records_published",
+        "records_rejected"
+      ],
+      "properties": {
+        "source_run_id": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "source_id": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "run_id": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "started_at": {
+          "$ref": "#/$defs/dateTime"
+        },
+        "finished_at": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/dateTime"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "requested_url": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/url"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "final_url": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/url"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "http_status": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 100,
+          "maximum": 599
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "SUCCESS",
+            "PARTIAL",
+            "DEGRADED",
+            "BLOCKED",
+            "ERROR",
+            "ZERO_VERIFIED"
+          ]
+        },
+        "coverage_status": {
+          "type": "string",
+          "enum": [
+            "PASS",
+            "PARTIAL",
+            "MISSING",
+            "BROKEN",
+            "NOT_IMPLEMENTED"
+          ]
+        },
+        "parser_version": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "records_seen": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "records_parsed": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "records_normalized": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "records_published": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "records_rejected": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "rejection_reason_counts": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "pages_visited": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "raw_reference": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "error": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "RawCapture": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "raw_capture_id",
+        "source_run_id",
+        "captured_at",
+        "content_hash",
+        "artifact_path"
+      ],
+      "properties": {
+        "raw_capture_id": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "source_run_id": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "captured_at": {
+          "$ref": "#/$defs/dateTime"
+        },
+        "requested_url": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/url"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "final_url": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/url"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "http_status": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "content_type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "content_hash": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "artifact_path": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "artifact_format": {
+          "type": "string",
+          "enum": [
+            "html",
+            "json",
+            "xml",
+            "text",
+            "screenshot",
+            "pdf",
+            "other"
+          ]
+        },
+        "size_bytes": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        }
+      }
+    },
+    "Observation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "observation_id",
+        "source_run_id",
+        "observed_at",
+        "parse_status",
+        "rejected"
+      ],
+      "properties": {
+        "observation_id": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "source_run_id": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "raw_capture_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "observed_at": {
+          "$ref": "#/$defs/dateTime"
+        },
+        "source_url": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/url"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "canonical_url": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/url"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "source_native_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "parse_status": {
+          "type": "string",
+          "enum": [
+            "PARSED",
+            "PARTIAL",
+            "FAILED",
+            "REJECTED"
+          ]
+        },
+        "rejected": {
+          "type": "boolean"
+        },
+        "rejection_reason": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "parsed_payload": {
+          "type": [
+            "object",
+            "array",
+            "string",
+            "number",
+            "boolean",
+            "null"
+          ]
+        },
+        "listing_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "unit_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "project_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "provenance": {
+          "$ref": "#/$defs/Provenance"
+        }
+      }
+    },
+    "Project": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "project_id",
+        "project_name",
+        "project_status",
+        "location"
+      ],
+      "properties": {
+        "project_id": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "project_name": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "project_name_normalized": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "developer": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "developer_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "developer_sources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          }
+        },
+        "address": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "coordinates": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Coordinates"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "location": {
+          "$ref": "#/$defs/LocationRef"
+        },
+        "project_status": {
+          "type": "string",
+          "enum": [
+            "PLANNED",
+            "PRE_LAUNCH",
+            "UNDER_PERMIT",
+            "UNDER_CONSTRUCTION",
+            "ACTIVE_SALES",
+            "SOLD_OUT",
+            "COMPLETED",
+            "CANCELLED",
+            "ABANDONED",
+            "UNKNOWN"
+          ]
+        },
+        "planning_status": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "construction_status": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "project_type": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "new_build",
+            "renovation",
+            "demolition_rebuild",
+            "mixed",
+            "unknown",
+            null
+          ]
+        },
+        "estimated_start": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/date"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "estimated_completion": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/date"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "units_total": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "units_available": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "official_sources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          }
+        },
+        "market_sources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          }
+        },
+        "planning_sources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          }
+        },
+        "identity": {
+          "$ref": "#/$defs/Identity"
+        },
+        "planning_observations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          }
+        },
+        "created_at": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/dateTime"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "updated_at": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/dateTime"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      }
+    },
+    "Unit": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "unit_id",
+        "project_id",
+        "unit_type"
+      ],
+      "properties": {
+        "unit_id": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "project_id": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "unit_type": {
+          "type": "string"
+        },
+        "unit_reference": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "floor": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "surface_m2": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "commercial_surface_m2": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "rooms": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "bedrooms": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "bathrooms": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "terrace_m2": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "balcony_m2": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "garden_m2": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "parking": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "garage": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "storage": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "pool": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "sea_view": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "sea_distance_m": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "orientation": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "energy_class": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "energy_class_verified": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "epgl_kwh_m2_year": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "heating": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "heat_pump": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "cooling": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "air_conditioning": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "pv_present": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "pv_kwp": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "battery": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "battery_kwh": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "ev_charging": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "ventilation": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "windows": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "shading": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "building_envelope": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "furnished": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "delivery_status": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "asking_price": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "price_per_m2": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "market_value": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/MarketPrice"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "location": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/LocationRef"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "distance_to_comune_centre_m": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "distance_to_school_m": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "distance_to_healthcare_m": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "distance_to_supermarket_m": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "distance_to_railway_m": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "distance_to_airport_m": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "winter_services_score": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 10
+        },
+        "family_score": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 10
+        },
+        "tourism_score": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 10
+        },
+        "liquidity_score": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 10
+        },
+        "new_build_supply_score": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 10
+        },
+        "flood_coastal_risk_score": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 10
+        },
+        "score": {
+          "$ref": "#/$defs/ScoreSet"
+        },
+        "family_fit": {
+          "type": "boolean"
+        },
+        "investment_fit": {
+          "type": "boolean"
+        },
+        "rental_fit": {
+          "type": "boolean"
+        },
+        "buyer_score": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 100
+        },
+        "buyer_verdict": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "BUY",
+            "NEGOTIATE",
+            "WATCH",
+            "AVOID",
+            null
+          ]
+        },
+        "provenance": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Provenance"
+          }
+        },
+        "identity": {
+          "$ref": "#/$defs/Identity"
+        }
+      }
+    },
+    "Listing": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "listing_id",
+        "source_id",
+        "source_url",
+        "canonical_url",
+        "first_seen"
+      ],
+      "properties": {
+        "listing_id": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "unit_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "project_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_id": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "source_native_listing_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_url": {
+          "$ref": "#/$defs/url"
+        },
+        "canonical_url": {
+          "$ref": "#/$defs/url"
+        },
+        "observed_urls": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/url"
+          }
+        },
+        "listing_title": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "seller": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "agency": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "developer": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "listing_status": {
+          "type": "string",
+          "enum": [
+            "ACTIVE",
+            "NEW",
+            "SOLD",
+            "REMOVED",
+            "RELISTED",
+            "UNKNOWN"
+          ]
+        },
+        "asking_price": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "old_price": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "new_price": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "first_seen": {
+          "$ref": "#/$defs/dateTime"
+        },
+        "last_seen": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/dateTime"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "captured_at": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/dateTime"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "promo_detected": {
+          "type": "boolean"
+        },
+        "promo_type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "raw_reference": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "provenance": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Provenance"
+          }
+        },
+        "identity": {
+          "$ref": "#/$defs/Identity"
+        }
+      }
+    },
+    "Identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "identity_type",
+        "confidence"
+      ],
+      "properties": {
+        "identity_type": {
+          "type": "string",
+          "enum": [
+            "exact_source_listing",
+            "exact_project",
+            "exact_unit",
+            "candidate_project",
+            "candidate_unit",
+            "unresolved"
+          ]
+        },
+        "confidence": {
+          "$ref": "#/$defs/confidence"
+        },
+        "identity_key": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "candidate_keys": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "matching_factors": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "matching_rationale": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "review_required": {
+          "type": "boolean"
+        }
+      }
+    },
+    "PriceObservation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "price_observation_id",
+        "listing_id",
+        "observed_at",
+        "event_type"
+      ],
+      "properties": {
+        "price_observation_id": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "listing_id": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "unit_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "observation_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "observed_at": {
+          "$ref": "#/$defs/dateTime"
+        },
+        "price": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "old_price": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "new_price": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "price_per_m2": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "currency": {
+          "$ref": "#/$defs/currency"
+        },
+        "event_type": {
+          "type": "string",
+          "enum": [
+            "NEW",
+            "UNCHANGED",
+            "INCREASE",
+            "DECREASE",
+            "PROMOTION",
+            "OLD_PRICE_REMOVED",
+            "RELISTED",
+            "SOLD_REMOVED",
+            "PRICE_UNKNOWN"
+          ]
+        },
+        "absolute_delta": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "percentage_delta": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "evidence": {
+          "$ref": "#/$defs/Evidence"
+        }
+      }
+    },
+    "Promotion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "promotion_id",
+        "listing_id",
+        "detected_at",
+        "promotion_type",
+        "evidence"
+      ],
+      "properties": {
+        "promotion_id": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "listing_id": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "unit_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "detected_at": {
+          "$ref": "#/$defs/dateTime"
+        },
+        "old_price": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "new_price": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "discount_amount": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "discount_percent": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "promotion_text": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "promotion_type": {
+          "type": "string",
+          "enum": [
+            "PRICE_DROP",
+            "PROMOTION",
+            "PROMOTION_SIGNAL",
+            "PRICE_RESTORED",
+            "PRICE_INCREASE"
+          ]
+        },
+        "valid_from": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/dateTime"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "valid_to": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/dateTime"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "source_id": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "source_url": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/url"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "evidence": {
+          "$ref": "#/$defs/Evidence"
+        }
+      }
+    },
+    "Location": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "location_id",
+        "country",
+        "region",
+        "province",
+        "comune"
+      ],
+      "properties": {
+        "location_id": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "country": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "region": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "province": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "comune": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "macro_zones": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/nonEmptyString"
+          }
+        },
+        "micro_locations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/nonEmptyString"
+          }
+        },
+        "reference_version": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "official_sources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          }
+        }
+      }
+    },
+    "MicroLocation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "micro_location_id",
+        "location_id",
+        "name",
+        "verification_status",
+        "verification_confidence"
+      ],
+      "properties": {
+        "micro_location_id": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "location_id": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "name": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "macro_zone": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "verification_status": {
+          "type": "string",
+          "enum": [
+            "verified",
+            "inferred",
+            "unknown"
+          ]
+        },
+        "verification_confidence": {
+          "$ref": "#/$defs/confidence"
+        },
+        "address_evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          }
+        },
+        "coordinates": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Coordinates"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "geometry_reference": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "reference_sources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          }
+        }
+      }
+    },
+    "AuditResult": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "audit_id",
+        "run_id",
+        "audited_at",
+        "status"
+      ],
+      "properties": {
+        "audit_id": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "run_id": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "audited_at": {
+          "$ref": "#/$defs/dateTime"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "PASS",
+            "PARTIAL",
+            "FAIL"
+          ]
+        },
+        "source_coverage": {
+          "$ref": "#/$defs/AuditMetric"
+        },
+        "capture_completeness": {
+          "$ref": "#/$defs/AuditMetric"
+        },
+        "parse_success": {
+          "$ref": "#/$defs/AuditMetric"
+        },
+        "normalization_success": {
+          "$ref": "#/$defs/AuditMetric"
+        },
+        "rejection_rate": {
+          "$ref": "#/$defs/AuditMetric"
+        },
+        "duplicate_rate": {
+          "$ref": "#/$defs/AuditMetric"
+        },
+        "cross_source_overlap": {
+          "$ref": "#/$defs/AuditMetric"
+        },
+        "location_verification": {
+          "$ref": "#/$defs/AuditMetric"
+        },
+        "price_coverage": {
+          "$ref": "#/$defs/AuditMetric"
+        },
+        "history_coverage": {
+          "$ref": "#/$defs/AuditMetric"
+        },
+        "promotion_evidence_coverage": {
+          "$ref": "#/$defs/AuditMetric"
+        },
+        "stage_counts": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "violations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "code",
+              "severity",
+              "message"
+            ],
+            "properties": {
+              "code": {
+                "$ref": "#/$defs/nonEmptyString"
+              },
+              "severity": {
+                "type": "string",
+                "enum": [
+                  "LOW",
+                  "MEDIUM",
+                  "HIGH",
+                  "CRITICAL"
+                ]
+              },
+              "message": {
+                "$ref": "#/$defs/nonEmptyString"
+              },
+              "entity_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "AuditMetric": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "numerator": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "denominator": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "rate": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 1
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "PASS",
+            "PARTIAL",
+            "FAIL",
+            "UNKNOWN"
+          ]
+        }
+      }
+    }
+  }
 }
