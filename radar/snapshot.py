@@ -51,8 +51,17 @@ MANDATORY_SOURCE_NAMES = {
     "immobiliare_new_build",
     "idealista_new_build",
     "idealista_projects",
+    "idealista_apartments",
     "casa_new_build",
     "jbc_direct",
+}
+
+SUCCESSFUL_SOURCE_STATUSES = {
+    "PASS",  # V3/V4 immutable manifests
+    "SUCCESS",  # Source-of-Truth contract
+    "SUCCESS_WITH_RESULTS",  # explicit current collector outcome
+    "VERIFIED_ZERO_RESULTS",  # valid empty page, never a failed request
+    "ZERO_VERIFIED",  # legacy spelling
 }
 
 PRICE_WINDOWS = (1, 7, 30, 90, 180, 365)
@@ -1016,7 +1025,8 @@ def evaluate_coverage(
     jbc_global = any(
         r.get("source") == "jbc_direct"
         and r.get("location") == "GLOBAL"
-        and r.get("status") == "PASS"
+        and str(r.get("status") or "").upper()
+        in SUCCESSFUL_SOURCE_STATUSES
         for r in reports
     )
 
@@ -1047,7 +1057,7 @@ def evaluate_coverage(
             mandatory_results.append({
                 "location": location,
                 "source": source,
-                "status": "MISSING",
+                "status": "MISSING_RUN",
                 "reason": "no_source_run_report",
             })
             continue
@@ -1055,7 +1065,7 @@ def evaluate_coverage(
         report = matching[-1]
         status = str(report.get("status") or "BROKEN").upper()
 
-        if status != "PASS":
+        if status not in SUCCESSFUL_SOURCE_STATUSES:
             broken.append({
                 "location": location,
                 "source": source,
@@ -1070,10 +1080,10 @@ def evaluate_coverage(
         mandatory_results.append({
             "location": location,
             "source": source,
-            "status": "PASS" if status == "PASS" else status,
+            "status": "PASS" if status in SUCCESSFUL_SOURCE_STATUSES else status,
             "reason": (
                 "source_run_passed"
-                if status == "PASS"
+                if status in SUCCESSFUL_SOURCE_STATUSES
                 else "source_run_not_pass"
             ),
         })
@@ -1129,6 +1139,13 @@ def source_summary(
                 "blocked": 0,
                 "zero_verified": 0,
                 "skipped": 0,
+                "success_with_results": 0,
+                "verified_zero_results": 0,
+                "rate_limited": 0,
+                "timeout": 0,
+                "parser_error": 0,
+                "source_unavailable": 0,
+                "missing_run": 0,
                 "records_seen": 0,
                 "records_parsed": 0,
                 "records_normalized": 0,
