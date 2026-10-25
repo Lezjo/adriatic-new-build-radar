@@ -27,8 +27,9 @@
     const date = value => { const parsed = value ? new Date(value) : null; return parsed && !Number.isNaN(parsed.valueOf()) ? new Intl.DateTimeFormat("uk-UA",{dateStyle:"medium",timeStyle:"short"}).format(parsed) : "—"; };
     const rowList = (payload, key) => Array.isArray(payload) ? payload : Array.isArray(payload?.[key]) ? payload[key] : Object.values(payload?.[key] || {});
     const sourceStatus = row => String(row.status || row.coverage || "NOT_REPORTED").toUpperCase();
-    const failedStatus = status => ["ERROR","BROKEN","BLOCKED","DEGRADED","MISSING","FAILED"].includes(status);
-    const zeroStatus = status => ["ZERO_VERIFIED","ZERO_RESULTS"].includes(status);
+    const failedStatus = status => ["ERROR","BROKEN","BLOCKED","DEGRADED","MISSING","MISSING_RUN","FAILED","RATE_LIMITED","TIMEOUT","PARSER_ERROR","SOURCE_UNAVAILABLE"].includes(status);
+    const zeroStatus = status => ["ZERO_VERIFIED","ZERO_RESULTS","VERIFIED_ZERO_RESULTS"].includes(status);
+    const successStatus = status => ["PASS","SUCCESS","SUCCESS_WITH_RESULTS"].includes(status);
     let S = {current:{},objects:[],projects:[],units:[],locations:[],coverage:[]};
 
     async function fetchJson(path) {
@@ -137,8 +138,8 @@
     function analytics() {
       const rows = sourceRows();
       const sourceTable = rows.length ? `<div class="table-wrap"><table><thead><tr><th>Source</th><th>Location</th><th>Status</th><th>Seen</th><th>Published</th><th>Evidence / error</th></tr></thead><tbody>${rows.map(row => {
-        const status = sourceStatus(row), klass = failedStatus(status) ? "source-error" : zeroStatus(status) ? "source-zero" : status === "PASS" || status === "SUCCESS" ? "source-ok" : "";
-        return `<tr class="${klass}"><td>${esc(row.source || row.source_name)}</td><td>${esc(row.location)}</td><td><span class="pill">${esc(status)}</span></td><td>${count(row.records_seen ?? row.discovered)}</td><td>${count(row.records_published ?? row.accepted)}</td><td>${esc((row.errors || []).join("; ") || row.reason || "—")}</td></tr>`;
+        const status = sourceStatus(row), klass = failedStatus(status) ? "source-error" : zeroStatus(status) ? "source-zero" : successStatus(status) ? "source-ok" : "";
+        return `<tr class="${klass}"><td>${esc(row.source || row.source_name)}</td><td>${esc(row.location)}</td><td><span class="pill">${esc(status)}</span></td><td>${count(row.records_seen ?? row.discovered)}</td><td>${count(row.records_published ?? row.accepted)}</td><td>${esc((row.errors || []).join("; ") || row.blocked_reason || row.reason || "—")}</td></tr>`;
       }).join("")}</tbody></table></div>` : `<p class="notice">No source coverage report is available for this public manifest.</p>`;
       const pricedListings = numeric(S.current.price_history_stats?.priced_objects) ? S.current.price_history_stats.priced_objects : Array.isArray(S.current.price_history) ? S.current.price_history.length : null;
       return `<section class="section" id="analytics"><h2>Analytics &amp; Data Quality</h2>

@@ -631,7 +631,8 @@ def embedded_json_text(page) -> str:
     return " ".join(chunks)[:30000]
 
 
-def goto(page, url: str) -> int | None:
+def navigate(page, url: str):
+    """Navigate once, without retry or any access-control workaround."""
     response = page.goto(
         url,
         wait_until="domcontentloaded",
@@ -646,6 +647,12 @@ def goto(page, url: str) -> int | None:
     except Exception:
         pass
 
+    return response
+
+
+def goto(page, url: str) -> int | None:
+    """Backward-compatible status-only navigation helper."""
+    response = navigate(page, url)
     return response.status if response else None
 
 
@@ -701,6 +708,82 @@ def detect_block(status: int | None, text: str) -> str | None:
             return f"blocked:{term}"
 
     return None
+
+
+def redact_diagnostic_text(value: str, limit: int = 800) -> str:
+    """Keep failure evidence useful while avoiding contact/credential leakage."""
+    value = re.sub(r"[\w.+-]+@[\w.-]+", "[redacted-email]", value)
+    value = re.sub(r"(?<!\d)(?:\+?\d[\d .-]{7,}\d)", "[redacted-phone]", value)
+    return norm(value)[:limit]
+
+
+def page_diagnostic(
+    page,
+    response,
+    requested_url: str,
+    stage: str,
+    parser_result: str = "not_attempted",
+) -> dict:
+    """Return bounded, redacted navigation evidence for one source attempt."""
+    try:
+        body = page_body(page)
+    except Exception:
+        body = ""
+    try:
+        title = page.title()
+    except Exception:
+        title = None
+    headers = {}
+    try:
+        headers = response.headers if response else {}
+    except Exception:
+        pass
+    return {
+        "timestamp": now_iso(),
+        "stage": stage,
+        "requested_url": requested_url,
+        "final_url": getattr(page, "url", None),
+        "http_status": getattr(response, "status", None),
+        "content_type": headers.get("content-type"),
+        "page_title": redact_diagnostic_text(title or "", 240) or None,
+        "body_type": "text/html" if body else "unavailable",
+        "body_length": len(body),
+        "body_sha256": hashlib.sha256(body.encode("utf-8")).hexdigest() if body else None,
+        "body_sample": redact_diagnostic_text(body) or None,
+        "navigation_outcome": "response_received" if response else "no_response",
+        "parser_result": parser_result,
+    }
+
+
+def classify_capture_status(
+    *,
+    records_published: int,
+    candidates_seen: int,
+    blocked_reason: str | None,
+    http_statuses: list[int | None],
+    errors: list[str],
+    rejected: list[dict],
+    fallback_records: int = 0,
+) -> str:
+    """Classify a run without ever converting a failure into a verified zero."""
+    statuses = {status for status in http_statuses if isinstance(status, int)}
+    reasons = " ".join(str(row.get("reason") or "") for row in rejected).lower()
+    failures = " ".join(errors).lower()
+    if records_published:
+        return "PARTIAL" if (blocked_reason or errors or rejected or fallback_records) else "SUCCESS_WITH_RESULTS"
+    if blocked_reason or 401 in statuses or 403 in statuses:
+        return "BLOCKED"
+    if 429 in statuses:
+        return "RATE_LIMITED"
+    if "timeout" in failures or "timeout" in reasons:
+        return "TIMEOUT"
+    if candidates_seen:
+        return "PARSER_ERROR"
+    if errors:
+        return "SOURCE_UNAVAILABLE"
+    if not statuses or any(status < 200 or status >= 400 for status in statuses):
+        return "SOURCE_UNAVAILABLE"
+    return "VERIFIED_ZERO_RESULTS"
 
 
 def discover_candidates(
@@ -1291,6 +1374,7 @@ def google_bing_discovery(
     report = {
         "source": source,
         "location": location,
+        "category": str(spec.get("scope") or "commercial"),
         "source_run_id": run_id,
         "collector": COLLECTOR_VERSION,
         "parser": portal_type(source),
@@ -1417,6 +1501,7 @@ def search_fallback_capture(
     report = {
         "source": source,
         "location": location,
+        "category": str(spec.get("scope") or "commercial"),
         "source_run_id": run_id,
         "search_url": spec["url"],
         "collector": COLLECTOR_VERSION,
@@ -1484,6 +1569,7 @@ def generic_portal_capture(
     rejected: list[dict] = []
     errors: list[str] = []
     statuses: list[int | None] = []
+    diagnostics: list[dict] = []
 
     blocked_reason: str | None = None
     max_pages = int(
@@ -1506,10 +1592,8 @@ def generic_portal_capture(
             visited.add(current)
 
             try:
-                status = goto(
-                    page,
-                    current,
-                )
+                response = navigate(page, current)
+                status = response.status if response else None
                 statuses.append(status)
 
                 body_text = page_body(page)
@@ -1521,6 +1605,9 @@ def generic_portal_capture(
 
                 if block_reason:
                     blocked_reason = block_reason
+                    diagnostics.append(page_diagnostic(
+                        page, response, current, "discovery", "blocked_before_parse"
+                    ))
                     break
 
                 if (
@@ -1535,6 +1622,9 @@ def generic_portal_capture(
                             ),
                         }
                     )
+                    diagnostics.append(page_diagnostic(
+                        page, response, current, "discovery", "http_error_before_parse"
+                    ))
                     continue
 
                 found, pagination = (
@@ -1544,6 +1634,10 @@ def generic_portal_capture(
                         source,
                     )
                 )
+                diagnostics.append(page_diagnostic(
+                    page, response, current, "discovery",
+                    "candidates_found" if found else "valid_empty_page",
+                ))
 
                 for url, label in found.items():
                     candidates.setdefault(
@@ -1564,10 +1658,21 @@ def generic_portal_capture(
                 errors.append(
                     f"timeout:{current}"
                 )
+                diagnostics.append({
+                    "timestamp": now_iso(), "stage": "discovery",
+                    "requested_url": current, "navigation_outcome": "timeout",
+                    "parser_result": "not_attempted",
+                })
             except Exception as exc:
                 errors.append(
                     f"page:{type(exc).__name__}:{exc}"
                 )
+                diagnostics.append({
+                    "timestamp": now_iso(), "stage": "discovery",
+                    "requested_url": current, "navigation_outcome": "error",
+                    "parser_result": "not_attempted",
+                    "error_type": type(exc).__name__,
+                })
 
     finally:
         context.close()
@@ -1590,10 +1695,9 @@ def generic_portal_capture(
         detail_page = detail_context.new_page()
 
         try:
-            status = goto(
-                detail_page,
-                url,
-            )
+            response = navigate(detail_page, url)
+            status = response.status if response else None
+            statuses.append(status)
             body_text = page_body(
                 detail_page
             )
@@ -1611,6 +1715,9 @@ def generic_portal_capture(
                         "label": label,
                     }
                 )
+                diagnostics.append(page_diagnostic(
+                    detail_page, response, url, "detail", "blocked_before_parse"
+                ))
                 continue
 
             if (
@@ -1626,10 +1733,12 @@ def generic_portal_capture(
                         "label": label,
                     }
                 )
+                diagnostics.append(page_diagnostic(
+                    detail_page, response, url, "detail", "http_error_before_parse"
+                ))
                 continue
 
-            rows.append(
-                extract_listing(
+            row = extract_listing(
                     detail_page,
                     source,
                     location,
@@ -1638,7 +1747,10 @@ def generic_portal_capture(
                     evidence=label,
                     capture_method="browser_detail",
                 )
-            )
+            rows.append(row)
+            diagnostics.append(page_diagnostic(
+                detail_page, response, url, "detail", "listing_extracted"
+            ))
 
         except PlaywrightTimeoutError:
             rejected.append(
@@ -1648,6 +1760,10 @@ def generic_portal_capture(
                     "label": label,
                 }
             )
+            diagnostics.append({
+                "timestamp": now_iso(), "stage": "detail", "requested_url": url,
+                "navigation_outcome": "timeout", "parser_result": "not_attempted",
+            })
         except Exception as exc:
             rejected.append(
                 {
@@ -1659,6 +1775,11 @@ def generic_portal_capture(
                     "label": label,
                 }
             )
+            diagnostics.append({
+                "timestamp": now_iso(), "stage": "detail", "requested_url": url,
+                "navigation_outcome": "error", "parser_result": "not_attempted",
+                "error_type": type(exc).__name__,
+            })
         finally:
             detail_context.close()
 
@@ -1710,14 +1831,14 @@ def generic_portal_capture(
 
     rows = list(unique_rows.values())
 
-    direct_status = (
-        "PASS"
-        if rows
-        and not blocked_reason
-        and not fallback_rows
-        else "PARTIAL"
-        if rows
-        else "BROKEN"
+    direct_status = classify_capture_status(
+        records_published=len(rows),
+        candidates_seen=len(candidates),
+        blocked_reason=blocked_reason,
+        http_statuses=statuses,
+        errors=errors,
+        rejected=rejected,
+        fallback_records=len(fallback_rows),
     )
 
     report = {
@@ -1752,14 +1873,12 @@ def generic_portal_capture(
             candidates
         )[:1000],
         "errors": errors[:100],
+        "diagnostics": diagnostics[:100],
         "fallback": fallback_report,
         "status": direct_status,
         "coverage": (
-            "PASS"
-            if direct_status == "PASS"
-            else "PARTIAL"
-            if rows
-            else "MISSING"
+            "PASS" if direct_status == "SUCCESS_WITH_RESULTS"
+            else "PARTIAL" if rows else "MISSING"
         ),
         "manifest": True,
         "rejected": rejected[:1000],
@@ -2079,6 +2198,7 @@ def jbc_capture(
     report = {
         "source": source,
         "location": "GLOBAL",
+        "category": "developer_direct",
         "source_run_id": run_id,
         "search_url": home,
         "collector": COLLECTOR_VERSION,
@@ -2214,6 +2334,7 @@ def run():
                     report = {
                         "source": source,
                         "location": location,
+                        "category": str(spec.get("scope") or "commercial"),
                         "source_run_id": run_id,
                         "search_url": spec.get(
                             "url"
