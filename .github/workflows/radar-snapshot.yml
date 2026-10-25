@@ -7,6 +7,7 @@ on:
     - cron: "0 6 * * *"
 
 permissions:
+  actions: write
   contents: write
 
 concurrency:
@@ -95,6 +96,7 @@ jobs:
 
       - name: Commit snapshot
         if: success()
+        id: snapshot_commit
         run: |
           git config user.name "adriatic-radar-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -103,10 +105,22 @@ jobs:
 
           if git diff --cached --quiet; then
             echo "No snapshot changes to commit."
+            echo "committed=false" >> "$GITHUB_OUTPUT"
           else
             git commit -m "radar: snapshot $(date -u +%Y-%m-%d)"
             git push
+            echo "committed=true" >> "$GITHUB_OUTPUT"
+            echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+            echo "run_id=$(python -c 'import json; print(json.load(open("data/current.json", encoding="utf-8"))["run_id"])')" >> "$GITHUB_OUTPUT"
           fi
 
-      # The commit above triggers deploy-pages.yml. Keeping deployment in one
-      # workflow avoids racing two deploy-pages jobs for the same snapshot.
+      - name: Dispatch Pages deployment for published snapshot
+        if: success() && steps.snapshot_commit.outputs.committed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SNAPSHOT_SHA: ${{ steps.snapshot_commit.outputs.sha }}
+          SNAPSHOT_RUN_ID: ${{ steps.snapshot_commit.outputs.run_id }}
+        run: |
+          gh workflow run deploy-pages.yml --ref main \
+            -f snapshot_commit="$SNAPSHOT_SHA" \
+            -f expected_run_id="$SNAPSHOT_RUN_ID"

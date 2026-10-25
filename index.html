@@ -64,7 +64,7 @@
           ${stat("Source failures",count(failures.length),failures.length ? "bad" : "good")}
           ${stat("Verified zero-result runs",count(zeroes.length),zeroes.length ? "warn" : "")}
         </div>
-        <div class="panel" style="margin-top:14px"><b>Data freshness:</b> ${esc(date(S.current.generated_at || S.current.last_live_capture || S.current.run_date))}<br><b>Public inventory:</b> ${esc(S.current.public_inventory_source || S.current.inventory_mode || S.current.snapshot_status || "unknown")}<br><b>Coverage:</b> ${esc(S.current.coverage_status || S.current.snapshot_status || "not reported")}</div>
+        <div class="panel" style="margin-top:14px"><b>Data freshness:</b> ${esc(date(S.current.generated_at || S.current.last_live_capture || S.current.run_date))}<br><b>Public inventory:</b> ${esc(S.current.public_inventory_source || S.current.inventory_mode || S.current.snapshot_status || "unknown")}<br><b>Coverage:</b> ${esc(S.current.coverage_status || "NOT_REPORTED")}</div>
         ${runMismatch ? `<p class="notice bad"><b>Run mismatch:</b> ${esc(runMismatch)}. Do not compare these files as one snapshot.</p>` : ""}
         ${failures.length ? `<p class="notice bad"><b>${count(failures.length)} source run(s) failed or were blocked.</b> They are shown below and are not treated as zero inventory.</p>` : ""}
         ${zeroes.length ? `<p class="notice"><b>${count(zeroes.length)} source run(s) reported verified zero results.</b> This is distinct from a failed request.</p>` : ""}
@@ -165,7 +165,7 @@
         S.objects = rowList(objects,"objects"); S.projects = rowList(projects,"projects"); S.units = rowList(units,"units"); S.locations = rowList(locations,"locations");
         S.coverage = Array.isArray(S.current.coverage) ? S.current.coverage : Array.isArray(S.current.capture_coverage) ? S.current.capture_coverage : Array.isArray(S.current.coverage_evaluation?.mandatory_results) ? S.current.coverage_evaluation.mandatory_results : [];
         $("#subtitle").textContent = `Run ${S.current.run_id || "—"} · ${S.current.inventory_mode || S.current.snapshot_status || "UNKNOWN"} · ${S.objects.length} published listings`;
-        $("#meta").innerHTML = `<div class="panel"><b>Freshness:</b> ${esc(date(S.current.generated_at || S.current.last_live_capture || S.current.run_date))} · <b>Run:</b> ${esc(S.current.run_id)} · <b>Coverage:</b> ${esc(S.current.coverage_status || S.current.snapshot_status || "not reported")}</div>`;
+        $("#meta").innerHTML = `<div class="panel"><b>Freshness:</b> ${esc(date(S.current.generated_at || S.current.last_live_capture || S.current.run_date))} · <b>Run:</b> ${esc(S.current.run_id)} · <b>Coverage:</b> ${esc(S.current.coverage_status || "NOT_REPORTED")}</div>`;
         render();
       } catch (error) { $("#subtitle").textContent = "Не вдалося завантажити опубліковані дані"; $("#app").innerHTML = `<p class="notice bad">${esc(error.message)}</p>`; }
     }
