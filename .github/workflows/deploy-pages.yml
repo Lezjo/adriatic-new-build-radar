@@ -5,6 +5,15 @@ on:
     branches:
       - main
   workflow_dispatch:
+    inputs:
+      snapshot_commit:
+        description: "Commit SHA to deploy; blank deploys the triggering ref."
+        required: false
+        type: string
+      expected_run_id:
+        description: "Expected data/current.json run_id; blank skips post-deploy verification."
+        required: false
+        type: string
 
 permissions:
   contents: read
@@ -26,6 +35,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          # Automated snapshot deployment always pins the commit it just
+          # published. Manual/push runs retain their native triggering ref.
+          ref: ${{ inputs.snapshot_commit || github.sha }}
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -38,3 +51,23 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Verify deployed snapshot run ID
+        if: inputs.expected_run_id != ''
+        env:
+          EXPECTED_RUN_ID: ${{ inputs.expected_run_id }}
+          PAGE_URL: ${{ steps.deployment.outputs.page_url }}
+        run: |
+          set -eu
+          endpoint="${PAGE_URL%/}/data/current.json"
+          for attempt in $(seq 1 18); do
+            actual_run_id="$(curl --fail --silent --show-error "$endpoint" 2>/dev/null | python -c 'import json, sys; value=json.load(sys.stdin).get("run_id"); assert isinstance(value, str) and value; print(value)' 2>/dev/null || true)"
+            if [ "$actual_run_id" = "$EXPECTED_RUN_ID" ]; then
+              echo "Verified deployed run_id: $actual_run_id"
+              exit 0
+            fi
+            echo "Attempt $attempt: deployed run_id is unavailable or '$actual_run_id'; expected '$EXPECTED_RUN_ID'."
+            sleep 10
+          done
+          echo "Deployment verification failed for $endpoint."
+          exit 1
