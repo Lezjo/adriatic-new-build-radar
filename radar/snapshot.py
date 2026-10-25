@@ -717,21 +717,115 @@ def make_entities(
     )
 
 
-def load_price_history() -> dict[str, Any]:
-    payload = load(
-        PRICE_HISTORY,
-        {
-            "schema_version": "3.0",
-            "retention_days": RETENTION_DAYS,
-            "listings": {},
-        },
+def normalized_captured_at(value: Any) -> str | None:
+    """Return a UTC timestamp for an old date/timestamp when possible."""
+    if not isinstance(value, str) or not value.strip():
+        return None
+    try:
+        parsed = datetime.fromisoformat(value.strip().replace("Z", "+00:00"))
+    except ValueError:
+        return None
+    if parsed.tzinfo is None:
+        parsed = parsed.replace(tzinfo=timezone.utc)
+    return iso(parsed)
+
+
+def normalize_price_history_entry(
+    value: Any,
+    legacy_key: str | None = None,
+) -> dict[str, Any]:
+    """Convert a persisted V2 list or V3 mapping to the canonical ledger.
+
+    V2 persisted ``listings[url]`` as a list of observations using ``date``.
+    V3 persists ``listings[listing_id]`` as a mapping with ``observations``.
+    Migration is deliberately lossless: malformed values remain represented in
+    ``malformed_observations`` rather than being silently discarded.
+    """
+    if isinstance(value, list):
+        raw_observations = value
+        entry: dict[str, Any] = {
+            "observations": [],
+            "legacy_history_key": legacy_key,
+            "history_format": "legacy_list",
+        }
+    elif isinstance(value, dict):
+        entry = dict(value)
+        raw_observations = entry.get("observations", [])
+    else:
+        return {
+            "observations": [],
+            "legacy_history_key": legacy_key,
+            "malformed_observations": [value],
+        }
+
+    if not isinstance(raw_observations, list):
+        entry["malformed_observations"] = (
+            list(entry.get("malformed_observations", []))
+            + [raw_observations]
+        )
+        raw_observations = []
+
+    observations: list[dict[str, Any]] = []
+    malformed = list(entry.get("malformed_observations", []))
+    for raw in raw_observations:
+        if not isinstance(raw, dict):
+            malformed.append(raw)
+            continue
+        observation = dict(raw)
+        captured_at = normalized_captured_at(
+            observation.get("captured_at") or observation.get("date")
+        )
+        if captured_at:
+            observation["captured_at"] = captured_at
+        elif observation.get("captured_at") or observation.get("date"):
+            # Retain the original source value as evidence, but do not use it
+            # for time-window calculations that require a real timestamp.
+            observation["invalid_captured_at"] = (
+                observation.get("captured_at") or observation.get("date")
+            )
+        observations.append(observation)
+
+    entry["observations"] = sorted(
+        observations,
+        key=lambda item: str(item.get("captured_at") or ""),
     )
+    if malformed:
+        entry["malformed_observations"] = malformed
+    else:
+        entry.pop("malformed_observations", None)
+    return entry
+
+
+def normalize_price_history(payload: Any) -> dict[str, Any]:
+    """Return the canonical, lossless price-history payload."""
     if not isinstance(payload, dict):
         payload = {}
-    payload.setdefault("schema_version", "3.0")
-    payload.setdefault("retention_days", RETENTION_DAYS)
-    payload.setdefault("listings", {})
-    return payload
+    normalized = dict(payload)
+    raw_listings = normalized.get("listings", {})
+    if not isinstance(raw_listings, dict):
+        normalized["malformed_listings"] = raw_listings
+        raw_listings = {}
+
+    normalized["schema_version"] = "3.0"
+    normalized.setdefault("retention_days", RETENTION_DAYS)
+    normalized["listings"] = {
+        str(key): normalize_price_history_entry(value, str(key))
+        for key, value in raw_listings.items()
+    }
+    return normalized
+
+
+def load_price_history() -> dict[str, Any]:
+    return normalize_price_history(
+        load(
+            PRICE_HISTORY,
+            {
+                "schema_version": "3.0",
+                "retention_days": RETENTION_DAYS,
+                "listings": {},
+            },
+        )
+    )
 
 
 def update_price_history(
@@ -739,7 +833,8 @@ def update_price_history(
     observations: list[dict[str, Any]],
     captured_at: str,
 ) -> dict[str, Any]:
-    listings = payload.setdefault("listings", {})
+    payload = normalize_price_history(payload)
+    listings = payload["listings"]
 
     for obs in observations:
         price = obs.get("price")
@@ -747,6 +842,16 @@ def update_price_history(
             continue
 
         listing_id = obs["listing_id"]
+        # A V2 ledger used canonical source URLs as keys. When a current
+        # listing has the same URL, re-key that complete legacy ledger to its
+        # canonical listing ID so historical and new observations stay joined.
+        source_url = canonical_url(obs.get("source_url"))
+        legacy_keys = [
+            key for key, entry in listings.items()
+            if key != listing_id
+            and isinstance(entry, dict)
+            and canonical_url(entry.get("legacy_history_key")) == source_url
+        ]
         history = listings.setdefault(
             listing_id,
             {
@@ -755,6 +860,18 @@ def update_price_history(
                 "last_seen": captured_at,
             },
         )
+        for legacy_key in legacy_keys:
+            legacy_history = listings.pop(legacy_key)
+            history["observations"] = (
+                list(legacy_history.get("observations", []))
+                + list(history.get("observations", []))
+            )
+            if legacy_history.get("malformed_observations"):
+                history["malformed_observations"] = (
+                    list(history.get("malformed_observations", []))
+                    + list(legacy_history["malformed_observations"])
+                )
+            history.setdefault("legacy_history_keys", []).append(legacy_key)
 
         history["observations"].append({
             "captured_at": captured_at,
@@ -765,18 +882,20 @@ def update_price_history(
             "run_id": obs.get("run_id"),
         })
 
+        existing_first_seen = history.get("first_seen")
+        existing_last_seen = history.get("last_seen")
         history["first_seen"] = min(
-            history.get("first_seen", captured_at),
+            existing_first_seen,
             captured_at,
-        )
+        ) if isinstance(existing_first_seen, str) else captured_at
         history["last_seen"] = max(
-            history.get("last_seen", captured_at),
+            existing_last_seen,
             captured_at,
-        )
+        ) if isinstance(existing_last_seen, str) else captured_at
 
         history["observations"] = sorted(
             history["observations"],
-            key=lambda item: item.get("captured_at", ""),
+            key=lambda item: str(item.get("captured_at") or ""),
         )
 
     # Do not destructively prune price history here. The immutable run
@@ -788,16 +907,21 @@ def update_price_history(
 
 
 def price_metrics(
-    history: dict[str, Any],
+    history: Any,
     captured_at: str,
 ) -> dict[str, Any]:
-    observations = history.get("observations", [])
-    current = observations[-1] if observations else None
+    history = normalize_price_history_entry(history)
+    observations = history["observations"]
+    priced_observations = [
+        item for item in observations
+        if isinstance(item.get("price"), (int, float))
+        and not isinstance(item.get("price"), bool)
+    ]
+    current = priced_observations[-1] if priced_observations else None
 
     prices = [
         item["price"]
-        for item in observations
-        if isinstance(item.get("price"), (int, float))
+        for item in priced_observations
     ]
 
     result: dict[str, Any] = {
@@ -825,10 +949,10 @@ def price_metrics(
         cutoff = captured_dt - timedelta(days=days)
         candidates = [
             item
-            for item in observations
-            if item.get("captured_at")
+            for item in priced_observations
+            if normalized_captured_at(item.get("captured_at"))
             and datetime.fromisoformat(
-                item["captured_at"].replace("Z", "+00:00")
+                normalized_captured_at(item["captured_at"]).replace("Z", "+00:00")
             ) >= cutoff
         ]
 

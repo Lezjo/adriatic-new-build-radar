@@ -1,12 +1,176 @@
-<!doctype html><html lang="uk"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Adriatic New Build Radar</title><style>:root{--n:#17243b;--b:#2458c6;--bg:#f3f6fa;--line:#dce4ef}*{box-sizing:border-box}body{margin:0;background:var(--bg);font:15px system-ui;color:#1d2a3d}header{padding:28px;background:var(--n);color:#fff}h1{margin:0}nav{padding:10px;display:flex;gap:6px;flex-wrap:wrap;background:#fff;position:sticky;top:0}.tab{border:1px solid var(--line);padding:8px 11px;border-radius:14px;background:#fff;cursor:pointer}.tab.active{background:var(--b);color:#fff}main{max-width:1600px;margin:auto;padding:18px}.grid,.stats{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}.card,.stat,.table{padding:15px;border:1px solid var(--line);background:#fff;border-radius:12px}.stat b{display:block;font-size:26px}.table{overflow:auto;margin-top:12px}table{width:100%;border-collapse:collapse;min-width:700px}td,th{padding:9px;border-bottom:1px solid var(--line);text-align:left}.up{color:#aa241b}.down{color:#08783c}.warn{background:#fff5d8;border-left:4px solid #dfae00;padding:12px}.bad{background:#fff0f0;border-left:4px solid #c33;padding:12px}section{display:none}.show{display:block}a{color:#1457b7}.muted{color:#66758a}</style></head><body><header><h1>Adriatic New Build Radar</h1><div id="subtitle">Loading current verified inventory…</div></header><nav id="nav"></nav><main><div id="meta" class="stats"></div><div id="app"></div></main><script>
-(()=>{const $=s=>document.querySelector(s),E=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])),M=x=>Number.isFinite(+x)?new Intl.NumberFormat('it-IT',{style:'currency',currency:'EUR',maximumFractionDigits:0}).format(x):'—',N=x=>Number.isFinite(+x)?new Intl.NumberFormat('uk-UA').format(x):'—',D=x=>x?new Intl.DateTimeFormat('uk-UA',{dateStyle:'medium',timeStyle:'short'}).format(new Date(x)):'—';let S={};async function get(x){let r=await fetch(x+'?v='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error(x+' '+r.status);return r.json()};
-function table(rows,cols){return rows.length?`<div class="table"><table><thead><tr>${cols.map(x=>'<th>'+x[0]+'</th>').join('')}</tr></thead><tbody>${rows.map(r=>'<tr>'+cols.map(x=>'<td>'+x[1](r)+'</td>').join('')+'</tr>').join('')}</tbody></table></div>`:'<p class="warn">Немає записів для цього зрізу.</p>'};function listingTable(rows=S.objects){return table(rows,[['Location',x=>E(x.location)],['Listing',x=>`<a target="_blank" rel="noopener" href="${E(x.source_url)}">${E(x.listing_title)}</a>`],['Source',x=>E(x.source)],['Price',x=>M(x.price)],['m²',x=>N(x.area_m2)],['€/m²',x=>M(x.eur_m2)],['Δ latest',x=>x.price_delta==null?'—':`<span class="${x.price_delta<0?'down':'up'}">${M(x.price_delta)} (${x.price_delta_pct??'—'}%)</span>`]])};
-function overview(){let c=S.current,t=c.totals||{},m=c.source_metrics||[],bad=m.filter(x=>x.mandatory&&x.enabled&&x.status!=='SUCCESS');return `<h2>Overview</h2><div class="stats">${[['Snapshot',c.snapshot_status],['Listings',t.listings],['Projects',t.projects],['Units',t.units],['Rejected',t.rejected],['Sources healthy',m.filter(x=>x.status==='SUCCESS').length],['Sources degraded',m.filter(x=>x.enabled&&x.status!=='SUCCESS').length]].map(x=>`<div class="stat"><small>${x[0]}</small><b>${N(x[1])}</b></div>`).join('')}</div>${bad.length?`<p class="bad">Не «Full inventory»: ${bad.length} обов’язкових source runs не дали успішних published rows. Перевірте Sources / Audit.</p>`:'<p class="warn">Статус залежить від останнього фактичного manifest.</p>'}<h3>Latest listings</h3>${listingTable()}`};
-function source(){let rows=S.current.coverage||S.current.capture_coverage||[];return `<h2>Sources / coverage</h2>${table(rows,[['Source',x=>E(x.source||x.source_name)],['Location',x=>E(x.location)],['Seen',x=>N(x.records_seen??x.discovered)],['Published',x=>N(x.records_published??x.accepted)],['Status',x=>E(x.status||'NOT_RUN')],['Errors',x=>E((x.errors||[]).join('; ')||'—')]])}`};
-function locations(){return `<h2>All locations from Першоджерело</h2><p class="muted">Coverage registry; an empty location is shown rather than hidden.</p><div class="grid">${S.locations.locations.map(x=>`<div class="card"><b>${E(x.comune)}</b><p>${E(x.cluster)}</p><small>${x.micro_locations.map(E).join(' · ')}</small><p>${N(S.objects.filter(o=>o.location===x.comune).length)} live listings</p></div>`).join('')}</div>`};
-function prices(){let rows=S.objects.filter(x=>x.price_event||x.promotion);return `<h2>Price History & Promotions</h2><p class="muted">Deltas are calculated only from immutable observations keyed by source listing ID. A keyword promotion remains separate from a price decrease.</p>${table(rows,[['Listing',x=>`<a href="${E(x.source_url)}" target="_blank">${E(x.listing_title)}</a>`],['Event',x=>E(x.price_event)],['Current',x=>M(x.price)],['Previous',x=>M(x.previous_price)],['30D',x=>M(x.price_change_30d)],['90D',x=>M(x.price_change_90d)],['180D',x=>M(x.price_change_180d)],['365D',x=>M(x.price_change_365d)],['Promotion',x=>x.promotion?E(x.promotion.promotion_type):'—']])}`};
-function locationInventory(){return `<h2>Live Inventory</h2><p class="muted">All published source listings; exact URL duplicates are removed only within the same source.</p>${listingTable()}`};function simple(name,key){let rows=S[key]?.[key]||[];return `<h2>${name}</h2>${table(rows,[['ID',x=>E(x[key.slice(0,-1)+'_id']||x.project_id||x.unit_id)],['Name / location',x=>E(x.project_name||x.title||x.location||'—')],['Listings',x=>N((x.listing_ids||[]).length)]])}`};
-function audit(){let m=S.current.source_metrics||[];return `<h2>Audit</h2><p>Run: <code>${E(S.current.run_id)}</code>; generated: ${D(S.current.last_live_capture)}.</p><ul><li>Raw evidence: ${E(S.current.files?.manifest||'not available')}</li><li>All observed URLs retained per listing: ${S.objects.filter(x=>Array.isArray(x.observed_urls)&&x.observed_urls.length).length}/${S.objects.length}</li><li>Provenance retained: ${S.objects.filter(x=>x.source_id&&x.raw_reference).length}/${S.objects.length}</li><li>Location registry entries: ${S.locations.locations.length}</li></ul>${source()}`};
-function render(){let tabs=[['overview','Overview',overview],['live','Live Inventory',locationInventory],['projects','Projects',()=>simple('Projects','projects')],['units','Units',()=>simple('Units','units')],['new','New / Last 30D',()=>listingTable(S.objects.filter(x=>x.new_to_radar_30d))],['prices','Price History',prices],['promos','Promotions',()=>listingTable(S.objects.filter(x=>x.promotion))],['planned','Planned / Pipeline',()=>'<h2>Planned / Pipeline</h2><p class="warn">Official planning sources are registered but do not yet have verified adapters; no planning data is manufactured.</p>'],['locations','Location Matrix',locations],['family','Family / Living',()=>'<h2>Family / Living</h2><p class="warn">Scores require verified school, health, mobility and winter-service data. They are deliberately not inferred from listings.</p>'],['rental','Rental',()=>'<h2>Rental</h2><p class="warn">Rental/yield data needs a separate verified rental evidence layer.</p>'],['investment','Investment',()=>'<h2>Investment</h2><p class="warn">No investment score is calculated until valuation, costs and risk inputs are present.</p>'],['risk','Risk',()=>'<h2>Risk</h2><p class="warn">Flood/coastal risk requires official GIS evidence and is not guessed.</p>'],['sources','Sources',source],['audit','Audit',audit]];$('#nav').innerHTML=tabs.map((x,i)=>`<button class="tab ${i?'':'active'}" data-id="${x[0]}">${x[1]}</button>`).join('');$('#app').innerHTML=tabs.map((x,i)=>`<section id="${x[0]}" class="${i?'':'show'}">${x[2]()}</section>`).join('');$('#nav').onclick=e=>{let b=e.target.closest('[data-id]');if(!b)return;document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x===b));document.querySelectorAll('section').forEach(x=>x.classList.toggle('show',x.id===b.dataset.id))}};
-async function init(){try{let a=await Promise.all(['data/current.json','data/objects.json','data/projects.json','data/units.json','data/locations.json'].map(get));[S.current,S.objects,S.projects,S.units,S.locations]=a;S.objects=S.objects.objects||S.current.listings||[];$('#subtitle').textContent=`Run ${S.current.run_id||'—'} · ${S.current.inventory_mode||S.current.snapshot_status||'UNKNOWN'} · ${S.objects.length} published listings`;$('#meta').innerHTML=`<div class="stat">Run date<b>${D(S.current.generated_at||S.current.last_live_capture)}</b></div><div class="stat">Locations<b>${N(S.locations.locations.length)}</b></div><div class="stat">Published listings<b>${N(S.objects.length)}</b></div>`;render()}catch(e){$('#app').innerHTML='<p class="bad">Data loading failed: '+E(e.message)+'</p>'}}init()})();
-</script></body></html>
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Adriatic New Build Radar</title>
+  <style>
+    :root{--ink:#17243b;--blue:#2458c6;--bg:#f3f6fa;--line:#dce4ef;--muted:#617087;--good:#08783c;--bad:#b42318;--warn:#9a6700}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);font:15px system-ui,sans-serif;color:var(--ink)}header{padding:26px max(18px,calc((100% - 1500px)/2));background:var(--ink);color:#fff}h1{margin:0;font-size:clamp(1.45rem,3vw,2rem)}h2{margin-top:0}.subtitle{margin:.5rem 0 0;color:#d9e4ff}.meta,main{max-width:1500px;margin:auto}.meta{padding:14px 18px 0}.nav{display:flex;gap:7px;flex-wrap:wrap;padding:10px max(18px,calc((100% - 1500px)/2));background:#fff;position:sticky;top:0;z-index:2;border-bottom:1px solid var(--line)}button,.tab{font:inherit}.tab{border:1px solid var(--line);padding:8px 12px;border-radius:999px;background:#fff;cursor:pointer}.tab.active{background:var(--blue);color:#fff;border-color:var(--blue)}main{padding:18px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px}.card,.panel,.table-wrap{background:#fff;border:1px solid var(--line);border-radius:12px;padding:15px}.stat b{display:block;font-size:1.55rem;margin-top:3px}.muted{color:var(--muted)}.good{color:var(--good)}.bad{color:var(--bad)}.warn{color:var(--warn)}.notice{padding:12px;border-left:4px solid var(--warn);background:#fff8e1}.notice.bad{border-color:var(--bad);background:#fff1f1}.filters{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:14px 0}.filters label{display:grid;gap:4px;font-size:.85rem;color:var(--muted)}input,select{padding:8px;border:1px solid var(--line);border-radius:7px;background:#fff;color:var(--ink);min-width:0}.table-wrap{overflow:auto;padding:0}table{width:100%;border-collapse:collapse;min-width:780px}th,td{padding:10px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}th{font-size:.8rem;color:var(--muted)}details summary{cursor:pointer;color:var(--blue)}details p{margin:.4rem 0}.pill{display:inline-block;padding:2px 7px;border-radius:999px;background:#eef3fb;font-size:.78rem}.source-error{background:#fff1f1}.source-zero{background:#fff8e1}.source-ok{background:#effaf3}.section{display:none}.section.show{display:block}@media(max-width:650px){header{padding:20px 16px}.nav{padding:9px 12px;position:static}main{padding:12px}.meta{padding:12px 12px 0}.filters{grid-template-columns:1fr 1fr}table{min-width:650px}}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Adriatic New Build Radar</h1>
+    <p id="subtitle" class="subtitle">Завантаження опублікованих даних…</p>
+  </header>
+  <nav id="nav" class="nav" aria-label="Основна навігація"></nav>
+  <div id="meta" class="meta"></div>
+  <main id="app"></main>
+  <script>
+  (() => {
+    const $ = selector => document.querySelector(selector);
+    const esc = value => String(value ?? "—").replace(/[&<>"']/g, char => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[char]));
+    const numeric = value => typeof value === "number" && Number.isFinite(value);
+    const count = value => numeric(value) ? new Intl.NumberFormat("uk-UA").format(value) : "—";
+    const money = value => numeric(value) ? new Intl.NumberFormat("it-IT",{style:"currency",currency:"EUR",maximumFractionDigits:0}).format(value) : "—";
+    const date = value => { const parsed = value ? new Date(value) : null; return parsed && !Number.isNaN(parsed.valueOf()) ? new Intl.DateTimeFormat("uk-UA",{dateStyle:"medium",timeStyle:"short"}).format(parsed) : "—"; };
+    const rowList = (payload, key) => Array.isArray(payload) ? payload : Array.isArray(payload?.[key]) ? payload[key] : Object.values(payload?.[key] || {});
+    const sourceStatus = row => String(row.status || row.coverage || "NOT_REPORTED").toUpperCase();
+    const failedStatus = status => ["ERROR","BROKEN","BLOCKED","DEGRADED","MISSING","FAILED"].includes(status);
+    const zeroStatus = status => ["ZERO_VERIFIED","ZERO_RESULTS"].includes(status);
+    let S = {current:{},objects:[],projects:[],units:[],locations:[],coverage:[]};
+
+    async function fetchJson(path) {
+      const response = await fetch(`${path}?v=${Date.now()}`, {cache:"no-store"});
+      if (!response.ok) throw new Error(`${path}: HTTP ${response.status}`);
+      return response.json();
+    }
+
+    function listingLocation(row) { return row.comune || row.municipality || row.location || row.micro_location || null; }
+    function listingMicroLocation(row) { return row.micro_location || row.location || null; }
+    function listingTitle(row) { return row.listing_title || row.title || row.project_name || "Без назви"; }
+    function listingUrl(row) { return row.source_url || row.canonical_url || null; }
+    function sourceRows() { return S.coverage.filter(row => row && typeof row === "object"); }
+    function sameRunWarning() {
+      const expected = S.current.run_id;
+      const objectRun = S.objectsPayload?.run_id;
+      return expected && objectRun && expected !== objectRun ? `current.json: ${expected}; objects.json: ${objectRun}` : null;
+    }
+
+    function overview() {
+      const rows = sourceRows(), failures = rows.filter(row => failedStatus(sourceStatus(row))), zeroes = rows.filter(row => zeroStatus(sourceStatus(row)));
+      const metrics = S.current.metrics || S.current.totals || {};
+      const projects = S.projects.length || metrics.projects;
+      const units = S.units.length || metrics.units;
+      const runMismatch = sameRunWarning();
+      return `<section class="section show" id="overview">
+        <h2>Overview</h2>
+        <div class="grid">
+          ${stat("Published listings",count(S.objects.length))}
+          ${stat("Projects",count(projects))}
+          ${stat("Units",count(units))}
+          ${stat("Source runs reported",count(rows.length))}
+          ${stat("Source failures",count(failures.length),failures.length ? "bad" : "good")}
+          ${stat("Verified zero-result runs",count(zeroes.length),zeroes.length ? "warn" : "")}
+        </div>
+        <div class="panel" style="margin-top:14px"><b>Data freshness:</b> ${esc(date(S.current.generated_at || S.current.last_live_capture || S.current.run_date))}<br><b>Public inventory:</b> ${esc(S.current.public_inventory_source || S.current.inventory_mode || S.current.snapshot_status || "unknown")}<br><b>Coverage:</b> ${esc(S.current.coverage_status || S.current.snapshot_status || "not reported")}</div>
+        ${runMismatch ? `<p class="notice bad"><b>Run mismatch:</b> ${esc(runMismatch)}. Do not compare these files as one snapshot.</p>` : ""}
+        ${failures.length ? `<p class="notice bad"><b>${count(failures.length)} source run(s) failed or were blocked.</b> They are shown below and are not treated as zero inventory.</p>` : ""}
+        ${zeroes.length ? `<p class="notice"><b>${count(zeroes.length)} source run(s) reported verified zero results.</b> This is distinct from a failed request.</p>` : ""}
+      </section>`;
+    }
+
+    function stat(label, value, className="") { return `<div class="card stat ${className}"><small class="muted">${esc(label)}</small><b>${value}</b></div>`; }
+    function options(values, current, label) { return `<option value="">${esc(label)}</option>${[...values].sort().map(value => `<option value="${esc(value)}" ${current === value ? "selected" : ""}>${esc(value)}</option>`).join("")}`; }
+
+    function listings() {
+      const locations = new Set(S.objects.map(listingLocation).filter(Boolean));
+      const energies = new Set(S.objects.map(row => row.energy_class).filter(Boolean));
+      const statuses = new Set(S.objects.map(row => row.status).filter(Boolean));
+      return `<section class="section" id="listings"><h2>Listings</h2><p class="muted">Показані тільки опубліковані listings. Відсутнє значення позначене «—», а не нулем.</p>
+        <div class="filters" id="filters">
+          <label>Пошук<input id="search" placeholder="назва або джерело"></label>
+          <label>Comune / location<select id="location">${options(locations,"","Усі")}</select></label>
+          <label>Ціна від<input id="priceMin" type="number" min="0" inputmode="numeric"></label>
+          <label>Ціна до<input id="priceMax" type="number" min="0" inputmode="numeric"></label>
+          <label>€/m² від<input id="eurMin" type="number" min="0" inputmode="numeric"></label>
+          <label>€/m² до<input id="eurMax" type="number" min="0" inputmode="numeric"></label>
+          <label>Спальні від<input id="bedsMin" type="number" min="0" inputmode="numeric"></label>
+          <label>Площа від м²<input id="areaMin" type="number" min="0" inputmode="numeric"></label>
+          <label>Паркування<select id="parking"><option value="">Будь-яке</option><option value="yes">Так</option><option value="no">Ні</option></select></label>
+          <label>Тераса<select id="terrace"><option value="">Будь-яка</option><option value="yes">Так</option><option value="no">Ні</option></select></label>
+          <label>Energy class<select id="energy">${options(energies,"","Усі")}</select></label>
+          <label>Construction status<select id="status">${options(statuses,"","Усі")}</select></label>
+        </div><p id="listingCount" class="muted"></p><div id="listingResults"></div></section>`;
+    }
+
+    function boolMatches(row, field, requested) { return !requested || (requested === "yes" ? row[field] === true : row[field] === false); }
+    function numberInput(id) { const value = $(id)?.value; return value === "" || value == null ? null : Number(value); }
+    function filteredListings() {
+      const term = $("#search")?.value.trim().toLowerCase() || "", location = $("#location")?.value || "", energy = $("#energy")?.value || "", status = $("#status")?.value || "";
+      const min = numberInput("#priceMin"), max = numberInput("#priceMax"), eurMin = numberInput("#eurMin"), eurMax = numberInput("#eurMax"), bedsMin = numberInput("#bedsMin"), areaMin = numberInput("#areaMin");
+      return S.objects.filter(row => {
+        const haystack = `${listingTitle(row)} ${row.source || ""} ${listingLocation(row) || ""}`.toLowerCase();
+        if (term && !haystack.includes(term)) return false;
+        if (location && listingLocation(row) !== location) return false;
+        if (energy && row.energy_class !== energy) return false;
+        if (status && row.status !== status) return false;
+        if (min !== null && (!numeric(row.price) || row.price < min)) return false;
+        if (max !== null && (!numeric(row.price) || row.price > max)) return false;
+        if (eurMin !== null && (!numeric(row.eur_m2) || row.eur_m2 < eurMin)) return false;
+        if (eurMax !== null && (!numeric(row.eur_m2) || row.eur_m2 > eurMax)) return false;
+        if (bedsMin !== null && (!numeric(row.bedrooms) || row.bedrooms < bedsMin)) return false;
+        if (areaMin !== null && (!numeric(row.area_m2) || row.area_m2 < areaMin)) return false;
+        return boolMatches(row,"parking",$("#parking")?.value) && boolMatches(row,"terrace",$("#terrace")?.value);
+      });
+    }
+
+    function renderListingRows(rows) {
+      $("#listingCount").textContent = `${count(rows.length)} із ${count(S.objects.length)} listings`;
+      $("#listingResults").innerHTML = rows.length ? `<div class="table-wrap"><table><thead><tr><th>Listing</th><th>Location</th><th>Source</th><th>Price</th><th>m²</th><th>€/m²</th><th>Details</th></tr></thead><tbody>${rows.map(row => {
+        const url = listingUrl(row), link = url ? `<a href="${esc(url)}" target="_blank" rel="noopener">${esc(listingTitle(row))}</a>` : esc(listingTitle(row));
+        return `<tr><td>${link}</td><td>${esc(listingLocation(row))}</td><td>${esc(row.source)}</td><td>${money(row.price)}</td><td>${count(row.area_m2)}</td><td>${money(row.eur_m2)}</td><td><details><summary>Fields</summary><p>Micro-location: ${esc(listingMicroLocation(row))}</p><p>Bedrooms: ${count(row.bedrooms)} · Parking: ${row.parking === true ? "yes" : row.parking === false ? "no" : "—"} · Terrace: ${row.terrace === true ? "yes" : row.terrace === false ? "no" : "—"}</p><p>Energy: ${esc(row.energy_class)} · Status: ${esc(row.status)} · First seen: ${esc(date(row.first_seen))}</p>${url ? `<p><a href="${esc(url)}" target="_blank" rel="noopener">Open original source</a></p>` : ""}</details></td></tr>`;
+      }).join("")}</tbody></table></div>` : `<p class="notice">Жоден listing не відповідає поточним фільтрам.</p>`;
+    }
+
+    function locations() {
+      const registry = rowList(S.locationsPayload,"locations"), comuneNames = [...new Set(registry.map(row => row.comune).filter(Boolean))];
+      const cards = comuneNames.map(comune => {
+        const rows = S.objects.filter(row => listingLocation(row) === comune || row.comune === comune);
+        const micros = [...new Set(rows.map(listingMicroLocation).filter(Boolean))];
+        return `<div class="card"><b>${esc(comune)}</b><p>${count(rows.length)} published listings</p><small class="muted">Observed micro-locations: ${esc(micros.join(" · ") || "—")}</small></div>`;
+      });
+      return `<section class="section" id="locations"><h2>Locations</h2><p class="muted">${count(comuneNames.length)} Comune from the location registry. Counts are derived from the published listing rows, not configured source totals.</p><div class="grid">${cards.join("") || `<p class="notice">Location registry is unavailable.</p>`}</div></section>`;
+    }
+
+    function analytics() {
+      const rows = sourceRows();
+      const sourceTable = rows.length ? `<div class="table-wrap"><table><thead><tr><th>Source</th><th>Location</th><th>Status</th><th>Seen</th><th>Published</th><th>Evidence / error</th></tr></thead><tbody>${rows.map(row => {
+        const status = sourceStatus(row), klass = failedStatus(status) ? "source-error" : zeroStatus(status) ? "source-zero" : status === "PASS" || status === "SUCCESS" ? "source-ok" : "";
+        return `<tr class="${klass}"><td>${esc(row.source || row.source_name)}</td><td>${esc(row.location)}</td><td><span class="pill">${esc(status)}</span></td><td>${count(row.records_seen ?? row.discovered)}</td><td>${count(row.records_published ?? row.accepted)}</td><td>${esc((row.errors || []).join("; ") || row.reason || "—")}</td></tr>`;
+      }).join("")}</tbody></table></div>` : `<p class="notice">No source coverage report is available for this public manifest.</p>`;
+      const pricedListings = numeric(S.current.price_history_stats?.priced_objects) ? S.current.price_history_stats.priced_objects : Array.isArray(S.current.price_history) ? S.current.price_history.length : null;
+      return `<section class="section" id="analytics"><h2>Analytics &amp; Data Quality</h2>
+        <div class="grid">${stat("Source reports",count(rows.length))}${stat("Listings with observed price",count(pricedListings))}${stat("Rows with provenance reference or source URL",`${count(S.objects.filter(row => row.raw_reference || row.raw_path || row.source_url).length)}/${count(S.objects.length)}`)}</div>
+        <h3>Source coverage</h3>${sourceTable}
+        <h3>Evidence-gated analyses</h3><div class="grid"><div class="card"><b>Rental</b><p class="muted">DATA_NOT_AVAILABLE until verified rental evidence exists.</p></div><div class="card"><b>Family / Living</b><p class="muted">DATA_NOT_AVAILABLE until verified school, health, mobility and service evidence exists.</p></div><div class="card"><b>Investment</b><p class="muted">NOT_VERIFIED until valuation, cost and risk inputs are evidenced.</p></div><div class="card"><b>Risk</b><p class="muted">NOT_VERIFIED until official GIS/planning evidence is linked.</p></div></div>
+      </section>`;
+    }
+
+    function render() {
+      $("#app").innerHTML = overview() + listings() + locations() + analytics();
+      const tabs = [["overview","Overview"],["listings","Listings"],["locations","Locations"],["analytics","Analytics & Data Quality"]];
+      $("#nav").innerHTML = tabs.map(([id,label], index) => `<button class="tab ${index === 0 ? "active" : ""}" data-tab="${id}">${label}</button>`).join("");
+      $("#nav").onclick = event => { const button = event.target.closest("[data-tab]"); if (!button) return; document.querySelectorAll(".tab").forEach(tab => tab.classList.toggle("active",tab === button)); document.querySelectorAll(".section").forEach(section => section.classList.toggle("show",section.id === button.dataset.tab)); };
+      $("#filters")?.addEventListener("input", () => renderListingRows(filteredListings()));
+      $("#filters")?.addEventListener("change", () => renderListingRows(filteredListings()));
+      renderListingRows(S.objects);
+    }
+
+    async function init() {
+      try {
+        const [current, objects, projects, units, locations] = await Promise.all(["data/current.json","data/objects.json","data/projects.json","data/units.json","data/locations.json"].map(fetchJson));
+        S.current = current || {}; S.objectsPayload = objects || {}; S.projectsPayload = projects || {}; S.unitsPayload = units || {}; S.locationsPayload = locations || {};
+        S.objects = rowList(objects,"objects"); S.projects = rowList(projects,"projects"); S.units = rowList(units,"units"); S.locations = rowList(locations,"locations");
+        S.coverage = Array.isArray(S.current.coverage) ? S.current.coverage : Array.isArray(S.current.capture_coverage) ? S.current.capture_coverage : Array.isArray(S.current.coverage_evaluation?.mandatory_results) ? S.current.coverage_evaluation.mandatory_results : [];
+        $("#subtitle").textContent = `Run ${S.current.run_id || "—"} · ${S.current.inventory_mode || S.current.snapshot_status || "UNKNOWN"} · ${S.objects.length} published listings`;
+        $("#meta").innerHTML = `<div class="panel"><b>Freshness:</b> ${esc(date(S.current.generated_at || S.current.last_live_capture || S.current.run_date))} · <b>Run:</b> ${esc(S.current.run_id)} · <b>Coverage:</b> ${esc(S.current.coverage_status || S.current.snapshot_status || "not reported")}</div>`;
+        render();
+      } catch (error) { $("#subtitle").textContent = "Не вдалося завантажити опубліковані дані"; $("#app").innerHTML = `<p class="notice bad">${esc(error.message)}</p>`; }
+    }
+    init();
+  })();
+  </script>
+</body>
+</html>
