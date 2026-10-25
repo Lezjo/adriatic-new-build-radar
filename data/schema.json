@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://lezjo.github.io/adriatic-new-build-radar/schema/v3.1.json",
+  "$id": "https://lezjo.github.io/adriatic-new-build-radar/schema/v3.2.json",
   "title": "Adriatic New Build Radar — Canonical Data Schema",
-  "description": "Canonical V3.1 data contract for Source → SourceRun → RawCapture → Observation → Listing → Unit → Project → PriceObservation / Promotion → Analysis → UI.",
+  "description": "Canonical V3.2 logical data contract for Source → SourceRun → RawCapture → Observation → Listing → Unit → Project → PriceObservation / Promotion → Analysis → UI. This aggregate contract is distinct from versioned immutable snapshot transport artifacts.",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -25,7 +25,7 @@
   "properties": {
     "schema_version": {
       "type": "string",
-      "const": "3.1.0"
+      "const": "3.2.0"
     },
     "schema_name": {
       "type": "string",

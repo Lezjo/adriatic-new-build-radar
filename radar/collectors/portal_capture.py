@@ -2236,8 +2236,8 @@ def run():
                         },
                         "raw_capture": 0,
                         "manifest": False,
-                        "status": "BROKEN",
-                        "coverage": "BROKEN",
+                        "status": "ERROR",
+                        "coverage": "ERROR",
                         "errors": [repr(exc)],
                     }
 

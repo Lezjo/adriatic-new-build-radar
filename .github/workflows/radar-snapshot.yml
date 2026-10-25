@@ -50,6 +50,11 @@ jobs:
         run: |
           python -m radar.snapshot
 
+      - name: Run inventory audit
+        if: always()
+        run: |
+          python inventory_audit.py
+
       - name: Print capture diagnostics to log
         if: always()
         run: |
