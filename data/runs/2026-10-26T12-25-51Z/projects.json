@@ -1,0 +1,2808 @@
+[
+  {
+    "project_id": "candidate-project:1b94f1ddae2a6684cb1b295cc8dd75b390571c77",
+    "name": "GreenCarpet | Appartamenti Esclusivi - Fronte Mare - Lido di Jesolo — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Venezia",
+    "comune": "Jesolo",
+    "municipality": "jesolo",
+    "macro_zone": "jesolo",
+    "micro_location": "Lido di Jesolo",
+    "location_verification_status": "VERIFIED_TEXT",
+    "location_verification_confidence": 0.9,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:899cdde5ec1b069262c3256b426e08b97c2317a9",
+      "listing:fa55dd617227a3fa720748422569d23d641a0273",
+      "listing:11ad98e7f6624492baafc1d7babe46c8fbc58f36"
+    ],
+    "unit_ids": [
+      "unit-candidate:4abc7b57500e357df06bcd370ebb1b7c8c294040",
+      "unit-candidate:a883719170826707eae642f6a9f46e77443d9a46",
+      "unit-candidate:e056aaa2084598831d8fdca9b312b9073fabaab3"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:193bcc7cf92bf9e7c38e80ba00c58c1b8018feed",
+    "name": "Attico fronte mare con Piscina a Jesolo Lido — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Venezia",
+    "comune": "Jesolo",
+    "municipality": "jesolo",
+    "macro_zone": "jesolo",
+    "micro_location": "Lido di Jesolo",
+    "location_verification_status": "VERIFIED_TEXT",
+    "location_verification_confidence": 0.9,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:82ba4275b9994e0abc110347d28b55bc65a2e005",
+      "listing:c8a6ea3de058fcb21f2284e58000620599424e21",
+      "listing:9b8eedf2aa713df55de7c904b3a321ad07ca9a15"
+    ],
+    "unit_ids": [
+      "unit:253ae52b7a32a83420c4d297dfef800cc09b1280",
+      "unit-candidate:d6a0c45e2d778fa01f0f7066e628afb2671c073d"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:84f97363b9914ce20bfd9a31da17d741185f930c",
+    "name": "Nuovo",
+    "region": "Veneto",
+    "province": "Venezia",
+    "comune": "Jesolo",
+    "municipality": "jesolo",
+    "macro_zone": "jesolo",
+    "micro_location": "Lido di Jesolo",
+    "location_verification_status": "VERIFIED_TEXT",
+    "location_verification_confidence": 0.9,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:caca0c135f224b0ab6e34055d2e9a476366611fa",
+      "listing:f0cf685aa38d0bd95312cc7c521b59fcea8ae955",
+      "listing:f6896b1d4284ffa6cc1ea160e99f329216d85311",
+      "listing:b5c425b053bcf01c506017cf77bbe06f2a121864",
+      "listing:22dd315f93aace44006187e0fcc4f538161e1069",
+      "listing:71546bbc2aabcfd722780065d3a841f9b69cdd6f",
+      "listing:bc192f6f7d5228179355bd18c5e6c7720b1e102f",
+      "listing:a33d08cbefe7eba21960de6b61a6de3b3cbbaa0e",
+      "listing:202a632d61bc90f373937e660e0eae23ba203b1e",
+      "listing:4d29518e5f9efa2ca3ac5aeb6e0583d5fd1460f4",
+      "listing:7e92aa0f2edece73c168896b1935a1ad8c7debbb",
+      "listing:c547d0d41fdf0da919f8c1522a4e24f380771fd8",
+      "listing:716a1d81567d486d35290772ff225b4a67aa7f5d",
+      "listing:d26409733e1a469f043ad428c1661823995ce61c",
+      "listing:6bdbcc2ebf1409bc93fcfc4297d753d96a57fae5"
+    ],
+    "unit_ids": [
+      "unit:13d6479f80c9d30d3911c075e13ab54d0abe0b85",
+      "unit:7439218c2cba87983babbcc4ca654db19e7a685b",
+      "unit:3145cecd9be993cb8d90e91539ad7aed726747ca",
+      "unit-candidate:55856b1bbf1f3b05bb01618feccb9c565406cd66",
+      "unit-candidate:7d20b8c5f96cb7f04cecbbb4f928886dc60c9513",
+      "unit-candidate:7e9444ddf82f195a3dd8801b819b105d646e2455",
+      "unit-candidate:4075694defbdb77035d5310971cfa20080dfb050",
+      "unit-candidate:0b8287a4c00dc95d27d8274c9f89bc744ebfabdb",
+      "unit-candidate:b5526af26dc4af7a5b6739c3d00e5a238e00750b"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:697bc81c6d62c39cb1ee6f422b9cb80a83e6dff9",
+    "name": "JHILLS - Appartamenti Indipendenti con Giardino Privato — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Venezia",
+    "comune": "Jesolo",
+    "municipality": "jesolo",
+    "macro_zone": "jesolo",
+    "micro_location": "Piazza Drago",
+    "location_verification_status": "VERIFIED_TEXT",
+    "location_verification_confidence": 0.9,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:58f77f130c29f45c7f72369d8d336dde83a77319",
+      "listing:41c23925ceab6febf49875e85a7f682da2e81bf2",
+      "listing:4a58db272b61c469b738a30e623285eb31c25031"
+    ],
+    "unit_ids": [
+      "unit-candidate:f3d317611d30194aa15ee604990e1acfbaef5921",
+      "unit-candidate:5ff058a464e4348e45aeb495eed8c4ddd3c30775"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:0b9d6dc42e35d8dc6f1e72fe80728fd09022f05a",
+    "name": "Nuova Bifamiliare a Ponte Crepaldo — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Venezia",
+    "comune": "San Donà di Piave",
+    "municipality": "san-dona-di-piave",
+    "macro_zone": "san-dona-di-piave",
+    "micro_location": null,
+    "location_verification_status": "UNVERIFIED",
+    "location_verification_confidence": 0.0,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:ad8948404a675db273a0ec3885abc9aa4a8a9f92",
+      "listing:0e91e7a872272b8c63e760c2d50ab88ccfff206b",
+      "listing:1c3b82d1c1ac638462f232c6dae85e60427759b1"
+    ],
+    "unit_ids": [
+      "unit-candidate:4e2ed1815c3bf6efa0aa671578fadb35749ffd37",
+      "unit-candidate:61e44c1c5d234cdbab11430fbb2a7b922d9910d5",
+      "unit-candidate:a14bc25d639c597fb4953f1f7f11df854e3ada48"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:d1ead147c08cb31094608d1dbba956903fa6d2c7",
+    "name": "Nuova Costruzione",
+    "region": "Veneto",
+    "province": "Venezia",
+    "comune": "Jesolo",
+    "municipality": "jesolo",
+    "macro_zone": "jesolo",
+    "micro_location": "Lido di Jesolo",
+    "location_verification_status": "VERIFIED_TEXT",
+    "location_verification_confidence": 0.9,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:5eceb0b02579d2bb46719f7b39346d033676d3d1",
+      "listing:7ce541f1d1c91214daf47e2b39eb4f3ab230852f",
+      "listing:a5c7ecbd5dbc2dc926cc55fdc0883913fc79d68f"
+    ],
+    "unit_ids": [
+      "unit:2169625c7c1cc3f5727522ee3e68f311327c5371",
+      "unit-candidate:ebe4182a97f2bfd9db064ab8ab9ee716e728e563"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:137a24071ea32741d548ab142660af36335b64a7",
+    "name": "Quadrilocale con Piscina | Nuova Costruzione - Fronte Mare a Jesolo — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Venezia",
+    "comune": "Jesolo",
+    "municipality": "jesolo",
+    "macro_zone": "jesolo",
+    "micro_location": "Lido di Jesolo",
+    "location_verification_status": "VERIFIED_TEXT",
+    "location_verification_confidence": 0.9,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:e99085c718679af4e36c0d9c13f8cc8aa4625f61",
+      "listing:72ee0e041d0b7a75ba74450823f609547782f918",
+      "listing:2f795e8ac9a3921a3bdf3350d58e8fd7152ae6b7"
+    ],
+    "unit_ids": [
+      "unit:52d7525b7b7f026dc98011b51657a81d9b00aff2",
+      "unit-candidate:0958cda4dc35092938d663b34f528103101f48a3"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:d47e223b896a0aeb41b9b090a05ff621bbe3a233",
+    "name": "Villa Moderna con Piscina – Jesolo Paese — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Venezia",
+    "comune": "Jesolo",
+    "municipality": "jesolo",
+    "macro_zone": "jesolo",
+    "micro_location": "Jesolo Paese",
+    "location_verification_status": "VERIFIED_TEXT",
+    "location_verification_confidence": 0.9,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:e5c4cd2ae7d893ae24c524bb9b24536d1494ea63",
+      "listing:a3944d608d02c08fb47e33c4e5a55dbb4969bed6",
+      "listing:a467aedaa47d46a6f0ebfc674444ec9791398c91"
+    ],
+    "unit_ids": [
+      "unit-candidate:a8e0f86daaca6136dd2f94af2a348797653b0fbb",
+      "unit-candidate:ef34422b57e021ff6c2a1d01a30a810a574ec923",
+      "unit-candidate:335374cabd4f48ed32d35a3aca946e68cff21d07"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:d80e13b9b4b50bc66779185ba32a6de1a1549f5f",
+    "name": "HOME B6.1 - NUOVO",
+    "region": "Veneto",
+    "province": "Venezia",
+    "comune": "Jesolo",
+    "municipality": "jesolo",
+    "macro_zone": "jesolo",
+    "micro_location": "Lido di Jesolo",
+    "location_verification_status": "VERIFIED_TEXT",
+    "location_verification_confidence": 0.9,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:75117a30595cd40698c1a376b5c79a405811227b",
+      "listing:ff52d5393b7f4ec059e4b2dc138b6febc9c8311f",
+      "listing:97bb867bebf988f0a0d9796650fde464c9768946"
+    ],
+    "unit_ids": [
+      "unit-candidate:59903fd2ec86c94c42ea2e13a2f9f0c1983afc9f",
+      "unit-candidate:5b26aedb534a7df0184f0c6170573e363d9beea2",
+      "unit-candidate:6b6b0c985175b0a694821205edc3e898008b5b3f"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:66d15cdbd4a3d08e9f372e76fdc11cba3a49fe30",
+    "name": "HOME B6.1 - NUOVI TRILOCALI A JESOLO — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Venezia",
+    "comune": "Jesolo",
+    "municipality": "jesolo",
+    "macro_zone": "jesolo",
+    "micro_location": "Lido di Jesolo",
+    "location_verification_status": "VERIFIED_TEXT",
+    "location_verification_confidence": 0.9,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:0bbfb4e1624abe26e75c4dd68576e40acb5ebfcb",
+      "listing:ed85957b8c8f2de954f4cb175a5fb61e3e1858b0",
+      "listing:dc74d48393ebe3289c133e81753b5440603a487f"
+    ],
+    "unit_ids": [
+      "unit-candidate:fae23ee4c9a65015818da1530f17326ec523bcd4",
+      "unit-candidate:7ecfae21bfbbfe4be3738b1e84fc829b1867f9e6",
+      "unit-candidate:9f2e9428175ca47b9b74e1daa0e245ea9f98ee76"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:8b9847aef18042ffdec5fc6be78a7101bfafda01",
+    "name": "Trifamiliare | Nuova costruzione a Jesolo — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Venezia",
+    "comune": "Jesolo",
+    "municipality": "jesolo",
+    "macro_zone": "jesolo",
+    "micro_location": "Jesolo Paese",
+    "location_verification_status": "VERIFIED_TEXT",
+    "location_verification_confidence": 0.9,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:3857b8e406c358c400b2ec1b6f531c87aa068f12",
+      "listing:b3cb89b6371835b6a4fafdfd647d2d88b93d077a",
+      "listing:85205253a29cee2e2fa213c2a9b1ab226b9a68a1"
+    ],
+    "unit_ids": [
+      "unit-candidate:94d3f656789fa4daca09f2aefb4465dae66492c8",
+      "unit-candidate:63357e70fb7569c89febe048ca172ef1a69ba3b2",
+      "unit-candidate:6941033e28316f42119801fde726eade2910632b"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:a2d27df418ceb1d453c48e5047e9c2f722b88bf4",
+    "name": "Trilocali di Nuova Costruzione con Piscina a Caorle — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Venezia",
+    "comune": "Caorle",
+    "municipality": "caorle",
+    "macro_zone": "caorle",
+    "micro_location": "Lido Altanea",
+    "location_verification_status": "VERIFIED_TEXT",
+    "location_verification_confidence": 0.9,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:258f81683cc342bb72ec97b564e3884223d322cf",
+      "listing:4ad7659134d7999074bb5caaa5c9f72368282ace",
+      "listing:114efb6d6844094cbc4baa46ed81edf413028c9b"
+    ],
+    "unit_ids": [
+      "unit-candidate:dc80765b81c18cc2f7ff64b29f575e8723c1136b",
+      "unit-candidate:5e5b0b24946b98e4a336062f7f0c3c15d9a36123",
+      "unit-candidate:a6a8942a44ce508912eee51a27c9e76a3216875b"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:d8fca20836240f2141f98262d9723e80e47b9d54",
+    "name": "Trilocale di Nuova Costruzione Vista Mare a Caorle — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Venezia",
+    "comune": "Caorle",
+    "municipality": "caorle",
+    "macro_zone": "caorle",
+    "micro_location": "Porto Santa Margherita",
+    "location_verification_status": "VERIFIED_TEXT",
+    "location_verification_confidence": 0.9,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:15f87a6b5b3668ba24aec09f8ed4bbd18fd8fec2",
+      "listing:62052f9ba1b1955ccfcd656f3341a7233051b2d8",
+      "listing:08525dd3de3bb3404dcf2dc3141ff333c59306fd"
+    ],
+    "unit_ids": [
+      "unit-candidate:c58d3d7e85e044cebc6b8e7641e8b98a707007b4",
+      "unit-candidate:4f92fcc04cfb6d845d372d2d8a905a4b16de1343",
+      "unit-candidate:1d1979b2d3e6715ecaa0b351536eb0d24dbd18c9"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:25c9fb7ca5de2cb6ebde5e0b624f035376a3c929",
+    "name": "Nuovo",
+    "region": "Veneto",
+    "province": "Venezia",
+    "comune": "Caorle",
+    "municipality": "caorle",
+    "macro_zone": "caorle",
+    "micro_location": "Porto Santa Margherita",
+    "location_verification_status": "VERIFIED_TEXT",
+    "location_verification_confidence": 0.9,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:08e40b328ac2467bd9fa762540a9bdafb1615689",
+      "listing:5299831fb0e4bd3a4dfd8ad14a80006543c57fa5",
+      "listing:7b10dc092b374faf6928d237966d616e4b878120",
+      "listing:4e975ea6ad85180b473131aaa6855d1eba5d9f26",
+      "listing:dec96603a62d98a90a73e9f514a2e5d85a0eeb02",
+      "listing:81187c41379309ebd16b0bf7aad5eba1fc0c4af2",
+      "listing:7eee6fc82323cae12fab71a9a3c1b01a7ad25913",
+      "listing:99ec3f0a0b4ecb7bc2726459fc255f1491720ed3",
+      "listing:860b5f1cf526688810ce9e118d13a0390bcf48e7",
+      "listing:d42852543727ac5b54af739bac4bffd40bda3242",
+      "listing:d3434be08a7acff938d99af245e5c206570570f2",
+      "listing:5adbb331bf62397c15e495a35bae2c42ed54d7a0"
+    ],
+    "unit_ids": [
+      "unit-candidate:35e94027a94b997918fbaf76117f0aea677287d8",
+      "unit-candidate:355961c1cef0313a4bd41bf52ac70881b494a181",
+      "unit-candidate:0ddbc74753d1e688367bdc2ca9d6668bcce511e2",
+      "unit-candidate:f211f0835f38bc4c30fbdeca7c564bbe19f4c539",
+      "unit-candidate:cd1e07f28ce2247b6c4e00ae8b75120153856f15",
+      "unit-candidate:1064e669a147cf229ccca044e5c8e73a045f25d0",
+      "unit-candidate:11750114acd34160afbda910ec2479cca1ebe791",
+      "unit-candidate:e8ab65f661be62c1c03112af6773d6276629b3be",
+      "unit-candidate:eeab324b85bbff3a75d9580358b4974ed52d7ea4",
+      "unit-candidate:29c103b5d8c26d2853488a6b85540476603aefe3",
+      "unit-candidate:881876f35b4bdccea25f73ece0bdd0196646c946",
+      "unit-candidate:f92281b4789f0973eb68d402f623a0218b5a23e0"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:321bbd4e8edf1257aed5e93e5aa8ce7cfeea4de1",
+    "name": "Borghetto Sul Meschio - Vittorio Veneto — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Treviso",
+    "comune": "Treviso",
+    "municipality": "treviso",
+    "macro_zone": "treviso",
+    "micro_location": null,
+    "location_verification_status": "UNVERIFIED",
+    "location_verification_confidence": 0.0,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:bb29fbf7e4429601320d8226ce26c69066d8333a",
+      "listing:4204f468d567f8b6f686fbed96b1a69c3685b776",
+      "listing:5a50ded8c4e2e90eba505381d46d7a492b0cf261"
+    ],
+    "unit_ids": [
+      "unit-candidate:43d8316cca91c809ae51b6132de264508001e31b",
+      "unit-candidate:d8766c394fa48422204d23bbfac970aee9592ab6",
+      "unit-candidate:6e024c32abe634b7e4a292c291202727b92c26ba"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:99a5076f763927dd6d9ae5fbb0d6599a80881801",
+    "name": "TEATRO – Esclusive Nuove Residenze nel cuore di Conegliano — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Treviso",
+    "comune": "Treviso",
+    "municipality": "treviso",
+    "macro_zone": "treviso",
+    "micro_location": null,
+    "location_verification_status": "UNVERIFIED",
+    "location_verification_confidence": 0.0,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:996fb44c57716845b9107a2718a19cf42e8affe5",
+      "listing:638d185cce8c4d1b2b59c32599ee9ccdf464a3c6",
+      "listing:df35d50f960983fb3b2dc7ebcde872495afc7c74"
+    ],
+    "unit_ids": [
+      "unit-candidate:d5f4207b1b3e68723238c3dbfd627e9a1d2c2406",
+      "unit-candidate:cbc3fd248f6644d3784469c010318528da62f3ec",
+      "unit-candidate:9582283d915abdd60b93fa320e7e303a9d9362ff"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:0ea4f9657ea3cb92bc7f6199f9dcf10bd07595a5",
+    "name": "UNIQUE Piazza Calvi - Nuova Costruzione Esclusiva nel Cuore di Conegliano — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Treviso",
+    "comune": "Treviso",
+    "municipality": "treviso",
+    "macro_zone": "treviso",
+    "micro_location": null,
+    "location_verification_status": "UNVERIFIED",
+    "location_verification_confidence": 0.0,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:e445e9e190c8142fe1772532961d71d440670c33",
+      "listing:8d59aa3d3b0fc83150bc882c224ed0afce549f49",
+      "listing:aa4e3f71f28c1285babd7e1226dcc2d25b9996e2"
+    ],
+    "unit_ids": [
+      "unit-candidate:690c11caf3c59de84efde9ecacb57c3b82ffe72a",
+      "unit-candidate:1293868926a020e29ae98a32e86720af868c9997",
+      "unit-candidate:f505375cddd6a0e701ec14a3b5976742c0bfd983"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:cb1b04fd58644b24257ad87aa25ddbf93319b7ff",
+    "name": "Appartamenti in Affitto Invernale | Soluzioni All-Inclusive a Jesolo — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Venezia",
+    "comune": "Jesolo",
+    "municipality": "jesolo",
+    "macro_zone": "jesolo",
+    "micro_location": "Piazza Drago",
+    "location_verification_status": "VERIFIED_TEXT",
+    "location_verification_confidence": 0.9,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:405b813654bc4b40c3cd095aaf1515d61a065844",
+      "listing:c0b30ef5b472b596d7b499c1ef4cb3bd09893621",
+      "listing:c4e9a49db4c46b107e7c899526c1d501a69c4e91"
+    ],
+    "unit_ids": [
+      "unit-candidate:c1f1a8d7ce5d9758a33c7daf70619489bddbec6e",
+      "unit-candidate:e80d0fe914533b67c75aaaa7705f1436287bb4fe",
+      "unit-candidate:12cdb5ec6af4217f23de6370d47fb85d9f7a6d33"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:2cce002623090d83454d8cecf7c0c9f0822d3b97",
+    "name": "Bifamiliari di nuova costruzione a Cessalto (TV) — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Treviso",
+    "comune": "Treviso",
+    "municipality": "treviso",
+    "macro_zone": "treviso",
+    "micro_location": null,
+    "location_verification_status": "UNVERIFIED",
+    "location_verification_confidence": 0.0,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:422022d3490fa3d14e305903fe065148c58c7ec3",
+      "listing:fa06698b9d84a3d543305b6dd2bbac3b7f878595",
+      "listing:e72533866604d5863395109911f478ce51426de8"
+    ],
+    "unit_ids": [
+      "unit-candidate:020692bdf18e90e89e6144d1926840f62f23e1da",
+      "unit-candidate:3717d7f2cfb456496dfd7b253569e14136c36340",
+      "unit-candidate:8c57a05ccfd8b2e5a55b24b26aef93d2c8d0ae6e"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:24742da0f60778a4df8e136c8022c24b007ff25d",
+    "name": "Quadrilocale in vendita a San Biagio di Callalta (Treviso) — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Treviso",
+    "comune": "Treviso",
+    "municipality": "treviso",
+    "macro_zone": "treviso",
+    "micro_location": null,
+    "location_verification_status": "UNVERIFIED",
+    "location_verification_confidence": 0.0,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:04c3aa0640b1abff0bc34c0d7286c98fd649001e",
+      "listing:c1c2b36e264f49af3bf7fb39b9e10b275f3056c4",
+      "listing:23c1ab52a17d65d8f07df654a9b74b206485e5bc"
+    ],
+    "unit_ids": [
+      "unit-candidate:6f9512ac4f9f8cf944cd00c1a913c6d30a5a8532",
+      "unit-candidate:9052cb23d71297cdd433f3d4364f252e117fab02",
+      "unit-candidate:0ef0c3008183567296444a93bb792f4fb1feb506"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:5193ce3cebc804a2f13c227b2382579b139875c0",
+    "name": "Appartamento di nuova costruzione con finiture di pregio a Mansuè — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Treviso",
+    "comune": "Treviso",
+    "municipality": "treviso",
+    "macro_zone": "treviso",
+    "micro_location": null,
+    "location_verification_status": "UNVERIFIED",
+    "location_verification_confidence": 0.0,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:81c0d6dd40ab3ed3d96096d31f25859b49c849c6",
+      "listing:5699d3422c8264b916938620a96518c7bc14947f",
+      "listing:2be5ec65991c5e88f832821edd190a5cd3bcd79b"
+    ],
+    "unit_ids": [
+      "unit-candidate:965a36eca75af7dc1474236f89f0feb1c7c68325",
+      "unit-candidate:07dd443806b3177f95a322e700d2e9a292958464",
+      "unit-candidate:1d442671fa44f37d91b830f66007ff71409631e4"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:5caf406ed89dabde722516bdb368035f8df55589",
+    "name": "Trilocale di nuova costruzione a Caorle (Venezia) — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Venezia",
+    "comune": "Caorle",
+    "municipality": "caorle",
+    "macro_zone": "caorle",
+    "micro_location": "Lido Altanea",
+    "location_verification_status": "VERIFIED_TEXT",
+    "location_verification_confidence": 0.9,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:a7e556da87304fa745b5aee5d30900f26819553c",
+      "listing:9fe5ae55040649ae6dba35ea21851f1399a9eabb",
+      "listing:bfe5cf884b42f3c290383d924eb7053996acfebe"
+    ],
+    "unit_ids": [
+      "unit-candidate:5f6e28747fb7340a5f2b899d142e93c00a982a6c",
+      "unit-candidate:a6c058543a0ba566c4d3847e6f6584c21dad048b",
+      "unit-candidate:c7fc1b4cdb709abc843d0a3060d1a18a7c027a09"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:07b2e8b22fdde32f1b0dc4ee10a1044fba9de970",
+    "name": "Appartamenti di nuova costruzione a Vittorio Veneto (Treviso) — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Treviso",
+    "comune": "Treviso",
+    "municipality": "treviso",
+    "macro_zone": "treviso",
+    "micro_location": null,
+    "location_verification_status": "UNVERIFIED",
+    "location_verification_confidence": 0.0,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:85a09a039e807c3ea0249661dd2e69d0dbbb2797",
+      "listing:b58332a009e913e9f8ffc1c49581f6ad46785b9f",
+      "listing:776e26dea14cf617ff329e251fe1fe53473cbbca"
+    ],
+    "unit_ids": [
+      "unit-candidate:a62d01a73e20b443286df9b9c06ce878c339ff9c",
+      "unit-candidate:a30b8334e37121ca2bb76a24d1a226000ae8e412",
+      "unit-candidate:1916c46099e1144f0e0e89baf50fe9679c806441"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:582fa7243cc50ee6ef2c73e3e749d9812c4f3d37",
+    "name": "Quadrilocale di nuova costruzione a Oderzo (Treviso) — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Treviso",
+    "comune": "Treviso",
+    "municipality": "treviso",
+    "macro_zone": "treviso",
+    "micro_location": null,
+    "location_verification_status": "UNVERIFIED",
+    "location_verification_confidence": 0.0,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:931c58e2ed38d34bf92f51af8fca00785b654b43",
+      "listing:ab12d61658d372f736267415e0d60ff8ddc96a64",
+      "listing:f15f38f7a1a7e7d55971b9af392cb15a0b40d8a1"
+    ],
+    "unit_ids": [
+      "unit-candidate:ce594ddbb80e73b5028c5aec30c122a7080e7306",
+      "unit-candidate:df17ad944292f7ebd8819e418292068d5b3b4e08",
+      "unit-candidate:e350b7728fb1d09614205f7147156efc49d54b6c"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:ab6079c09612be8618ae436c711f3377bab59854",
+    "name": "Villette a Schiera di Nuova Costruzione a Oderzo — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Treviso",
+    "comune": "Treviso",
+    "municipality": "treviso",
+    "macro_zone": "treviso",
+    "micro_location": null,
+    "location_verification_status": "UNVERIFIED",
+    "location_verification_confidence": 0.0,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:b6378bfa91d93c855d2dac73b1b138bef9de38b9",
+      "listing:b6f35a7a47dccbd5b3c93177799fc9f1b9328953",
+      "listing:3df8916c53e576065ea752851579690d4bfcaf1e"
+    ],
+    "unit_ids": [
+      "unit-candidate:a0cea90939efa7be61bdc9f623aa03d16920da0c",
+      "unit-candidate:99b61ee9e936d32bf8fdd21babc5e4178e560f35",
+      "unit-candidate:a38e3b0a37b90c7b1583ed49372d0bf3d9786fc9"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:8d002f60d278394e25a5ab95b2d6b85285a1f52a",
+    "name": "Nuovi Appartamenti Trilocali a Jesolo Paese — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Venezia",
+    "comune": "Jesolo",
+    "municipality": "jesolo",
+    "macro_zone": "jesolo",
+    "micro_location": "Jesolo Paese",
+    "location_verification_status": "VERIFIED_TEXT",
+    "location_verification_confidence": 0.9,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:713a94d440ddd2566bd10b1c91329604bf815c25",
+      "listing:2fbffc941f5229b5682d32f9f69a2f293282acd1",
+      "listing:43b681395ab66cfb9e9c6e921b27f80394a7b538"
+    ],
+    "unit_ids": [
+      "unit-candidate:eba5e0327874e01095c83bbbd5cd42edfd6ffd4f",
+      "unit-candidate:1a0e920b07c4e072b91fa5d14f375418d85b87f5",
+      "unit-candidate:f1ad0f2e4c2b7baed9050d940731aa1ae013c747"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:99f395c3c81b18ea388c1527d70a5097f0e75edc",
+    "name": "Magnolia",
+    "region": "Veneto",
+    "province": "Venezia",
+    "comune": "Jesolo",
+    "municipality": "jesolo",
+    "macro_zone": "jesolo",
+    "micro_location": "Jesolo Paese",
+    "location_verification_status": "VERIFIED_TEXT",
+    "location_verification_confidence": 0.9,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:76c154d6606c77472d73892ba2484ebb49c3e71d",
+      "listing:017803f295078a160366ca65276a77ced4c0bbf1",
+      "listing:92ac52acb0dc98d4a8121e07580f2f5ab980fe7b",
+      "listing:08a6fbd3919762b321f7fb5763bb8a35c4a71355",
+      "listing:f209c977b6641dd7df8fe2023f851cacdb29bfef",
+      "listing:77d43808eed08218edf7d5f845a0d382d8da4a5e"
+    ],
+    "unit_ids": [
+      "unit-candidate:de7bf561c2ef4c525b8101a7facda40a3774b468",
+      "unit-candidate:a653e9a7fb7b60c460e2bc6136c4fe1c5792ea91",
+      "unit-candidate:fa301052adfe71fbfedd2872f487208d8eaf69f3",
+      "unit-candidate:1284c1b6ba44d29def3193351b73ff64a1697d56",
+      "unit-candidate:c4799be8218a928499925619aee3f7e9b2b7580d",
+      "unit-candidate:8cd93d49bd3630577c36177d71b903400c437b96"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:5c8f83c067d0b932adf1f8e30eee9524254bfc33",
+    "name": "Trifamiliare | Nuova Costruzione | Noventa di Piave — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Venezia",
+    "comune": "Jesolo",
+    "municipality": "jesolo",
+    "macro_zone": "jesolo",
+    "micro_location": "Lido di Jesolo",
+    "location_verification_status": "VERIFIED_TEXT",
+    "location_verification_confidence": 0.9,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:d314c0e73516c2370803c8d1f6c10b048ebf9681",
+      "listing:7999db2969330d364c7faa2665f4f8c39f68ac5a",
+      "listing:bbb4f7b95a2b8422f036e36cb5a4102770ab75d1"
+    ],
+    "unit_ids": [
+      "unit-candidate:9e552b386b34c09b545a4f1b7034ad5c1202cb6f",
+      "unit-candidate:e7f9723fc934276403b23b3a8ba87ee8cd126aba",
+      "unit-candidate:4a1bfb0af8678f92dbd18be7ae46132a8a2c838f"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:ab80ce9fe6085c14f56b03b319dc74ecc4d16a29",
+    "name": "Nuove Villette indipendenti ed esclusive a Fossalta di Piave — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Venezia",
+    "comune": "Jesolo",
+    "municipality": "jesolo",
+    "macro_zone": "jesolo",
+    "micro_location": "Piazza Drago",
+    "location_verification_status": "VERIFIED_TEXT",
+    "location_verification_confidence": 0.9,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:9e32007e7a956e72187af2ba222b47019b7a2f61",
+      "listing:5ac0b893557f82ea1f90b554aeb02b084d4d95e0",
+      "listing:a2e9cb17cbf69d63b6a43462146b3230f13909ca"
+    ],
+    "unit_ids": [
+      "unit:cee2420688740ab3ed0bb6e8a565cc143b251023",
+      "unit-candidate:6e08a350604a71b3b33f269f224187ba45038d4d"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:63c42341c1322bb1478efc5339887b1b06a036ba",
+    "name": "Nuova Bifamiliare a Jesolo Paese — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Venezia",
+    "comune": "Jesolo",
+    "municipality": "jesolo",
+    "macro_zone": "jesolo",
+    "micro_location": "Jesolo Paese",
+    "location_verification_status": "VERIFIED_TEXT",
+    "location_verification_confidence": 0.9,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:b8bdd1f101f8b4a223e4bffeb53512b86a400965",
+      "listing:df65254620aa58f145e55d2b4281391b78f86ff9",
+      "listing:86dd87fbf3be48eea383b5f5cc50ca6ff26bfac1"
+    ],
+    "unit_ids": [
+      "unit-candidate:779affcc025fd9314752c848999befcc236b462f",
+      "unit-candidate:99ec61ae9363ae911eafd90b0f30507d270f1ea2",
+      "unit-candidate:56db84ec239d2237f553bc2a16057ff977851563"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:c3c60ddb2fa655e3217506ec91e2cfd6215212be",
+    "name": "Aurea Living - La Tua Serenità nel Verde a Noventa di Piave — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Venezia",
+    "comune": "Jesolo",
+    "municipality": "jesolo",
+    "macro_zone": "jesolo",
+    "micro_location": "Piazza Drago",
+    "location_verification_status": "VERIFIED_TEXT",
+    "location_verification_confidence": 0.9,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:ed2d41b1dbf24c1e4929032de3d85e5668572720",
+      "listing:b80eb949bd686d9ffb4bc41f7d6eb386c12acf1d",
+      "listing:9193517ae16eab75833eb84582ae18555bda9c5a"
+    ],
+    "unit_ids": [
+      "unit-candidate:92e018f59d69c47a0f47f182bd937bbf8d2dba23",
+      "unit-candidate:f2138596af467a29139f8d35203c3e510addcf97",
+      "unit-candidate:fdfbe84bbe885398411f3f85b627dc6fc1aace9f"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:90030001bc7b387732a0e74dafdd7e25bf9fa10a",
+    "name": "Nuovi Quadrilocali a San Donà di Piave — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Venezia",
+    "comune": "San Donà di Piave",
+    "municipality": "san-dona-di-piave",
+    "macro_zone": "san-dona-di-piave",
+    "micro_location": "Mussetta",
+    "location_verification_status": "VERIFIED_TEXT",
+    "location_verification_confidence": 0.9,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:1b711bf00da19ba0a51ddc55102c431675a0886a",
+      "listing:d2699150eafe294b3d9b09d5a33f9a2f8d0daa6a",
+      "listing:681d7b8d428d945396110c2243cb242f03cc353d"
+    ],
+    "unit_ids": [
+      "unit-candidate:6030adbcabaa1d3a3b33e1cd01f782f5c174f02f",
+      "unit-candidate:feed0847df04959350790b3e71ef0cd3847386e9",
+      "unit-candidate:f8db8b7b7116ee85334dd8a4d86e52d22016e23e"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:01258c9ebae7e715d60e0ea94736b2a946f3915b",
+    "name": "Appartamento Bilocale al Piano Terra - A Jesolo — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Venezia",
+    "comune": "Jesolo",
+    "municipality": "jesolo",
+    "macro_zone": "jesolo",
+    "micro_location": "Lido di Jesolo",
+    "location_verification_status": "VERIFIED_TEXT",
+    "location_verification_confidence": 0.9,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:e6afe256d9df557f8c8ff38f855d9d08064bd133",
+      "listing:bb85699cec243f16c102802943140b370b0989fa",
+      "listing:07766a9e81664308a783d5881334b8565c65c1a7"
+    ],
+    "unit_ids": [
+      "unit-candidate:d929935e912d768da1bc07fc310a9bff4fa25ef4",
+      "unit-candidate:bb654689abd795b26c033bc9f1336f6dacc1656d",
+      "unit-candidate:761dc17a863d83ac852067ee91583e305e4f8cfd"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:dd8c4aa6056ab7b90b5f532c3ea64c105b61827f",
+    "name": "Piano Terra Esclusivo | Oasi con Piscina a Jesolo — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Venezia",
+    "comune": "Jesolo",
+    "municipality": "jesolo",
+    "macro_zone": "jesolo",
+    "micro_location": "Lido di Jesolo",
+    "location_verification_status": "VERIFIED_TEXT",
+    "location_verification_confidence": 0.9,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:f618b8af5f725400e22529cbe6e2b735e97930a5",
+      "listing:a7ad4bf8499ea277b50bcb93f4c379913ff9ceab",
+      "listing:e63db3fe1f235fbbf5a0b6898468b4007f63901a"
+    ],
+    "unit_ids": [
+      "unit-candidate:b32dd6eb185d82091065f733a4de8a694d266b73",
+      "unit-candidate:5d74eb5b5114fcb6bab0ab3acc13fdac0112f22d",
+      "unit-candidate:f4d9563c8fd54ba0d786859813a3c15f7833f47d"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:e321fe1b11633ac02967548f031e05d0c18ff845",
+    "name": "Ville di Prestigio - Zona Faro a Jesolo — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Venezia",
+    "comune": "Jesolo",
+    "municipality": "jesolo",
+    "macro_zone": "jesolo",
+    "micro_location": "Lido di Jesolo",
+    "location_verification_status": "VERIFIED_TEXT",
+    "location_verification_confidence": 0.9,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:388f991e5fbc6fc4130178b3db5f34d9bbb1fb20",
+      "listing:c79a7a814973cac90b63af2a529911b2d6fb0154",
+      "listing:af97a75bfd6b7cc115f346000d1f8b647826423e"
+    ],
+    "unit_ids": [
+      "unit-candidate:9cf8ae82e3af3cbd8afa61ea7d21faaccf4a01e7",
+      "unit-candidate:c51c809d0a1b1e9107e5a3ad918f92a30f9c122e",
+      "unit-candidate:657859eb4970f04417d175ae35954b0ab63fbf0c"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:d00f21fe318c0ecff69b77facf215b6962ffcbf0",
+    "name": "Casa Singola con Giardino a Jesolo Lido — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Venezia",
+    "comune": "Jesolo",
+    "municipality": "jesolo",
+    "macro_zone": "jesolo",
+    "micro_location": "Lido di Jesolo",
+    "location_verification_status": "VERIFIED_TEXT",
+    "location_verification_confidence": 0.9,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:561af97cad8d4ab71834a9331e795a1a25cbb703",
+      "listing:ef7758b78566ec70f39a016b8603669c247a2b40",
+      "listing:803dacb55839ce041c2ca2b22a5d6c296190c599"
+    ],
+    "unit_ids": [
+      "unit-candidate:e0fb9a8f85ce4a41c8eba9ba0d9cebcee197cde7",
+      "unit-candidate:e2e14afbebdee4bb3e187f4436ca0f7fc569fc69",
+      "unit-candidate:06591e0b016d13aba82da86f784f098029c41ddf"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:dc8ad33b54e94d3b726e6e63934060e56fe49d9a",
+    "name": "Villa Singola con Piscina vicino al Mare a Jesolo — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Venezia",
+    "comune": "Jesolo",
+    "municipality": "jesolo",
+    "macro_zone": "jesolo",
+    "micro_location": "Piazza Drago",
+    "location_verification_status": "VERIFIED_TEXT",
+    "location_verification_confidence": 0.9,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:7ddb3135a68715596824cd6d0de0a9b60e0adc9f",
+      "listing:46c07c7e1b51bc37e2818dced94dda6083b4bd7b",
+      "listing:7580374ac736e1baab27a9ec5bd4ea638a7a1709"
+    ],
+    "unit_ids": [
+      "unit-candidate:7644fd4d843782f37fe9c677365ee5b837da174f",
+      "unit-candidate:d467c8ff875194f64e60b0d7eab240600d5e805f",
+      "unit-candidate:230388bcd0f5bb51114ba245a08f65cadd70588d"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:d9962912ba88c88e10adb6c01489fc403decff96",
+    "name": "Trilocale Vista Mare - Affitto Stagione Invernale a Jesolo — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Venezia",
+    "comune": "Jesolo",
+    "municipality": "jesolo",
+    "macro_zone": "jesolo",
+    "micro_location": "Lido di Jesolo",
+    "location_verification_status": "VERIFIED_TEXT",
+    "location_verification_confidence": 0.9,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:fb3d76006f5f2d0fbd30c3fc58656888f1236380",
+      "listing:3db8f334abef1ec6895e90631504a2430ee88268",
+      "listing:51aba69e72d14ab4a5078b540fde8e80da91b36b"
+    ],
+    "unit_ids": [
+      "unit-candidate:2cb1d0d58ea59dcde3f3285df7ea9ac937581c2b",
+      "unit-candidate:2c7d681b413bcf0e5bdca7efc4bee7990dce4695",
+      "unit-candidate:88b29b2e8562dbfbb300a25c3bce48f5dda4856c"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:1126f574367eb1623b89c7a2089b55e3a6bc91a7",
+    "name": "Bilocale a Due Passi dal Mare a Jesolo — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Venezia",
+    "comune": "Jesolo",
+    "municipality": "jesolo",
+    "macro_zone": "jesolo",
+    "micro_location": "Lido di Jesolo",
+    "location_verification_status": "VERIFIED_TEXT",
+    "location_verification_confidence": 0.9,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:c4f4304273fe392fbbf1b891418959cc06a25e27",
+      "listing:843b42a9093d3421e9cd0f34a53631be4503c9c6",
+      "listing:e4a7df787d0e78390fdf9221902a3396b33107df"
+    ],
+    "unit_ids": [
+      "unit-candidate:cf9c5fc3095d70cf7d3127de377c5557081a2581",
+      "unit-candidate:c2cccffdc2b6a3a6ee9a05d80a0461135357fe3f",
+      "unit-candidate:e88c0e86896b054dbffa3df86510875357e92f64"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:ecf294f139d0bdea3a82d6d096292a4568d2acfd",
+    "name": "Appartamenti Trilocali con Terrazza o Giardino Privato a Jesolo — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Venezia",
+    "comune": "Jesolo",
+    "municipality": "jesolo",
+    "macro_zone": "jesolo",
+    "micro_location": "Lido di Jesolo",
+    "location_verification_status": "VERIFIED_TEXT",
+    "location_verification_confidence": 0.9,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:7bcc0e72292b0f23cc19560b1b1ecabbce566f2e",
+      "listing:f69442acf677c289dc1c6bf8b1138b6b85c2b840",
+      "listing:64718c09e225448bafe5b9ce077cd8418048965d"
+    ],
+    "unit_ids": [
+      "unit-candidate:e6f3861f9f087e6a2028e5bfc157c41445ad6085",
+      "unit-candidate:08fdfad0e896b178810ce281c4867cdabb279b1a",
+      "unit-candidate:a281f9bad64b4079285d5f641a1feca38c360039"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:f9a9f9f48315e68086901886214196ed2dc7d6ef",
+    "name": "Appartamento Quadrilocale con Solarium a Jesolo Lido — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Venezia",
+    "comune": "Jesolo",
+    "municipality": "jesolo",
+    "macro_zone": "jesolo",
+    "micro_location": "Lido di Jesolo",
+    "location_verification_status": "VERIFIED_TEXT",
+    "location_verification_confidence": 0.9,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:000daac29707a24e7e84e856b4e7c18eeea99774",
+      "listing:3ef73c74487bb56d5e9ac1d983b8adc5822ecdb1",
+      "listing:35f03e0a21569d334cc0911706b039726c5ab3be"
+    ],
+    "unit_ids": [
+      "unit-candidate:73b2799f026799651ba36d54fdeb938695080034",
+      "unit-candidate:12c66991859f8a80ce033a5dfe0e5d409a8d52ed",
+      "unit-candidate:c25aef16759d2ed671a14eeed7ec660c6dc795fb"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:10706faf975fa99ef7bef5bdcf7aab13f59fdba9",
+    "name": "Appartamento di Nuova Costruzione con Vista Panoramica a Jesolo Lido — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Venezia",
+    "comune": "Jesolo",
+    "municipality": "jesolo",
+    "macro_zone": "jesolo",
+    "micro_location": "Lido di Jesolo",
+    "location_verification_status": "VERIFIED_TEXT",
+    "location_verification_confidence": 0.9,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:358262be390cd10d7445e8e64376191de2ce35df",
+      "listing:214d0f0799844ade886a634ee48a1cc4ee4fb316",
+      "listing:dc908b959f28f030e16d72d45013210ce10466dd"
+    ],
+    "unit_ids": [
+      "unit-candidate:c41b4ed9fd69680c9a3a7fc7a9f95b805d28a926",
+      "unit-candidate:fe360e3be1394ce1e98f767a2895221268e7821c",
+      "unit-candidate:9412529f307cdf7a1fd152f3707f83c32a1cc368"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:e1f5ff046e1116e91cd4fa38c617569a2796f34c",
+    "name": "Trilocale con Piscina: stile e relax al Lido di Jesolo — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Venezia",
+    "comune": "Jesolo",
+    "municipality": "jesolo",
+    "macro_zone": "jesolo",
+    "micro_location": "Lido di Jesolo",
+    "location_verification_status": "VERIFIED_TEXT",
+    "location_verification_confidence": 0.9,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:5ebe0694ebde5e149fcf84fab86e8cb45775d247",
+      "listing:e5791541424dc8e33bd6a4b1380fe31ac29decdc",
+      "listing:42ed2ca2482216b07203c1b31fd4cdd3225239ac"
+    ],
+    "unit_ids": [
+      "unit-candidate:794fbaba633cbd76c87c12d0e6c45ff379172f16",
+      "unit-candidate:f553dcafa4f6a98d30316e610d82b8d6ea97a8d3",
+      "unit-candidate:cd839b6d7289101b870998047585a629fadfac93"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:dae6b6dfb47f5339a60755bc1d9e4eac4e67b70e",
+    "name": "Attico con Solarium a Jesolo Lido — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Venezia",
+    "comune": "Jesolo",
+    "municipality": "jesolo",
+    "macro_zone": "jesolo",
+    "micro_location": "Lido di Jesolo",
+    "location_verification_status": "VERIFIED_TEXT",
+    "location_verification_confidence": 0.9,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:5c82cc57e6202add10b1f5a352270bf7eed37953",
+      "listing:6a1c13dc0296c51c27a14057f41257099875705e",
+      "listing:def93c562da3e022956420eedfbdde0ab49db81b"
+    ],
+    "unit_ids": [
+      "unit-candidate:5228fdc522074ef2eb0e2405a75b566dc5706622",
+      "unit-candidate:f3f70dc38430ed900888bf4b139bfb4d16fa1234",
+      "unit-candidate:b161bc95467dc47e52da536acecca97cda2e7abd"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:d8baac79aad8ae8fbb8421b4830b5ae9d092dd9c",
+    "name": "Casa singola - Affitto Annuale | Piazza Mazzini - Jesolo — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Venezia",
+    "comune": "Jesolo",
+    "municipality": "jesolo",
+    "macro_zone": "jesolo",
+    "micro_location": "Lido di Jesolo",
+    "location_verification_status": "VERIFIED_TEXT",
+    "location_verification_confidence": 0.9,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:9e55e01c01c737b1f11cc654ce5daeb8ddddac31",
+      "listing:26139b3ef67e9e26ecffa137e25d3fb35f2cf802",
+      "listing:8d3bc78ce071972fa578a9bddc2858e94daef560"
+    ],
+    "unit_ids": [
+      "unit-candidate:07dfd58a2f8cb0dc90653abd3adc888fdd6d0a8d",
+      "unit-candidate:56a5687a95c0ea5922b15087819cdef217aa7f23",
+      "unit-candidate:d362a127b8f1e80c27fa2764f8bfc0bb01bdb5a0"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:7ce5e009c02469b6f1793fdd806b6a5c8175223d",
+    "name": "Appartamento Metrature Importanti - Lido di Jesolo — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Venezia",
+    "comune": "Jesolo",
+    "municipality": "jesolo",
+    "macro_zone": "jesolo",
+    "micro_location": "Lido di Jesolo",
+    "location_verification_status": "VERIFIED_TEXT",
+    "location_verification_confidence": 0.9,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:8793350f06c0a55bb5416b1bcc21c66ee7bf7397",
+      "listing:1b6d2aff204589db2ab20bc17b7bdffa13e982d2",
+      "listing:f81682fd06b63b5a236b9e930ac0762e34cb2b0c"
+    ],
+    "unit_ids": [
+      "unit-candidate:4e533d4e8a0a4f14ef8e2b9e4ab1aa3cc6350687",
+      "unit-candidate:0edcbfb4997fd2c60892aa16b0be7e5ea10d05b5",
+      "unit-candidate:b8b33938a5dadb92c3ddb47fbf31abaea774b659"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:b625e500a86cc0ac3c0b2fa0776089f57be81fcb",
+    "name": "Appartamento Trilocale con Terrazzo Abitabile — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Venezia",
+    "comune": "Jesolo",
+    "municipality": "jesolo",
+    "macro_zone": "jesolo",
+    "micro_location": "Jesolo Paese",
+    "location_verification_status": "VERIFIED_TEXT",
+    "location_verification_confidence": 0.9,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:1e397b7f8f2641c6d16f6ef0dc20855a2b7bed60",
+      "listing:36fd9f77a95c23606aeb4034d7a4b9a2c1b8a822",
+      "listing:4b8ca780ec96b8e2fae62fc4ba43a18ca5a6b387"
+    ],
+    "unit_ids": [
+      "unit-candidate:40489eeaf9d2fe5590f6cfceecc096cb7ae87f7c",
+      "unit-candidate:d804a49dc9f4981dbad86d482f8470bb4fa5454a",
+      "unit-candidate:75c00c19727b578ba5016922fe3a5c7f3795a799"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:482e814322fb41ae331b3742b8aa5a05bfe9270a",
+    "name": "Terreno - Lignano Sabbiadoro — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Venezia",
+    "comune": "Jesolo",
+    "municipality": "jesolo",
+    "macro_zone": "jesolo",
+    "micro_location": "Piazza Drago",
+    "location_verification_status": "VERIFIED_TEXT",
+    "location_verification_confidence": 0.9,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:8f5197cb12513a596ac40b8cc76e4b0d40f71ec3",
+      "listing:2eee25d79ff819a0d183087340742da8ee00299b",
+      "listing:457c4c0d0d18f40cff3d383858b49a75fe31ce1e"
+    ],
+    "unit_ids": [
+      "unit-candidate:0c252dc9b4f8accff00a59d7d12ddd2ffd459cc2",
+      "unit-candidate:b978d7551cab82b172ce827523e9618a173fb6b7"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:7b1c0c600ca36f53f668aaa4bbd0d9293201f373",
+    "name": "Esclusiva",
+    "region": "Veneto",
+    "province": "Venezia",
+    "comune": "Jesolo",
+    "municipality": "jesolo",
+    "macro_zone": "jesolo",
+    "micro_location": "Piazza Drago",
+    "location_verification_status": "VERIFIED_TEXT",
+    "location_verification_confidence": 0.9,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:544ee8588a9b28db2f3c735f8a43c0aec324876a",
+      "listing:66e308e2fb731e3b31a81dd944007cb29befbffc",
+      "listing:8d909ad603b269437da41f5a01c8fc3c60523cd3"
+    ],
+    "unit_ids": [
+      "unit-candidate:9f9793850a26c51b025858acd7b393e6c47939ef",
+      "unit-candidate:664039f63ceee82152a719852a501a499a88ffb3",
+      "unit-candidate:962e551239c9048a37839a9a35a8ed65ba9a726a"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:798a946aa959fe518cbbc471b8fda34627becc3d",
+    "name": "Appartamento Trilocale Vista Mare a Jesolo Lido — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Venezia",
+    "comune": "Jesolo",
+    "municipality": "jesolo",
+    "macro_zone": "jesolo",
+    "micro_location": "Lido di Jesolo",
+    "location_verification_status": "VERIFIED_TEXT",
+    "location_verification_confidence": 0.9,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:13f15b9fd6705374f10145bee520f530b7e969b5",
+      "listing:6ec17a3edb877699484fa386bd73becf7feae149",
+      "listing:46762a664658a1ecac0c6401c7323d9e9cf44236"
+    ],
+    "unit_ids": [
+      "unit-candidate:45995b11b6d48bfb89dc34123590432839267200",
+      "unit-candidate:97c185b3e0dd45d5f34d33769217eaeb2ce0f492",
+      "unit-candidate:d032a4ccb99c3c32883de018d975de7cd9c84bcc"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:3183598c564d078d6f5e1615e4af34c65d66dddd",
+    "name": "Spazioso",
+    "region": "Veneto",
+    "province": "Venezia",
+    "comune": "Jesolo",
+    "municipality": "jesolo",
+    "macro_zone": "jesolo",
+    "micro_location": "Jesolo Paese",
+    "location_verification_status": "VERIFIED_TEXT",
+    "location_verification_confidence": 0.9,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:0261fb0b94c2f14d1686573d9fe3a654bf5bc0bf",
+      "listing:90dfe5da25dae74b04917ae3e62dd39f6168feed",
+      "listing:9f7e2c3c887c59ebd312790941525ef22a200a1c"
+    ],
+    "unit_ids": [
+      "unit-candidate:6c44055d82ea2d654346cddd09d9e9b127ac0146",
+      "unit-candidate:35f71ef78ddba3e69def9a43e31f32104b45f1e0",
+      "unit-candidate:7762d9d518eb506952db9ef0f72a1f5f4d9a9feb"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:0faab2dca678bbd5d8e2f4b94192a925ab92c1a9",
+    "name": "Trilocale con Giardino - Fossalta di Piave — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Venezia",
+    "comune": "Jesolo",
+    "municipality": "jesolo",
+    "macro_zone": "jesolo",
+    "micro_location": "Piazza Drago",
+    "location_verification_status": "VERIFIED_TEXT",
+    "location_verification_confidence": 0.9,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:f46fc747b875ca2517f203d9b02fabfbb958b811",
+      "listing:d7f792a22bed77fd93785da410ee3998652be31c",
+      "listing:d5e2d872569b4fb98dbcaa7d107eb67ea96a2eb6"
+    ],
+    "unit_ids": [
+      "unit-candidate:c55171704a863abc1c0955345445f58db9c85b17",
+      "unit-candidate:43aaf5e04561d8f861632263c7743ceaa58d2c43",
+      "unit-candidate:6987d3b5663cb9cf11a550dd11cb741392628807"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:5c08b2090e60fa73668208b624938670dfcd1fd8",
+    "name": "Terreni Campana - Nuove Opportunità a Jesolo Paese — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Venezia",
+    "comune": "Jesolo",
+    "municipality": "jesolo",
+    "macro_zone": "jesolo",
+    "micro_location": "Jesolo Paese",
+    "location_verification_status": "VERIFIED_TEXT",
+    "location_verification_confidence": 0.9,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:79fb035e68d4cefff7945fc87db96a60fcb9688f",
+      "listing:6d8786ed9e48d72f01e67bb6ffc33cece748a356",
+      "listing:fe6775fba85538e4803e10c7a2392d8cdb030c0c"
+    ],
+    "unit_ids": [
+      "unit-candidate:0826edb43c607de8c57beac9756c49f1c88d68f5",
+      "unit-candidate:fde9d693eb9c0adabf7a91fab93cca70df979101"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:c4de3d0d563545898707e1fc67f8686a67f8fa02",
+    "name": "Merville - Casa nel Parco — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Venezia",
+    "comune": "Jesolo",
+    "municipality": "jesolo",
+    "macro_zone": "jesolo",
+    "micro_location": "Pineta",
+    "location_verification_status": "VERIFIED_TEXT",
+    "location_verification_confidence": 0.9,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:192168b65f00454ef48844c0bcf970886dee8abd",
+      "listing:85439e5c4a55c86aa549e4f829e2fb4ad3de5640",
+      "listing:02d2919b147ac25295dc148978abf33b29128fcf"
+    ],
+    "unit_ids": [
+      "unit-candidate:13058acfce73631286bf569ecb2ee5d53c49ef1a",
+      "unit-candidate:23a80fd006b2587342f42f775b437fd7cb00dce3",
+      "unit-candidate:0034bdca76fdefb3dbd7844cdce74cf70c2838e1"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:2f7a9aef30cb4b55d8481ea2fa5461532380e80f",
+    "name": "Trilocale Fronte Mare | Adriatic Palace a Jesolo — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Venezia",
+    "comune": "Jesolo",
+    "municipality": "jesolo",
+    "macro_zone": "jesolo",
+    "micro_location": "Piazza Drago",
+    "location_verification_status": "VERIFIED_TEXT",
+    "location_verification_confidence": 0.9,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:6af72ceca3baf785e94759930516c18fe33f2436",
+      "listing:326f71527569c00529dd5a47f7ef0876fbe9b272",
+      "listing:822f8d836424c49c0231c58f74eb6e75cbefc538"
+    ],
+    "unit_ids": [
+      "unit-candidate:813399c7bceaf8c8f94e468210515a70c75c226e",
+      "unit-candidate:5bff14622e447a77552c7c82de581baa1f33e841",
+      "unit-candidate:7d94617e656ee03094d2fea4f20f8b6b0d433bb8"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:1eb066967ffcde621e0c739bdda14dc4a28d7f92",
+    "name": "Villa Storica in centro a Motta di Livenza — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Treviso",
+    "comune": "Treviso",
+    "municipality": "treviso",
+    "macro_zone": "treviso",
+    "micro_location": null,
+    "location_verification_status": "UNVERIFIED",
+    "location_verification_confidence": 0.0,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:171c3cec038f22ee2a2946e37d54adb612902fc4",
+      "listing:f6b0f8cd049a49893217cafa5c32c648772062c8",
+      "listing:129a7cdbeac19ad5add895a66217db74cc0cfc02"
+    ],
+    "unit_ids": [
+      "unit-candidate:bef9dfa74d360da6ffa12d19f1f13b102b59f393",
+      "unit-candidate:d053a0ecaea19be71bc68abb7cef371c2e90b1d2",
+      "unit-candidate:a3cc941dabb7429bada3e3966f16df3ab8c3bf23"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:6795dd332fb570e5d4d6c44fe205d1d77fe01d92",
+    "name": "Vendi il tuo sogno: Bar-Gelateria in posizione strategica a Cessalto — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Treviso",
+    "comune": "Treviso",
+    "municipality": "treviso",
+    "macro_zone": "treviso",
+    "micro_location": null,
+    "location_verification_status": "UNVERIFIED",
+    "location_verification_confidence": 0.0,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:0b727443869e2147a505261a88e5eab2a05acee8",
+      "listing:3295cab64df92fac9e036010bd452adc370c9c16",
+      "listing:1d775c609ae7ea21003f232b84676803f2d50e1c"
+    ],
+    "unit_ids": [
+      "unit-candidate:ce345f887c6696a19e8aacbf7a6358b4341dc02b",
+      "unit-candidate:873c395877a95e6cb8e0e6302abf7ad330fcbfec"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:312ba56075b4d4b15b1f6e9ccce1c640bd2b0304",
+    "name": "Villa d'Epoca Ristrutturata in Vendita a Cessalto — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Treviso",
+    "comune": "Treviso",
+    "municipality": "treviso",
+    "macro_zone": "treviso",
+    "micro_location": null,
+    "location_verification_status": "UNVERIFIED",
+    "location_verification_confidence": 0.0,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:f81528419c0c8f7a0e54ca48e24ae09d0d4d5554",
+      "listing:80bcbd1067e27abfa5ef1be61b62abb0db66c2ea",
+      "listing:60c633ea1305d9e2075dcb7996aa014644f9703f"
+    ],
+    "unit_ids": [
+      "unit-candidate:95fd16da34ad787a010b6594b5c8bb057db750da",
+      "unit-candidate:102e0666f1a0512e64825e55d08026428f3ae1bd",
+      "unit-candidate:3dfe2ba880f7df893917de5608e8dab4dc6b6b99"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:5effa0c8921de0c9da58131f8ccd41b942066cb7",
+    "name": "Appartamento duplex in centro a Motta di Livenza — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Treviso",
+    "comune": "Treviso",
+    "municipality": "treviso",
+    "macro_zone": "treviso",
+    "micro_location": null,
+    "location_verification_status": "UNVERIFIED",
+    "location_verification_confidence": 0.0,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:fb272a9171f2cd9e92904c780d0511fb537bc15e",
+      "listing:e6d39c4b28d5da1b0a4447d63c46e8316af73a5b",
+      "listing:6c93721dcf27acfecfc4446568b4a68168512439"
+    ],
+    "unit_ids": [
+      "unit-candidate:d5be38c9c55226453de2eac372bbe703aef158e7",
+      "unit-candidate:d7fbf1842dc529561c44e81c3c0e82462741f8bc",
+      "unit-candidate:64e836781e247f22beecc115113f1579c6e55264"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:91e08f3da01531bee35c02616b0df558cb64e0ff",
+    "name": "Villa di design con piscina a Salgareda — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Treviso",
+    "comune": "Treviso",
+    "municipality": "treviso",
+    "macro_zone": "treviso",
+    "micro_location": null,
+    "location_verification_status": "UNVERIFIED",
+    "location_verification_confidence": 0.0,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:1227e8a946dec431441d60ec811b0add93468497",
+      "listing:57e01ec8ad733f546ae308246fe9e3d1c162164b",
+      "listing:f1f0a94051b88d51dceac32d814268696ac57864"
+    ],
+    "unit_ids": [
+      "unit-candidate:30c06391b8a0b37c162879c8318a681d9c48cb71",
+      "unit-candidate:8cef0adec102ab3d9299cf3cbc7f1740f7cfc2bc",
+      "unit-candidate:c20e933301eafb2ccec5f2af2c6bdf9b59eff67b"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:f0111d2ab6dca4e1c169fb6ce686c1f14d7c9cf2",
+    "name": "Elegante Bifamiliare a Oderzo: Modernità e Comfort nel Verde — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Treviso",
+    "comune": "Treviso",
+    "municipality": "treviso",
+    "macro_zone": "treviso",
+    "micro_location": null,
+    "location_verification_status": "UNVERIFIED",
+    "location_verification_confidence": 0.0,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:fac81b340d3bacb39cddabf1e2a79d26a4253feb",
+      "listing:38bf4a42f572614a718acd33052702f3f95c3e7a",
+      "listing:28d6ffe43b7da946cfed69c402ed19b1a9111998"
+    ],
+    "unit_ids": [
+      "unit-candidate:3d53a02db2835ba33a485e54f3b648490b2a8a06",
+      "unit-candidate:3fd4fb78b6c8cf6436e3204a16f824b6a5fbe97e",
+      "unit-candidate:d8ef35f008cd78679cd596114a410e299a889081"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:addcb3ddea88f049ca860b0e45a4883a149a302d",
+    "name": "Ultime Unità Bifamiliari Nuova Costruzione in Vendita a Oderzo — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Treviso",
+    "comune": "Treviso",
+    "municipality": "treviso",
+    "macro_zone": "treviso",
+    "micro_location": null,
+    "location_verification_status": "UNVERIFIED",
+    "location_verification_confidence": 0.0,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:ded7f5db715dbe81a41b5d0e3127202590b6605e",
+      "listing:06689e86d804a27eeb94e5a241d9650a3a561554",
+      "listing:9d3cd7073ac91cb96fd28c21addc064e06a2726e"
+    ],
+    "unit_ids": [
+      "unit-candidate:58b429ff61a97a575c5098e7e7de04d8b3a984cd",
+      "unit-candidate:8d586047eabf3152e33a4e65a2346c2ab00f960e",
+      "unit-candidate:4309154a5f5a4f6db988a1877f1d2455aab8c209"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:b998787b6b82edaea13bb945af66f11997053cd1",
+    "name": "Bifamiliare in Stile Liberty con Ampio Giardino a Ponte di Piave (Treviso) — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Treviso",
+    "comune": "Treviso",
+    "municipality": "treviso",
+    "macro_zone": "treviso",
+    "micro_location": null,
+    "location_verification_status": "UNVERIFIED",
+    "location_verification_confidence": 0.0,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:fc1ab3c441a4098a8c31231e1fcc390a31b9abe4",
+      "listing:16baeac76d15ac6dcd2f6b6539edaebcc63aed5e",
+      "listing:009066a65fee4082fd0d4607f3c6a4c068020e7b"
+    ],
+    "unit_ids": [
+      "unit-candidate:43ee5dadee95bfa8500cbaf818ca1796b50ccf12",
+      "unit-candidate:016c5397226b64dc50f0988c3299837c55902efb",
+      "unit-candidate:ed2921662de15bdf2738802590e3335fa4022759"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:0dd63c7213cc42014e8eed50ed0bfd23751b5881",
+    "name": "Immobili di prossima realizzazione a Godega di Sant'Urbano — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Treviso",
+    "comune": "Treviso",
+    "municipality": "treviso",
+    "macro_zone": "treviso",
+    "micro_location": null,
+    "location_verification_status": "UNVERIFIED",
+    "location_verification_confidence": 0.0,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:e3acb35813b4651f2f4fe96eebcb1a0f31754a7e",
+      "listing:b4b5b90b11a18da08b70c4cc3d70057eb3dd6df8",
+      "listing:1a3d8a19c1aabf2ccf9769576da8f6f9f51b4a8e"
+    ],
+    "unit_ids": [
+      "unit-candidate:54aca92dbc0a20d2b80b888263b6dcb8a9eb7c84",
+      "unit-candidate:ecb1a6b395e55e1ca0fc9f7bd81847b869797fa1",
+      "unit-candidate:726d7bc5696d71d62b11639ac4e8defc35db564a"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:097f750eb759d740c6728851b03020897f8ae80a",
+    "name": "Casolare in vendita a Gorgo al Monticano - (Treviso) — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Treviso",
+    "comune": "Treviso",
+    "municipality": "treviso",
+    "macro_zone": "treviso",
+    "micro_location": null,
+    "location_verification_status": "UNVERIFIED",
+    "location_verification_confidence": 0.0,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:4485f583a061f0ce5e800e03411f578d04385bcb",
+      "listing:c1051c03d9a4edba50cf07d7f779fecdc79015c5",
+      "listing:8fe0351835735f3ee29d6c963c3be05abf43746e"
+    ],
+    "unit_ids": [
+      "unit-candidate:db03dadf7055bc9fc6a7d4d818b12e3202b9b42e",
+      "unit-candidate:50cb097ecaf2f0437bcf1bd365e560204797e979",
+      "unit-candidate:ed07d14018deac7b7aa12d536a764684614aed4e"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:b829849b1472c8105eca02d78ff101e838e26b0f",
+    "name": "Attico in centro ad Oderzo — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Treviso",
+    "comune": "Treviso",
+    "municipality": "treviso",
+    "macro_zone": "treviso",
+    "micro_location": null,
+    "location_verification_status": "UNVERIFIED",
+    "location_verification_confidence": 0.0,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:ddf256f65d07e975136d87d45da917ded364c938",
+      "listing:e69115f989dabe77cd423b147f34f85acb63a19a",
+      "listing:b11347009bc3e0d600b62c328b3724aa39624b31"
+    ],
+    "unit_ids": [
+      "unit-candidate:5e7ddf5d85fcc2fc71e4a2f652dc611dd40c7a83",
+      "unit-candidate:4324c07e26a967e71f9df3e94a58409695ffac26",
+      "unit-candidate:9324ca58085ccf6da7d595702e16de24f28deb7a"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:5d9bc5a411377537d9cc809ca27551244abedc81",
+    "name": "Villa in Bioedilizia – Stile Rustico Moderno — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Treviso",
+    "comune": "Treviso",
+    "municipality": "treviso",
+    "macro_zone": "treviso",
+    "micro_location": null,
+    "location_verification_status": "UNVERIFIED",
+    "location_verification_confidence": 0.0,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:50da1dfe4812a5cf0d441513182324402abdbf77",
+      "listing:814f2a57ade1f2cc744ecb87ca40d7564ffc71ef",
+      "listing:dc8220ba11345031dab6d571b79700e6f7d24a05"
+    ],
+    "unit_ids": [
+      "unit-candidate:acd88c705e263d58e29b7fff428517635cb5a004",
+      "unit-candidate:c17c109ce6ce0dba9eec7acecf5d50d55349c53e",
+      "unit-candidate:8e034a2323d43e24b6871e52630ae4695d199d44"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:fc39c75b0e59129a61c604ab3ff4e51c7162b02f",
+    "name": "Terreno agricolo in vendita a Salgareda (Treviso) — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Treviso",
+    "comune": "Treviso",
+    "municipality": "treviso",
+    "macro_zone": "treviso",
+    "micro_location": null,
+    "location_verification_status": "UNVERIFIED",
+    "location_verification_confidence": 0.0,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:c1bf661e44303b26834d733926532e43ff35f184",
+      "listing:8460334ef6f82936fdbe8972292c586e919511ff",
+      "listing:6ed615949025a67a935ad46fe58105deec83e011"
+    ],
+    "unit_ids": [
+      "unit-candidate:dfeb34b477d2790ed6849754d431afaf12caf55e",
+      "unit-candidate:5d9a2ca1f185eb3dca83de6404794ebcd3c1789e",
+      "unit-candidate:bd05d8c1f65b5c2754c38370161421defd89fc57"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:9dc3f8a9f145babee0492ffe3adfda50990fccf2",
+    "name": "Villa singola con piscina a Chiarano (Treviso) — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Treviso",
+    "comune": "Treviso",
+    "municipality": "treviso",
+    "macro_zone": "treviso",
+    "micro_location": null,
+    "location_verification_status": "UNVERIFIED",
+    "location_verification_confidence": 0.0,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:ceb40dfdccb6c061e3e2ec2602e81b8c151c1327",
+      "listing:11d4c4b2da4d82c5db67799ad013a38c04c8e32a",
+      "listing:e9cd3ba9d9b2b81af4acc745f1fc213eeed46cb8"
+    ],
+    "unit_ids": [
+      "unit-candidate:10314e44e5bb94102acf6391e5ec47c0a7e0ee90",
+      "unit-candidate:6e237609a3d1ca6b8af7696e95ff68edb6e5029e",
+      "unit-candidate:addfe1da62a0a4f3572c3033176a983d823c8fb6"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:4b84d64f97d737934b0a1acfa14e09ed19a6b66c",
+    "name": "Appartamento in palazzo storico — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Treviso",
+    "comune": "Treviso",
+    "municipality": "treviso",
+    "macro_zone": "treviso",
+    "micro_location": null,
+    "location_verification_status": "UNVERIFIED",
+    "location_verification_confidence": 0.0,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:d2a14947e419b92c776eddbe51ba01f1616f7fa0",
+      "listing:c39cd29c6cc0bbfe39ec46a30111572a7dd0ca5f",
+      "listing:185beea45ad032f7c6097e8885d619e1e82a68c2"
+    ],
+    "unit_ids": [
+      "unit-candidate:13d1358933bb27e9897fe2a3f159c64a759a25a3",
+      "unit-candidate:9c68afd9a317256223eaf0b41a5c6b705aa47279",
+      "unit-candidate:77d1f938b7852ae3c9760dfd76f05effbf7bf6b1"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:a543553236f5f21e5ef8ee5e6232aed315ab506c",
+    "name": "Appartamenti classe A4 a Mansuè — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Treviso",
+    "comune": "Treviso",
+    "municipality": "treviso",
+    "macro_zone": "treviso",
+    "micro_location": null,
+    "location_verification_status": "UNVERIFIED",
+    "location_verification_confidence": 0.0,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:86c15814e8ae5353ed48e4174eefaf78d1530f88",
+      "listing:ff435e11df1d483df2452b71e10791a3f49b4560",
+      "listing:ad84fa05227f5e532c7422aed1f6814225c32d18"
+    ],
+    "unit_ids": [
+      "unit-candidate:2180652dc9a4a418669cfe9f201cfc624b201d15",
+      "unit-candidate:f55d9dadc1065cf25feb39ec1b9e8fec8637d546",
+      "unit-candidate:a8a8206c7cf8a8b90a7cbd9bad77f95722731df8"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:3c998601ac36b0a4bf8a21c3e3dd1fb351946288",
+    "name": "Casale in vendita a San Biagio di Callalta - (Treviso) — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Treviso",
+    "comune": "Treviso",
+    "municipality": "treviso",
+    "macro_zone": "treviso",
+    "micro_location": null,
+    "location_verification_status": "UNVERIFIED",
+    "location_verification_confidence": 0.0,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:7786203b1655314543e2ab64dfb24b9754ffa439",
+      "listing:b0ca1570253ad25008db97c28f1f59a6ddcc1c36",
+      "listing:9f165d9cf545ae57a819af4ea58829d6b766d928"
+    ],
+    "unit_ids": [
+      "unit-candidate:b70850be68ece96f2925bbeb6715d9eba79dda97",
+      "unit-candidate:e02470428c0dad40a864f4f91dfbb9cdbdf8e08a",
+      "unit-candidate:d3825faf9d34c6d9c076562020d90caa20295055"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:39ae8e4c3797c9c6c236b130949bd15833618d61",
+    "name": "Bifamiliare a Ormelle — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Treviso",
+    "comune": "Treviso",
+    "municipality": "treviso",
+    "macro_zone": "treviso",
+    "micro_location": null,
+    "location_verification_status": "UNVERIFIED",
+    "location_verification_confidence": 0.0,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:5571aa53a174c8b32ee031944c050add927028ba",
+      "listing:2b0231362b189939e19be0bc22109fbc1f80b537",
+      "listing:f3453063df9cbf16305f265b69b1e2d507199cdf"
+    ],
+    "unit_ids": [
+      "unit-candidate:e7174a49b3f95bdee2094b085e032b56afbf4848",
+      "unit-candidate:12b05fd8986f80f546ba6247c1c16f11e30ff9a8",
+      "unit-candidate:e958e5dc887684e01394e5c95281e5c34879b16f"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:16537ec5ab3edacd871371edfcd9fbc7988abccd",
+    "name": "Rustico del ‘900 da ristrutturare a Tempio di Ormelle vicino Oderzo — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Treviso",
+    "comune": "Treviso",
+    "municipality": "treviso",
+    "macro_zone": "treviso",
+    "micro_location": null,
+    "location_verification_status": "UNVERIFIED",
+    "location_verification_confidence": 0.0,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:235fe9c4c404e0c54cd203ed399c6c08d2e7a9fb",
+      "listing:3e9dc9bddabcbc4005242be0392ce0b0b2492b71",
+      "listing:c3157ec298840939b8f9333afd1935f9520a73e7"
+    ],
+    "unit_ids": [
+      "unit-candidate:006fbbe9202e0ad9140380f0a9317a4608da1229",
+      "unit-candidate:2051a52dd1ae4f703c9c987c66bcebf52131ea93",
+      "unit-candidate:0249e5aa90ef5d4e917730f5c1d4f16941609e5e"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:58fa7362452f034f3f94d5438fae6ef9400cfacb",
+    "name": "Casa singola ad Ormelle (Treviso) — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Treviso",
+    "comune": "Treviso",
+    "municipality": "treviso",
+    "macro_zone": "treviso",
+    "micro_location": null,
+    "location_verification_status": "UNVERIFIED",
+    "location_verification_confidence": 0.0,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:03b6d19522ef288b287912dde7ae79c2240d449c",
+      "listing:396f4b2a896b958597c436b30187c641c836db14",
+      "listing:836a485d7d6c1dcc8b8c9417c0c2599dbf4ce15b"
+    ],
+    "unit_ids": [
+      "unit-candidate:4c27c7cd313b39a8e12d87f7dbb64952d2f53afd",
+      "unit-candidate:cd71abb118b4d240cb185e54bd8b2e3933850b57",
+      "unit-candidate:bde812019084fc021b03a74774b7feced89476d2"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:20edf6ecb56dbca4a7ba3c97a65049377323388a",
+    "name": "Ufficio in centro a Oderzo (Treviso) — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Treviso",
+    "comune": "Treviso",
+    "municipality": "treviso",
+    "macro_zone": "treviso",
+    "micro_location": null,
+    "location_verification_status": "UNVERIFIED",
+    "location_verification_confidence": 0.0,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:72b421e7816906b9497fa3cb793106d4347c2a00",
+      "listing:df4c417536f98ee19a272c42f1000941b3b58896",
+      "listing:c1e787aae0d6afce7f9a60affedda367958b6372"
+    ],
+    "unit_ids": [
+      "unit-candidate:dfc1470abd4f7bb1c9f57c6a45ce040cce167844",
+      "unit-candidate:f30a3a548e3568506edc04fc588af9445192c154",
+      "unit-candidate:d583a0dc3b2f72e027d8c37e57afcd7a48215385"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:2f43a627f1fd35d6f97ba2bf0e38e6b3e633a92f",
+    "name": "Casa singola a Oderzo (Treviso) — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Treviso",
+    "comune": "Treviso",
+    "municipality": "treviso",
+    "macro_zone": "treviso",
+    "micro_location": null,
+    "location_verification_status": "UNVERIFIED",
+    "location_verification_confidence": 0.0,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:4cd1d9e8d96559481c1f3474ff767717aade9bac",
+      "listing:f1731b905d7193da79d853de4ab58811fb2bf398",
+      "listing:9ac6c42ad0b29c3f11e8d069bd84795c08fdb51d"
+    ],
+    "unit_ids": [
+      "unit-candidate:e3dc5b013c138dd99dce245f648bc3c7e56fafdd",
+      "unit-candidate:5427b2f3c55fb67a37373e80f5bcfcd9e588fdce",
+      "unit-candidate:83891aadc8494b8628076750f63623786dc9f04d"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:4c9d0d7f9cca495817494211e2a037f89c7e2975",
+    "name": "Casa singola a Fossalta di Portogruaro — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Venezia",
+    "comune": "Jesolo",
+    "municipality": "jesolo",
+    "macro_zone": "jesolo",
+    "micro_location": "Piazza Drago",
+    "location_verification_status": "VERIFIED_TEXT",
+    "location_verification_confidence": 0.9,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:e72ec2a7bfa2aee7f0bc822d1175874fe5c957de",
+      "listing:82148bf594ef1ea81d4b4dd57a55a7abc9c20956",
+      "listing:8b6ca0787260dca2587f993850cb18986cef38c5"
+    ],
+    "unit_ids": [
+      "unit-candidate:9838414d9da1fb3b15eda8aa746fb2055215296d",
+      "unit-candidate:05e475665f64541c50a8c22d3fa422fa35dc6f7d",
+      "unit-candidate:be4589c9cf57d0a9d2207e0e5d77e2db2e6a55aa"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:631262134a91897e1cf66068803a16d5637aa968",
+    "name": "Posto auto a Oderzo (Treviso) — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Treviso",
+    "comune": "Treviso",
+    "municipality": "treviso",
+    "macro_zone": "treviso",
+    "micro_location": null,
+    "location_verification_status": "UNVERIFIED",
+    "location_verification_confidence": 0.0,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:adcd29a56875fae5b665d4beb9f8033ec61133de",
+      "listing:bfeea59db7cde8ad2f39a1eac5ae65800b02e4c3",
+      "listing:c8b64ee96e6cbdee83566a60380b6554e7227017"
+    ],
+    "unit_ids": [
+      "unit-candidate:715c922c52c50ec1964a706b152b90e6774b4482",
+      "unit-candidate:e6ab5a1ce18987d97c575645e58a8eb823e72c21"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:f65164c415a06a1e5cf746d41e1097b1b61f1001",
+    "name": "Villetta a schiera a Porto Santa Margherita (Venezia) — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Venezia",
+    "comune": "Caorle",
+    "municipality": "caorle",
+    "macro_zone": "caorle",
+    "micro_location": "Porto Santa Margherita",
+    "location_verification_status": "VERIFIED_TEXT",
+    "location_verification_confidence": 0.9,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:75c5a4a0ccc65893a9fe73f2a378c5a30cdb7dc1",
+      "listing:3f4799f4a06598aa4ef4d8cb1cdc2725817e2330",
+      "listing:6b71535bf4e95518731c2340b99fd96eb300750c"
+    ],
+    "unit_ids": [
+      "unit-candidate:762cfff69c5db869c87a8a6a557562fd5685a074",
+      "unit-candidate:8fb1adb65fde683f96dc055bb0b6280f61e48b52",
+      "unit-candidate:d0440b295a4358899cda588817ff49fb509d8dae"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:b56533bb9996b3d12d1d3da4727055be147fd576",
+    "name": "Quadrilocale a Oderzo — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Treviso",
+    "comune": "Treviso",
+    "municipality": "treviso",
+    "macro_zone": "treviso",
+    "micro_location": null,
+    "location_verification_status": "UNVERIFIED",
+    "location_verification_confidence": 0.0,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:ef95ce6a1657d7e960a64c366cbd902c8442b4e8",
+      "listing:4ec437839edc090a5ec2546a4438902a667dfa7f",
+      "listing:4edd82fa53ccb9792d6257e79248d55bc95a3f1a"
+    ],
+    "unit_ids": [
+      "unit-candidate:3c8cfad38fe070a547f36bd763f10154df59d1bf",
+      "unit-candidate:7b6a1dad062fe262024fca423256628ca9e9eb0b",
+      "unit-candidate:5e6246db6e724113e7b5f21856b73517fc1ad07d"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:6861717f7aa220bfae0c51e529e1d7c0293624cd",
+    "name": "Rustico Rudere in Vendita a Portogruaro - Lugugnana — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Venezia",
+    "comune": "Jesolo",
+    "municipality": "jesolo",
+    "macro_zone": "jesolo",
+    "micro_location": "Piazza Drago",
+    "location_verification_status": "VERIFIED_TEXT",
+    "location_verification_confidence": 0.9,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:8043d8d0ee36cd1ae5c822b661bd34f543b3a6a8",
+      "listing:d65ade6fd18a5c3be96ff6608f8f611874db0403",
+      "listing:9090d67079fa3fb676f9885136ec7e1a3a645d27"
+    ],
+    "unit_ids": [
+      "unit-candidate:74e23e4422876aed2664f59a9e3a4364f36b26e9",
+      "unit-candidate:41e90c7a16caf81606ea69684a08934b560d28c2",
+      "unit-candidate:d2806f012311d7a889a4e94d02cf7747d1d01123"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:028adb7e5ab72773ce4f2cbe0f4a3ab92a0e446f",
+    "name": "Quadrilocale Centro di Oderzo (Treviso) — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Treviso",
+    "comune": "Treviso",
+    "municipality": "treviso",
+    "macro_zone": "treviso",
+    "micro_location": null,
+    "location_verification_status": "UNVERIFIED",
+    "location_verification_confidence": 0.0,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:c8a1a7ed0c986af43ac2e1697f9ffddb452b9613",
+      "listing:9edfe289f583b4558d12e4a5b32c68fa33108c04",
+      "listing:f7e11120c0300fdfe0cd4590a9bc7afb208f7eab"
+    ],
+    "unit_ids": [
+      "unit-candidate:959b36090abfb27db4e3df651217cb26062ffda2",
+      "unit-candidate:a5c77a26b133ef5e372120f58306bf669a97319a",
+      "unit-candidate:b25f1c49cf1a26549cb91e5a528289325ff43478"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:4cccd81711657627de62ef6afeb3fbbf54c4608c",
+    "name": "Quadrilocale ristrutturato a Oderzo (Treviso) — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Treviso",
+    "comune": "Treviso",
+    "municipality": "treviso",
+    "macro_zone": "treviso",
+    "micro_location": null,
+    "location_verification_status": "UNVERIFIED",
+    "location_verification_confidence": 0.0,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:7180a4fa0e5b37ea8e770704829b704723d53744",
+      "listing:84d74d3c5aba3546b72d6e9fc0e7f5dd6ba0cbee",
+      "listing:d04f3259012a30387f7d8b19e682cc0573cb0a2e"
+    ],
+    "unit_ids": [
+      "unit-candidate:f9959fd89caad6096c9c2ca5dd3126a37205df8f",
+      "unit-candidate:a41cd467baa22aa4789e3f827c22c392296ea061",
+      "unit-candidate:58b1d73679551845de32d6bf07ad01a7758f44d6"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:c4d982bc522d53276b121e0f1be44b5ae7de1ce0",
+    "name": "Attività commerciale a Mansuè (Treviso) — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Treviso",
+    "comune": "Treviso",
+    "municipality": "treviso",
+    "macro_zone": "treviso",
+    "micro_location": null,
+    "location_verification_status": "UNVERIFIED",
+    "location_verification_confidence": 0.0,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:919f61451ec3dac1c681fbf4bf0a95bb6d34526f",
+      "listing:c260bde5d4d637926a658d88664da8891aa3e76e",
+      "listing:ee226a8e2ae6ee19a27f5f760cd1ca3a84ec925a"
+    ],
+    "unit_ids": [
+      "unit-candidate:cdd2b14e54f8333c950d70db8b31cd3b93226719",
+      "unit-candidate:06ece5e86d6c955ab5af0586d2facba5d4ee950e"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:705021960099dc537b8aa21f72e0e485e89421da",
+    "name": "Quadrilocale in centro a Oderzo (Treviso) — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Treviso",
+    "comune": "Treviso",
+    "municipality": "treviso",
+    "macro_zone": "treviso",
+    "micro_location": null,
+    "location_verification_status": "UNVERIFIED",
+    "location_verification_confidence": 0.0,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:8bcb7e972b6b7474378738e2238bf8349fb324a7",
+      "listing:4b9898316eb54895719c6c3f39eff369dfb26d5e",
+      "listing:abf281fde96b10bee4364c0277117723e2c3b617"
+    ],
+    "unit_ids": [
+      "unit-candidate:e97abf61952a06ed99f4fe2be74a3cbf9875cab1",
+      "unit-candidate:a91a3d24db0102902f1c7c768d6ccea7ff8dc430",
+      "unit-candidate:7ea71024b8b81856462656c313475e317ce09522"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:0335769f2ef21abff815147d373612bf73b64f4b",
+    "name": "Casa d’epoca Terra Cielo a Oderzo — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Treviso",
+    "comune": "Treviso",
+    "municipality": "treviso",
+    "macro_zone": "treviso",
+    "micro_location": null,
+    "location_verification_status": "UNVERIFIED",
+    "location_verification_confidence": 0.0,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:2c39bea7a4677a17b10488b475434f2c325b919b",
+      "listing:57e7f3140418ee66159bf4a4e579312131b80d96",
+      "listing:d4fec847826ef8abfbcb7f57ff17e136eb9757b3"
+    ],
+    "unit_ids": [
+      "unit-candidate:4621677f8527d3c2970cd53956460963060ec392",
+      "unit-candidate:7e1eececce9333309ec79ecfaf18b186f77a841b",
+      "unit-candidate:0fb600c39fccbee4637e62dcc6214682af8d8bb6"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:2b7cd89689d37aa903a1545d1c87e2be6589011e",
+    "name": "Cessione Ristorante |Attività Avviata| nel Cuore della Pineta di Jesolo — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Venezia",
+    "comune": "Jesolo",
+    "municipality": "jesolo",
+    "macro_zone": "jesolo",
+    "micro_location": "Pineta",
+    "location_verification_status": "VERIFIED_TEXT",
+    "location_verification_confidence": 0.9,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:09a25bc1a5ac49f7e7f8d07a9d3080ece1224365",
+      "listing:608ea758cfe63cea9e104d40b1df29525f49b53f",
+      "listing:6220d49cc7b91ecc7abb906217d9194ae8645b3e"
+    ],
+    "unit_ids": [
+      "unit-candidate:0ece82c3be958ea817b9771e1b62c2fd98c61ea2",
+      "unit-candidate:ca58e30c64b02165d2fc4a7ec4122615e5f904cf"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:d5a3c6b05839dc183eea126d67bcf46a798adab6",
+    "name": "Ampia bifamiliare a San Polo di Piave: comfort e stile in posizione centrale — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Treviso",
+    "comune": "Treviso",
+    "municipality": "treviso",
+    "macro_zone": "treviso",
+    "micro_location": null,
+    "location_verification_status": "UNVERIFIED",
+    "location_verification_confidence": 0.0,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:ed691a680a5ccae18f92d753367e3fc00cf56b24",
+      "listing:ff48bd3d652427f58303bce491444fcf9f073652",
+      "listing:6920b53049c44fa7aca928f5f52213bfd9457beb"
+    ],
+    "unit_ids": [
+      "unit-candidate:883fa74be9b9d47aad724c8da87ec97b775e8a3a",
+      "unit-candidate:e90f8956879530e925889acc069678e984c44f0f",
+      "unit-candidate:5b6264166b5cbd603ce2b3c90157bfdc72472f99"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:33cbe9fb128b3d3a2830f3371d49983a4ae10f01",
+    "name": "Casa Quadrifamiliare centrale giardino a Motta di Livenza — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Treviso",
+    "comune": "Treviso",
+    "municipality": "treviso",
+    "macro_zone": "treviso",
+    "micro_location": null,
+    "location_verification_status": "UNVERIFIED",
+    "location_verification_confidence": 0.0,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:a990c5022736a37e531eeef3ef36bde0742b7e58",
+      "listing:cc9cf91ade9a6c43820706dbf4496e6c40d5efb3",
+      "listing:4abd42186a8f3f601547c18a90ebc1a1bfe92526"
+    ],
+    "unit_ids": [
+      "unit-candidate:048ede9b956eb411df97593ea67559eb174da41f",
+      "unit-candidate:c9396e8c3714c72097dd20455b8436a5be5cc819",
+      "unit-candidate:b517b6fd1aee20a27081ec6303d9d81fa738c20e"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:42cc80c8ae358b6609e7ce4ec06afc4ca5b5d69b",
+    "name": "Trilocale - Palms Edition a Jesolo Lido — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Venezia",
+    "comune": "Jesolo",
+    "municipality": "jesolo",
+    "macro_zone": "jesolo",
+    "micro_location": "Lido di Jesolo",
+    "location_verification_status": "VERIFIED_TEXT",
+    "location_verification_confidence": 0.9,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:a4f9ada836f95c03acfa41b6a2713a860984103a",
+      "listing:b58b495ff5d827449daa8f314c9124bca3ea3994",
+      "listing:d650b7eaa598766abcb2e532849b8f9fd3b19ca4"
+    ],
+    "unit_ids": [
+      "unit-candidate:11577cef124d4c85cf845d5b9b3d815c1028d68c",
+      "unit-candidate:7a5bb384f55a066495e61856498b5d62e9e0608d",
+      "unit-candidate:11870b50232bf819434f08ad4a33db875574e4e7"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:0ac08551e80915a72737d39157eb7dd66e95e5fc",
+    "name": "Bifamiliare a Santo Stino di Livenza — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Venezia",
+    "comune": "Jesolo",
+    "municipality": "jesolo",
+    "macro_zone": "jesolo",
+    "micro_location": "Piazza Drago",
+    "location_verification_status": "VERIFIED_TEXT",
+    "location_verification_confidence": 0.9,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:a69cc44a82556b0226c9d3e6c89efa792c2216f8",
+      "listing:468ba52519e613261b5918620df98683c8928800",
+      "listing:ff2192ff68df6caf88ae573f165dac354efe98f6"
+    ],
+    "unit_ids": [
+      "unit-candidate:f1e7bc95fa4d306c8b3cd9840370c7f482e0560f",
+      "unit-candidate:0d86bd2047ca18cfeba1602b856d2b653fd5b4d1",
+      "unit-candidate:e8b8ee44d1e633529295aeb56191efadcf887cc1"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:b0d308dcda5281c175803b2388aea9ed4e38a076",
+    "name": "Attico Esclusivo con Piscina Privata e Solarium Panoramico a Jesolo — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Venezia",
+    "comune": "Jesolo",
+    "municipality": "jesolo",
+    "macro_zone": "jesolo",
+    "micro_location": "Lido di Jesolo",
+    "location_verification_status": "VERIFIED_TEXT",
+    "location_verification_confidence": 0.9,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:e1b7109aa5de37bb3c32af70588083cfa40a3415",
+      "listing:cdfa4e6660caedac2a0fd47e69f86a23edc18b58",
+      "listing:5b18d6f9e061863d69c575b1f39513469c5c2e79"
+    ],
+    "unit_ids": [
+      "unit-candidate:e218e728bb579a9efd6905d7920bbd27f60f3cb9",
+      "unit-candidate:cc92af6f719866914d3f0cc2fe92c1c988b96a76",
+      "unit-candidate:114a8a2b2907345586399b1da6ef87cc804510c0"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:e832431a3e10694fd46d32be8b02f249b9946983",
+    "name": "Appartamento con ingresso indipendente — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Treviso",
+    "comune": "Treviso",
+    "municipality": "treviso",
+    "macro_zone": "treviso",
+    "micro_location": null,
+    "location_verification_status": "UNVERIFIED",
+    "location_verification_confidence": 0.0,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:005a5d4e02caa3ed90e545abe6f9fd6c87679f01",
+      "listing:fd917e02362426a3b0346b7f026b5c9ddbb674d6",
+      "listing:c1b36c941c21d8cfcbe6498e31ba497a65d2485e"
+    ],
+    "unit_ids": [
+      "unit-candidate:d6fcea93b4f61973820896a3a09f9647843e1ec1",
+      "unit-candidate:28a3407a7b5b94a81081e1470c8a7fa2bba72ff8",
+      "unit-candidate:de6d3890a9a5f6222c745fc9c6af9307450e79b0"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:bdc2f79a98ce2667bb0b070e042ec6ad786c4fc0",
+    "name": "Hotel - albergo a Caorle — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Venezia",
+    "comune": "Caorle",
+    "municipality": "caorle",
+    "macro_zone": "caorle",
+    "micro_location": null,
+    "location_verification_status": "UNVERIFIED",
+    "location_verification_confidence": 0.0,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:8322ff991b7fb133e6fdadd436bfe27d4058339f"
+    ],
+    "unit_ids": [
+      "unit-candidate:a8078752e1e10259a26bb5aa785554be5d8e27e0"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:b685961899e234223dae181e615b5d2a1f18c550",
+    "name": "Trilocale in affitto - Torre Aquileia - Lido di Jesolo — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Venezia",
+    "comune": "Jesolo",
+    "municipality": "jesolo",
+    "macro_zone": "jesolo",
+    "micro_location": "Lido di Jesolo",
+    "location_verification_status": "VERIFIED_TEXT",
+    "location_verification_confidence": 0.9,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:b27f4be5f90fc72db8b0bb8138d055ed59302171",
+      "listing:c43eab7e54821762096ea087d6d9eea3a07f7b30",
+      "listing:fa88a49122dfeecc9239f7225972a11c89bb1652"
+    ],
+    "unit_ids": [
+      "unit-candidate:b0d96585797b33aabb5069e8f166a6ce61016d58",
+      "unit-candidate:eec9eb147e9d6ac006250a58928706d9dc2430da",
+      "unit-candidate:7b13d286465a77890120e4b32d3fbf748af75f27"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:6c0739e4a7eeb7a28aec8c9fe333cb56f994f326",
+    "name": "Bifamiliare - Via C. Goldoni a Jesolo Paese — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Venezia",
+    "comune": "Jesolo",
+    "municipality": "jesolo",
+    "macro_zone": "jesolo",
+    "micro_location": "Jesolo Paese",
+    "location_verification_status": "VERIFIED_TEXT",
+    "location_verification_confidence": 0.9,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:e7483ade1f3110416ae8330025024ce52a846bd3",
+      "listing:3f969a92e5bfa84d15bebe04f274aa2933bf1d3d",
+      "listing:7213cfb1911920c1ae233baca6286ac1875b2210"
+    ],
+    "unit_ids": [
+      "unit-candidate:3e7ba6fd0cbdb252edc7f68ec685da7e5d1b1e18",
+      "unit-candidate:d91494c652f367d5b10eca5ad1f67e581f2c733f",
+      "unit-candidate:e6bc9e9135cef9e53b88f1f3a932d12d31bfa2d3"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:37c833d629b96a459b034075fd93d00f3a75f59a",
+    "name": "Appartamento quadrilocale in centro ad Oderzo — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Treviso",
+    "comune": "Treviso",
+    "municipality": "treviso",
+    "macro_zone": "treviso",
+    "micro_location": null,
+    "location_verification_status": "UNVERIFIED",
+    "location_verification_confidence": 0.0,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:32cea0aa0ee67e36b564f5b283447d0fa21ce20e",
+      "listing:9a5998ecc6a6d52ef27847ddcd9d46b3c19de773",
+      "listing:2c5a6bfec16b44b80476aab4a591c54d6d78c025"
+    ],
+    "unit_ids": [
+      "unit-candidate:5b83b718073825bfe2c8cfc6070270dead917540",
+      "unit-candidate:65dae6de72019b196fd5b5f752ec2aa932d0b1f8",
+      "unit-candidate:597c69ec79486cdb15d5f6b8afb6e2aaa9bbda79"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:3717b0505c982662f50728f21269a4104aa3e148",
+    "name": "Villa trifamiliare di testa a Oderzo (Treviso) — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Treviso",
+    "comune": "Treviso",
+    "municipality": "treviso",
+    "macro_zone": "treviso",
+    "micro_location": null,
+    "location_verification_status": "UNVERIFIED",
+    "location_verification_confidence": 0.0,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:4850c36e4f18d54d0ca977cb8888cd6aefeb2ca1",
+      "listing:a0f212c476880527bf754539a5af8304f5df2a7f",
+      "listing:f84f8d9b3fcb5bb77ade0c4511c6b76ca78079af"
+    ],
+    "unit_ids": [
+      "unit-candidate:6ebecc7adbc3876e688683d9dd88aa864cd7cede",
+      "unit-candidate:1fc7ad5302db5c9ee4d21d4190def858a8744245",
+      "unit-candidate:6d8d76d02d3425dfe4c1a559b279be654484af1a"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:865793ffc7948cec2139965094f47846d654b96d",
+    "name": "Appartamento con Giardino Privato in Residence con Piscina a Caorle — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Venezia",
+    "comune": "Caorle",
+    "municipality": "caorle",
+    "macro_zone": "caorle",
+    "micro_location": null,
+    "location_verification_status": "UNVERIFIED",
+    "location_verification_confidence": 0.0,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:eda6364c65a6abfd57090ab8be26b40039643efc",
+      "listing:f154e322306591704f249f516a17eef1447ba04c",
+      "listing:a8834ffd9ec0d48e217f0f4ee80742c6ce4cb887"
+    ],
+    "unit_ids": [
+      "unit-candidate:afcdd591ab7da10597956e0db1f34a7a2f19c1e5",
+      "unit-candidate:6c65f30c0c75daa1d6b369315bdf2b780d0fc88b",
+      "unit-candidate:d5e035738322836384c96d4827bdac3ce7ec4a95"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:019c5fd22681df5071fde5be912046615c409844",
+    "name": "Moderno",
+    "region": "Veneto",
+    "province": "Venezia",
+    "comune": "San Donà di Piave",
+    "municipality": "san-dona-di-piave",
+    "macro_zone": "san-dona-di-piave",
+    "micro_location": null,
+    "location_verification_status": "UNVERIFIED",
+    "location_verification_confidence": 0.0,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:a44abefc709666e36b10c35fa63fd0acad26e713",
+      "listing:570e5d028a26245b78825dc3aff82732db64c27c",
+      "listing:01f90136116ea4490121d5e5801737513c405f75"
+    ],
+    "unit_ids": [
+      "unit-candidate:c62fb63bac849fb35b5f3b89ab30d1bf53ce97aa",
+      "unit-candidate:d2cfdfa4f13617453c7b2dc06421bfe765135157",
+      "unit-candidate:c8eae5a084cdab924a159778c57d95d93ae3532b"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:a135aacd3c70e4f0bba6bb24c985d132f1054fe6",
+    "name": "Appartamenti Trilocali Ristrutturati a Mansuè (Treviso) — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Treviso",
+    "comune": "Treviso",
+    "municipality": "treviso",
+    "macro_zone": "treviso",
+    "micro_location": null,
+    "location_verification_status": "UNVERIFIED",
+    "location_verification_confidence": 0.0,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:ff3565661059f939e006508423576aeb69f54693",
+      "listing:c5d09343bbe1c9aa51c4a83c14d0ce4fe579019d",
+      "listing:8ccb19df724145b7a29bd952c0aabef1b17c686f"
+    ],
+    "unit_ids": [
+      "unit-candidate:6a3d8dc31f7c0134197d4f90eb799305b903808d",
+      "unit-candidate:00bf83d0d2646a031e7e4024976eaee79d03a67f",
+      "unit-candidate:782aa0ab084b437bf98f12a1048c0d60542a7d47"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  },
+  {
+    "project_id": "candidate-project:091e92256e50a1e11af74e89456d2050b3eaaf7a",
+    "name": "Hotel in Caorle — JBC Immobiliare",
+    "region": "Veneto",
+    "province": "Venezia",
+    "comune": "Caorle",
+    "municipality": "caorle",
+    "macro_zone": "caorle",
+    "micro_location": null,
+    "location_verification_status": "UNVERIFIED",
+    "location_verification_confidence": 0.0,
+    "sources": [
+      "jbc_direct"
+    ],
+    "listing_ids": [
+      "listing:cc84b8847478379e942142471ae520147c20575b",
+      "listing:5b1eafb77231e58ae46565222161515390817758"
+    ],
+    "unit_ids": [
+      "unit-candidate:b4d273e8b11cc5b1d9ac64b509d7c161fd8a18b1",
+      "unit-candidate:044df72c9710beb3967a32e7ea54ed52a5abf08e"
+    ],
+    "first_seen": "2026-10-26T12:25:51Z",
+    "last_seen": "2026-10-26T12:25:51Z"
+  }
+]
