@@ -207,10 +207,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/4848903-nuovo-quadrilocale-con-piscina-jesolo-lido",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 312000,
+          "eur_m2": 3120,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/4848903-nuovo-quadrilocale-con-piscina-jesolo-lido",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:f0cf685aa38d0bd95312cc7c521b59fcea8ae955": {
       "observations": [
@@ -237,10 +245,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/4900974-nuovo-quadrilocale-fronte-mare-a-jesolo",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 357000,
+          "eur_m2": 3570,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/4900974-nuovo-quadrilocale-fronte-mare-a-jesolo",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:f6896b1d4284ffa6cc1ea160e99f329216d85311": {
       "observations": [
@@ -267,10 +283,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/4994605-nuovo-trilocale-fronte-mare-a-jesolo-lido",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 512000,
+          "eur_m2": 5689,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/4994605-nuovo-trilocale-fronte-mare-a-jesolo-lido",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:b5c425b053bcf01c506017cf77bbe06f2a121864": {
       "observations": [
@@ -297,10 +321,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/4994664-nuovo-trilocale-con-piscina-fronte-mare-a-jesolo",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 482000,
+          "eur_m2": 5356,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/4994664-nuovo-trilocale-con-piscina-fronte-mare-a-jesolo",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:5eceb0b02579d2bb46719f7b39346d033676d3d1": {
       "observations": [
@@ -327,10 +359,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/4994671-nuova-costruzione-trilocale-fronte-mare-a-jesolo-lido",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 502000,
+          "eur_m2": 5578,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/4994671-nuova-costruzione-trilocale-fronte-mare-a-jesolo-lido",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:e99085c718679af4e36c0d9c13f8cc8aa4625f61": {
       "observations": [
@@ -357,10 +397,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/4994676-quadrilocale-con-piscina-nuova-costruzione-fronte-mare-a-jesolo",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 477000,
+          "eur_m2": 4770,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/4994676-quadrilocale-con-piscina-nuova-costruzione-fronte-mare-a-jesolo",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:e5c4cd2ae7d893ae24c524bb9b24536d1494ea63": {
       "observations": [
@@ -387,10 +435,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/4996267-villa-moderna-con-piscina-jesolo-paese",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 590000,
+          "eur_m2": 2950,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/4996267-villa-moderna-con-piscina-jesolo-paese",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:258f81683cc342bb72ec97b564e3884223d322cf": {
       "observations": [
@@ -417,10 +473,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/5104735-trilocali-di-nuova-costruzione-con-piscina-a-caorle",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 329000,
+          "eur_m2": 3964,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/5104735-trilocali-di-nuova-costruzione-con-piscina-a-caorle",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:15f87a6b5b3668ba24aec09f8ed4bbd18fd8fec2": {
       "observations": [
@@ -447,10 +511,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/5107567-trilocale-di-nuova-costruzione-vista-mare-a-caorle",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 336000,
+          "eur_m2": 3907,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/5107567-trilocale-di-nuova-costruzione-vista-mare-a-caorle",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:08e40b328ac2467bd9fa762540a9bdafb1615689": {
       "observations": [
@@ -477,10 +549,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/5114287-nuovo-bilocale-in-residence-al-lido-altanea-a-caorle",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 246000,
+          "eur_m2": 3905,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/5114287-nuovo-bilocale-in-residence-al-lido-altanea-a-caorle",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:5299831fb0e4bd3a4dfd8ad14a80006543c57fa5": {
       "observations": [
@@ -507,10 +587,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/5114397-nuovo-bilocale-piano-terra-con-giardino-residence-al-lido-altanea",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 255000,
+          "eur_m2": 3984,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/5114397-nuovo-bilocale-piano-terra-con-giardino-residence-al-lido-altanea",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:7b10dc092b374faf6928d237966d616e4b878120": {
       "observations": [
@@ -537,10 +625,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/5117637-nuovo-trilocale-con-giardino-esclusivo-residence-altanea-a-caorle",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 418000,
+          "eur_m2": 4019,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/5117637-nuovo-trilocale-con-giardino-esclusivo-residence-altanea-a-caorle",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:422022d3490fa3d14e305903fe065148c58c7ec3": {
       "observations": [
@@ -567,10 +663,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/4834359-bifamiliari-di-nuova-costruzione-a-cessalto-tv",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 312000,
+          "eur_m2": 2229,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/4834359-bifamiliari-di-nuova-costruzione-a-cessalto-tv",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:04c3aa0640b1abff0bc34c0d7286c98fd649001e": {
       "observations": [
@@ -597,10 +701,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/4851238-quadrilocale-in-vendita-a-san-biagio-di-callalta-treviso",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 325000,
+          "eur_m2": 2955,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/4851238-quadrilocale-in-vendita-a-san-biagio-di-callalta-treviso",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:81c0d6dd40ab3ed3d96096d31f25859b49c849c6": {
       "observations": [
@@ -627,10 +739,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/4997755-appartamento-di-nuova-costruzione-con-finiture-di-pregio-a-mansue",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 335000,
+          "eur_m2": 3045,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/4997755-appartamento-di-nuova-costruzione-con-finiture-di-pregio-a-mansue",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:a7e556da87304fa745b5aee5d30900f26819553c": {
       "observations": [
@@ -657,10 +777,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/5105166-trilocale-di-nuova-costruzione-a-caorle-venezia",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 396000,
+          "eur_m2": 4000,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/5105166-trilocale-di-nuova-costruzione-a-caorle-venezia",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:931c58e2ed38d34bf92f51af8fca00785b654b43": {
       "observations": [
@@ -687,10 +815,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/5131383-quadrilocale-di-nuova-costruzione-a-oderzo-treviso",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 490000,
+          "eur_m2": 3475,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/5131383-quadrilocale-di-nuova-costruzione-a-oderzo-treviso",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:b6378bfa91d93c855d2dac73b1b138bef9de38b9": {
       "observations": [
@@ -717,10 +853,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/5158940-villette-a-schiera-di-nuova-costruzione-a-oderzo",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 390000,
+          "eur_m2": 2167,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/5158940-villette-a-schiera-di-nuova-costruzione-a-oderzo",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:713a94d440ddd2566bd10b1c91329604bf815c25": {
       "observations": [
@@ -747,10 +891,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/5192338-nuovi-appartamenti-trilocali-a-jesolo-paese",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 259000,
+          "eur_m2": 3047,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/5192338-nuovi-appartamenti-trilocali-a-jesolo-paese",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:9e32007e7a956e72187af2ba222b47019b7a2f61": {
       "observations": [
@@ -777,10 +929,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/5099851-nuove-villette-indipendenti-ed-esclusive-a-fossalta-di-piave",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 320000,
+          "eur_m2": 2286,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/5099851-nuove-villette-indipendenti-ed-esclusive-a-fossalta-di-piave",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:b8bdd1f101f8b4a223e4bffeb53512b86a400965": {
       "observations": [
@@ -807,10 +967,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/5192390-nuova-bifamiliare-a-jesolo-paese",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 430000,
+          "eur_m2": null,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/5192390-nuova-bifamiliare-a-jesolo-paese",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:ed2d41b1dbf24c1e4929032de3d85e5668572720": {
       "observations": [
@@ -837,10 +1005,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/5195075-aurea-living-la-tua-serenita-nel-verde-a-noventa-di-piave",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 420000,
+          "eur_m2": 3111,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/5195075-aurea-living-la-tua-serenita-nel-verde-a-noventa-di-piave",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:1b711bf00da19ba0a51ddc55102c431675a0886a": {
       "observations": [
@@ -867,10 +1043,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/5197356-nuovi-quadrilocali-a-san-dona-di-piave",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 288000,
+          "eur_m2": 2504,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/5197356-nuovi-quadrilocali-a-san-dona-di-piave",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:e6afe256d9df557f8c8ff38f855d9d08064bd133": {
       "observations": [
@@ -897,10 +1081,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/4613671-appartamento-bilocale-al-piano-terra-a-jesolo",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 310000,
+          "eur_m2": 6200,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/4613671-appartamento-bilocale-al-piano-terra-a-jesolo",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:f618b8af5f725400e22529cbe6e2b735e97930a5": {
       "observations": [
@@ -927,10 +1119,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/4624243-piano-terra-esclusivo-oasi-con-piscina-a-jesolo",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 420000,
+          "eur_m2": 5600,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/4624243-piano-terra-esclusivo-oasi-con-piscina-a-jesolo",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:561af97cad8d4ab71834a9331e795a1a25cbb703": {
       "observations": [
@@ -957,10 +1157,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/4989068-casa-singola-con-giardino-a-jesolo-lido",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 550000,
+          "eur_m2": 4583,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/4989068-casa-singola-con-giardino-a-jesolo-lido",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:c4f4304273fe392fbbf1b891418959cc06a25e27": {
       "observations": [
@@ -987,10 +1195,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/5026671-bilocale-a-due-passi-dal-mare-a-jesolo",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 210000,
+          "eur_m2": 4200,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/5026671-bilocale-a-due-passi-dal-mare-a-jesolo",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:7bcc0e72292b0f23cc19560b1b1ecabbce566f2e": {
       "observations": [
@@ -1017,10 +1233,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/5029091-appartamenti-trilocali-con-terrazza-o-giardino-privato-a-jesolo",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 375000,
+          "eur_m2": 4167,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/5029091-appartamenti-trilocali-con-terrazza-o-giardino-privato-a-jesolo",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:000daac29707a24e7e84e856b4e7c18eeea99774": {
       "observations": [
@@ -1047,10 +1271,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/5029566-appartamento-quadrilocale-con-solarium-a-jesolo-lido",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 325000,
+          "eur_m2": 3250,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/5029566-appartamento-quadrilocale-con-solarium-a-jesolo-lido",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:358262be390cd10d7445e8e64376191de2ce35df": {
       "observations": [
@@ -1077,10 +1309,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/5034046-appartamento-di-nuova-costruzione-con-vista-panoramica-a-jesolo-lido",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 790000,
+          "eur_m2": 4938,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/5034046-appartamento-di-nuova-costruzione-con-vista-panoramica-a-jesolo-lido",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:5c82cc57e6202add10b1f5a352270bf7eed37953": {
       "observations": [
@@ -1107,10 +1347,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/5034514-attico-con-solarium-a-jesolo-lido",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 1300000,
+          "eur_m2": 6500,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/5034514-attico-con-solarium-a-jesolo-lido",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:8793350f06c0a55bb5416b1bcc21c66ee7bf7397": {
       "observations": [
@@ -1137,10 +1385,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/5044780-appartamento-metrature-importanti-lido-di-jesolo",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 315000,
+          "eur_m2": 2625,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/5044780-appartamento-metrature-importanti-lido-di-jesolo",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:1e397b7f8f2641c6d16f6ef0dc20855a2b7bed60": {
       "observations": [
@@ -1167,10 +1423,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/5098853-appartamento-trilocale-con-terrazzo-abitabile",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 270000,
+          "eur_m2": 3000,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/5098853-appartamento-trilocale-con-terrazzo-abitabile",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:4e975ea6ad85180b473131aaa6855d1eba5d9f26": {
       "observations": [
@@ -1197,10 +1461,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/5107540-nuovo-trilocale-in-residence-al-lido-altanea",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 323000,
+          "eur_m2": 3892,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/5107540-nuovo-trilocale-in-residence-al-lido-altanea",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:22dd315f93aace44006187e0fcc4f538161e1069": {
       "observations": [
@@ -1227,10 +1499,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/5107738-nuovo-appartamento-trilocale-con-terrazzo-vivibile",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 335000,
+          "eur_m2": 3350,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/5107738-nuovo-appartamento-trilocale-con-terrazzo-vivibile",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:544ee8588a9b28db2f3c735f8a43c0aec324876a": {
       "observations": [
@@ -1257,10 +1537,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/5111406-esclusiva-villetta-di-testa-nel-cuore-del-golf-jesolo-village",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 419000,
+          "eur_m2": 3492,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/5111406-esclusiva-villetta-di-testa-nel-cuore-del-golf-jesolo-village",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:13f15b9fd6705374f10145bee520f530b7e969b5": {
       "observations": [
@@ -1287,10 +1575,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/5113013-appartamento-trilocale-vista-mare-a-jesolo-lido",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 465000,
+          "eur_m2": 6200,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/5113013-appartamento-trilocale-vista-mare-a-jesolo-lido",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:0261fb0b94c2f14d1686573d9fe3a654bf5bc0bf": {
       "observations": [
@@ -1317,10 +1613,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/5124819-spazioso-quadrilocale-a-jesolo-paese",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 200000,
+          "eur_m2": 2000,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/5124819-spazioso-quadrilocale-a-jesolo-paese",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:f46fc747b875ca2517f203d9b02fabfbb958b811": {
       "observations": [
@@ -1347,10 +1651,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/5124874-trilocale-con-giardino-fossalta-di-piave",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 145000,
+          "eur_m2": 1611,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/5124874-trilocale-con-giardino-fossalta-di-piave",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:79fb035e68d4cefff7945fc87db96a60fcb9688f": {
       "observations": [
@@ -1377,10 +1689,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/5126250-terreni-campana-nuove-opportunita-a-jesolo-paese",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 154000,
+          "eur_m2": 205,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/5126250-terreni-campana-nuove-opportunita-a-jesolo-paese",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:192168b65f00454ef48844c0bcf970886dee8abd": {
       "observations": [
@@ -1407,10 +1727,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/5127858-merville-casa-nel-parco",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 1050000,
+          "eur_m2": 8750,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/5127858-merville-casa-nel-parco",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:171c3cec038f22ee2a2946e37d54adb612902fc4": {
       "observations": [
@@ -1437,10 +1765,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/4435952-villa-storica-in-centro-a-motta-di-livenza",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 425000,
+          "eur_m2": 1184,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/4435952-villa-storica-in-centro-a-motta-di-livenza",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:0b727443869e2147a505261a88e5eab2a05acee8": {
       "observations": [
@@ -1467,10 +1803,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/4451729-vendi-il-tuo-sogno-bar-gelateria-in-posizione-strategica-a-cessalto",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 200000,
+          "eur_m2": 1667,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/4451729-vendi-il-tuo-sogno-bar-gelateria-in-posizione-strategica-a-cessalto",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:fb272a9171f2cd9e92904c780d0511fb537bc15e": {
       "observations": [
@@ -1497,10 +1841,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/4626005-appartamento-duplex-in-centro-a-motta-di-livenza",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 180000,
+          "eur_m2": 1500,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/4626005-appartamento-duplex-in-centro-a-motta-di-livenza",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:1227e8a946dec431441d60ec811b0add93468497": {
       "observations": [
@@ -1527,10 +1879,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/4638250-villa-di-design-con-piscina-a-salgareda",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 745000,
+          "eur_m2": 2980,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/4638250-villa-di-design-con-piscina-a-salgareda",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:fac81b340d3bacb39cddabf1e2a79d26a4253feb": {
       "observations": [
@@ -1557,10 +1917,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/4646427-elegante-bifamiliare-a-oderzo-modernita-e-comfort-nel-verde",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 620000,
+          "eur_m2": 2952,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/4646427-elegante-bifamiliare-a-oderzo-modernita-e-comfort-nel-verde",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:fc1ab3c441a4098a8c31231e1fcc390a31b9abe4": {
       "observations": [
@@ -1587,10 +1955,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/4789843-bifamiliare-in-stile-liberty-con-ampio-giardino-a-ponte-di-piave-treviso",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 210000,
+          "eur_m2": 968,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/4789843-bifamiliare-in-stile-liberty-con-ampio-giardino-a-ponte-di-piave-treviso",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:e3acb35813b4651f2f4fe96eebcb1a0f31754a7e": {
       "observations": [
@@ -1617,10 +1993,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/4801126-immobili-di-prossima-realizzazione-a-godega-di-sant-urbano",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 325000,
+          "eur_m2": 2407,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/4801126-immobili-di-prossima-realizzazione-a-godega-di-sant-urbano",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:4485f583a061f0ce5e800e03411f578d04385bcb": {
       "observations": [
@@ -1647,10 +2031,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/4807160-casolare-in-vendita-a-gorgo-al-monticano-treviso",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 165000,
+          "eur_m2": 465,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/4807160-casolare-in-vendita-a-gorgo-al-monticano-treviso",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:ddf256f65d07e975136d87d45da917ded364c938": {
       "observations": [
@@ -1677,10 +2069,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/4831494-attico-in-centro-ad-oderzo",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 695000,
+          "eur_m2": 1712,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/4831494-attico-in-centro-ad-oderzo",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:50da1dfe4812a5cf0d441513182324402abdbf77": {
       "observations": [
@@ -1707,10 +2107,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/4831590-villa-in-bioedilizia-stile-rustico-moderno",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 448000,
+          "eur_m2": 2422,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/4831590-villa-in-bioedilizia-stile-rustico-moderno",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:c1bf661e44303b26834d733926532e43ff35f184": {
       "observations": [
@@ -1737,10 +2145,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/4835899-terreno-agricolo-in-vendita-a-salgareda-treviso",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 55000,
+          "eur_m2": null,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/4835899-terreno-agricolo-in-vendita-a-salgareda-treviso",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:ceb40dfdccb6c061e3e2ec2602e81b8c151c1327": {
       "observations": [
@@ -1767,10 +2183,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/4860387-villa-singola-con-piscina-a-chiarano-treviso",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 398000,
+          "eur_m2": 1421,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/4860387-villa-singola-con-piscina-a-chiarano-treviso",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:d2a14947e419b92c776eddbe51ba01f1616f7fa0": {
       "observations": [
@@ -1797,10 +2221,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/4864278-appartamento-in-palazzo-storico",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 690000,
+          "eur_m2": 2706,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/4864278-appartamento-in-palazzo-storico",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:5571aa53a174c8b32ee031944c050add927028ba": {
       "observations": [
@@ -1827,10 +2259,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/4902864-bifamiliare-a-ormelle",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 245000,
+          "eur_m2": 942,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/4902864-bifamiliare-a-ormelle",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:03b6d19522ef288b287912dde7ae79c2240d449c": {
       "observations": [
@@ -1857,10 +2297,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/4997254-casa-singola-ad-ormelle-treviso",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 185000,
+          "eur_m2": 487,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/4997254-casa-singola-ad-ormelle-treviso",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:4cd1d9e8d96559481c1f3474ff767717aade9bac": {
       "observations": [
@@ -1887,10 +2335,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/5034816-casa-singola-a-oderzo-treviso",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 205000,
+          "eur_m2": 1694,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/5034816-casa-singola-a-oderzo-treviso",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:e72ec2a7bfa2aee7f0bc822d1175874fe5c957de": {
       "observations": [
@@ -1917,10 +2373,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/5095632-casa-singola-a-fossalta-di-portogruaro",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 145000,
+          "eur_m2": 659,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/5095632-casa-singola-a-fossalta-di-portogruaro",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:adcd29a56875fae5b665d4beb9f8033ec61133de": {
       "observations": [
@@ -1947,10 +2411,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/5101293-posto-auto-a-oderzo-treviso",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 20000,
+          "eur_m2": null,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/5101293-posto-auto-a-oderzo-treviso",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:75c5a4a0ccc65893a9fe73f2a378c5a30cdb7dc1": {
       "observations": [
@@ -1977,10 +2449,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/5110322-villetta-a-schiera-a-porto-santa-margherita-venezia",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 369000,
+          "eur_m2": 4341,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/5110322-villetta-a-schiera-a-porto-santa-margherita-venezia",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:7180a4fa0e5b37ea8e770704829b704723d53744": {
       "observations": [
@@ -2007,10 +2487,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/5124858-quadrilocale-ristrutturato-a-oderzo-treviso",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 365000,
+          "eur_m2": 2645,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/5124858-quadrilocale-ristrutturato-a-oderzo-treviso",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:919f61451ec3dac1c681fbf4bf0a95bb6d34526f": {
       "observations": [
@@ -2037,10 +2525,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/5125856-attivita-commerciale-a-mansue-treviso",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 85000,
+          "eur_m2": 1214,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/5125856-attivita-commerciale-a-mansue-treviso",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:8bcb7e972b6b7474378738e2238bf8349fb324a7": {
       "observations": [
@@ -2067,10 +2563,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/5132289-quadrilocale-in-centro-a-oderzo-treviso",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 450000,
+          "eur_m2": 2866,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/5132289-quadrilocale-in-centro-a-oderzo-treviso",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:2c39bea7a4677a17b10488b475434f2c325b919b": {
       "observations": [
@@ -2097,10 +2601,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/5158090-casa-d-epoca-terra-cielo-a-oderzo",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 195000,
+          "eur_m2": 1048,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/5158090-casa-d-epoca-terra-cielo-a-oderzo",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:09a25bc1a5ac49f7e7f8d07a9d3080ece1224365": {
       "observations": [
@@ -2127,10 +2639,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/5099423-cessione-ristorante-attivita-avviata-nel-cuore-della-pineta-di-jesolo",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 215000,
+          "eur_m2": 717,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/5099423-cessione-ristorante-attivita-avviata-nel-cuore-della-pineta-di-jesolo",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:ed691a680a5ccae18f92d753367e3fc00cf56b24": {
       "observations": [
@@ -2157,10 +2677,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/5134814-ampia-bifamiliare-a-san-polo-di-piave-comfort-e-stile-in-posizione-centrale",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 205000,
+          "eur_m2": 981,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/5134814-ampia-bifamiliare-a-san-polo-di-piave-comfort-e-stile-in-posizione-centrale",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:a990c5022736a37e531eeef3ef36bde0742b7e58": {
       "observations": [
@@ -2187,10 +2715,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/5160420-casa-quadrifamiliare-centrale-giardino-a-motta-di-livenza",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 240000,
+          "eur_m2": 1412,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/5160420-casa-quadrifamiliare-centrale-giardino-a-motta-di-livenza",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:a4f9ada836f95c03acfa41b6a2713a860984103a": {
       "observations": [
@@ -2217,10 +2753,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/5166320-trilocale-palms-edition-a-jesolo-lido",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 460000,
+          "eur_m2": 5610,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/5166320-trilocale-palms-edition-a-jesolo-lido",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:e1b7109aa5de37bb3c32af70588083cfa40a3415": {
       "observations": [
@@ -2247,10 +2791,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/5160327-attico-esclusivo-con-piscina-privata-e-solarium-panoramico-a-jesolo",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 630000,
+          "eur_m2": 4315,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/5160327-attico-esclusivo-con-piscina-privata-e-solarium-panoramico-a-jesolo",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:005a5d4e02caa3ed90e545abe6f9fd6c87679f01": {
       "observations": [
@@ -2277,10 +2829,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/5192164-appartamento-con-ingresso-indipendente",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 189000,
+          "eur_m2": 1853,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/5192164-appartamento-con-ingresso-indipendente",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:32cea0aa0ee67e36b564f5b283447d0fa21ce20e": {
       "observations": [
@@ -2307,10 +2867,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/5187078-appartamento-quadrilocale-in-centro-ad-oderzo",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 280000,
+          "eur_m2": 2545,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/5187078-appartamento-quadrilocale-in-centro-ad-oderzo",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:4850c36e4f18d54d0ca977cb8888cd6aefeb2ca1": {
       "observations": [
@@ -2337,10 +2905,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/5189911-villa-trifamiliare-di-testa-a-oderzo-treviso",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 420000,
+          "eur_m2": 2154,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/5189911-villa-trifamiliare-di-testa-a-oderzo-treviso",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:eda6364c65a6abfd57090ab8be26b40039643efc": {
       "observations": [
@@ -2367,10 +2943,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/5191561-appartamento-con-giardino-privato-in-residence-con-piscina-a-caorle",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 230000,
+          "eur_m2": 2875,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/5191561-appartamento-con-giardino-privato-in-residence-con-piscina-a-caorle",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:a44abefc709666e36b10c35fa63fd0acad26e713": {
       "observations": [
@@ -2427,10 +3011,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/5196763-appartamenti-trilocali-ristrutturati-a-mansue-treviso",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 245000,
+          "eur_m2": 2450,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/5196763-appartamenti-trilocali-ristrutturati-a-mansue-treviso",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:71546bbc2aabcfd722780065d3a841f9b69cdd6f": {
       "observations": [
@@ -2457,10 +3049,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/4848903-nuovo-quadrilocale-con-piscina-jesolo-lido",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 312000,
+          "eur_m2": 3120,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/4848903-nuovo-quadrilocale-con-piscina-jesolo-lido",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:bc192f6f7d5228179355bd18c5e6c7720b1e102f": {
       "observations": [
@@ -2487,10 +3087,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/4900974-nuovo-quadrilocale-fronte-mare-a-jesolo",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 357000,
+          "eur_m2": 3570,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/4900974-nuovo-quadrilocale-fronte-mare-a-jesolo",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:0e91e7a872272b8c63e760c2d50ab88ccfff206b": {
       "observations": [
@@ -2517,10 +3125,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/4983758-nuova-bifamiliare-a-ponte-crepaldo",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 345000,
+          "eur_m2": 2285,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/4983758-nuova-bifamiliare-a-ponte-crepaldo",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:a33d08cbefe7eba21960de6b61a6de3b3cbbaa0e": {
       "observations": [
@@ -2547,10 +3163,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/4994605-nuovo-trilocale-fronte-mare-a-jesolo-lido",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 512000,
+          "eur_m2": 5689,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/4994605-nuovo-trilocale-fronte-mare-a-jesolo-lido",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:202a632d61bc90f373937e660e0eae23ba203b1e": {
       "observations": [
@@ -2577,10 +3201,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/4994664-nuovo-trilocale-con-piscina-fronte-mare-a-jesolo",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 482000,
+          "eur_m2": 5356,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/4994664-nuovo-trilocale-con-piscina-fronte-mare-a-jesolo",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:7ce541f1d1c91214daf47e2b39eb4f3ab230852f": {
       "observations": [
@@ -2607,10 +3239,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/4994671-nuova-costruzione-trilocale-fronte-mare-a-jesolo-lido",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 502000,
+          "eur_m2": 5578,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/4994671-nuova-costruzione-trilocale-fronte-mare-a-jesolo-lido",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:72ee0e041d0b7a75ba74450823f609547782f918": {
       "observations": [
@@ -2637,10 +3277,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/4994676-quadrilocale-con-piscina-nuova-costruzione-fronte-mare-a-jesolo",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 477000,
+          "eur_m2": 4770,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/4994676-quadrilocale-con-piscina-nuova-costruzione-fronte-mare-a-jesolo",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:a3944d608d02c08fb47e33c4e5a55dbb4969bed6": {
       "observations": [
@@ -2667,10 +3315,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/4996267-villa-moderna-con-piscina-jesolo-paese",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 590000,
+          "eur_m2": 2950,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/4996267-villa-moderna-con-piscina-jesolo-paese",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:4ad7659134d7999074bb5caaa5c9f72368282ace": {
       "observations": [
@@ -2697,10 +3353,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/5104735-trilocali-di-nuova-costruzione-con-piscina-a-caorle",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 329000,
+          "eur_m2": 3964,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/5104735-trilocali-di-nuova-costruzione-con-piscina-a-caorle",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:62052f9ba1b1955ccfcd656f3341a7233051b2d8": {
       "observations": [
@@ -2727,10 +3391,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/5107567-trilocale-di-nuova-costruzione-vista-mare-a-caorle",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 336000,
+          "eur_m2": 3907,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/5107567-trilocale-di-nuova-costruzione-vista-mare-a-caorle",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:dec96603a62d98a90a73e9f514a2e5d85a0eeb02": {
       "observations": [
@@ -2757,10 +3429,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/5114287-nuovo-bilocale-in-residence-al-lido-altanea-a-caorle",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 246000,
+          "eur_m2": 3905,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/5114287-nuovo-bilocale-in-residence-al-lido-altanea-a-caorle",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:81187c41379309ebd16b0bf7aad5eba1fc0c4af2": {
       "observations": [
@@ -2787,10 +3467,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/5114397-nuovo-bilocale-piano-terra-con-giardino-residence-al-lido-altanea",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 255000,
+          "eur_m2": 3984,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/5114397-nuovo-bilocale-piano-terra-con-giardino-residence-al-lido-altanea",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:7eee6fc82323cae12fab71a9a3c1b01a7ad25913": {
       "observations": [
@@ -2817,10 +3505,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/5117637-nuovo-trilocale-con-giardino-esclusivo-residence-altanea-a-caorle",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 418000,
+          "eur_m2": 4019,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/5117637-nuovo-trilocale-con-giardino-esclusivo-residence-altanea-a-caorle",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:fa06698b9d84a3d543305b6dd2bbac3b7f878595": {
       "observations": [
@@ -2847,10 +3543,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/4834359-bifamiliari-di-nuova-costruzione-a-cessalto-tv",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 312000,
+          "eur_m2": 2229,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/4834359-bifamiliari-di-nuova-costruzione-a-cessalto-tv",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:c1c2b36e264f49af3bf7fb39b9e10b275f3056c4": {
       "observations": [
@@ -2877,10 +3581,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/4851238-quadrilocale-in-vendita-a-san-biagio-di-callalta-treviso",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 325000,
+          "eur_m2": 2955,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/4851238-quadrilocale-in-vendita-a-san-biagio-di-callalta-treviso",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:5699d3422c8264b916938620a96518c7bc14947f": {
       "observations": [
@@ -2907,10 +3619,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/4997755-appartamento-di-nuova-costruzione-con-finiture-di-pregio-a-mansue",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 335000,
+          "eur_m2": 3045,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/4997755-appartamento-di-nuova-costruzione-con-finiture-di-pregio-a-mansue",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:9fe5ae55040649ae6dba35ea21851f1399a9eabb": {
       "observations": [
@@ -2937,10 +3657,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/5105166-trilocale-di-nuova-costruzione-a-caorle-venezia",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 396000,
+          "eur_m2": 4000,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/5105166-trilocale-di-nuova-costruzione-a-caorle-venezia",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:ab12d61658d372f736267415e0d60ff8ddc96a64": {
       "observations": [
@@ -2967,10 +3695,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/5131383-quadrilocale-di-nuova-costruzione-a-oderzo-treviso",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 490000,
+          "eur_m2": 3475,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/5131383-quadrilocale-di-nuova-costruzione-a-oderzo-treviso",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:b6f35a7a47dccbd5b3c93177799fc9f1b9328953": {
       "observations": [
@@ -2997,10 +3733,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/5158940-villette-a-schiera-di-nuova-costruzione-a-oderzo",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 390000,
+          "eur_m2": 2167,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/5158940-villette-a-schiera-di-nuova-costruzione-a-oderzo",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:2fbffc941f5229b5682d32f9f69a2f293282acd1": {
       "observations": [
@@ -3027,10 +3771,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/5192338-nuovi-appartamenti-trilocali-a-jesolo-paese",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 259000,
+          "eur_m2": 3047,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/5192338-nuovi-appartamenti-trilocali-a-jesolo-paese",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:7999db2969330d364c7faa2665f4f8c39f68ac5a": {
       "observations": [
@@ -3057,10 +3809,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/4999608-trifamiliare-nuova-costruzione-noventa-di-piave",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 295000,
+          "eur_m2": 2107,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/4999608-trifamiliare-nuova-costruzione-noventa-di-piave",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:5ac0b893557f82ea1f90b554aeb02b084d4d95e0": {
       "observations": [
@@ -3087,10 +3847,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/5099851-nuove-villette-indipendenti-ed-esclusive-a-fossalta-di-piave",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 320000,
+          "eur_m2": 2286,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/5099851-nuove-villette-indipendenti-ed-esclusive-a-fossalta-di-piave",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:df65254620aa58f145e55d2b4281391b78f86ff9": {
       "observations": [
@@ -3117,10 +3885,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/5192390-nuova-bifamiliare-a-jesolo-paese",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 430000,
+          "eur_m2": null,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/5192390-nuova-bifamiliare-a-jesolo-paese",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:b80eb949bd686d9ffb4bc41f7d6eb386c12acf1d": {
       "observations": [
@@ -3147,10 +3923,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/5195075-aurea-living-la-tua-serenita-nel-verde-a-noventa-di-piave",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 420000,
+          "eur_m2": 3111,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/5195075-aurea-living-la-tua-serenita-nel-verde-a-noventa-di-piave",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:d2699150eafe294b3d9b09d5a33f9a2f8d0daa6a": {
       "observations": [
@@ -3177,10 +3961,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/5197356-nuovi-quadrilocali-a-san-dona-di-piave",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 288000,
+          "eur_m2": 2504,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/5197356-nuovi-quadrilocali-a-san-dona-di-piave",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:4d29518e5f9efa2ca3ac5aeb6e0583d5fd1460f4": {
       "observations": [
@@ -3207,10 +3999,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/4848903-nuovo-quadrilocale-con-piscina-jesolo-lido",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 312000,
+          "eur_m2": 3120,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/4848903-nuovo-quadrilocale-con-piscina-jesolo-lido",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:7e92aa0f2edece73c168896b1935a1ad8c7debbb": {
       "observations": [
@@ -3237,10 +4037,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/4900974-nuovo-quadrilocale-fronte-mare-a-jesolo",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 357000,
+          "eur_m2": 3570,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/4900974-nuovo-quadrilocale-fronte-mare-a-jesolo",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:1c3b82d1c1ac638462f232c6dae85e60427759b1": {
       "observations": [
@@ -3267,10 +4075,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/4983758-nuova-bifamiliare-a-ponte-crepaldo",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 345000,
+          "eur_m2": 2285,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/4983758-nuova-bifamiliare-a-ponte-crepaldo",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:c547d0d41fdf0da919f8c1522a4e24f380771fd8": {
       "observations": [
@@ -3297,10 +4113,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/4994605-nuovo-trilocale-fronte-mare-a-jesolo-lido",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 512000,
+          "eur_m2": 5689,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/4994605-nuovo-trilocale-fronte-mare-a-jesolo-lido",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:716a1d81567d486d35290772ff225b4a67aa7f5d": {
       "observations": [
@@ -3327,10 +4151,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/4994664-nuovo-trilocale-con-piscina-fronte-mare-a-jesolo",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 482000,
+          "eur_m2": 5356,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/4994664-nuovo-trilocale-con-piscina-fronte-mare-a-jesolo",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:a5c7ecbd5dbc2dc926cc55fdc0883913fc79d68f": {
       "observations": [
@@ -3357,10 +4189,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/4994671-nuova-costruzione-trilocale-fronte-mare-a-jesolo-lido",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 502000,
+          "eur_m2": 5578,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/4994671-nuova-costruzione-trilocale-fronte-mare-a-jesolo-lido",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:2f795e8ac9a3921a3bdf3350d58e8fd7152ae6b7": {
       "observations": [
@@ -3387,10 +4227,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/4994676-quadrilocale-con-piscina-nuova-costruzione-fronte-mare-a-jesolo",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 477000,
+          "eur_m2": 4770,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/4994676-quadrilocale-con-piscina-nuova-costruzione-fronte-mare-a-jesolo",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:a467aedaa47d46a6f0ebfc674444ec9791398c91": {
       "observations": [
@@ -3417,10 +4265,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/4996267-villa-moderna-con-piscina-jesolo-paese",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 590000,
+          "eur_m2": 2950,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/4996267-villa-moderna-con-piscina-jesolo-paese",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:114efb6d6844094cbc4baa46ed81edf413028c9b": {
       "observations": [
@@ -3447,10 +4303,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/5104735-trilocali-di-nuova-costruzione-con-piscina-a-caorle",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 329000,
+          "eur_m2": 3964,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/5104735-trilocali-di-nuova-costruzione-con-piscina-a-caorle",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:08525dd3de3bb3404dcf2dc3141ff333c59306fd": {
       "observations": [
@@ -3477,10 +4341,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/5107567-trilocale-di-nuova-costruzione-vista-mare-a-caorle",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 336000,
+          "eur_m2": 3907,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/5107567-trilocale-di-nuova-costruzione-vista-mare-a-caorle",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:99ec3f0a0b4ecb7bc2726459fc255f1491720ed3": {
       "observations": [
@@ -3507,10 +4379,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/5114287-nuovo-bilocale-in-residence-al-lido-altanea-a-caorle",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 246000,
+          "eur_m2": 3905,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/5114287-nuovo-bilocale-in-residence-al-lido-altanea-a-caorle",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:860b5f1cf526688810ce9e118d13a0390bcf48e7": {
       "observations": [
@@ -3537,10 +4417,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/5114397-nuovo-bilocale-piano-terra-con-giardino-residence-al-lido-altanea",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 255000,
+          "eur_m2": 3984,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/5114397-nuovo-bilocale-piano-terra-con-giardino-residence-al-lido-altanea",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:e72533866604d5863395109911f478ce51426de8": {
       "observations": [
@@ -3567,10 +4455,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/4834359-bifamiliari-di-nuova-costruzione-a-cessalto-tv",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 312000,
+          "eur_m2": 2229,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/4834359-bifamiliari-di-nuova-costruzione-a-cessalto-tv",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:23c1ab52a17d65d8f07df654a9b74b206485e5bc": {
       "observations": [
@@ -3597,10 +4493,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/4851238-quadrilocale-in-vendita-a-san-biagio-di-callalta-treviso",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 325000,
+          "eur_m2": 2955,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/4851238-quadrilocale-in-vendita-a-san-biagio-di-callalta-treviso",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:2be5ec65991c5e88f832821edd190a5cd3bcd79b": {
       "observations": [
@@ -3627,10 +4531,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/4997755-appartamento-di-nuova-costruzione-con-finiture-di-pregio-a-mansue",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 335000,
+          "eur_m2": 3045,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/4997755-appartamento-di-nuova-costruzione-con-finiture-di-pregio-a-mansue",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:bfe5cf884b42f3c290383d924eb7053996acfebe": {
       "observations": [
@@ -3657,10 +4569,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/5105166-trilocale-di-nuova-costruzione-a-caorle-venezia",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 396000,
+          "eur_m2": 4000,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/5105166-trilocale-di-nuova-costruzione-a-caorle-venezia",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:f15f38f7a1a7e7d55971b9af392cb15a0b40d8a1": {
       "observations": [
@@ -3687,10 +4607,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/5131383-quadrilocale-di-nuova-costruzione-a-oderzo-treviso",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 490000,
+          "eur_m2": 3475,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/5131383-quadrilocale-di-nuova-costruzione-a-oderzo-treviso",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:3df8916c53e576065ea752851579690d4bfcaf1e": {
       "observations": [
@@ -3717,10 +4645,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/5158940-villette-a-schiera-di-nuova-costruzione-a-oderzo",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 390000,
+          "eur_m2": 2167,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/5158940-villette-a-schiera-di-nuova-costruzione-a-oderzo",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:43b681395ab66cfb9e9c6e921b27f80394a7b538": {
       "observations": [
@@ -3747,10 +4683,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/5192338-nuovi-appartamenti-trilocali-a-jesolo-paese",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 259000,
+          "eur_m2": 3047,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/5192338-nuovi-appartamenti-trilocali-a-jesolo-paese",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:bbb4f7b95a2b8422f036e36cb5a4102770ab75d1": {
       "observations": [
@@ -3777,10 +4721,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/4999608-trifamiliare-nuova-costruzione-noventa-di-piave",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 295000,
+          "eur_m2": 2107,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/4999608-trifamiliare-nuova-costruzione-noventa-di-piave",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:86dd87fbf3be48eea383b5f5cc50ca6ff26bfac1": {
       "observations": [
@@ -3807,10 +4759,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/5192390-nuova-bifamiliare-a-jesolo-paese",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 430000,
+          "eur_m2": null,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/5192390-nuova-bifamiliare-a-jesolo-paese",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:9193517ae16eab75833eb84582ae18555bda9c5a": {
       "observations": [
@@ -3837,10 +4797,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/5195075-aurea-living-la-tua-serenita-nel-verde-a-noventa-di-piave",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 420000,
+          "eur_m2": 3111,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/5195075-aurea-living-la-tua-serenita-nel-verde-a-noventa-di-piave",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:681d7b8d428d945396110c2243cb242f03cc353d": {
       "observations": [
@@ -3867,10 +4835,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/5197356-nuovi-quadrilocali-a-san-dona-di-piave",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 288000,
+          "eur_m2": 2504,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/5197356-nuovi-quadrilocali-a-san-dona-di-piave",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:a7ad4bf8499ea277b50bcb93f4c379913ff9ceab": {
       "observations": [
@@ -3897,10 +4873,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/4624243-piano-terra-esclusivo-oasi-con-piscina-a-jesolo",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 420000,
+          "eur_m2": 5600,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/4624243-piano-terra-esclusivo-oasi-con-piscina-a-jesolo",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:c79a7a814973cac90b63af2a529911b2d6fb0154": {
       "observations": [
@@ -3927,10 +4911,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/4627100-ville-di-prestigio-zona-faro-a-jesolo",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 558000,
+          "eur_m2": 2790,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/4627100-ville-di-prestigio-zona-faro-a-jesolo",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:ef7758b78566ec70f39a016b8603669c247a2b40": {
       "observations": [
@@ -3957,10 +4949,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/4989068-casa-singola-con-giardino-a-jesolo-lido",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 550000,
+          "eur_m2": 4583,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/4989068-casa-singola-con-giardino-a-jesolo-lido",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:843b42a9093d3421e9cd0f34a53631be4503c9c6": {
       "observations": [
@@ -3987,10 +4987,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/5026671-bilocale-a-due-passi-dal-mare-a-jesolo",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 210000,
+          "eur_m2": 4200,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/5026671-bilocale-a-due-passi-dal-mare-a-jesolo",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:f69442acf677c289dc1c6bf8b1138b6b85c2b840": {
       "observations": [
@@ -4017,10 +5025,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/5029091-appartamenti-trilocali-con-terrazza-o-giardino-privato-a-jesolo",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 375000,
+          "eur_m2": 4167,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/5029091-appartamenti-trilocali-con-terrazza-o-giardino-privato-a-jesolo",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:214d0f0799844ade886a634ee48a1cc4ee4fb316": {
       "observations": [
@@ -4047,10 +5063,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/5034046-appartamento-di-nuova-costruzione-con-vista-panoramica-a-jesolo-lido",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 790000,
+          "eur_m2": 4938,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/5034046-appartamento-di-nuova-costruzione-con-vista-panoramica-a-jesolo-lido",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:6a1c13dc0296c51c27a14057f41257099875705e": {
       "observations": [
@@ -4077,10 +5101,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/5034514-attico-con-solarium-a-jesolo-lido",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 1300000,
+          "eur_m2": 6500,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/5034514-attico-con-solarium-a-jesolo-lido",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:36fd9f77a95c23606aeb4034d7a4b9a2c1b8a822": {
       "observations": [
@@ -4107,10 +5139,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/5098853-appartamento-trilocale-con-terrazzo-abitabile",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 270000,
+          "eur_m2": 3000,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/5098853-appartamento-trilocale-con-terrazzo-abitabile",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:d3434be08a7acff938d99af245e5c206570570f2": {
       "observations": [
@@ -4137,10 +5177,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/5107540-nuovo-trilocale-in-residence-al-lido-altanea",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 323000,
+          "eur_m2": 3892,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/5107540-nuovo-trilocale-in-residence-al-lido-altanea",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:d26409733e1a469f043ad428c1661823995ce61c": {
       "observations": [
@@ -4167,10 +5215,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/5107738-nuovo-appartamento-trilocale-con-terrazzo-vivibile",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 335000,
+          "eur_m2": 3350,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/5107738-nuovo-appartamento-trilocale-con-terrazzo-vivibile",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:66e308e2fb731e3b31a81dd944007cb29befbffc": {
       "observations": [
@@ -4197,10 +5253,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/5111406-esclusiva-villetta-di-testa-nel-cuore-del-golf-jesolo-village",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 419000,
+          "eur_m2": 3492,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/5111406-esclusiva-villetta-di-testa-nel-cuore-del-golf-jesolo-village",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:6ec17a3edb877699484fa386bd73becf7feae149": {
       "observations": [
@@ -4227,10 +5291,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/5113013-appartamento-trilocale-vista-mare-a-jesolo-lido",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 465000,
+          "eur_m2": 6200,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/5113013-appartamento-trilocale-vista-mare-a-jesolo-lido",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:90dfe5da25dae74b04917ae3e62dd39f6168feed": {
       "observations": [
@@ -4257,10 +5329,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/5124819-spazioso-quadrilocale-a-jesolo-paese",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 200000,
+          "eur_m2": 2000,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/5124819-spazioso-quadrilocale-a-jesolo-paese",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:d7f792a22bed77fd93785da410ee3998652be31c": {
       "observations": [
@@ -4287,10 +5367,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/5124874-trilocale-con-giardino-fossalta-di-piave",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 145000,
+          "eur_m2": 1611,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/5124874-trilocale-con-giardino-fossalta-di-piave",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:6d8786ed9e48d72f01e67bb6ffc33cece748a356": {
       "observations": [
@@ -4317,10 +5405,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/5126250-terreni-campana-nuove-opportunita-a-jesolo-paese",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 154000,
+          "eur_m2": 205,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/5126250-terreni-campana-nuove-opportunita-a-jesolo-paese",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:85439e5c4a55c86aa549e4f829e2fb4ad3de5640": {
       "observations": [
@@ -4347,10 +5443,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/5127858-merville-casa-nel-parco",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 1050000,
+          "eur_m2": 8750,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/5127858-merville-casa-nel-parco",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:f6b0f8cd049a49893217cafa5c32c648772062c8": {
       "observations": [
@@ -4377,10 +5481,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/4435952-villa-storica-in-centro-a-motta-di-livenza",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 425000,
+          "eur_m2": 1184,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/4435952-villa-storica-in-centro-a-motta-di-livenza",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:3295cab64df92fac9e036010bd452adc370c9c16": {
       "observations": [
@@ -4407,10 +5519,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/4451729-vendi-il-tuo-sogno-bar-gelateria-in-posizione-strategica-a-cessalto",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 200000,
+          "eur_m2": 1667,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/4451729-vendi-il-tuo-sogno-bar-gelateria-in-posizione-strategica-a-cessalto",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:e6d39c4b28d5da1b0a4447d63c46e8316af73a5b": {
       "observations": [
@@ -4437,10 +5557,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/4626005-appartamento-duplex-in-centro-a-motta-di-livenza",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 180000,
+          "eur_m2": 1500,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/4626005-appartamento-duplex-in-centro-a-motta-di-livenza",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:57e01ec8ad733f546ae308246fe9e3d1c162164b": {
       "observations": [
@@ -4467,10 +5595,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/4638250-villa-di-design-con-piscina-a-salgareda",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 745000,
+          "eur_m2": 2980,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/4638250-villa-di-design-con-piscina-a-salgareda",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:38bf4a42f572614a718acd33052702f3f95c3e7a": {
       "observations": [
@@ -4497,10 +5633,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/4646427-elegante-bifamiliare-a-oderzo-modernita-e-comfort-nel-verde",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 620000,
+          "eur_m2": 2952,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/4646427-elegante-bifamiliare-a-oderzo-modernita-e-comfort-nel-verde",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:16baeac76d15ac6dcd2f6b6539edaebcc63aed5e": {
       "observations": [
@@ -4527,10 +5671,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/4789843-bifamiliare-in-stile-liberty-con-ampio-giardino-a-ponte-di-piave-treviso",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 210000,
+          "eur_m2": 968,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/4789843-bifamiliare-in-stile-liberty-con-ampio-giardino-a-ponte-di-piave-treviso",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:b4b5b90b11a18da08b70c4cc3d70057eb3dd6df8": {
       "observations": [
@@ -4557,10 +5709,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/4801126-immobili-di-prossima-realizzazione-a-godega-di-sant-urbano",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 325000,
+          "eur_m2": 2407,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/4801126-immobili-di-prossima-realizzazione-a-godega-di-sant-urbano",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:c1051c03d9a4edba50cf07d7f779fecdc79015c5": {
       "observations": [
@@ -4587,10 +5747,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/4807160-casolare-in-vendita-a-gorgo-al-monticano-treviso",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 165000,
+          "eur_m2": 465,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/4807160-casolare-in-vendita-a-gorgo-al-monticano-treviso",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:e69115f989dabe77cd423b147f34f85acb63a19a": {
       "observations": [
@@ -4617,10 +5785,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/4831494-attico-in-centro-ad-oderzo",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 695000,
+          "eur_m2": 1712,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/4831494-attico-in-centro-ad-oderzo",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:814f2a57ade1f2cc744ecb87ca40d7564ffc71ef": {
       "observations": [
@@ -4647,10 +5823,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/4831590-villa-in-bioedilizia-stile-rustico-moderno",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 448000,
+          "eur_m2": 2422,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/4831590-villa-in-bioedilizia-stile-rustico-moderno",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:8460334ef6f82936fdbe8972292c586e919511ff": {
       "observations": [
@@ -4677,10 +5861,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/4835899-terreno-agricolo-in-vendita-a-salgareda-treviso",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 55000,
+          "eur_m2": 130,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/4835899-terreno-agricolo-in-vendita-a-salgareda-treviso",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:11d4c4b2da4d82c5db67799ad013a38c04c8e32a": {
       "observations": [
@@ -4707,10 +5899,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/4860387-villa-singola-con-piscina-a-chiarano-treviso",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 398000,
+          "eur_m2": 1421,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/4860387-villa-singola-con-piscina-a-chiarano-treviso",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:c39cd29c6cc0bbfe39ec46a30111572a7dd0ca5f": {
       "observations": [
@@ -4737,10 +5937,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/4864278-appartamento-in-palazzo-storico",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 690000,
+          "eur_m2": 2706,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/4864278-appartamento-in-palazzo-storico",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:396f4b2a896b958597c436b30187c641c836db14": {
       "observations": [
@@ -4767,10 +5975,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/4997254-casa-singola-ad-ormelle-treviso",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 185000,
+          "eur_m2": 487,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/4997254-casa-singola-ad-ormelle-treviso",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:f1731b905d7193da79d853de4ab58811fb2bf398": {
       "observations": [
@@ -4797,10 +6013,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/5034816-casa-singola-a-oderzo-treviso",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 205000,
+          "eur_m2": 1694,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/5034816-casa-singola-a-oderzo-treviso",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:82148bf594ef1ea81d4b4dd57a55a7abc9c20956": {
       "observations": [
@@ -4827,10 +6051,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/5095632-casa-singola-a-fossalta-di-portogruaro",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 145000,
+          "eur_m2": 659,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/5095632-casa-singola-a-fossalta-di-portogruaro",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:bfeea59db7cde8ad2f39a1eac5ae65800b02e4c3": {
       "observations": [
@@ -4857,10 +6089,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/5101293-posto-auto-a-oderzo-treviso",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 20000,
+          "eur_m2": null,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/5101293-posto-auto-a-oderzo-treviso",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:3f4799f4a06598aa4ef4d8cb1cdc2725817e2330": {
       "observations": [
@@ -4887,10 +6127,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/5110322-villetta-a-schiera-a-porto-santa-margherita-venezia",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 369000,
+          "eur_m2": 4341,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/5110322-villetta-a-schiera-a-porto-santa-margherita-venezia",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:9edfe289f583b4558d12e4a5b32c68fa33108c04": {
       "observations": [
@@ -4917,10 +6165,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/5120490-quadrilocale-centro-di-oderzo-treviso",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 198000,
+          "eur_m2": 1707,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/5120490-quadrilocale-centro-di-oderzo-treviso",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:c260bde5d4d637926a658d88664da8891aa3e76e": {
       "observations": [
@@ -4947,10 +6203,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/5125856-attivita-commerciale-a-mansue-treviso",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 85000,
+          "eur_m2": 1214,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/5125856-attivita-commerciale-a-mansue-treviso",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:4b9898316eb54895719c6c3f39eff369dfb26d5e": {
       "observations": [
@@ -4977,10 +6241,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/5132289-quadrilocale-in-centro-a-oderzo-treviso",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 450000,
+          "eur_m2": 2866,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/5132289-quadrilocale-in-centro-a-oderzo-treviso",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:57e7f3140418ee66159bf4a4e579312131b80d96": {
       "observations": [
@@ -5007,10 +6279,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/5158090-casa-d-epoca-terra-cielo-a-oderzo",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 195000,
+          "eur_m2": 1048,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/5158090-casa-d-epoca-terra-cielo-a-oderzo",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:608ea758cfe63cea9e104d40b1df29525f49b53f": {
       "observations": [
@@ -5037,10 +6317,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/5099423-cessione-ristorante-attivita-avviata-nel-cuore-della-pineta-di-jesolo",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 215000,
+          "eur_m2": 717,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/5099423-cessione-ristorante-attivita-avviata-nel-cuore-della-pineta-di-jesolo",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:ff48bd3d652427f58303bce491444fcf9f073652": {
       "observations": [
@@ -5067,10 +6355,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/5134814-ampia-bifamiliare-a-san-polo-di-piave-comfort-e-stile-in-posizione-centrale",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 205000,
+          "eur_m2": 981,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/5134814-ampia-bifamiliare-a-san-polo-di-piave-comfort-e-stile-in-posizione-centrale",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:cc9cf91ade9a6c43820706dbf4496e6c40d5efb3": {
       "observations": [
@@ -5097,10 +6393,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/5160420-casa-quadrifamiliare-centrale-giardino-a-motta-di-livenza",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 240000,
+          "eur_m2": 1412,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/5160420-casa-quadrifamiliare-centrale-giardino-a-motta-di-livenza",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:b58b495ff5d827449daa8f314c9124bca3ea3994": {
       "observations": [
@@ -5127,10 +6431,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/5166320-trilocale-palms-edition-a-jesolo-lido",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 460000,
+          "eur_m2": 5610,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/5166320-trilocale-palms-edition-a-jesolo-lido",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:468ba52519e613261b5918620df98683c8928800": {
       "observations": [
@@ -5157,10 +6469,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/5167480-bifamiliare-a-santo-stino-di-livenza",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 370000,
+          "eur_m2": 2056,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/5167480-bifamiliare-a-santo-stino-di-livenza",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:cdfa4e6660caedac2a0fd47e69f86a23edc18b58": {
       "observations": [
@@ -5187,10 +6507,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/5160327-attico-esclusivo-con-piscina-privata-e-solarium-panoramico-a-jesolo",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 630000,
+          "eur_m2": 4315,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/5160327-attico-esclusivo-con-piscina-privata-e-solarium-panoramico-a-jesolo",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:fd917e02362426a3b0346b7f026b5c9ddbb674d6": {
       "observations": [
@@ -5217,10 +6545,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/5192164-appartamento-con-ingresso-indipendente",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 189000,
+          "eur_m2": 1853,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/5192164-appartamento-con-ingresso-indipendente",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:9a5998ecc6a6d52ef27847ddcd9d46b3c19de773": {
       "observations": [
@@ -5247,10 +6583,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/5187078-appartamento-quadrilocale-in-centro-ad-oderzo",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 280000,
+          "eur_m2": 2545,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/5187078-appartamento-quadrilocale-in-centro-ad-oderzo",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:a0f212c476880527bf754539a5af8304f5df2a7f": {
       "observations": [
@@ -5277,10 +6621,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/5189911-villa-trifamiliare-di-testa-a-oderzo-treviso",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 420000,
+          "eur_m2": 2154,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/5189911-villa-trifamiliare-di-testa-a-oderzo-treviso",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:f154e322306591704f249f516a17eef1447ba04c": {
       "observations": [
@@ -5307,10 +6659,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/5191561-appartamento-con-giardino-privato-in-residence-con-piscina-a-caorle",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 230000,
+          "eur_m2": 2875,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/5191561-appartamento-con-giardino-privato-in-residence-con-piscina-a-caorle",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:570e5d028a26245b78825dc3aff82732db64c27c": {
       "observations": [
@@ -5367,10 +6727,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/5196763-appartamenti-trilocali-ristrutturati-a-mansue-treviso",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 245000,
+          "eur_m2": 2450,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/5196763-appartamenti-trilocali-ristrutturati-a-mansue-treviso",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:e63db3fe1f235fbbf5a0b6898468b4007f63901a": {
       "observations": [
@@ -5397,10 +6765,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/4624243-piano-terra-esclusivo-oasi-con-piscina-a-jesolo",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 420000,
+          "eur_m2": 5600,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/4624243-piano-terra-esclusivo-oasi-con-piscina-a-jesolo",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:af97a75bfd6b7cc115f346000d1f8b647826423e": {
       "observations": [
@@ -5427,10 +6803,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/4627100-ville-di-prestigio-zona-faro-a-jesolo",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 558000,
+          "eur_m2": 2790,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/4627100-ville-di-prestigio-zona-faro-a-jesolo",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:803dacb55839ce041c2ca2b22a5d6c296190c599": {
       "observations": [
@@ -5457,10 +6841,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/4989068-casa-singola-con-giardino-a-jesolo-lido",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 550000,
+          "eur_m2": 4583,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/4989068-casa-singola-con-giardino-a-jesolo-lido",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:e4a7df787d0e78390fdf9221902a3396b33107df": {
       "observations": [
@@ -5487,10 +6879,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/5026671-bilocale-a-due-passi-dal-mare-a-jesolo",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 210000,
+          "eur_m2": 4200,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/5026671-bilocale-a-due-passi-dal-mare-a-jesolo",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:64718c09e225448bafe5b9ce077cd8418048965d": {
       "observations": [
@@ -5517,10 +6917,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/5029091-appartamenti-trilocali-con-terrazza-o-giardino-privato-a-jesolo",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 375000,
+          "eur_m2": 4167,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/5029091-appartamenti-trilocali-con-terrazza-o-giardino-privato-a-jesolo",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:dc908b959f28f030e16d72d45013210ce10466dd": {
       "observations": [
@@ -5547,10 +6955,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/5034046-appartamento-di-nuova-costruzione-con-vista-panoramica-a-jesolo-lido",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 790000,
+          "eur_m2": 4938,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/5034046-appartamento-di-nuova-costruzione-con-vista-panoramica-a-jesolo-lido",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:def93c562da3e022956420eedfbdde0ab49db81b": {
       "observations": [
@@ -5577,10 +6993,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/5034514-attico-con-solarium-a-jesolo-lido",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 1300000,
+          "eur_m2": 6500,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/5034514-attico-con-solarium-a-jesolo-lido",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:f81682fd06b63b5a236b9e930ac0762e34cb2b0c": {
       "observations": [
@@ -5607,10 +7031,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/5044780-appartamento-metrature-importanti-lido-di-jesolo",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 315000,
+          "eur_m2": 2625,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/5044780-appartamento-metrature-importanti-lido-di-jesolo",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:4b8ca780ec96b8e2fae62fc4ba43a18ca5a6b387": {
       "observations": [
@@ -5637,10 +7069,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/5098853-appartamento-trilocale-con-terrazzo-abitabile",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 270000,
+          "eur_m2": 3000,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/5098853-appartamento-trilocale-con-terrazzo-abitabile",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:5adbb331bf62397c15e495a35bae2c42ed54d7a0": {
       "observations": [
@@ -5667,10 +7107,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/5107540-nuovo-trilocale-in-residence-al-lido-altanea",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 323000,
+          "eur_m2": 3892,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/5107540-nuovo-trilocale-in-residence-al-lido-altanea",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:6bdbcc2ebf1409bc93fcfc4297d753d96a57fae5": {
       "observations": [
@@ -5697,10 +7145,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/5107738-nuovo-appartamento-trilocale-con-terrazzo-vivibile",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 335000,
+          "eur_m2": 3350,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/5107738-nuovo-appartamento-trilocale-con-terrazzo-vivibile",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:8d909ad603b269437da41f5a01c8fc3c60523cd3": {
       "observations": [
@@ -5727,10 +7183,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/5111406-esclusiva-villetta-di-testa-nel-cuore-del-golf-jesolo-village",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 419000,
+          "eur_m2": 3492,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/5111406-esclusiva-villetta-di-testa-nel-cuore-del-golf-jesolo-village",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:46762a664658a1ecac0c6401c7323d9e9cf44236": {
       "observations": [
@@ -5757,10 +7221,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/5113013-appartamento-trilocale-vista-mare-a-jesolo-lido",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 465000,
+          "eur_m2": 6200,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/5113013-appartamento-trilocale-vista-mare-a-jesolo-lido",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:9f7e2c3c887c59ebd312790941525ef22a200a1c": {
       "observations": [
@@ -5787,10 +7259,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/5124819-spazioso-quadrilocale-a-jesolo-paese",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 200000,
+          "eur_m2": 2000,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/5124819-spazioso-quadrilocale-a-jesolo-paese",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:d5e2d872569b4fb98dbcaa7d107eb67ea96a2eb6": {
       "observations": [
@@ -5817,10 +7297,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/5124874-trilocale-con-giardino-fossalta-di-piave",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 145000,
+          "eur_m2": 1611,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/5124874-trilocale-con-giardino-fossalta-di-piave",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:fe6775fba85538e4803e10c7a2392d8cdb030c0c": {
       "observations": [
@@ -5847,10 +7335,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/5126250-terreni-campana-nuove-opportunita-a-jesolo-paese",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 154000,
+          "eur_m2": 205,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/5126250-terreni-campana-nuove-opportunita-a-jesolo-paese",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:02d2919b147ac25295dc148978abf33b29128fcf": {
       "observations": [
@@ -5877,10 +7373,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/5127858-merville-casa-nel-parco",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 1050000,
+          "eur_m2": 8750,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/5127858-merville-casa-nel-parco",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:129a7cdbeac19ad5add895a66217db74cc0cfc02": {
       "observations": [
@@ -5907,10 +7411,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/4435952-villa-storica-in-centro-a-motta-di-livenza",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 425000,
+          "eur_m2": 1184,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/4435952-villa-storica-in-centro-a-motta-di-livenza",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:1d775c609ae7ea21003f232b84676803f2d50e1c": {
       "observations": [
@@ -5937,10 +7449,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/4451729-vendi-il-tuo-sogno-bar-gelateria-in-posizione-strategica-a-cessalto",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 200000,
+          "eur_m2": 1667,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/4451729-vendi-il-tuo-sogno-bar-gelateria-in-posizione-strategica-a-cessalto",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:6c93721dcf27acfecfc4446568b4a68168512439": {
       "observations": [
@@ -5967,10 +7487,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/4626005-appartamento-duplex-in-centro-a-motta-di-livenza",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 180000,
+          "eur_m2": 1500,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/4626005-appartamento-duplex-in-centro-a-motta-di-livenza",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:f1f0a94051b88d51dceac32d814268696ac57864": {
       "observations": [
@@ -5997,10 +7525,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/4638250-villa-di-design-con-piscina-a-salgareda",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 745000,
+          "eur_m2": 2980,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/4638250-villa-di-design-con-piscina-a-salgareda",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:28d6ffe43b7da946cfed69c402ed19b1a9111998": {
       "observations": [
@@ -6027,10 +7563,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/4646427-elegante-bifamiliare-a-oderzo-modernita-e-comfort-nel-verde",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 620000,
+          "eur_m2": 2952,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/4646427-elegante-bifamiliare-a-oderzo-modernita-e-comfort-nel-verde",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:009066a65fee4082fd0d4607f3c6a4c068020e7b": {
       "observations": [
@@ -6057,10 +7601,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/4789843-bifamiliare-in-stile-liberty-con-ampio-giardino-a-ponte-di-piave-treviso",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 210000,
+          "eur_m2": 968,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/4789843-bifamiliare-in-stile-liberty-con-ampio-giardino-a-ponte-di-piave-treviso",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:1a3d8a19c1aabf2ccf9769576da8f6f9f51b4a8e": {
       "observations": [
@@ -6087,10 +7639,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/4801126-immobili-di-prossima-realizzazione-a-godega-di-sant-urbano",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 325000,
+          "eur_m2": 2407,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/4801126-immobili-di-prossima-realizzazione-a-godega-di-sant-urbano",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:8fe0351835735f3ee29d6c963c3be05abf43746e": {
       "observations": [
@@ -6117,10 +7677,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/4807160-casolare-in-vendita-a-gorgo-al-monticano-treviso",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 165000,
+          "eur_m2": 465,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/4807160-casolare-in-vendita-a-gorgo-al-monticano-treviso",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:b11347009bc3e0d600b62c328b3724aa39624b31": {
       "observations": [
@@ -6147,10 +7715,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/4831494-attico-in-centro-ad-oderzo",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 695000,
+          "eur_m2": 1712,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/4831494-attico-in-centro-ad-oderzo",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:dc8220ba11345031dab6d571b79700e6f7d24a05": {
       "observations": [
@@ -6177,10 +7753,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/4831590-villa-in-bioedilizia-stile-rustico-moderno",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 448000,
+          "eur_m2": 2422,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/4831590-villa-in-bioedilizia-stile-rustico-moderno",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:6ed615949025a67a935ad46fe58105deec83e011": {
       "observations": [
@@ -6207,10 +7791,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/4835899-terreno-agricolo-in-vendita-a-salgareda-treviso",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 55000,
+          "eur_m2": 130,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/4835899-terreno-agricolo-in-vendita-a-salgareda-treviso",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:e9cd3ba9d9b2b81af4acc745f1fc213eeed46cb8": {
       "observations": [
@@ -6237,10 +7829,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/4860387-villa-singola-con-piscina-a-chiarano-treviso",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 398000,
+          "eur_m2": 1421,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/4860387-villa-singola-con-piscina-a-chiarano-treviso",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:185beea45ad032f7c6097e8885d619e1e82a68c2": {
       "observations": [
@@ -6267,10 +7867,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/4864278-appartamento-in-palazzo-storico",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 690000,
+          "eur_m2": 2706,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/4864278-appartamento-in-palazzo-storico",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:836a485d7d6c1dcc8b8c9417c0c2599dbf4ce15b": {
       "observations": [
@@ -6297,10 +7905,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/4997254-casa-singola-ad-ormelle-treviso",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 185000,
+          "eur_m2": 487,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/4997254-casa-singola-ad-ormelle-treviso",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:9ac6c42ad0b29c3f11e8d069bd84795c08fdb51d": {
       "observations": [
@@ -6327,10 +7943,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/5034816-casa-singola-a-oderzo-treviso",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 205000,
+          "eur_m2": 1694,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/5034816-casa-singola-a-oderzo-treviso",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:8b6ca0787260dca2587f993850cb18986cef38c5": {
       "observations": [
@@ -6357,10 +7981,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/5095632-casa-singola-a-fossalta-di-portogruaro",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 145000,
+          "eur_m2": 659,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/5095632-casa-singola-a-fossalta-di-portogruaro",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:c8b64ee96e6cbdee83566a60380b6554e7227017": {
       "observations": [
@@ -6387,10 +8019,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/5101293-posto-auto-a-oderzo-treviso",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 20000,
+          "eur_m2": null,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/5101293-posto-auto-a-oderzo-treviso",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:6b71535bf4e95518731c2340b99fd96eb300750c": {
       "observations": [
@@ -6417,10 +8057,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/5110322-villetta-a-schiera-a-porto-santa-margherita-venezia",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 369000,
+          "eur_m2": 4341,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/5110322-villetta-a-schiera-a-porto-santa-margherita-venezia",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:f7e11120c0300fdfe0cd4590a9bc7afb208f7eab": {
       "observations": [
@@ -6447,10 +8095,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/5120490-quadrilocale-centro-di-oderzo-treviso",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 198000,
+          "eur_m2": 1707,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/5120490-quadrilocale-centro-di-oderzo-treviso",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:d04f3259012a30387f7d8b19e682cc0573cb0a2e": {
       "observations": [
@@ -6477,10 +8133,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/5124858-quadrilocale-ristrutturato-a-oderzo-treviso",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 365000,
+          "eur_m2": 2645,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/5124858-quadrilocale-ristrutturato-a-oderzo-treviso",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:ee226a8e2ae6ee19a27f5f760cd1ca3a84ec925a": {
       "observations": [
@@ -6507,10 +8171,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/5125856-attivita-commerciale-a-mansue-treviso",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 85000,
+          "eur_m2": 1214,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/5125856-attivita-commerciale-a-mansue-treviso",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:abf281fde96b10bee4364c0277117723e2c3b617": {
       "observations": [
@@ -6537,10 +8209,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/5132289-quadrilocale-in-centro-a-oderzo-treviso",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 450000,
+          "eur_m2": 2866,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/5132289-quadrilocale-in-centro-a-oderzo-treviso",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:d4fec847826ef8abfbcb7f57ff17e136eb9757b3": {
       "observations": [
@@ -6567,10 +8247,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/5158090-casa-d-epoca-terra-cielo-a-oderzo",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 195000,
+          "eur_m2": 1048,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/5158090-casa-d-epoca-terra-cielo-a-oderzo",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:6220d49cc7b91ecc7abb906217d9194ae8645b3e": {
       "observations": [
@@ -6597,10 +8285,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/5099423-cessione-ristorante-attivita-avviata-nel-cuore-della-pineta-di-jesolo",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 215000,
+          "eur_m2": 717,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/5099423-cessione-ristorante-attivita-avviata-nel-cuore-della-pineta-di-jesolo",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:6920b53049c44fa7aca928f5f52213bfd9457beb": {
       "observations": [
@@ -6627,10 +8323,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/5134814-ampia-bifamiliare-a-san-polo-di-piave-comfort-e-stile-in-posizione-centrale",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 205000,
+          "eur_m2": 981,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/5134814-ampia-bifamiliare-a-san-polo-di-piave-comfort-e-stile-in-posizione-centrale",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:4abd42186a8f3f601547c18a90ebc1a1bfe92526": {
       "observations": [
@@ -6657,10 +8361,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/5160420-casa-quadrifamiliare-centrale-giardino-a-motta-di-livenza",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 240000,
+          "eur_m2": 1412,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/5160420-casa-quadrifamiliare-centrale-giardino-a-motta-di-livenza",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:d650b7eaa598766abcb2e532849b8f9fd3b19ca4": {
       "observations": [
@@ -6687,10 +8399,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/5166320-trilocale-palms-edition-a-jesolo-lido",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 460000,
+          "eur_m2": 5610,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/5166320-trilocale-palms-edition-a-jesolo-lido",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:ff2192ff68df6caf88ae573f165dac354efe98f6": {
       "observations": [
@@ -6717,10 +8437,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/5167480-bifamiliare-a-santo-stino-di-livenza",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 370000,
+          "eur_m2": 2056,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/5167480-bifamiliare-a-santo-stino-di-livenza",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:5b18d6f9e061863d69c575b1f39513469c5c2e79": {
       "observations": [
@@ -6747,10 +8475,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/5160327-attico-esclusivo-con-piscina-privata-e-solarium-panoramico-a-jesolo",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 630000,
+          "eur_m2": 4315,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/5160327-attico-esclusivo-con-piscina-privata-e-solarium-panoramico-a-jesolo",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:c1b36c941c21d8cfcbe6498e31ba497a65d2485e": {
       "observations": [
@@ -6777,10 +8513,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/5192164-appartamento-con-ingresso-indipendente",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 189000,
+          "eur_m2": 1853,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/5192164-appartamento-con-ingresso-indipendente",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:2c5a6bfec16b44b80476aab4a591c54d6d78c025": {
       "observations": [
@@ -6807,10 +8551,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/5187078-appartamento-quadrilocale-in-centro-ad-oderzo",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 280000,
+          "eur_m2": 2545,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/5187078-appartamento-quadrilocale-in-centro-ad-oderzo",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:a8834ffd9ec0d48e217f0f4ee80742c6ce4cb887": {
       "observations": [
@@ -6837,10 +8589,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/5191561-appartamento-con-giardino-privato-in-residence-con-piscina-a-caorle",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 230000,
+          "eur_m2": 2875,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/5191561-appartamento-con-giardino-privato-in-residence-con-piscina-a-caorle",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:01f90136116ea4490121d5e5801737513c405f75": {
       "observations": [
@@ -6897,10 +8657,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/5196763-appartamenti-trilocali-ristrutturati-a-mansue-treviso",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 245000,
+          "eur_m2": 2450,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/5196763-appartamenti-trilocali-ristrutturati-a-mansue-treviso",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-25T09:49:49Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:c4dc397b51bbda393db3f35bf939cb9a6539af23": {
       "observations": [
@@ -6911,10 +8679,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/immobili/5193300-casa-bifamiliare-con-capannone-agricolo-a-mansue-treviso",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 400000,
+          "eur_m2": 1970,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/5193300-casa-bifamiliare-con-capannone-agricolo-a-mansue-treviso",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-27T11:44:44Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:0f20317eec42b5f6e84d488bf46bca038db5a07d": {
       "observations": [
@@ -6925,10 +8701,18 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/en/immobili/5193300-casa-bifamiliare-con-capannone-agricolo-a-mansue-treviso",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 400000,
+          "eur_m2": 1970,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/5193300-casa-bifamiliare-con-capannone-agricolo-a-mansue-treviso",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-27T11:44:44Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
     },
     "listing:c8e549451eb32a9a3948321c40b01b6c2db56648": {
       "observations": [
@@ -6939,10 +8723,60 @@
           "source": "jbc_direct",
           "source_url": "https://www.jbcimmobiliare.it/de/immobili/5193300-casa-bifamiliare-con-capannone-agricolo-a-mansue-treviso",
           "run_id": "2026-10-27T11-44-44Z"
+        },
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 400000,
+          "eur_m2": 1970,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/5193300-casa-bifamiliare-con-capannone-agricolo-a-mansue-treviso",
+          "run_id": "2026-10-28T12-18-03Z"
         }
       ],
       "first_seen": "2026-10-27T11:44:44Z",
-      "last_seen": "2026-10-27T11:44:44Z"
+      "last_seen": "2026-10-28T12:18:03Z"
+    },
+    "listing:a1800e817a45cd00ca56612bda66fe53d39ccf83": {
+      "observations": [
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 670000,
+          "eur_m2": 6091,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/immobili/5119012-sesto-piano-esclusivo-vista-mare-jesolo",
+          "run_id": "2026-10-28T12-18-03Z"
+        }
+      ],
+      "first_seen": "2026-10-28T12:18:03Z",
+      "last_seen": "2026-10-28T12:18:03Z"
+    },
+    "listing:cdd8d08039ffa4adfdbf2611aadebea1899eba40": {
+      "observations": [
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 670000,
+          "eur_m2": 6091,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/en/immobili/5119012-sesto-piano-esclusivo-vista-mare-jesolo",
+          "run_id": "2026-10-28T12-18-03Z"
+        }
+      ],
+      "first_seen": "2026-10-28T12:18:03Z",
+      "last_seen": "2026-10-28T12:18:03Z"
+    },
+    "listing:3896112c799f1906d24fd8ef17a37fa1cf469bb7": {
+      "observations": [
+        {
+          "captured_at": "2026-10-28T12:18:03Z",
+          "price": 670000,
+          "eur_m2": 6091,
+          "source": "jbc_direct",
+          "source_url": "https://www.jbcimmobiliare.it/de/immobili/5119012-sesto-piano-esclusivo-vista-mare-jesolo",
+          "run_id": "2026-10-28T12-18-03Z"
+        }
+      ],
+      "first_seen": "2026-10-28T12:18:03Z",
+      "last_seen": "2026-10-28T12:18:03Z"
     }
   },
   "updated_at": "2026-08-19T09:14:26Z"
