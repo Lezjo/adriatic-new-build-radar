@@ -1,0 +1,1389 @@
+{
+  "schema_version": "6.1",
+  "run_id": "2026-10-30T12-18-46Z",
+  "date": "2026-10-30",
+  "captured_at": "2026-10-30T12:18:46Z",
+  "inventory_mode": "PARTIAL_CAPTURE",
+  "coverage_status": "INCOMPLETE",
+  "full_inventory_allowed": false,
+  "metrics": {
+    "projects": 101,
+    "units": 306,
+    "listings": 324,
+    "observations": 324,
+    "priced_observations": 226,
+    "locations": [
+      "caorle",
+      "jesolo",
+      "san-dona-di-piave",
+      "treviso"
+    ],
+    "energy_class": {
+      "A4": 65,
+      "A3": 4,
+      "A2": 2,
+      "A1": 1
+    },
+    "priority_profile": {
+      "3_bedrooms": 94,
+      "pv_present": 167,
+      "heat_pump": 14,
+      "parking_or_garage": 249,
+      "terrace": 92
+    },
+    "price": {
+      "min": 20000,
+      "max": 1300000,
+      "median": 335000,
+      "budget_target": 400000,
+      "within_budget": 148
+    }
+  },
+  "records": {
+    "rows_captured": 324,
+    "projects": 101,
+    "units": 306,
+    "listings": 324,
+    "observations": 324,
+    "rejected": 0
+  },
+  "source_summary": {
+    "immobiliare_new_build": {
+      "runs": 22,
+      "pass": 0,
+      "partial": 0,
+      "broken": 0,
+      "error": 0,
+      "degraded": 0,
+      "blocked": 22,
+      "zero_verified": 0,
+      "skipped": 0,
+      "success_with_results": 0,
+      "verified_zero_results": 0,
+      "rate_limited": 0,
+      "timeout": 0,
+      "parser_error": 0,
+      "source_unavailable": 0,
+      "missing_run": 0,
+      "records_seen": 0,
+      "records_parsed": 0,
+      "records_normalized": 0,
+      "records_published": 0,
+      "records_rejected": 0
+    },
+    "idealista_new_build": {
+      "runs": 22,
+      "pass": 0,
+      "partial": 0,
+      "broken": 0,
+      "error": 0,
+      "degraded": 0,
+      "blocked": 22,
+      "zero_verified": 0,
+      "skipped": 0,
+      "success_with_results": 0,
+      "verified_zero_results": 0,
+      "rate_limited": 0,
+      "timeout": 0,
+      "parser_error": 0,
+      "source_unavailable": 0,
+      "missing_run": 0,
+      "records_seen": 0,
+      "records_parsed": 0,
+      "records_normalized": 0,
+      "records_published": 0,
+      "records_rejected": 0
+    },
+    "idealista_projects": {
+      "runs": 2,
+      "pass": 0,
+      "partial": 0,
+      "broken": 0,
+      "error": 0,
+      "degraded": 0,
+      "blocked": 2,
+      "zero_verified": 0,
+      "skipped": 0,
+      "success_with_results": 0,
+      "verified_zero_results": 0,
+      "rate_limited": 0,
+      "timeout": 0,
+      "parser_error": 0,
+      "source_unavailable": 0,
+      "missing_run": 0,
+      "records_seen": 0,
+      "records_parsed": 0,
+      "records_normalized": 0,
+      "records_published": 0,
+      "records_rejected": 0
+    },
+    "casa_new_build": {
+      "runs": 21,
+      "pass": 0,
+      "partial": 0,
+      "broken": 0,
+      "error": 0,
+      "degraded": 0,
+      "blocked": 21,
+      "zero_verified": 0,
+      "skipped": 0,
+      "success_with_results": 0,
+      "verified_zero_results": 0,
+      "rate_limited": 0,
+      "timeout": 0,
+      "parser_error": 0,
+      "source_unavailable": 0,
+      "missing_run": 0,
+      "records_seen": 0,
+      "records_parsed": 0,
+      "records_normalized": 0,
+      "records_published": 0,
+      "records_rejected": 0
+    },
+    "jbc_direct": {
+      "runs": 1,
+      "pass": 1,
+      "partial": 0,
+      "broken": 0,
+      "error": 0,
+      "degraded": 0,
+      "blocked": 0,
+      "zero_verified": 0,
+      "skipped": 0,
+      "success_with_results": 0,
+      "verified_zero_results": 0,
+      "rate_limited": 0,
+      "timeout": 0,
+      "parser_error": 0,
+      "source_unavailable": 0,
+      "missing_run": 0,
+      "records_seen": 324,
+      "records_parsed": 324,
+      "records_normalized": 324,
+      "records_published": 324,
+      "records_rejected": 0
+    },
+    "idealista_apartments": {
+      "runs": 1,
+      "pass": 0,
+      "partial": 0,
+      "broken": 0,
+      "error": 0,
+      "degraded": 0,
+      "blocked": 1,
+      "zero_verified": 0,
+      "skipped": 0,
+      "success_with_results": 0,
+      "verified_zero_results": 0,
+      "rate_limited": 0,
+      "timeout": 0,
+      "parser_error": 0,
+      "source_unavailable": 0,
+      "missing_run": 0,
+      "records_seen": 0,
+      "records_parsed": 0,
+      "records_normalized": 0,
+      "records_published": 0,
+      "records_rejected": 0
+    }
+  },
+  "coverage_evaluation": {
+    "mandatory_expected": [
+      {
+        "location": "anzola dell'emilia",
+        "source": "casa_new_build"
+      },
+      {
+        "location": "anzola dell'emilia",
+        "source": "idealista_new_build"
+      },
+      {
+        "location": "anzola dell'emilia",
+        "source": "immobiliare_new_build"
+      },
+      {
+        "location": "bologna",
+        "source": "casa_new_build"
+      },
+      {
+        "location": "bologna",
+        "source": "idealista_new_build"
+      },
+      {
+        "location": "bologna",
+        "source": "immobiliare_new_build"
+      },
+      {
+        "location": "bologna-first-belt",
+        "source": "casa_new_build"
+      },
+      {
+        "location": "bologna-first-belt",
+        "source": "idealista_new_build"
+      },
+      {
+        "location": "calderara di reno",
+        "source": "casa_new_build"
+      },
+      {
+        "location": "calderara di reno",
+        "source": "idealista_new_build"
+      },
+      {
+        "location": "calderara di reno",
+        "source": "immobiliare_new_build"
+      },
+      {
+        "location": "caorle",
+        "source": "immobiliare_new_build"
+      },
+      {
+        "location": "caorle",
+        "source": "jbc_direct"
+      },
+      {
+        "location": "casalecchio di reno",
+        "source": "casa_new_build"
+      },
+      {
+        "location": "casalecchio di reno",
+        "source": "idealista_new_build"
+      },
+      {
+        "location": "casalecchio di reno",
+        "source": "immobiliare_new_build"
+      },
+      {
+        "location": "castel maggiore",
+        "source": "casa_new_build"
+      },
+      {
+        "location": "castel maggiore",
+        "source": "idealista_new_build"
+      },
+      {
+        "location": "castel maggiore",
+        "source": "immobiliare_new_build"
+      },
+      {
+        "location": "castelfranco emilia",
+        "source": "casa_new_build"
+      },
+      {
+        "location": "castelfranco emilia",
+        "source": "idealista_new_build"
+      },
+      {
+        "location": "castelfranco emilia",
+        "source": "immobiliare_new_build"
+      },
+      {
+        "location": "castenaso",
+        "source": "casa_new_build"
+      },
+      {
+        "location": "castenaso",
+        "source": "idealista_new_build"
+      },
+      {
+        "location": "castenaso",
+        "source": "immobiliare_new_build"
+      },
+      {
+        "location": "cavallino-treporti",
+        "source": "casa_new_build"
+      },
+      {
+        "location": "cavallino-treporti",
+        "source": "idealista_apartments"
+      },
+      {
+        "location": "cavallino-treporti",
+        "source": "idealista_new_build"
+      },
+      {
+        "location": "cavallino-treporti",
+        "source": "immobiliare_new_build"
+      },
+      {
+        "location": "granarolo dell'emilia",
+        "source": "casa_new_build"
+      },
+      {
+        "location": "granarolo dell'emilia",
+        "source": "idealista_new_build"
+      },
+      {
+        "location": "granarolo dell'emilia",
+        "source": "immobiliare_new_build"
+      },
+      {
+        "location": "jesolo",
+        "source": "casa_new_build"
+      },
+      {
+        "location": "jesolo",
+        "source": "idealista_new_build"
+      },
+      {
+        "location": "jesolo",
+        "source": "idealista_projects"
+      },
+      {
+        "location": "jesolo",
+        "source": "immobiliare_new_build"
+      },
+      {
+        "location": "jesolo",
+        "source": "jbc_direct"
+      },
+      {
+        "location": "modena",
+        "source": "casa_new_build"
+      },
+      {
+        "location": "modena",
+        "source": "idealista_new_build"
+      },
+      {
+        "location": "modena",
+        "source": "immobiliare_new_build"
+      },
+      {
+        "location": "nonantola",
+        "source": "casa_new_build"
+      },
+      {
+        "location": "nonantola",
+        "source": "idealista_new_build"
+      },
+      {
+        "location": "nonantola",
+        "source": "immobiliare_new_build"
+      },
+      {
+        "location": "ozzano dell'emilia",
+        "source": "casa_new_build"
+      },
+      {
+        "location": "ozzano dell'emilia",
+        "source": "idealista_new_build"
+      },
+      {
+        "location": "ozzano dell'emilia",
+        "source": "immobiliare_new_build"
+      },
+      {
+        "location": "pianoro",
+        "source": "casa_new_build"
+      },
+      {
+        "location": "pianoro",
+        "source": "idealista_new_build"
+      },
+      {
+        "location": "pianoro",
+        "source": "immobiliare_new_build"
+      },
+      {
+        "location": "san cesario sul panaro",
+        "source": "casa_new_build"
+      },
+      {
+        "location": "san cesario sul panaro",
+        "source": "idealista_new_build"
+      },
+      {
+        "location": "san cesario sul panaro",
+        "source": "immobiliare_new_build"
+      },
+      {
+        "location": "san lazzaro di savena",
+        "source": "casa_new_build"
+      },
+      {
+        "location": "san lazzaro di savena",
+        "source": "idealista_new_build"
+      },
+      {
+        "location": "san lazzaro di savena",
+        "source": "immobiliare_new_build"
+      },
+      {
+        "location": "san-dona-di-piave",
+        "source": "casa_new_build"
+      },
+      {
+        "location": "san-dona-di-piave",
+        "source": "idealista_new_build"
+      },
+      {
+        "location": "san-dona-di-piave",
+        "source": "immobiliare_new_build"
+      },
+      {
+        "location": "san-dona-di-piave",
+        "source": "jbc_direct"
+      },
+      {
+        "location": "sasso marconi",
+        "source": "casa_new_build"
+      },
+      {
+        "location": "sasso marconi",
+        "source": "idealista_new_build"
+      },
+      {
+        "location": "sasso marconi",
+        "source": "immobiliare_new_build"
+      },
+      {
+        "location": "treviso",
+        "source": "idealista_new_build"
+      },
+      {
+        "location": "treviso",
+        "source": "idealista_projects"
+      },
+      {
+        "location": "treviso",
+        "source": "immobiliare_new_build"
+      },
+      {
+        "location": "valsamoggia",
+        "source": "casa_new_build"
+      },
+      {
+        "location": "valsamoggia",
+        "source": "idealista_new_build"
+      },
+      {
+        "location": "valsamoggia",
+        "source": "immobiliare_new_build"
+      },
+      {
+        "location": "zola predosa",
+        "source": "casa_new_build"
+      },
+      {
+        "location": "zola predosa",
+        "source": "idealista_new_build"
+      },
+      {
+        "location": "zola predosa",
+        "source": "immobiliare_new_build"
+      }
+    ],
+    "mandatory_results": [
+      {
+        "location": "anzola dell'emilia",
+        "source": "casa_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "anzola dell'emilia",
+        "source": "idealista_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "anzola dell'emilia",
+        "source": "immobiliare_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "bologna",
+        "source": "casa_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "bologna",
+        "source": "idealista_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "bologna",
+        "source": "immobiliare_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "bologna-first-belt",
+        "source": "casa_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "bologna-first-belt",
+        "source": "idealista_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "calderara di reno",
+        "source": "casa_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "calderara di reno",
+        "source": "idealista_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "calderara di reno",
+        "source": "immobiliare_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "caorle",
+        "source": "immobiliare_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "caorle",
+        "source": "jbc_direct",
+        "status": "PASS",
+        "reason": "global_jbc_capture_passed"
+      },
+      {
+        "location": "casalecchio di reno",
+        "source": "casa_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "casalecchio di reno",
+        "source": "idealista_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "casalecchio di reno",
+        "source": "immobiliare_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "castel maggiore",
+        "source": "casa_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "castel maggiore",
+        "source": "idealista_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "castel maggiore",
+        "source": "immobiliare_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "castelfranco emilia",
+        "source": "casa_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "castelfranco emilia",
+        "source": "idealista_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "castelfranco emilia",
+        "source": "immobiliare_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "castenaso",
+        "source": "casa_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "castenaso",
+        "source": "idealista_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "castenaso",
+        "source": "immobiliare_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "cavallino-treporti",
+        "source": "casa_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "cavallino-treporti",
+        "source": "idealista_apartments",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "cavallino-treporti",
+        "source": "idealista_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "cavallino-treporti",
+        "source": "immobiliare_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "granarolo dell'emilia",
+        "source": "casa_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "granarolo dell'emilia",
+        "source": "idealista_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "granarolo dell'emilia",
+        "source": "immobiliare_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "jesolo",
+        "source": "casa_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "jesolo",
+        "source": "idealista_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "jesolo",
+        "source": "idealista_projects",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "jesolo",
+        "source": "immobiliare_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "jesolo",
+        "source": "jbc_direct",
+        "status": "PASS",
+        "reason": "global_jbc_capture_passed"
+      },
+      {
+        "location": "modena",
+        "source": "casa_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "modena",
+        "source": "idealista_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "modena",
+        "source": "immobiliare_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "nonantola",
+        "source": "casa_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "nonantola",
+        "source": "idealista_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "nonantola",
+        "source": "immobiliare_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "ozzano dell'emilia",
+        "source": "casa_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "ozzano dell'emilia",
+        "source": "idealista_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "ozzano dell'emilia",
+        "source": "immobiliare_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "pianoro",
+        "source": "casa_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "pianoro",
+        "source": "idealista_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "pianoro",
+        "source": "immobiliare_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "san cesario sul panaro",
+        "source": "casa_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "san cesario sul panaro",
+        "source": "idealista_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "san cesario sul panaro",
+        "source": "immobiliare_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "san lazzaro di savena",
+        "source": "casa_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "san lazzaro di savena",
+        "source": "idealista_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "san lazzaro di savena",
+        "source": "immobiliare_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "san-dona-di-piave",
+        "source": "casa_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "san-dona-di-piave",
+        "source": "idealista_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "san-dona-di-piave",
+        "source": "immobiliare_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "san-dona-di-piave",
+        "source": "jbc_direct",
+        "status": "PASS",
+        "reason": "global_jbc_capture_passed"
+      },
+      {
+        "location": "sasso marconi",
+        "source": "casa_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "sasso marconi",
+        "source": "idealista_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "sasso marconi",
+        "source": "immobiliare_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "treviso",
+        "source": "idealista_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "treviso",
+        "source": "idealista_projects",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "treviso",
+        "source": "immobiliare_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "valsamoggia",
+        "source": "casa_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "valsamoggia",
+        "source": "idealista_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "valsamoggia",
+        "source": "immobiliare_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "zola predosa",
+        "source": "casa_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "zola predosa",
+        "source": "idealista_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      },
+      {
+        "location": "zola predosa",
+        "source": "immobiliare_new_build",
+        "status": "BLOCKED",
+        "reason": "source_run_not_pass"
+      }
+    ],
+    "missing": [],
+    "broken": [
+      {
+        "location": "anzola dell'emilia",
+        "source": "casa_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "anzola dell'emilia",
+        "source": "idealista_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "anzola dell'emilia",
+        "source": "immobiliare_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "bologna",
+        "source": "casa_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "bologna",
+        "source": "idealista_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "bologna",
+        "source": "immobiliare_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "bologna-first-belt",
+        "source": "casa_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "bologna-first-belt",
+        "source": "idealista_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "calderara di reno",
+        "source": "casa_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "calderara di reno",
+        "source": "idealista_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "calderara di reno",
+        "source": "immobiliare_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "caorle",
+        "source": "immobiliare_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "casalecchio di reno",
+        "source": "casa_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "casalecchio di reno",
+        "source": "idealista_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "casalecchio di reno",
+        "source": "immobiliare_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "castel maggiore",
+        "source": "casa_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "castel maggiore",
+        "source": "idealista_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "castel maggiore",
+        "source": "immobiliare_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "castelfranco emilia",
+        "source": "casa_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "castelfranco emilia",
+        "source": "idealista_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "castelfranco emilia",
+        "source": "immobiliare_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "castenaso",
+        "source": "casa_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "castenaso",
+        "source": "idealista_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "castenaso",
+        "source": "immobiliare_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "cavallino-treporti",
+        "source": "casa_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "cavallino-treporti",
+        "source": "idealista_apartments",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "cavallino-treporti",
+        "source": "idealista_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "cavallino-treporti",
+        "source": "immobiliare_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "granarolo dell'emilia",
+        "source": "casa_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "granarolo dell'emilia",
+        "source": "idealista_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "granarolo dell'emilia",
+        "source": "immobiliare_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "jesolo",
+        "source": "casa_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "jesolo",
+        "source": "idealista_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "jesolo",
+        "source": "idealista_projects",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "jesolo",
+        "source": "immobiliare_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "modena",
+        "source": "casa_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "modena",
+        "source": "idealista_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "modena",
+        "source": "immobiliare_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "nonantola",
+        "source": "casa_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "nonantola",
+        "source": "idealista_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "nonantola",
+        "source": "immobiliare_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "ozzano dell'emilia",
+        "source": "casa_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "ozzano dell'emilia",
+        "source": "idealista_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "ozzano dell'emilia",
+        "source": "immobiliare_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "pianoro",
+        "source": "casa_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "pianoro",
+        "source": "idealista_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "pianoro",
+        "source": "immobiliare_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "san cesario sul panaro",
+        "source": "casa_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "san cesario sul panaro",
+        "source": "idealista_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "san cesario sul panaro",
+        "source": "immobiliare_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "san lazzaro di savena",
+        "source": "casa_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "san lazzaro di savena",
+        "source": "idealista_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "san lazzaro di savena",
+        "source": "immobiliare_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "san-dona-di-piave",
+        "source": "casa_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "san-dona-di-piave",
+        "source": "idealista_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "san-dona-di-piave",
+        "source": "immobiliare_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "sasso marconi",
+        "source": "casa_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "sasso marconi",
+        "source": "idealista_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "sasso marconi",
+        "source": "immobiliare_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "treviso",
+        "source": "idealista_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "treviso",
+        "source": "idealista_projects",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "treviso",
+        "source": "immobiliare_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "valsamoggia",
+        "source": "casa_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "valsamoggia",
+        "source": "idealista_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "valsamoggia",
+        "source": "immobiliare_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "zola predosa",
+        "source": "casa_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "zola predosa",
+        "source": "idealista_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      },
+      {
+        "location": "zola predosa",
+        "source": "immobiliare_new_build",
+        "status": "BLOCKED",
+        "coverage": "MISSING",
+        "rejection_reasons": {}
+      }
+    ],
+    "mandatory_complete": false,
+    "coverage_status": "INCOMPLETE",
+    "full_inventory_allowed": false
+  },
+  "immutable_run": "data/runs/2026-10-30T12-18-46Z/run.json"
+}
